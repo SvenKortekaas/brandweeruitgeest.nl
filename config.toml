@@ -96,11 +96,16 @@ paginate = 10
     name = "Betekenis P2000"
     url  = "/betekenis-p2000-meldingen/"
     weight = 4
+	
+[[menu.main]]
+    name = "Voertuigen"
+    url  = "/voertuigen/"
+    weight = 5
 
 [[menu.main]]
     name = "Over ons"
     url  = "/over-ons/"
-    weight = 5
+    weight = 6
 
 # Top bar social links menu
 
@@ -213,10 +218,10 @@ paginate = 10
 [params.see_more]
     enable = true
     icon = "fa fa-file-code-o"
-    title = "Do you want to see more?"
-    subtitle = "We have prepared for you more than 40 different HTML pages, including 5 variations of homepage."
-    link_url = "#"
-    link_text = "Check other homepages"
+    title = "Helden gezocht!"
+    subtitle = "Word lid van brandweer Uitgeest! Neem contact met ons via het contact formulier"
+    link_url = "/over-ons"
+    link_text = "Neem contact op"
 
 [params.clients]
     enable = true
