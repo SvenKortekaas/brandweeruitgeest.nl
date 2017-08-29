@@ -14,7 +14,7 @@ Alle rechten van intellectuele eigendom betreffende deze materialen liggen bij d
 
 # Privacy
 
-Brandweer Uitgeest verzameld geen persoonlijke informatie. Ook doen wij geen poging om u te traceren of profileren. Wij werken dan ook niet samen met een derde partij om gegevens te verzamelen.
+Brandweer Uitgeest verzameld geen persoonlijke informatie. Ook doen wij geen poging om u te traceren of profileren.
 
 #### Update
 Wij behouden ons het recht voor deze informatie aan te passen. Wijzigingen zullen op deze website worden gepubliceerd.  
