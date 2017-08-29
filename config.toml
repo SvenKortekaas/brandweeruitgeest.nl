@@ -120,11 +120,17 @@ paginate = 10
     name = "Twitter"
     url = "http://twitter.com/brw_utg"
     pre = "<i class='fa fa-2x fa-twitter'></i>"
-
+	
 [[menu.topbar]]
     weight = 3
+    name = "GitHub"
+    url = "https://github.com/svenkortekaas/brandweeruitgeest.nl/"
+    pre = "<i class='fa fa-2x fa-github'></i>"
+
+[[menu.topbar]]
+    weight = 4
     name = "Email"
-    url = "mailto:info@brandweeruitgeest.nl"
+    url = "/contact/"
     pre = "<i class='fa fa-2x fa-envelope'></i>"
 
 [params]
