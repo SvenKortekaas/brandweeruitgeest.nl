@@ -179,9 +179,7 @@ paginate = 10
 [params.topbar]
     enable = true
     text = """<p class="hidden-sm hidden-xs">Bereik ons ook op social media</p>
-      <p class="hidden-md hidden-lg"><a href="#" data-animate-hover="pulse"><i class="fa fa-phone"></i></a>
-      <a href="#" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
-      </p>
+      <p class="hidden-md hidden-lg">Bereik ons ook op social media</p>
       """
 
 # Enable and disable widgets for the right sidebar
