@@ -19,10 +19,10 @@ Met dank aan Ruben van [112-Uitgeest.nl](https://www.112-uitgeest.nl) voor de fo
 
 {{< load-photoswipe >}}
 {{< gallery >}}
-  {{< figure src="/img/nieuws/2016-09-13-Gemeenteraadsledenenburgemeesteropbezoek/IMG_3244(Medium).jpg" >}}
-  {{< figure src="/img/nieuws/2016-09-13-Gemeenteraadsledenenburgemeesteropbezoek/IMG_3259(Medium).jpg" >}}
-  {{< figure src="/img/nieuws/2016-09-13-Gemeenteraadsledenenburgemeesteropbezoek/IMG_3264(Medium).jpg" >}}
-  {{< figure src="/img/nieuws/2016-09-13-Gemeenteraadsledenenburgemeesteropbezoek/IMG_3267(Medium).jpg" >}}
-  {{< figure src="/img/nieuws/2016-09-13-Gemeenteraadsledenenburgemeesteropbezoek/IMG_3287(Medium).jpg" >}}
+  {{< figure src="/img/nieuws/2016-09-13-Gemeenteraadsledenenburgemeesteropbezoek/IMG_3244(Medium).JPG" >}}
+  {{< figure src="/img/nieuws/2016-09-13-Gemeenteraadsledenenburgemeesteropbezoek/IMG_3259(Medium).JPG" >}}
+  {{< figure src="/img/nieuws/2016-09-13-Gemeenteraadsledenenburgemeesteropbezoek/IMG_3264(Medium).JPG" >}}
+  {{< figure src="/img/nieuws/2016-09-13-Gemeenteraadsledenenburgemeesteropbezoek/IMG_3267(Medium).JPG" >}}
+  {{< figure src="/img/nieuws/2016-09-13-Gemeenteraadsledenenburgemeesteropbezoek/IMG_3287(Medium).JPG" >}}
   {{< figure src="/img/nieuws/2016-09-13-Gemeenteraadsledenenburgemeesteropbezoek/IMG_3350(Medium).jpg" >}}
 {{< /gallery >}}
