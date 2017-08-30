@@ -1,4 +1,4 @@
-baseurl = "https://example.org"
+baseurl = "https://grav.skortekaas.nl/"
 title = "Brandweer Uitgeest"
 theme = "hugo-universal-theme"
 languageCode = "nl-nl"
@@ -96,11 +96,16 @@ paginate = 10
     name = "Betekenis P2000"
     url  = "/betekenis-p2000-meldingen/"
     weight = 4
+	
+[[menu.main]]
+    name = "Voertuigen"
+    url  = "/voertuigen/"
+    weight = 5
 
 [[menu.main]]
     name = "Over ons"
     url  = "/over-ons/"
-    weight = 5
+    weight = 6
 
 # Top bar social links menu
 
@@ -115,11 +120,17 @@ paginate = 10
     name = "Twitter"
     url = "http://twitter.com/brw_utg"
     pre = "<i class='fa fa-2x fa-twitter'></i>"
-
+	
 [[menu.topbar]]
     weight = 3
+    name = "GitHub"
+    url = "https://github.com/svenkortekaas/brandweeruitgeest.nl/"
+    pre = "<i class='fa fa-2x fa-github'></i>"
+
+[[menu.topbar]]
+    weight = 4
     name = "Email"
-    url = "mailto:info@brandweeruitgeest.nl"
+    url = "/contact/"
     pre = "<i class='fa fa-2x fa-envelope'></i>"
 
 [params]
@@ -174,9 +185,7 @@ paginate = 10
 [params.topbar]
     enable = true
     text = """<p class="hidden-sm hidden-xs">Bereik ons ook op social media</p>
-      <p class="hidden-md hidden-lg"><a href="#" data-animate-hover="pulse"><i class="fa fa-phone"></i></a>
-      <a href="#" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
-      </p>
+      <p class="hidden-md hidden-lg">Bereik ons ook op social media</p>
       """
 
 # Enable and disable widgets for the right sidebar
@@ -212,16 +221,16 @@ paginate = 10
 
 [params.see_more]
     enable = true
-    icon = "fa fa-file-code-o"
-    title = "Do you want to see more?"
-    subtitle = "We have prepared for you more than 40 different HTML pages, including 5 variations of homepage."
-    link_url = "#"
-    link_text = "Check other homepages"
+    icon = "fa fa-exclamation-triangle"
+    title = "Helden gezocht!"
+    subtitle = "Word lid van brandweer Uitgeest! Neem contact met ons via het contact formulier"
+    link_url = "/over-ons"
+    link_text = "Neem contact op"
 
 [params.clients]
     enable = true
     # All clients are defined in their own files. You can find example items
     # at 'exampleSite/data/clients'.
     # For more informtion take a look at the README.
-    title = "Our Clients"
+    title = "Links"
     subtitle = ""
