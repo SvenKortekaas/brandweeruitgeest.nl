@@ -22,4 +22,4 @@ script:
   - hugo -v
   
 after_success:
-  -  'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bash "cd public && find . -type f -exec curl --ftp-create-dirs -T {} -u $FTP_USER:$FTP_PASSWORD ftp://ftp.skortekaas.nl/{} \\;" fi'
+  -  "cd public && find . -type f -exec curl --ftp-create-dirs -T {} -u $FTP_USER:$FTP_PASSWORD ftp://ftp.skortekaas.nl/{} \\;"
