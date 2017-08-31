@@ -23,7 +23,7 @@ NOTE: Be sure to merge the latest from "upstream" before making a pull request!
 
 ## Hoe draai/test je de site
 
-Installeer Hugo. Uitleg staat [http://gohugo.io/getting-started/installing/]  
+Installeer Hugo. Uitleg staat hier: [http://gohugo.io/getting-started/installing/]  
 
 Na de clone naar je eigen machine run de website met het command `hugo server` vanuit de brandweeruitgeest.nl directory  
 

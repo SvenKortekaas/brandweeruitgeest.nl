@@ -18,4 +18,4 @@ Brandweer Uitgeest verzameld geen persoonlijke informatie. Ook doen wij geen pog
 
 #### Update
 Wij behouden ons het recht voor deze informatie aan te passen. Wijzigingen zullen op deze website worden gepubliceerd.  
-Laatste update: **29 augustus 2017**
+Laatste update: **30 augustus 2017**
