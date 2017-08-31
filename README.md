@@ -1,5 +1,4 @@
 # Eigen bijdragen aan de brandweer Uitgeest website
-=================================================
 
 De website van brandweer Uitgeest is open source. Iedereen is vrij om zijn eigen bijdrage te leveren aan de website. En wij staan hier ook voor open. Wil je graag een pagina toevoegen? Een eigen artikel schrijven? Of iets verbeteren?  
 Voel je vrij om dat te doen!  
