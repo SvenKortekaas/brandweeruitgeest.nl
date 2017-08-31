@@ -1,22 +1,25 @@
-language: go
-
 env:
   global:
   - secure: x47qX+mHIs+dgSv9+Xx9LXvZTkPqa7Qpl1Rem5W9XPSKWSvq763sPeRG3Kd71WmNPS9SP3pZQ+Cbifw71H4Dc03AZc1W/GMHTtM3ivDE0QgJ1UJ0P3VlHGrde6AVpUZzSkoj6FpU/9bNG/siZ1WwDfcjknGVjG2lPvytwa8AFA8jSDgeWZECoHfTdZCZ20rkUCdYeMegp7SL7otDXVQrhOSFpGwhaIysBig/dUPmAiB4F0qTMFD2lgVLMk0WWMmpqKEiUzsePF8nSlXjkdFmCjs+6N8xxiNsw1aev+hojEpeaojYGngyLLu5zaShj8pYhATkCtEZ2GjGh6mcmHbagCR10fx+oxVbBRJH0LHEnqedUCTA+setdbjaBdUkWX7V20U7S8Vw0HWi1m5+4ZGWV85Po/eh9GdmTaqIP7PJCo1jrPLoacnUFDNNMMBpHypSGbqmxrAuZp3GRPtbLepnJXGe7O6zpU8uAQTBfDDojSANljJEX1HeJM6yrqIWVrXq72LtQiUtIjHmNHvuU3z3tPO+Ozd6qx6QwGcO6EbJcf/itqyYxObazTpV34F1QZRs65C/wXjdF92VGhTv6Fr0gFpmIryYvdBcjzbC2gtq8yIBerRhWH3jGvSdgYksUqp+gQ8ZnLETavyh9MqHxAEZDKgWPJS9whX10Y7MUAf2qGY=
   - secure: EX+mjNXW0WlheCMicx6XcbVjPNnYV6AQDGTD3udffzHzPv4KSHc1GICifAWcEML5J+Hrg7znlslvpehdoACSDszE04wktysLXGIyCKg49Ab7GjZZ0TcFsU9EvxZLtWGapWVwO14Z2SSU9tlsL8rgFoJ1uIizlkKJQ4GG+KvhDSYVBc3bv9qolRiuMlGkYzbdTn1MNkoNqXnj2LfqjfXUYjAmlzWMTNzNer2v1Q60R3LrRt+96wDuHb9P8J0D9ObL029+Q1mqMivBV2wNgwYyumDdioBz9VMhB6paugXnS6Jff868HX9XnUccM6rPz9/Hf5zG8nAtNMm98HEnzJQfpTW2sTu/yc4QPY0n2vgxsl8R8vj8m7NmBxu0W+K3vWI9X3bh85hPICZwB+qX4eGSAtqINBbOQcyAkt16p8Fm6IXN9IlzWP7TrRIla150QPnNM8/6JNkIZK8ovmDxSAqzmw7Os7BU5hP/71iOgmlg/0qU5bWm6GE/wrhgJfVzO1CdTJ7Wfjty4jPaw48//p2m9ecsxMhrYIHfUfTBdgT9kKguPhkbGu4yiBi2qbSDYYkwk+0DD3pNKXMXvLl/+LvICLKx+jSX1qdx908bSlGCe9+rt7HNTUYbumQk5gbsRZYKAzRP3fh+RVt4lMLlbGGHrSUTRfXtdlDZw1E+zWL4eJ8=
   
-branches:
-  only:
-    - master
+sudo: required
 
-go:
-  - 1.7.1
-   
-before_script:
-  - go get -u -v github.com/spf13/hugo
- 
+python:
+  - "2.7"
+
+# Clean and don't fail
+install:
+  - sudo pip install pygments
+  - wget -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.26/hugo_0.26_Linux-64bit.deb
+  - sudo dpkg -i /tmp/hugo.deb
+  - rm -rf public || exit 0
+
+# Build the website
 script:
-  - hugo
+  - pygmentize -V
+  - git submodule update --init --recursive
+  - hugo -v
   
 after_success:
   "find public -type f -exec curl --ftp-create-dirs -T {} -u $FTP_USER:$FTP_PASSWORD ftp://ftp.skortekaas.nl/{} \\;"
