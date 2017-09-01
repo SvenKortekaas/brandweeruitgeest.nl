@@ -13,6 +13,7 @@ install:
   - sudo pip install pygments
   - wget -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.26/hugo_0.26_Linux-64bit.deb
   - sudo dpkg -i /tmp/hugo.deb
+  - sudo apt install curl -y
   - rm -rf public || exit 0
 
 # Build the website
@@ -22,4 +23,11 @@ script:
   - hugo -v
   
 after_success:
-  -  "cd public && find . -type f -exec curl --ftp-create-dirs -T {} -u $FTP_USER:$FTP_PASSWORD ftp://ftp.skortekaas.nl/{} \\;"
+
+  - "cd public/js/"
+  - "curl -X POST -s --data-urlencode 'input@hpneo.gmaps.js' https://javascript-minifier.com/raw > hpneo.gmaps.min.js"
+  - "curl -X POST -s --data-urlencode 'input@load-photoswipe.js' https://javascript-minifier.com/raw > load-photoswipe.min.js"
+  - "rm hpneo.gmaps.js && mv hpneo.gmaps.min.js hpneo.gmaps.js"
+  - "rm load-photoswipe.js && mv load-photoswipe.min.js load-photoswipe.js"
+  - "cd .."
+  - "cd find . -type f -exec curl --ftp-create-dirs -T {} -u $FTP_USER:$FTP_PASSWORD ftp://ftp.skortekaas.nl/{} \\;"
