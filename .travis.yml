@@ -23,7 +23,7 @@ script:
   - hugo -v
 
 after_success:
-  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then
+  - if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then
       bash cd public/js/;
       bash curl -X POST -s --data-urlencode 'input@hpneo.gmaps.js' https://javascript-minifier.com/raw > hpneo.gmaps.min.js;
       bash curl -X POST -s --data-urlencode 'input@load-photoswipe.js' https://javascript-minifier.com/raw > load-photoswipe.min.js;
@@ -46,4 +46,4 @@ after_success:
       bash rm owl.theme.css && mv owl.theme.min.css owl.theme.css;
       bash cd ..;
       bash find . -type f -exec curl --ftp-create-dirs -T {} -u $FTP_USER:$FTP_PASSWORD ftp://ftp.skortekaas.nl/{} \\;
-    fi'
+    fi
