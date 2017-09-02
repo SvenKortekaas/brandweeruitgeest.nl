@@ -2,7 +2,7 @@
 title = "Autobrand Wethouder Twaalfhovenstraat"
 date = "2016-11-28T13:00:00+02:00"
 author = "Sven Kortekaas"
-tags = ["brand","brandbestrijding","autobrand"]
+tags = ["brand","autobrand"]
 categories = ["nieuws","uitruk"]
 banner = "img/nieuws/2016-11-26-Prio1AutobrandWethouderTwaalfhovenstraat/IMG_3679(Medium).JPG"
 +++

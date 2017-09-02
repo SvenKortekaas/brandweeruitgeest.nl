@@ -2,7 +2,7 @@
 title = "Broei in hooibalen Busch en Dam"
 date = "2016-06-13T13:00:00+02:00"
 author = "Sven Kortekaas"
-tags = ["brand","brandbestrijding","buitenbrand"]
+tags = ["brand","buitenbrand"]
 categories = ["nieuws","uitruk"]
 banner = "img/nieuws/2016-09-13-Prio2BuitenbrandBuschenDam/IMG_3170.JPG"
 +++
