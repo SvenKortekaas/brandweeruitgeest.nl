@@ -23,7 +23,7 @@ script:
   - pygmentize -V
   - git submodule update --init --recursive
   - hugo -v
-  - htmlproof ./public --allow-hash-href --check-html --empty-alt-ignore
+  - htmlproofer ./public --allow-hash-href --check-html --empty-alt-ignore
   
 deploy:
   # deploy master to production
