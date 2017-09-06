@@ -1,0 +1,71 @@
+- id: home
+  translation: "Home"
+
+- id: templateBy
+  translation: "Template door"
+
+- id: portedBy
+  translation: "Geport naar Hugo door"
+
+- id: contactGoTo
+  translation: "Ga naar de contact pagina"
+
+- id: contactAddrTitle
+  translation: "Adres"
+
+- id: contactTitle
+  translation: "Contact"
+
+- id: contactForm
+  translation: "Contact formulier"
+
+- id: contactName
+  translation: "Uw naam"
+
+- id: contactMail
+  translation: "Uw email"
+
+- id: contactMessage
+  translation: "Uw bericht"
+
+- id: contactSend
+  translation: "Stuur bericht"
+
+- id: navHome
+  translation: "ga naar de homepage"
+
+- id: navToggle
+  translation: "Toggle Navigation"
+
+- id: categoriesTitle
+  translation: "Categoriën"
+
+- id: searchTitle
+  translation: "Zoeken"
+
+- id: tagsTitle
+  translation: "Tags"
+
+- id: continueReading
+  translation: "Verder lezen"
+
+- id: readMore
+  translation: "Lees meer"
+
+- id: authorBy
+  translation: "Door"
+
+- id: recentPosts
+  translation: "Recente artikelen"
+
+- id: aboutUs
+  translation: "Over ons"
+
+- id: newer
+  translation: "Nieuwer"
+
+- id: older
+  translation: "Ouder"
+
+- id: publishedOn
+  translation: "op"

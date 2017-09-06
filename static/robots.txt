@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://grav.skortekaas.nl/sitemap.xml

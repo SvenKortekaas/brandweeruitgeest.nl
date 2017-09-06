@@ -1,0 +1,236 @@
+baseurl = "https://grav.skortekaas.nl/"
+title = "Brandweer Uitgeest"
+theme = "hugo-universal-theme"
+languageCode = "nl-nl"
+# Site language. Available translations in the theme's `/i18n` directory.
+defaultContentLanguage = "nl"
+# Enable comments by entering your Disqus shortname
+#disqusShortname = "devcows"
+# Enable Google Analytics by entering your tracking code
+#googleAnalytics = ""
+
+# Define the number of posts per page
+paginate = 10
+
+[menu]
+
+# Main menu
+
+[[menu.main]]
+    name = "Home"
+    url  = "/"
+    weight = 1
+
+[[menu.main]]
+    name = "Nieuws"
+    url  = "/nieuws/"
+    weight = 2
+
+[[menu.main]]
+    name = "Uitrukken"
+    identifier = "uitrukken"
+    url  = "/"
+    weight = 3
+	
+[[menu.main]]
+    name = "2017"
+    url  = "/2017/"
+    weight = 30
+	parent = "uitrukken"
+
+[[menu.main]]
+    name = "2016"
+    url  = "/2016/"
+    weight = 31
+	parent = "uitrukken"
+
+[[menu.main]]
+    name = "2015"
+    url  = "/2015/"
+    weight = 32
+	parent = "uitrukken"
+	
+[[menu.main]]
+    name = "2014"
+    url  = "/2014/"
+    weight = 33
+	parent = "uitrukken"
+	
+[[menu.main]]
+    name = "2013"
+    url  = "/2013/"
+    weight = 34
+	parent = "uitrukken"
+	
+[[menu.main]]
+    name = "2012"
+    url  = "/2012/"
+    weight = 35
+	parent = "uitrukken"
+	
+[[menu.main]]
+    name = "2011"
+    url  = "/2011/"
+    weight = 36
+	parent = "uitrukken"
+	
+[[menu.main]]
+    name = "2010"
+    url  = "/2010/"
+    weight = 37
+	parent = "uitrukken"
+	
+[[menu.main]]
+    name = "2009"
+    url  = "/2009/"
+    weight = 38
+	parent = "uitrukken"
+	
+[[menu.main]]
+    name = "2008"
+    url  = "/2008/"
+    weight = 39
+	parent = "uitrukken"
+	
+[[menu.main]]
+    name = "Betekenis P2000"
+    url  = "/betekenis-p2000-meldingen/"
+    weight = 4
+	
+[[menu.main]]
+    name = "Voertuigen"
+    url  = "/voertuigen/"
+    weight = 5
+
+[[menu.main]]
+    name = "Over ons"
+    url  = "/over-ons/"
+    weight = 6
+
+# Top bar social links menu
+
+[[menu.topbar]]
+    weight = 1
+    name = "Facebook"
+    url = "http://facebook.com/brandweeruitgeest"
+    pre = "<i class='fa fa-2x fa-facebook'></i>"
+
+[[menu.topbar]]
+    weight = 2
+    name = "Twitter"
+    url = "http://twitter.com/brw_utg"
+    pre = "<i class='fa fa-2x fa-twitter'></i>"
+	
+[[menu.topbar]]
+    weight = 3
+    name = "GitHub"
+    url = "https://github.com/svenkortekaas/brandweeruitgeest.nl/"
+    pre = "<i class='fa fa-2x fa-github'></i>"
+
+[[menu.topbar]]
+    weight = 4
+    name = "Email"
+    url = "/contact/"
+    pre = "<i class='fa fa-2x fa-envelope'></i>"
+
+[params]
+    viewMorePostLink = "/nieuws/"
+    author = "Sven Kortekaas"
+    defaultKeywords = ["brandweer", "uitgeest", "vrk", "brw", "utg", "veiligheidsregio", "kennemerland", "ts", "112", "tankautospuit", "autospuit"]
+    defaultDescription = "Officiële website van brandweer Uitgeest"
+
+    # Google Maps API key (if not set will default to not passing a key.)
+    googleMapsApiKey = "AIzaSyDk4ArQ3In5hO1pfasDDiTVxwUn3y9kn4M"
+
+    # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
+    style = "red"
+
+    # Since this template is static, the contact form uses www.formspree.io as a
+    # proxy. The form makes a POST request to their servers to send the actual
+    # email. Visitors can send up to a 1000 emails each month for free.
+    #
+    # What you need to do for the setup?
+    #
+    # - set your email address under 'email' below
+    # - upload the generated site to your server
+    # - send a dummy email yourself to confirm your account
+    # - click the confirm link in the email from www.formspree.io
+    # - you're done. Happy mailing!
+    #
+    # Enable the contact form by entering your Formspree.io email
+    email = "info@brandweeruitgeest.nl"
+
+    about_us = "<p>De brandweer post Uitgeest is onderdeel van Veiligheidsregio Kennermerland is gelegen aan de Molenwerf 25 te Uitgeest</p>"
+    copyright = "Copyright (c) 2004 - 2017, Brandweer Uitgeest; all rights reserved."
+
+    # Format dates with Go's time formatting
+    date_format = "January 2, 2006"
+
+    logo = "img/logo.png"
+    address = """<p><strong>Brandweer Uitgeest</strong>
+        <br>Molenwerf 25
+        <br>1911 DB
+        <br>Uitgeest
+        <br>
+        <strong>Nederland</strong>
+      </p>
+      """
+    latitude = "52.535915"
+    longitude = "4.717255"
+
+[Permalinks]
+    nieuws = "/nieuws/:year/:month/:day/:filename/"
+
+# Enable or disable top bar with social icons
+[params.topbar]
+    enable = true
+    text = """<p class="hidden-sm hidden-xs">Bereik ons ook op social media</p>
+      <p class="hidden-md hidden-lg">Bereik ons ook op social media</p>
+      """
+
+# Enable and disable widgets for the right sidebar
+[params.widgets]
+    categories = true
+    tags = true
+    search = true
+
+[params.carousel]
+    enable = true
+    # All carousel items are defined in their own files. You can find example items
+    # at 'exampleSite/data/carousel'.
+    # For more informtion take a look at the README.
+	
+[params.recent_posts]
+    enable = true
+    title = "Laatste nieuws"
+    subtitle = "Het laatste nieuws van en over brandweer Uitgeest vind je hier. Je kunt hier onder andere iets lezen over de laatste uitruk die we gehad hebben, een evenement waar we aan mee hebben gewerkt of ander belangrijk nieuws."
+
+[params.features]
+    enable = true
+    # All features are defined in their own files. You can find example items
+    # at 'exampleSite/data/features'.
+    # For more informtion take a look at the README.
+
+[params.testimonials]
+    enable = true
+    # All testimonials are defined in their own files. You can find example items
+    # at 'exampleSite/data/testimonials'.
+    # For more informtion take a look at the README.
+    title = "Feedback"
+    subtitle = ""
+
+[params.see_more]
+    enable = true
+    icon = "fa fa-exclamation-triangle"
+    title = "Helden gezocht!"
+    subtitle = "Word lid van brandweer Uitgeest! Neem contact met ons via het contact formulier"
+    link_url = "/over-ons"
+    link_text = "Neem contact op"
+
+[params.clients]
+    enable = true
+    # All clients are defined in their own files. You can find example items
+    # at 'exampleSite/data/clients'.
+    # For more informtion take a look at the README.
+    title = "Links"
+    subtitle = ""
