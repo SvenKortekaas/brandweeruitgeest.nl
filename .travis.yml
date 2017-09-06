@@ -25,6 +25,7 @@ script:
 deploy:
   # deploy master to production
   - provider: script
+    skip_cleanup: true
     script: deploy.sh
     on:
       branch: master
