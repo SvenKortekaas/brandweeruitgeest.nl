@@ -21,3 +21,4 @@ rm owl.carousel.css && mv owl.carousel.min.css owl.carousel.css
 rm owl.theme.css && mv owl.theme.min.css owl.theme.css
 cd ..
 find . -type f -exec curl --ftp-create-dirs -T {} -u $FTP_USER:$FTP_PASSWORD ftp://ftp.skortekaas.nl/{} \;
+exit 0
