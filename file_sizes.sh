@@ -9,7 +9,7 @@ find ./public/ -name "*.gif" -type f -size +300k -exec ls -lh {} \; | awk '{ pri
 find ./public/ -name "*.GIF" -type f -size +300k -exec ls -lh {} \; | awk '{ print "GIF/Image " $9 " is too big: " $5 }'
 
 # Find a way to do this in one line.....
-if [ -n "$(find ./public/ -name "*.jpg" -type f -size +300)" ]
+if [ -n "$(find ./public/ -name "*.jpg" -type f -size +300k)" ]
 then
   exit 1
 elif [ -n "$(find ./public/ -name "*.JPG" -type f -size +300k)" ]
