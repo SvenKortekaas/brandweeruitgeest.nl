@@ -9,13 +9,30 @@ find ./public/ -name "*.gif" -type f -size +300k -exec ls -lh {} \; | awk '{ pri
 find ./public/ -name "*.GIF" -type f -size +300k -exec ls -lh {} \; | awk '{ print "GIF/Image " $9 " is too big: " $5 }'
 
 # Find a way to do this in one line.....
-find ./public/ -name "*.jpg" -type f -size +300k -exec exit 1 \;
-find ./public/ -name "*.JPG" -type f -size +300k -exec exit 1 \;
-find ./public/ -name "*.jpeg" -type f -size +300k -exec exit 1 \;
-find ./public/ -name "*.JPEG" -type f -size +300k -exec exit 1 \;
-find ./public/ -name "*.png" -type f -size +300k -exec exit 1 \;
-find ./public/ -name "*.PNG" -type f -size +300k -exec exit 1 \;
-find ./public/ -name "*.gif" -type f -size +300k -exec exit 1 \;
-find ./public/ -name "*.GIF" -type f -size +300k -exec exit 1 \;
+if [[ -n $(find ./public/ -name "*.jpg" -type f -size +300k) ]]
+then
+  -exec exit 1
+elif [[ -n $(find ./public/ -name "*.JPG" -type f -size +300k) ]]
+then
+  -exec exit 1
+elif [[ -n $(find ./public/ -name "*.jpeg" -type f -size +300k) ]]
+then
+  -exec exit 1
+elif [[ -n $(find ./public/ -name "*.JPEG" -type f -size +300k) ]]
+then
+  -exec exit 1
+elif [[ -n $(find ./public/ -name "*.png" -type f -size +300k) ]]
+then
+  -exec exit 1
+elif [[ -n $(find ./public/ -name "*.PNG" -type f -size +300k) ]]
+then
+  -exec exit 1
+elif [[ -n $(find ./public/ -name "*.gif" -type f -size +300k) ]]
+then
+  -exec exit 1
+elif [[ -n $(find ./public/ -name "*.GIF" -type f -size +300k) ]]
+then
+  -exec exit 1
+fi
 
 exit 0
