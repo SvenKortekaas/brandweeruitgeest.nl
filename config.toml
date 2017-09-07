@@ -167,13 +167,12 @@ paginate = 10
     date_format = "January 2, 2006"
 
     logo = "img/logo.png"
-    address = """<p><strong>Brandweer Uitgeest</strong>
+    address = """<strong>Brandweer Uitgeest</strong>
         <br>Molenwerf 25
         <br>1911 DB
         <br>Uitgeest
         <br>
-        <strong>Nederland</strong>
-      </p>
+        <strong>Nederland</strong><br>
       """
     latitude = "52.535915"
     longitude = "4.717255"
