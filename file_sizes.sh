@@ -33,6 +33,8 @@ then
 elif [ -n "$(find ./public/ -name "*.GIF" -type f -size +300k)" ]
 then
   exit 1
+else
+  echo "No problems. All images are less than 300kb"
 fi
 
 exit 0
