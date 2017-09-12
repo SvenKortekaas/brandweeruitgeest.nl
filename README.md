@@ -21,8 +21,8 @@ Wij maken gebruik van het "fork-and-pull" Git workflow.
  4. **Push** your work back up to your fork
  5. Submit a **Pull request** so that we can review your changes
 
-NOTE: Be sure to merge the latest from "upstream" before making a pull request!
-NOTE: If adding images make sure they are less than 300kb or else the Travis build will fail
+NOTE: Be sure to merge the latest from "upstream" before making a pull request!  
+NOTE: If adding images make sure they are less than 300kb or else the Travis build will fail  
 
 ## Hoe draai/test je de site
 
