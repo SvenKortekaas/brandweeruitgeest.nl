@@ -5,6 +5,8 @@ author = "Sven Kortekaas"
 tags = ["brand","autobrand"]
 categories = ["nieuws","uitruk"]
 banner = "img/nieuws/2017-06-22-Prio1BrandwegvervoerN203/IMG_5966(Medium).JPG"
+description = "Donderdagavond 22 juni zijn we opgeroepen voor een autobrand op de N203. Daar zou een vrachtwagen die gesleept werd vlam hebben gevat bij de remmen."
+images = ["/img/nieuws/2017-06-22-Prio1BrandwegvervoerN203/IMG_5954(Medium).JPG","/img/nieuws/2017-06-22-Prio1BrandwegvervoerN203/IMG_5976(Medium).JPG","/img/nieuws/2017-06-22-Prio1BrandwegvervoerN203/IMG_5997(Medium).JPG"]
 +++
 
 **Donderdagavond 22 juni zijn we opgeroepen voor een autobrand op de N203. Daar zou een vrachtwagen die gesleept werd vlam hebben gevat bij de remmen.**  
