@@ -138,6 +138,9 @@ paginate = 10
     author = "Sven Kortekaas"
     defaultKeywords = ["brandweer", "uitgeest", "vrk", "brw", "utg", "veiligheidsregio", "kennemerland", "ts", "112", "tankautospuit", "autospuit"]
     defaultDescription = "Officiële website van brandweer Uitgeest"
+	description = "Officiële website van brandweer Uitgeest"
+	site_description = "Officiële website van brandweer Uitgeest"
+	images = ["https://www.brandweeruitgeest.nl/img/logo.png"]
 
     # Google Maps API key (if not set will default to not passing a key.)
     googleMapsApiKey = "AIzaSyDk4ArQ3In5hO1pfasDDiTVxwUn3y9kn4M"
@@ -233,3 +236,8 @@ paginate = 10
     # For more informtion take a look at the README.
     title = "Links"
     subtitle = ""
+
+[social]
+  facebook        = "SvenKortekaas"
+  facebook_admin  = "SvenKortekaas"
+  facebook_app_id = "953096171457298"
