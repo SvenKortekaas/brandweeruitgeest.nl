@@ -1,4 +1,4 @@
-baseurl = "https://grav.skortekaas.nl/"
+baseurl = "https://www.brandweeruitgeest.nl/"
 title = "Brandweer Uitgeest"
 theme = "hugo-universal-theme"
 languageCode = "nl-nl"
