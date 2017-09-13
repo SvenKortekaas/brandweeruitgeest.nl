@@ -5,6 +5,8 @@ author = "Sven Kortekaas"
 tags = ["gaslekkage","hulpverlening"]
 categories = ["nieuws","uitruk"]
 banner = "img/nieuws/2017-02-18-Prio1GaslekkageWethouderC.Kromstraat/2017-02-1816.03.59-1(Medium).jpg"
+description = "Zaterdag 18 februari is de brandweer, politie en het gasbedrijf Stedin gealarmeerd voor een gaslekkage op de Wethouder C. Kromstraat. Een bewoner was bezig met het plaatsen van een tuinhekje en heeft hierbij een gasleiding geraakt."
+images = ["/img/nieuws/2017-02-18-Prio1GaslekkageWethouderC.Kromstraat/2017-02-1816.03.59-1(Medium).jpg","/img/nieuws/2017-02-18-Prio1GaslekkageWethouderC.Kromstraat/2017-02-1816.03.59-2(Medium).jpg","/img/nieuws/2017-02-18-Prio1GaslekkageWethouderC.Kromstraat/2017-02-1816.04.30(Medium).jpg"]
 +++
 
 **Zaterdag 18 februari is de brandweer, politie en het gasbedrijf Stedin gealarmeerd voor een gaslekkage op de Wethouder C. Kromstraat. Een bewoner was bezig met het plaatsen van een tuinhekje en heeft hierbij een gasleiding geraakt.**  

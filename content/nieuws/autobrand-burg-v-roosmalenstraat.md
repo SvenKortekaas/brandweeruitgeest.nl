@@ -5,6 +5,8 @@ author = "Sven Kortekaas"
 tags = ["brand","autobrand"]
 categories = ["nieuws","uitruk"]
 banner = "img/nieuws/2017-04-29-Prio1BrandwegvervoerBurg.v.Roosmalenstraat/IMG_5434(Medium).jpg"
+description = "Zaterdagochtend 29 april rond half 10 is brandweer van Uitgeest opgeroepen voor een autobrand op de Burgemeester van Roosmalenstraat te Uitgeest."
+images = ["/img/nieuws/2017-04-29-Prio1BrandwegvervoerBurg.v.Roosmalenstraat/IMG_5434(Medium).jpg","/img/nieuws/2017-04-29-Prio1BrandwegvervoerBurg.v.Roosmalenstraat/IMG_5435(Medium).jpg","/img/nieuws/2017-04-29-Prio1BrandwegvervoerBurg.v.Roosmalenstraat/IMG_5440(Medium).jpg"]
 +++
 
 **Zaterdagochtend 29 april rond half 10 is brandweer van Uitgeest opgeroepen voor een autobrand op de Burgemeester van Roosmalenstraat te Uitgeest.**  

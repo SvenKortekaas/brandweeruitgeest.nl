@@ -5,6 +5,8 @@ author = "Sven Kortekaas"
 tags = ["brand","autobrand"]
 categories = ["nieuws","uitruk"]
 banner = "img/nieuws/2017-05-12-Prio1VoertuigbrandA9/Naamloos-1(Medium).jpg"
+description = "Op 12 mei werden wij opgeroepen voor een autobrand op de A9. De auto zou staan op de oprit nabij Van der Valk Akersloot."
+images = ["/img/nieuws/2017-05-12-Prio1VoertuigbrandA9/Naamloos-1(Medium).jpg","/img/nieuws/2017-05-12-Prio1VoertuigbrandA9/IMG_5499(Medium).jpg","/img/nieuws/2017-05-12-Prio1VoertuigbrandA9/IMG_5510(Medium).jpg"]
 +++
 
 **Op 12 mei werden wij opgeroepen voor een autobrand op de A9. De auto zou staan op de oprit nabij Van der Valk Akersloot.**  

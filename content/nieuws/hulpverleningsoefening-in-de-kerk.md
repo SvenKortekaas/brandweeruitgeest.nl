@@ -5,6 +5,8 @@ author = "Sven Kortekaas"
 tags = ["reanimatie","aed"]
 categories = ["nieuws","oefening"]
 banner = "img/nieuws/2016-12-13-Oefenavondkerk/IMG_3792_1.JPG"
+description = "De brandweer van Uitgeest heeft laatst twee dinsdagavonden geoefend in de kerk op de Langebuurt. Bij deze oefening had de organist een hartstilstand gekregen tijdens het bespelen van het orgel. Niet echt uiteraard, en het slachtoffer was een pop. Vanwege zijn medische situatie moest het slachtoffer horizontaal naar beneden. En omdat de trap naar boven gedraaid is en heel smal was de trap geen optie."
+images = ["/img/nieuws/2016-12-13-Oefenavondkerk/IMG_3792_1.JPG","/img/nieuws/2016-12-13-Oefenavondkerk/IMG_3790_1.JPG","/img/nieuws/2016-12-06-Oefenavondkerk/IMG-20161206-WA0017.jpg"]
 +++
 ​
 **De brandweer van Uitgeest heeft laatst twee dinsdagavonden geoefend in de kerk op de Langebuurt. Bij deze oefening had de organist een hartstilstand gekregen tijdens het bespelen van het orgel. Niet echt uiteraard, en het slachtoffer was een pop. Vanwege zijn medische situatie moest het slachtoffer horizontaal naar beneden. En omdat de trap naar boven gedraaid is en heel smal was de trap geen optie.**  

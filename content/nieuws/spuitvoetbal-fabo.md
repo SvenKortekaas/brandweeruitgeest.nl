@@ -5,6 +5,8 @@ author = "Sven Kortekaas"
 tags = ["spuitvoetbal","fabo"]
 categories = ["nieuws"]
 banner = "img/nieuws/2017-06-14-SpuitvoetbalFABO/De_Uitgeester.jpg"
+description = "Ook dit jaar hebben wij de FABO geholpen met het organiseren van het spuitvoetbal. Een elk jaar terug kerend fenomeen voor de leden van de FABO."
+images = ["/img/nieuws/2017-06-14-SpuitvoetbalFABO/De_Uitgeester.jpg","/img/nieuws/2017-06-14-SpuitvoetbalFABO/Foto_1_FABO_Facebook.jpg","/img/nieuws/2017-06-14-SpuitvoetbalFABO/Foto_2_FABO_Facebook.jpg"]
 +++
 
 **Ook dit jaar hebben wij de FABO geholpen met het organiseren van het spuitvoetbal. Een elk jaar terug kerend fenomeen voor de leden van de FABO.**  

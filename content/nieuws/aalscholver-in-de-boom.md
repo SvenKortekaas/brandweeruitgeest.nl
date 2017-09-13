@@ -5,6 +5,8 @@ author = "Sven Kortekaas"
 tags = ["dier op hoogte","hulpverlening"]
 categories = ["nieuws","uitruk"]
 banner = "img/nieuws/2017-01-08-Prio2DierophoogteSluisbuurt/IMG_3922(Medium).jpg"
+description = "Op zondag 8 januari werden we rond kwart over vier gealarmeerd voor een dier op hoogte. Op de Sluisbuurt zat een aalscholver vast in de boom."
+images = ["/img/nieuws/2017-01-08-Prio2DierophoogteSluisbuurt/IMG_3922(Medium).jpg","/img/nieuws/2017-01-08-Prio2DierophoogteSluisbuurt/IMG_3919(Medium).jpg","/img/nieuws/2017-01-08-Prio2DierophoogteSluisbuurt/IMG_3949(Medium).jpg"]
 +++
 
 **Op zondag 8 januari werden we rond kwart over vier gealarmeerd voor een dier op hoogte. Op de Sluisbuurt zat een aalscholver vast in de boom.**  
