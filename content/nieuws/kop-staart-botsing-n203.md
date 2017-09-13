@@ -5,6 +5,8 @@ author = "Sven Kortekaas"
 tags = ["brand","autobrand","ongeval"]
 categories = ["nieuws","uitruk"]
 banner = "img/nieuws/2016-12-03-Prio1AutobrandN203/IMG_3761(Medium).JPG"
+description = "Zaterdagochtend 3 december werd de brandweer van Uitgeest gealarmeerd voor een autobrand als gevolg van een botsing op de N203 richting Krommenie."
+images = ["/img/nieuws/2016-12-03-Prio1AutobrandN203/IMG_3761(Medium).JPG","/img/nieuws/2016-12-03-Prio1AutobrandN203/IMG_3740(Medium).JPG","/img/nieuws/2016-12-03-Prio1AutobrandN203/IMG_3757(Medium).JPG"]
 +++
 ​
 **Zaterdagochtend 3 december werd de brandweer van Uitgeest gealarmeerd voor een autobrand als gevolg van een botsing op de N203 richting Krommenie.**  

@@ -5,6 +5,8 @@ author = "Sven Kortekaas"
 tags = ["brand","autobrand"]
 categories = ["nieuws","uitruk"]
 banner = "img/nieuws/2016-11-26-Prio1AutobrandWethouderTwaalfhovenstraat/IMG_3679(Medium).JPG"
+description = "De brandweer van Uitgeest werd maandagmiddag gealarmeerd voor een buitenbrand op het Busch en Dam in Uitgeest. Nadat het eerst al de beurt was geweest voor brandweer Heemskerk en brandweer Krommenie was het nu de beurt aan brandweer Uitgeest."
+images = ["/img/nieuws/2016-11-26-Prio1AutobrandWethouderTwaalfhovenstraat/IMG_3679(Medium).JPG","/img/nieuws/2016-11-26-Prio1AutobrandWethouderTwaalfhovenstraat/IMG_3676(Medium).JPG","/img/nieuws/2016-11-26-Prio1AutobrandWethouderTwaalfhovenstraat/IMG_3694(Medium).JPG"]
 +++
 
 **De brandweer van Uitgeest werd maandagmiddag gealarmeerd voor een buitenbrand op het Busch en Dam in Uitgeest. Nadat het eerst al de beurt was geweest voor brandweer Heemskerk en brandweer Krommenie was het nu de beurt aan brandweer Uitgeest.**  

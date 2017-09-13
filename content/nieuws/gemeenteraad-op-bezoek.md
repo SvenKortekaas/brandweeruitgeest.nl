@@ -5,6 +5,8 @@ author = "Sven Kortekaas"
 tags = ["burgemeester","gemeente","raadsleden"]
 categories = ["nieuws"]
 banner = "img/nieuws/2016-09-13-Gemeenteraadsledenenburgemeesteropbezoek/IMG_3350(Medium).jpg"
+description = "De gemeenteraad van Uitgeest was dinsdagavond samen met de burgemeester, Wendy Verkleij, uitgenodigd om een kijkje te komen nemen in de keuken van brandweer Uitgeest. Wat doet de brandweer precies en hoe wordt er geoefend?"
+images = ["/img/nieuws/2016-09-13-Gemeenteraadsledenenburgemeesteropbezoek/IMG_3350(Medium).jpg","/img/nieuws/2016-09-13-Gemeenteraadsledenenburgemeesteropbezoek/IMG_3244(Medium).JPG","/img/nieuws/2016-09-13-Gemeenteraadsledenenburgemeesteropbezoek/IMG_3287(Medium).JPG"]
 +++
 
 **De gemeenteraad van Uitgeest was dinsdagavond samen met de burgemeester, Wendy Verkleij, uitgenodigd om een kijkje te komen nemen in de keuken van brandweer Uitgeest. Wat doet de brandweer precies en hoe wordt er geoefend?**  

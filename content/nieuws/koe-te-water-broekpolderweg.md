@@ -5,6 +5,8 @@ author = "Sven Kortekaas"
 tags = ["hulpverlening","dier te water"]
 categories = ["nieuws","uitruk"]
 banner = "img/nieuws/2017-05-24-Prio2DiertewaterBroekpolderweg/IMG_5723(Medium).JPG"
+description = "Op 24 mei zijn we gealarmeerd voor een koe te water aan de Broekpolderweg. In samenwerking met de boer en zijn trekker hebben we de koe uit het water gekregen."
+images = ["/img/nieuws/2017-05-24-Prio2DiertewaterBroekpolderweg/IMG_5723(Medium).JPG","/img/nieuws/2017-05-24-Prio2DiertewaterBroekpolderweg/IMG_5707(Medium).JPG","/img/nieuws/2017-05-24-Prio2DiertewaterBroekpolderweg/IMG_5732(Medium).JPG"]
 +++
 
 **Op 24 mei zijn we gealarmeerd voor een koe te water aan de Broekpolderweg. In samenwerking met de boer en zijn trekker hebben we de koe uit het water gekregen.**  

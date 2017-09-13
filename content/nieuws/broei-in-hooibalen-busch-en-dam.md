@@ -5,6 +5,8 @@ author = "Sven Kortekaas"
 tags = ["brand","buitenbrand"]
 categories = ["nieuws","uitruk"]
 banner = "img/nieuws/2016-09-13-Prio2BuitenbrandBuschenDam/IMG_3170.JPG"
+description = "De brandweer van Uitgeest werd maandagmiddag gealarmeerd voor een buitenbrand op het Busch en Dam in Uitgeest. Nadat het eerst al de beurt was geweest voor brandweer Heemskerk en brandweer Krommenie was het nu de beurt aan brandweer Uitgeest."
+images = ["/img/nieuws/2016-09-13-Prio2BuitenbrandBuschenDam/IMG_3170.JPG","/img/nieuws/2016-09-13-Prio2BuitenbrandBuschenDam/IMG_3179.JPG","/img/nieuws/2016-09-13-Prio2BuitenbrandBuschenDam/IMG_3225.JPG"]
 +++
 
 **De brandweer van Uitgeest werd maandagmiddag gealarmeerd voor een buitenbrand op het Busch en Dam in Uitgeest. Nadat het eerst al de beurt was geweest voor brandweer Heemskerk en brandweer Krommenie was het nu de beurt aan brandweer Uitgeest.**  

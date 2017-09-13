@@ -5,6 +5,8 @@ author = "Sven Kortekaas"
 tags = ["hulpverlening","ongeval"]
 categories = ["nieuws","uitruk"]
 banner = "img/nieuws/2017-05-19-Prio1OngevalBuitenLetselMolenstraat/IMG_5574-1(Medium).jpg"
+description = "Op 19 mei zijn we samen met de politie, ambulance en traumahelikopter gealarmeerd voor een ongeval bij een bedrijf aan de Molenstraat. Daar zou iemand gewond zijn geraakt en mogelijk bekneld zitten."
+images = ["/img/nieuws/2017-05-19-Prio1OngevalBuitenLetselMolenstraat/IMG_5574-1(Medium).jpg","/img/nieuws/2017-05-19-Prio1OngevalBuitenLetselMolenstraat/IMG_5568(Medium).jpg","/img/nieuws/2017-05-19-Prio1OngevalBuitenLetselMolenstraat/IMG_5574(Medium).jpg"]
 +++
 
 **Op 19 mei zijn we samen met de politie, ambulance en traumahelikopter gealarmeerd voor een ongeval bij een bedrijf aan de Molenstraat. Daar zou iemand gewond zijn geraakt en mogelijk bekneld zitten.**  

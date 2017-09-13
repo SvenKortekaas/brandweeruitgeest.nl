@@ -5,6 +5,8 @@ author = "Sven Kortekaas"
 tags = ["brand","buitenbrand"]
 categories = ["nieuws","uitruk"]
 banner = "img/nieuws/2017-05-24-Prio2BuitenbrandKruiskamplaan/IMG_5747(Medium).JPG"
+description = "Op 24 mei zijn we gealarmeerd voor een buitenbrand op de Kruiskamplaan. Daar stond een stuk grasland in de “Groene Driehoek” tussen de A9 en de Kruiskamplaan in de brand. Buurtbewoners hebben snel gehandeld en zijn met brandblussers en emmers in de weer gegaan om de brand te blussen. Hierdoor was er voor ons weinig meer te doen dan controle uitvoeren. De brand was al geblust."
+images = ["/img/nieuws/2017-05-24-Prio2BuitenbrandKruiskamplaan/IMG_5747(Medium).JPG","/img/nieuws/2017-05-24-Prio2BuitenbrandKruiskamplaan/IMG_5749(Medium).JPG","/img/nieuws/2017-05-24-Prio2BuitenbrandKruiskamplaan/IMG_8221(Medium).JPG"]
 +++
 
 **Op 24 mei zijn we gealarmeerd voor een buitenbrand op de Kruiskamplaan. Daar stond een stuk grasland in de “Groene Driehoek” tussen de A9 en de Kruiskamplaan in de brand. Buurtbewoners hebben snel gehandeld en zijn met brandblussers en emmers in de weer gegaan om de brand te blussen. Hierdoor was er voor ons weinig meer te doen dan controle uitvoeren. De brand was al geblust.**  
