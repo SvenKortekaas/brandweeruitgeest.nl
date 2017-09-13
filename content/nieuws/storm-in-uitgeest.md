@@ -4,7 +4,7 @@ date = "2017-09-13T16:00:00+02:00"
 author = "Sven Kortekaas"
 tags = ["stormschade","hulpverlening"]
 categories = ["nieuws","uitruk"]
-banner = "img/nieuws/2017-09-13-Storm/1.jp"
+banner = "img/nieuws/2017-09-13-Storm/1.jpg"
 description = "Woensdag 13 september is code oranje afgegeven voor het weer. Windstoten met meer dan 100 km/h zorgde ook voor problemen in en rond Uitgeest."
 images = ["/img/nieuws/2017-09-13-Storm/1.jpg","/img/nieuws/2017-09-13-Storm/2.jpg"]
 +++
