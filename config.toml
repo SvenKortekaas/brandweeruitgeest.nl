@@ -130,7 +130,7 @@ paginate = 10
 [[menu.topbar]]
     weight = 4
     name = "Email"
-    url = "/contact/"
+    url = "/over-ons/"
     pre = "<i class='fa fa-2x fa-envelope'></i>"
 
 [params]
