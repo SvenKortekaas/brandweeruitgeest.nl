@@ -1,4 +1,6 @@
 ---
+pages:
+- nieuws/uitruk-brand-tester.md
 hide_body: false
 fields:
 - type: datetime
