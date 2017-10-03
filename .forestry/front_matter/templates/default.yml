@@ -1,0 +1,8 @@
+---
+hide_body: false
+fields:
+- name: date
+  label: Date
+  type: field_group
+  hidden: false
+  default: {}
