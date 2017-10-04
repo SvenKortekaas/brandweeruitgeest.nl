@@ -17,6 +17,7 @@ install:
   - chmod +x deploy.sh
   - chmod +x file_sizes.sh
   - rm -rf public || exit 0
+  - npm -g i html-minify
 
 # Build the website
 script:
@@ -24,6 +25,10 @@ script:
   - git submodule update --init --recursive
   - hugo -v
   - sh file_sizes.sh
+  - cd public
+  - cat index.html
+  - htmlminify index.html
+  - cat index.html
   
 deploy:
   # deploy master to production
