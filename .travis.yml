@@ -26,9 +26,7 @@ script:
   - hugo -v
   - sh file_sizes.sh
   - cd public
-  - cat index.html
-  - html-minifier --case-sensitive --remove-comments index.html > index.min.html
-  - cat index.min.html
+  - html-minifier --case-sensitive index.html
   
 deploy:
   # deploy master to production
