@@ -17,7 +17,7 @@ install:
   - chmod +x deploy.sh
   - chmod +x file_sizes.sh
   - rm -rf public || exit 0
-  - npm -g i html-minify
+  - npm install html-minifier -g
 
 # Build the website
 script:
@@ -26,9 +26,7 @@ script:
   - hugo -v
   - sh file_sizes.sh
   - cd public
-  - cat index.html
-  - htmlminify index.html > index.html
-  - cat index.html 
+  - html-minifier --help
   
 deploy:
   # deploy master to production
