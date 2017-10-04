@@ -27,8 +27,8 @@ script:
   - sh file_sizes.sh
   - cd public
   - cat index.html
-  - htmlminify index.html
-  - cat index.html
+  - htmlminify index.html > index.html
+  - cat index.html 
   
 deploy:
   # deploy master to production
