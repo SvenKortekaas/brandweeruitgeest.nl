@@ -72,3 +72,6 @@
 
 - id: publishedOn
   translation: "op"
+
+- id: seeAlso
+  translation: "Bekijk ook"
