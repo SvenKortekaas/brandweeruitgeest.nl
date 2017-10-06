@@ -28,6 +28,7 @@
 
                         <div id="post-content">
                           {{ .Content }}
+						  {{ partial "related.html" . }}
                         </div>
                         <!-- /#post-content -->
                         {{ if .Site.DisqusShortname }}
