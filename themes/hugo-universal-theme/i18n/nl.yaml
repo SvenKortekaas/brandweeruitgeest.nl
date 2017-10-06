@@ -24,6 +24,9 @@
 
 - id: contactMail
   translation: "Uw email"
+  
+- id: contactSubject
+  translation: "Onderwerp"
 
 - id: contactMessage
   translation: "Uw bericht"
