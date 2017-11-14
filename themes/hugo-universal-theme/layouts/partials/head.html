@@ -106,24 +106,4 @@
     {{ with .Site.Social.facebook_app_id }}
       <meta property="fb:app_id" content="{{ . }}" />
     {{ end }}
-	
-	<!-- Onesignal push notifications -->
-	<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
-    <script>
-      var OneSignal = window.OneSignal || [];
-      OneSignal.push(["init", {
-        appId: "10d4a12f-9e8c-4594-b3a7-fc433db5a633",
-        autoRegister: true,
-        notifyButton: {
-          enable: true, /* Set to false to hide */
-		  showCredit: false
-        },
-		welcomeNotification: {
-          "title": "Welkom",
-          "message": "Bedankt voor het aanmelden!"
-          // "url": "" /* Leave commented for the notification to not open a window on Chrome and Firefox (on Safari, it opens to your webpage) */
-        },
-		showCredit: false
-      }]);
-    </script>
 </head>
