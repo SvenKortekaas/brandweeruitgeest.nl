@@ -41,4 +41,4 @@ Een paar tips die de NFPA aanbeveelt.
 <sub>Bron: [Fire NIST](https://www.nist.gov/topics/fire "Fire | NIST")</sub>  
 
 {{< load-photoswipe >}}
-{{< figure src="img/nieuws/2017-12-19-waarom-moet-je-je-kerstboom-water-geven/kerstboom_verbranding_beverwijk_2014.jpg" caption="Foto: Sven Kortekaas" alt="Kerstboom verbranding 2014 in Beverwijk">}}
+{{< figure src="https://www.brandweeruitgeest.nl/img/nieuws/2017-12-19-waarom-moet-je-je-kerstboom-water-geven/kerstboom_verbranding_beverwijk_2014.jpg" caption="Foto: Sven Kortekaas" alt="Kerstboom verbranding 2014 in Beverwijk">}}
