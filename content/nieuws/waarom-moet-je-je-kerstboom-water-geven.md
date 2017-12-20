@@ -13,7 +13,7 @@ images = ["img/nieuws/2017-12-19-waarom-moet-je-je-kerstboom-water-geven/kerstbo
 
 In de volgende video zie je het brandverloop van een kerstboom die elke dag water krijgt en één die nooit water krijgt.  
   
-{{< youtube 26A-49Wb2F4 >}}
+{{< youtube 26A-49Wb2F4 >}}  
   
 Zoals je kunt zien heb je grotere kans om te vluchten en/of blussen bij brand in een kerstboom die water krijgt dan bij een kerstboom die geen water krijgt. De video laat zien hoe belangrijk het is om de kerstboom water te geven.  
 
@@ -39,6 +39,3 @@ Een paar tips die de NFPA aanbeveelt.
 * Haal buiten kerstverlichting naar binnen
 
 <sub>Bron: [Fire NIST](https://www.nist.gov/topics/fire "Fire | NIST")</sub>  
-
-{{< load-photoswipe >}}
-{{< figure src="https://www.brandweeruitgeest.nl/img/nieuws/2017-12-19-waarom-moet-je-je-kerstboom-water-geven/kerstboom_verbranding_beverwijk_2014.jpg" caption="Foto: Sven Kortekaas" alt="Kerstboom verbranding 2014 in Beverwijk">}}
