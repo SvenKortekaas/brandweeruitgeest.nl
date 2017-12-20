@@ -26,7 +26,7 @@ NOTE: If adding images make sure they are less than 300kb or else the Travis bui
 
 ## Hoe draai/test je de site
 
-Installeer Hugo. Uitleg staat [hier](http://gohugo.io/getting-started/installing/)  
+Installeer Hugo. Uitleg staat [hier](http://gohugo.io/getting-started/installing/).  
 
 Na de clone naar je eigen machine run de website met het command `hugo server` vanuit de brandweeruitgeest.nl directory  
 
