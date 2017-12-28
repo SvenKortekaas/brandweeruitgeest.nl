@@ -1,6 +1,6 @@
 +++
 title = "Schaap te water met kerst"
-date = "2017-12-28T16:00:00+02:00"
+date = "2017-12-28T10:00:00+02:00"
 author = "Sven Kortekaas"
 tags = ["hulpverlening","dier te water"]
 categories = ["nieuws","uitruk"]
