@@ -6,7 +6,7 @@ tags = ["hulpverlening","dier te water"]
 categories = ["nieuws","uitruk"]
 banner = "img/nieuws/2017-12-25-Prio2DierTeWaterA9/dier_te_water_11.jpg"
 description = "Op eerste kerstdag rond half 2 's middags kreeg brandweer Uitgeest een prio 2 melding dier te water op de A9 nabij de afrit Uitgeest."
-images = ["img/nieuws/2017-12-25-Prio2DierTeWaterA9/dier_te_water_3.jpg","img/nieuws/2017-12-25-Prio2DierTeWaterA9/dier_te_water_6.jpg","img/nieuws/2017-12-25-Prio2DierTeWaterA9/dier_te_water_9.jpg","img/nieuws/2017-12-25-Prio2DierTeWaterA9/dier_te_water_17.jpg"]
+images = ["/img/nieuws/2017-12-25-Prio2DierTeWaterA9/dier_te_water_3.jpg","/img/nieuws/2017-12-25-Prio2DierTeWaterA9/dier_te_water_6.jpg","/img/nieuws/2017-12-25-Prio2DierTeWaterA9/dier_te_water_9.jpg","/img/nieuws/2017-12-25-Prio2DierTeWaterA9/dier_te_water_17.jpg"]
 +++
 
 **Op eerste kerstdag rond half 2 's middags kreeg brandweer Uitgeest een prio 2 melding dier te water op de A9 nabij de afrit Uitgeest.**  
@@ -19,11 +19,11 @@ Met dank aan Sander Disselköter voor de foto's
   
 {{< load-photoswipe >}}
 {{< gallery >}}
-  {{< figure src="img/nieuws/2017-12-25-Prio2DierTeWaterA9/dier_te_water_3.jpg" >}}
-  {{< figure src="img/nieuws/2017-12-25-Prio2DierTeWaterA9/dier_te_water_6.jpg" >}}
-  {{< figure src="img/nieuws/2017-12-25-Prio2DierTeWaterA9/dier_te_water_9.jpg" >}}
-  {{< figure src="img/nieuws/2017-12-25-Prio2DierTeWaterA9/dier_te_water_11.jpg" >}}
-  {{< figure src="img/nieuws/2017-12-25-Prio2DierTeWaterA9/dier_te_water_13.jpg" >}}
-  {{< figure src="img/nieuws/2017-12-25-Prio2DierTeWaterA9/dier_te_water_14.jpg" >}}
-  {{< figure src="img/nieuws/2017-12-25-Prio2DierTeWaterA9/dier_te_water_17.jpg" >}}
+  {{< figure src="/img/nieuws/2017-12-25-Prio2DierTeWaterA9/dier_te_water_3.jpg" >}}
+  {{< figure src="/img/nieuws/2017-12-25-Prio2DierTeWaterA9/dier_te_water_6.jpg" >}}
+  {{< figure src="/img/nieuws/2017-12-25-Prio2DierTeWaterA9/dier_te_water_9.jpg" >}}
+  {{< figure src="/img/nieuws/2017-12-25-Prio2DierTeWaterA9/dier_te_water_11.jpg" >}}
+  {{< figure src="/img/nieuws/2017-12-25-Prio2DierTeWaterA9/dier_te_water_13.jpg" >}}
+  {{< figure src="/img/nieuws/2017-12-25-Prio2DierTeWaterA9/dier_te_water_14.jpg" >}}
+  {{< figure src="/img/nieuws/2017-12-25-Prio2DierTeWaterA9/dier_te_water_17.jpg" >}}
 {{< /gallery >}}
