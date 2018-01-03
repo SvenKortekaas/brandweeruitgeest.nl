@@ -5,7 +5,7 @@ languageCode = "nl-nl"
 # Site language. Available translations in the theme's `/i18n` directory.
 defaultContentLanguage = "nl"
 # Enable comments by entering your Disqus shortname
-disqusShortname = "brandweeruitgeest"
+#disqusShortname = "brandweeruitgeest"
 # Enable Google Analytics by entering your tracking code
 #googleAnalytics = ""
 
