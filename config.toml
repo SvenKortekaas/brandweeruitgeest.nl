@@ -5,7 +5,7 @@ languageCode = "nl-nl"
 # Site language. Available translations in the theme's `/i18n` directory.
 defaultContentLanguage = "nl"
 # Enable comments by entering your Disqus shortname
-#disqusShortname = "devcows"
+disqusShortname = "brandweeruitgeest"
 # Enable Google Analytics by entering your tracking code
 #googleAnalytics = ""
 
@@ -33,64 +33,70 @@ paginate = 10
     weight = 3
 	
 [[menu.main]]
+    name = "2018"
+    url  = "/2018/"
+    weight = 30
+	  parent = "uitrukken"
+	
+[[menu.main]]
     name = "2017"
     url  = "/2017/"
-    weight = 30
-	parent = "uitrukken"
+    weight = 31
+	  parent = "uitrukken"
 
 [[menu.main]]
     name = "2016"
     url  = "/2016/"
-    weight = 31
-	parent = "uitrukken"
+    weight = 32
+	  parent = "uitrukken"
 
 [[menu.main]]
     name = "2015"
     url  = "/2015/"
-    weight = 32
-	parent = "uitrukken"
+    weight = 33
+	  parent = "uitrukken"
 	
 [[menu.main]]
     name = "2014"
     url  = "/2014/"
-    weight = 33
-	parent = "uitrukken"
+    weight = 34
+	  parent = "uitrukken"
 	
 [[menu.main]]
     name = "2013"
     url  = "/2013/"
-    weight = 34
-	parent = "uitrukken"
+    weight = 35
+	  parent = "uitrukken"
 	
 [[menu.main]]
     name = "2012"
     url  = "/2012/"
-    weight = 35
-	parent = "uitrukken"
+    weight = 36
+	  parent = "uitrukken"
 	
 [[menu.main]]
     name = "2011"
     url  = "/2011/"
-    weight = 36
-	parent = "uitrukken"
+    weight = 37
+	  parent = "uitrukken"
 	
 [[menu.main]]
     name = "2010"
     url  = "/2010/"
-    weight = 37
-	parent = "uitrukken"
+    weight = 38
+	  parent = "uitrukken"
 	
 [[menu.main]]
     name = "2009"
     url  = "/2009/"
-    weight = 38
-	parent = "uitrukken"
+    weight = 39
+	  parent = "uitrukken"
 	
 [[menu.main]]
     name = "2008"
     url  = "/2008/"
-    weight = 39
-	parent = "uitrukken"
+    weight = 40
+	  parent = "uitrukken"
 	
 [[menu.main]]
     name = "Betekenis P2000"
