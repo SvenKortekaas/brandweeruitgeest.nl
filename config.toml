@@ -206,7 +206,7 @@ paginate = 10
     enable = true
     # All carousel items are defined in their own files. You can find example items
     # at 'exampleSite/data/carousel'.
-    # For more informtion take a look at the README.
+    # For more information take a look at the README.
 	
 [params.recent_posts]
     enable = true
@@ -217,15 +217,21 @@ paginate = 10
     enable = true
     # All features are defined in their own files. You can find example items
     # at 'exampleSite/data/features'.
-    # For more informtion take a look at the README.
+    # For more information take a look at the README.
 
 [params.testimonials]
-    enable = true
+    enable = false
     # All testimonials are defined in their own files. You can find example items
     # at 'exampleSite/data/testimonials'.
-    # For more informtion take a look at the README.
+    # For more information take a look at the README.
     title = "Feedback"
     subtitle = ""
+	
+[params.brw_nederland]
+    enable = true
+    icon = "fa fa-question-circle"
+    title = "Brandweer Nederland"
+    subtitle = "Om een goed beeld te krijgen van de werkgebieden van de brandweer, heeft Brandweer Nederland een korte video ontwikkeld waar in ons werk wordt getoond."
 
 [params.see_more]
     enable = true
@@ -239,7 +245,7 @@ paginate = 10
     enable = true
     # All clients are defined in their own files. You can find example items
     # at 'exampleSite/data/clients'.
-    # For more informtion take a look at the README.
+    # For more information take a look at the README.
     title = "Links"
     subtitle = ""
 
