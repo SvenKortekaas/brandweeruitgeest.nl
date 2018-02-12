@@ -227,11 +227,11 @@ paginate = 10
     title = "Feedback"
     subtitle = ""
 	
-[params.brw_nederland]
-    enable = true
-    icon = "fa fa-question-circle"
-    title = "Brandweer Nederland"
-    subtitle = "Om een goed beeld te krijgen van de werkgebieden van de brandweer, heeft Brandweer Nederland een korte video ontwikkeld waar in ons werk wordt getoond."
+#[params.brw_nederland]
+#    enable = true
+#    icon = "fa fa-question-circle"
+#    title = "Brandweer Nederland"
+#    subtitle = "Om een goed beeld te krijgen van de werkgebieden van de brandweer, heeft Brandweer Nederland een korte video ontwikkeld waar in ons werk wordt getoond."
 
 [params.see_more]
     enable = true
