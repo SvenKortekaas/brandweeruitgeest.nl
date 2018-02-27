@@ -19,5 +19,3 @@ Brandweer Uitgeest heeft meerdere voertuigen tot zijn beschikking. De voertuigen
 ### [Dienstauto 12-2001](/12-2001/ "DA 12-2001")
 
 ### [Dienstauto 12-2002](/12-2002/ "DA 12-2002")
-
-### [Dienstauto 12-2003](/12-2003/ "DA 12-2003")
