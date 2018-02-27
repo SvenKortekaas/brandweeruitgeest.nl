@@ -66,5 +66,7 @@ html-minifier --case-sensitive --collapse-whitespace -o voertuigen/index.min.htm
 rm voertuigen/index.html && mv voertuigen/index.min.html voertuigen/index.html
 html-minifier --case-sensitive --collapse-whitespace -o over-ons/index.min.html over-ons/index.html
 rm over-ons/index.html && mv over-ons/index.min.html over-ons/index.html
+html-minifier --case-sensitive --collapse-whitespace -o nieuws/index.min.html nieuws/index.html
+rm nieuws/index.html && mv nieuws/index.min.html nieuws/index.html
 find . -type f -exec curl --ftp-create-dirs -T {} -u $FTP_USER:$FTP_PASSWORD ftp://brandweeruitgeest.nl/{} \;
 exit 0
