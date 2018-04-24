@@ -97,13 +97,8 @@ echo Entering ..
 cd ..
 ls -all
 
-echo fixing the shit
-echo set ssl:verify-certificate no
-set ssl:verify-certificate no
-
-
 echo Starting the upload
-lftp -c "set ftps:initial-prot ''; set ftp:ssl-force true; set ftp:ssl-protect-data true; open ftp://$FTP_USER:$FTP_PASSWORD@$FTP_HOST:21; mirror -eRv public .; quit;"
+lftp -c "set ftps:initial-prot ''; set ftp:ssl-force true; set ftp:ssl-protect-data true; set ssl:verify-certificate no; open ftp://$FTP_USER:$FTP_PASSWORD@$FTP_HOST:21; mirror -eRv public .; quit;"
 
 echo Exiting
 exit 0
