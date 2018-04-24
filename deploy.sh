@@ -6,7 +6,11 @@ pwd
 
 ls -all
 
+echo Entering public/js/
 cd public/js/
+ls -all
+
+echo Minify javascript
 curl -X POST -s --data-urlencode 'input@hpneo.gmaps.js' https://javascript-minifier.com/raw > hpneo.gmaps.min.js
 curl -X POST -s --data-urlencode 'input@load-photoswipe.js' https://javascript-minifier.com/raw > load-photoswipe.min.js
 curl -X POST -s --data-urlencode 'input@gmaps.init.js' https://javascript-minifier.com/raw > gmaps.init.min.js
@@ -15,7 +19,12 @@ rm hpneo.gmaps.js && mv hpneo.gmaps.min.js hpneo.gmaps.js
 rm load-photoswipe.js && mv load-photoswipe.min.js load-photoswipe.js
 rm gmaps.init.js && mv gmaps.init.min.js gmaps.init.js
 rm front.js && mv front.min.js front.js
+
+echo Entering ../css/
 cd ../css/
+ls -all
+
+echo Minify css
 curl -X POST -s --data-urlencode 'input@animate.css' https://cssminifier.com/raw > animate.min.css
 curl -X POST -s --data-urlencode 'input@style.red.css' https://cssminifier.com/raw > style.red.min.css
 curl -X POST -s --data-urlencode 'input@custom.css' https://cssminifier.com/raw > custom.min.css
@@ -26,7 +35,12 @@ rm style.red.css && mv style.red.min.css style.red.css
 rm custom.css && mv custom.min.css custom.css
 rm owl.carousel.css && mv owl.carousel.min.css owl.carousel.css
 rm owl.theme.css && mv owl.theme.min.css owl.theme.css
+
+echo Entering ..
 cd ..
+ls -all
+
+echo Minify html files
 html-minifier --case-sensitive --collapse-whitespace -o index.min.html index.html
 rm index.html && mv index.min.html index.html
 html-minifier --case-sensitive --collapse-whitespace -o 2018/index.min.html 2018/index.html
@@ -75,5 +89,9 @@ html-minifier --case-sensitive --collapse-whitespace -o over-ons/index.min.html 
 rm over-ons/index.html && mv over-ons/index.min.html over-ons/index.html
 html-minifier --case-sensitive --collapse-whitespace -o nieuws/index.min.html nieuws/index.html
 rm nieuws/index.html && mv nieuws/index.min.html nieuws/index.html
+
+echo Starting the upload
 lftp -c "set ftps:initial-prot ''; set ftp:ssl-force true; set ftp:ssl-protect-data true; open ftp://$FTP_USER:$FTP_PASSWORD@$FTP_HOST:21; mirror -eRv public .; quit;"
+
+echo Exiting
 exit 0
