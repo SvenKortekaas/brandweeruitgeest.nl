@@ -169,8 +169,8 @@ paginate = 10
     # Enable the contact form by entering your Formspree.io email
     email = "info@brandweeruitgeest.nl"
 
-    about_us = "<p>De brandweer post Uitgeest is onderdeel van Veiligheidsregio Kennermerland is gelegen aan de Molenwerf 25 te Uitgeest</p>"
-    copyright = "Copyright (c) 2004 - 2017, Brandweer Uitgeest; all rights reserved."
+    about_us = "<p>De brandweer post Uitgeest is onderdeel van Veiligheidsregio Kennemerland is gelegen aan de Molenwerf 25 te Uitgeest</p>"
+    copyright = "Copyright (c) 2004 - 2018, Brandweer Uitgeest; all rights reserved."
 
     # Format dates with Go's time formatting
     date_format = "January 2, 2006"
@@ -180,7 +180,7 @@ paginate = 10
         <br>Molenwerf 25
         <br>1911 DB
         <br>Uitgeest
-        <br>
+        <br>info@brandweeruitgeest.nl
         <strong>Nederland</strong><br>
       """
     latitude = "52.535915"
