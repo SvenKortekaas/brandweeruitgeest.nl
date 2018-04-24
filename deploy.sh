@@ -2,7 +2,9 @@
 
 set -e
 
-cd ..
+pwd
+
+ls -all
 
 cd public/js/
 curl -X POST -s --data-urlencode 'input@hpneo.gmaps.js' https://javascript-minifier.com/raw > hpneo.gmaps.min.js
