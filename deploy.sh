@@ -2,16 +2,7 @@
 
 set -e
 
-pwd
-
-ls -all
-
-echo Pinging brandweer uitgeest
-ping -c 4 brandweeruitgeest.nl
-
-echo Entering public/js/
 cd public/js/
-ls -all
 
 echo Minify javascript
 curl -X POST -s --data-urlencode 'input@hpneo.gmaps.js' https://javascript-minifier.com/raw > hpneo.gmaps.min.js
@@ -23,9 +14,7 @@ rm load-photoswipe.js && mv load-photoswipe.min.js load-photoswipe.js
 rm gmaps.init.js && mv gmaps.init.min.js gmaps.init.js
 rm front.js && mv front.min.js front.js
 
-echo Entering ../css/
 cd ../css/
-ls -all
 
 echo Minify css
 curl -X POST -s --data-urlencode 'input@animate.css' https://cssminifier.com/raw > animate.min.css
@@ -39,9 +28,7 @@ rm custom.css && mv custom.min.css custom.css
 rm owl.carousel.css && mv owl.carousel.min.css owl.carousel.css
 rm owl.theme.css && mv owl.theme.min.css owl.theme.css
 
-echo Entering ..
 cd ..
-ls -all
 
 echo Minify html files
 html-minifier --case-sensitive --collapse-whitespace -o index.min.html index.html
@@ -93,12 +80,9 @@ rm over-ons/index.html && mv over-ons/index.min.html over-ons/index.html
 html-minifier --case-sensitive --collapse-whitespace -o nieuws/index.min.html nieuws/index.html
 rm nieuws/index.html && mv nieuws/index.min.html nieuws/index.html
 
-echo Entering ..
 cd ..
-ls -all
 
 echo Starting the upload
 lftp -c "set ftps:initial-prot ''; set ftp:ssl-force true; set ftp:ssl-protect-data true; set ssl:verify-certificate no; open ftp://$FTP_USER:$FTP_PASSWORD@$FTP_HOST:21; mirror -eRv public .; quit;"
 
-echo Exiting
 exit 0
