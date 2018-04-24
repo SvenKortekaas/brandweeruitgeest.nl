@@ -68,5 +68,5 @@ html-minifier --case-sensitive --collapse-whitespace -o over-ons/index.min.html 
 rm over-ons/index.html && mv over-ons/index.min.html over-ons/index.html
 html-minifier --case-sensitive --collapse-whitespace -o nieuws/index.min.html nieuws/index.html
 rm nieuws/index.html && mv nieuws/index.min.html nieuws/index.html
-find . -type f -exec curl -v --ftp-create-dirs -T {} -u $FTP_USER:$FTP_PASSWORD ftp://195.20.9.86:22/{} \;
+find . -type f -exec curl -v --ftp-create-dirs -T {} -u $FTP_USER:$FTP_PASSWORD ftp://195.20.9.86:21/{} \;
 exit 0
