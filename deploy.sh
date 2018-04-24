@@ -1,4 +1,7 @@
 #!/bin/bash
+
+set -e
+
 cd public/js/
 curl -X POST -s --data-urlencode 'input@hpneo.gmaps.js' https://javascript-minifier.com/raw > hpneo.gmaps.min.js
 curl -X POST -s --data-urlencode 'input@load-photoswipe.js' https://javascript-minifier.com/raw > load-photoswipe.min.js
@@ -68,5 +71,5 @@ html-minifier --case-sensitive --collapse-whitespace -o over-ons/index.min.html 
 rm over-ons/index.html && mv over-ons/index.min.html over-ons/index.html
 html-minifier --case-sensitive --collapse-whitespace -o nieuws/index.min.html nieuws/index.html
 rm nieuws/index.html && mv nieuws/index.min.html nieuws/index.html
-find . -type f -exec curl -v --ftp-create-dirs --ftp-pasv --disable-epsv -T {} -u $FTP_USER:$FTP_PASSWORD ftp://brandweeruitgeest.nl/{} \;
+lftp -c "set ftps:initial-prot ''; set ftp:ssl-force true; set ftp:ssl-protect-data true; open ftp://$FTP_USER:$FTP_PASSWORD@$FTP_HOST:21; mirror -eRv public .; quit;"
 exit 0
