@@ -98,12 +98,9 @@ cd ..
 ls -all
 
 echo fixing the shit
-cd ~/.lftp
-ls -all
-echo 
-echo touching
-echo set ssl:verify-certificate no > rc
-cd ~
+echo set ssl:verify-certificate no
+set ssl:verify-certificate no
+
 
 echo Starting the upload
 lftp -c "set ftps:initial-prot ''; set ftp:ssl-force true; set ftp:ssl-protect-data true; open ftp://$FTP_USER:$FTP_PASSWORD@$FTP_HOST:21; mirror -eRv public .; quit;"
