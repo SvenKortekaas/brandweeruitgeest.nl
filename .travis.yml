@@ -11,7 +11,7 @@ python:
 # Clean and don't fail
 install:
   - sudo pip install pygments
-  - wget -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.37/hugo_0.37_Linux-64bit.deb
+  - wget -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.40/hugo_0.40_Linux-64bit.deb
   - sudo dpkg -i /tmp/hugo.deb
   - sudo apt install curl -y
   - chmod +x deploy.sh
