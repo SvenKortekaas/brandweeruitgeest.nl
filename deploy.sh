@@ -83,6 +83,6 @@ rm nieuws/index.html && mv nieuws/index.min.html nieuws/index.html
 cd ..
 
 echo Starting the upload
-lftp -c "set ftps:initial-prot ''; set ftp:ssl-force true; set ftp:ssl-protect-data true; set ssl:verify-certificate no; open ftp://$FTP_USER:$FTP_PASSWORD@$FTP_HOST:21; mirror -eRv public .; quit;"
+lftp -c "set ssl:verify-certificate no; open ftp://$FTP_USER:$FTP_PASSWORD@$FTP_HOST:21; mirror -eRv public .; quit;"
 
 exit 0
