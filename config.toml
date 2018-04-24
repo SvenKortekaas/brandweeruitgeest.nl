@@ -180,8 +180,8 @@ paginate = 10
         <br>Molenwerf 25
         <br>1911 DB
         <br>Uitgeest
-        <br>info@brandweeruitgeest.nl
-        <strong>Nederland</strong><br>
+        <br>Nederland
+        <br><strong>info@brandweeruitgeest</strong><br>
       """
     latitude = "52.535915"
     longitude = "4.717255"
