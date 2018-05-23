@@ -86,6 +86,6 @@ rm nieuws/index.html && mv nieuws/index.min.html nieuws/index.html
 #lftp -c "set ssl:verify-certificate no; set dns:order "inet"; set ftp:use-mdtm off; open ftp://$FTP_USER:$FTP_PASSWORD@$FTP_HOST:21; mirror --ignore-time --continue --reverse --verbose=3 --parallel=10 public .; quit;"
 
 echo Starting the upload
-find . -type f -exec curl --ftp-create-dirs -T {} -u ${FTP_USER}:${FTP_PASSWORD} ftp://${FTP_HOST}/{} \;
+find . -type f -exec curl -vvv --ftp-create-dirs -T {} -u ${FTP_USER}:${FTP_PASSWORD} ftp://${FTP_HOST}/{} \;
 
 exit 0
