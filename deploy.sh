@@ -86,10 +86,6 @@ rm nieuws/index.html && mv nieuws/index.min.html nieuws/index.html
 #lftp -c "set ssl:verify-certificate no; set dns:order "inet"; set ftp:use-mdtm off; open ftp://$FTP_USER:$FTP_PASSWORD@$FTP_HOST:21; mirror --ignore-time --continue --reverse --verbose=3 --parallel=10 public .; quit;"
 
 echo Starting the upload
-ping -c3 brandweeruitgeest.nl
-ping -c3 195.20.9.86
-ping -c3 8.8.8.8
-ping -c3 1.1.1.1
-find . -type f -exec curl -4 -vvv --ftp-create-dirs -T {} -u ${FTP_USER}:${FTP_PASSWORD} ftp://brandweeruitgeest.nl:22/{} \;
+find . -type f -exec curl -4 -vvv --ftp-create-dirs -T {} -u ${FTP_USER}:${FTP_PASSWORD} ftp://brandweeruitgeest.nl/{} \;
 
 exit 0
