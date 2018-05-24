@@ -90,6 +90,6 @@ rm nieuws/index.html && mv nieuws/index.min.html nieuws/index.html
 
 echo Starting the upload
 cd ..
-ncftpput -R -v -u "${FTP_USER}" -p "${FTP_PASSWORD}" brandweeruitgeest.nl ftp-upload-path public/*
+ncftpput -R -v -u "${FTP_USER}" -p "${FTP_PASSWORD}" brandweeruitgeest.nl / public/*
 
 exit 0

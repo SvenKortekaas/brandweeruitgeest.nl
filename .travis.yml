@@ -13,7 +13,7 @@ install:
   - chmod +x file_sizes.sh
   - rm -rf public || exit 0
   - npm install html-minifier -g
-  - sudo apt install -y lftp
+  - sudo apt install ncftp -y
 
 # Build the website
 script:
