@@ -86,7 +86,7 @@ rm nieuws/index.html && mv nieuws/index.min.html nieuws/index.html
 
 echo Starting the upload
 cd ..
-lftp -u "${FTP_USER}","${FTP_PASSWORD}" ftp://${FTP_HOST} <<EOF
+lftp -u "${FTP_USER}","${FTP_PASSWORD}" ftp://brandweeruitgeest.nl <<EOF
 # the next 3 lines put you in ftpes mode. Uncomment if you are having trouble connecting.
 # set ftp:ssl-force true
 # set ftp:ssl-protect-data true
