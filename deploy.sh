@@ -80,13 +80,12 @@ rm over-ons/index.html && mv over-ons/index.min.html over-ons/index.html
 html-minifier --case-sensitive --collapse-whitespace -o nieuws/index.min.html nieuws/index.html
 rm nieuws/index.html && mv nieuws/index.min.html nieuws/index.html
 
-#cd ..
-#
-#echo Starting the upload
-#lftp -c "set ssl:verify-certificate no; set dns:order "inet"; set ftp:use-mdtm off; open ftp://$FTP_USER:$FTP_PASSWORD@$FTP_HOST:21; mirror --ignore-time --continue --reverse --verbose=3 --parallel=10 public .; quit;"
-
 echo Starting the upload
-find . -type f -exec curl -vvv -k --ftp-create-dirs -T {} -u ${FTP_USER}:${FTP_PASSWORD} ftp://brandweeruitgeest.nl/{} \;
+cd..
+lftp -c "open ftp://$FTP_USER:$FTP_PASSWORD@$FTP_HOST:21; mirror --ignore-time --continue --reverse --verbose=3 --parallel=10 public .; quit;"
+
+#echo Starting the upload
+# find . -type f -exec curl -vvv -k --ftp-create-dirs -T {} -u ${FTP_USER}:${FTP_PASSWORD} ftp://brandweeruitgeest.nl/{} \;
 
 #echo Starting the upload
 #cd ..
