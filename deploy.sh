@@ -82,7 +82,7 @@ rm nieuws/index.html && mv nieuws/index.min.html nieuws/index.html
 
 echo Starting the upload to ftp://${FTP_HOST}
 cd ..
-lftp -c "set dns:order "inet"; open --user "${FTP_USER}" --password "${FTP_PASSWORD}" ftp://brandweeruitgeest.nl; mirror --ignore-time --continue --reverse --verbose=3 --parallel=10 public .; quit;"
+lftp -c "set dns:order "inet"; set ssl:verify-certificate false; open --user "${FTP_USER}" --password "${FTP_PASSWORD}" ftp://brandweeruitgeest.nl; mirror --ignore-time --continue --reverse --verbose=3 --parallel=10 public .; quit;"
 
 
 #echo Starting the upload
