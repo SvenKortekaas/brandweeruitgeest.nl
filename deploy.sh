@@ -82,8 +82,16 @@ rm nieuws/index.html && mv nieuws/index.min.html nieuws/index.html
 
 echo Starting the upload to ftp://${FTP_HOST}
 cd ..
-lftp -c "set cmd:trace true; set dns:order "inet"; set ssl:verify-certificate false; set ftp:sync-mode false; open --user "${FTP_USER}" --password "${FTP_PASSWORD}" ftp://brandweeruitgeest.nl; mirror --ignore-time --continue --reverse --verbose=3 --parallel=8 --use-pget-n=2 public .; quit;"
+#lftp -c "set cmd:trace true && set dns:order "inet" && set ssl:verify-certificate false && set ftp:sync-mode false && open --user "${FTP_USER}" --password "${FTP_PASSWORD}" ftp://brandweeruitgeest.nl && mirror --ignore-time --continue --reverse --verbose=3 --parallel=8 --use-pget-n=2 public .; quit;"
 
+lftp -u "${FTP_USER}","${FTP_PASSWORD}" ftp://195.20.9.86 << EOF
+    set dns:order "inet"
+    set sftp:auto-confirm yes
+    set ssl:verify-certificate false
+    set mirror:use-pget-n 10
+    mirror -c -P10 --reverse --verbose=3 public .
+    quit
+EOF
 
 #echo Starting the upload
 # find . -type f -exec curl -vvv -k --ftp-create-dirs -T {} -u ${FTP_USER}:${FTP_PASSWORD} ftp://brandweeruitgeest.nl/{} \;
