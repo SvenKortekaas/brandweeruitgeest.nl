@@ -26,6 +26,6 @@ deploy:
   # deploy master to production
   - provider: script
     skip_cleanup: true
-    script: sh deploy.sh
+    script: sudo bash deploy.sh
     on:
       branch: master
