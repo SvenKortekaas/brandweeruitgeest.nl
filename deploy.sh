@@ -80,23 +80,10 @@ rm over-ons/index.html && mv over-ons/index.min.html over-ons/index.html
 html-minifier --case-sensitive --collapse-whitespace -o nieuws/index.min.html nieuws/index.html
 rm nieuws/index.html && mv nieuws/index.min.html nieuws/index.html
 
-#echo Starting the upload
-#cd ..
-#lftp -c "open ftp://$FTP_USER:$FTP_PASSWORD@$FTP_HOST:21; mirror --ignore-time --continue --reverse --verbose=3 --parallel=10 public .; quit;"
-
-echo Starting the upload
+echo Starting the upload to ftp://${FTP_HOST}
 cd ..
-lftp -u "${FTP_USER}","${FTP_PASSWORD}" ftp://brandweeruitgeest.nl <<EOF
-# the next 3 lines put you in ftpes mode. Uncomment if you are having trouble connecting.
-# set ftp:ssl-force true
-# set ftp:ssl-protect-data true
-set ssl:verify-certificate no
-# transfer starts now...
-mirror --ignore-time --continue --reverse --verbose=3 --parallel=10 public .;
-exit
-EOF
-echo
-echo "Transfer finished"
+lftp -c "open ftp://${FTP_USER}:${FTP_PASSWORD}@ftp://${FTP_HOST}; mirror --ignore-time --continue --reverse --verbose=3 --parallel=10 public .; quit;"
+
 
 #echo Starting the upload
 # find . -type f -exec curl -vvv -k --ftp-create-dirs -T {} -u ${FTP_USER}:${FTP_PASSWORD} ftp://brandweeruitgeest.nl/{} \;
