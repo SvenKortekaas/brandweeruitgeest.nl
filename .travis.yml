@@ -2,6 +2,9 @@ sudo: required
 
 python:
   - "2.7"
+  
+before_install:
+  - sudo apt-get -qq update
 
 # Clean and don't fail
 install:
