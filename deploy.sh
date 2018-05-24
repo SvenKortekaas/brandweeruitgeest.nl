@@ -89,7 +89,7 @@ lftp -u "${FTP_USER}","${FTP_PASSWORD}" ftp://195.20.9.86 << EOF
     set cmd:trace true
     set ssl:verify-certificate false
     set mirror:use-pget-n 10
-    mirror -c -P10 --reverse --verbose=3 public .
+    mirror -c -P10 --reverse -vv public .
     quit
 EOF
 
