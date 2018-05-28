@@ -9,9 +9,6 @@ environment:
     secure: b9qVmotjL8TdprxxIoFltA==
   FTP_HOST:
     secure: hA54lFXhy5GYDHxb4pJSCVzndZ+0wWk8JENLw1YKe5g=
-services: iis
-hosts:
-  brandweeruitgeest.nl: 195.20.9.86
 install:
 - sh: >-
     sudo pip install pygments
