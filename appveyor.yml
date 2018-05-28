@@ -7,8 +7,7 @@ environment:
     secure: VDlRdMrQ7xsTQfrkNt321g==
   FTP_PASSWORD:
     secure: b9qVmotjL8TdprxxIoFltA==
-  FTP_HOST:
-    secure: hA54lFXhy5GYDHxb4pJSCVzndZ+0wWk8JENLw1YKe5g=
+  FTP_HOST: brandweeruitgeest.nl
 install:
 - sh: >-
     sudo pip install pygments
@@ -37,10 +36,9 @@ build_script:
     hugo -v
 test_script:
 - sh: sh file_sizes.sh
-before_deploy:
+deploy_script:
 - sh: >-
     cd public/js/
-
 
     echo Minify javascript
 
@@ -62,7 +60,6 @@ before_deploy:
 
 
     cd ../css/
-
 
     echo Minify css
 
@@ -87,8 +84,8 @@ before_deploy:
     rm owl.theme.css && mv owl.theme.min.css owl.theme.css
 
 
-    cd ..
 
+    cd ..
 
     echo Minify html files
 
@@ -189,11 +186,12 @@ before_deploy:
     rm nieuws/index.html && mv nieuws/index.min.html nieuws/index.html
 
     cd ..
-deploy:
-- provider: FTP
-  host: brandweeruitgeest.nl
-  protocol: ftp
-  username: brandwej
-  password:
-    secure: b9qVmotjL8TdprxxIoFltA==
-  artifact: public/**/*
+
+
+    cd public
+
+    ls -all
+
+    echo "Upload to $env:FTP_HOST"
+
+    find . -type f -exec curl -vvv -k --ftp-create-dirs -T {} -u $env:FTP_USER:$env:FTP_PASSWORD ftp://brandweeruitgeest.nl/{} \;
