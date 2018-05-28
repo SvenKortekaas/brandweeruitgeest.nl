@@ -196,4 +196,4 @@ deploy:
   username: brandwej
   password:
     secure: b9qVmotjL8TdprxxIoFltA==
-  artifact: public/*
+  artifact: public/**/*
