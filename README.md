@@ -1,4 +1,4 @@
-# Brandweer Uitgeest website [![Build Status](https://travis-ci.org/SvenKortekaas/brandweeruitgeest.nl.svg?branch=master)](https://travis-ci.org/SvenKortekaas/brandweeruitgeest.nl) [![Build status](https://ci.appveyor.com/api/projects/status/pm07f46mspr13fnr?svg=true)](https://ci.appveyor.com/project/SvenKortekaas/brandweeruitgeest-nl)
+# Brandweer Uitgeest website [![Build status](https://ci.appveyor.com/api/projects/status/pm07f46mspr13fnr?svg=true)](https://ci.appveyor.com/project/SvenKortekaas/brandweeruitgeest-nl)
 
 
 We betalen allemaal door middel van gemeentebelasting en andere bijdragen aan de brandweer van Nederland. Maar waarom mogen wij als burgers dan geen invloed hebben op de website? Dat vond ik nu ook. Daarom heb ik de website van brandweer Uitgeest hier op GitHub geplaatst. Iedereen mag en kan zijn eigen bijdrage leveren aan de website. Maar voordat het online komt bekijk ik het wel even en pas ik het zonodig aan. Dit is niet om censuur of iets dergelijks toe te passen maar om te zorgen dat het mag en past op de website van brandweer Uitgeest. Na een succesvolle pull-request word de website automatisch gebouwd en geplaatst op de server.  
