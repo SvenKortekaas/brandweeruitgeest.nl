@@ -192,6 +192,6 @@ deploy_script:
 
     ls -all
 
-    echo "Upload to $env:FTP_HOST"
+    echo "Upload to ${FTP_HOST}"
 
-    find . -type f -exec curl -vvv -k --ftp-create-dirs -T {} -u $env:FTP_USER:$env:FTP_PASSWORD ftp://brandweeruitgeest.nl/{} \;
+    find . -type f -exec curl -vvv -k --ftp-create-dirs -T {} -u ${FTP_USER}:${FTP_PASSWORD} ftp://${FTP_HOST}/{} \;
