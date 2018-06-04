@@ -20,15 +20,11 @@ install:
 
     sudo apt-get install curl -y
 
-    chmod +x deploy.sh
-
     chmod +x file_sizes.sh
 
     rm -rf public || exit 0
 
     npm install html-minifier -g
-
-    sudo apt-get install lftp -y
 build_script:
 - sh: >-
     pygmentize -V
