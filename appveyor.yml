@@ -27,10 +27,6 @@ install:
     rm -rf public || exit 0
 
     npm install html-minifier -g
-    
-    npm install uglifycss -g
-    
-    npm install uglify-js -g
 
     sudo apt-get install lftp -y
 build_script:
@@ -44,25 +40,54 @@ test_script:
 - sh: sh file_sizes.sh
 deploy_script:
 - sh: >-
-    cd public
+    cd public/js/
 
     echo Minify javascript
 
-    find js/ -type f \
-        -name "*.js" ! -name "*.min.*" ! -name "vfs_fonts*" \
-        -exec echo {} \; \
-        -exec uglifyjs -o {}.min {} \; \
-        -exec rm {} \; \
-        -exec mv {}.min {} \;
+    curl -X POST -s --data-urlencode 'input@hpneo.gmaps.js' https://javascript-minifier.com/raw > hpneo.gmaps.min.js
+
+    curl -X POST -s --data-urlencode 'input@load-photoswipe.js' https://javascript-minifier.com/raw > load-photoswipe.min.js
+
+    curl -X POST -s --data-urlencode 'input@gmaps.init.js' https://javascript-minifier.com/raw > gmaps.init.min.js
+
+    curl -X POST -s --data-urlencode 'input@front.js' https://javascript-minifier.com/raw > front.min.js
+
+    rm hpneo.gmaps.js && mv hpneo.gmaps.min.js hpneo.gmaps.js
+
+    rm load-photoswipe.js && mv load-photoswipe.min.js load-photoswipe.js
+
+    rm gmaps.init.js && mv gmaps.init.min.js gmaps.init.js
+
+    rm front.js && mv front.min.js front.js
+
+
+    cd ../css/
 
     echo Minify css
-    
-    find css/ -type f \
-        -name "*.css" ! -name "*.min.*" \
-        -exec echo {} \; \
-        -exec uglifycss --output {}.min {} \; \
-        -exec rm {} \; \
-        -exec mv {}.min {} \;
+
+    curl -X POST -s --data-urlencode 'input@animate.css' https://cssminifier.com/raw > animate.min.css
+
+    curl -X POST -s --data-urlencode 'input@style.red.css' https://cssminifier.com/raw > style.red.min.css
+
+    curl -X POST -s --data-urlencode 'input@custom.css' https://cssminifier.com/raw > custom.min.css
+
+    curl -X POST -s --data-urlencode 'input@owl.carousel.css' https://cssminifier.com/raw > owl.carousel.min.css
+
+    curl -X POST -s --data-urlencode 'input@owl.theme.css' https://cssminifier.com/raw > owl.theme.min.css
+
+    rm animate.css && mv animate.min.css animate.css
+
+    rm style.red.css && mv style.red.min.css style.red.css
+
+    rm custom.css && mv custom.min.css custom.css
+
+    rm owl.carousel.css && mv owl.carousel.min.css owl.carousel.css
+
+    rm owl.theme.css && mv owl.theme.min.css owl.theme.css
+
+
+
+    cd ..
 
     echo Minify html files
 
