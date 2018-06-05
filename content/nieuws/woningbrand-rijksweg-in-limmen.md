@@ -4,7 +4,7 @@ date = "2018-06-05T07:00:00+02:00"
 author = "Sven Kortekaas"
 tags = ["brand","woningbrand"]
 categories = ["nieuws","uitruk"]
-banner = "img/nieuws/2018-06-03-Prio1MiddelbrandWoningRijkswegLimmen/IMG_5038_1(Medium).JPG"
+banner = "img/nieuws/2018-06-03-Prio1MiddelbrandWoningRijkswegLimmen/IMG_8134(Medium).JPG"
 description = "Zondagnacht we opgeroepen voor een middelbrand op de Rijksweg in Limmen. Daar was brand uitgebroken in een werkplaats op de beganegrond. De bewoners konden gelukkig de woning op tijd verlaten."
 images = ["/img/nieuws/2018-06-03-Prio1MiddelbrandWoningRijkswegLimmen/IMG_8120(Medium).JPG","/img/nieuws/2018-06-03-Prio1MiddelbrandWoningRijkswegLimmen/IMG_8123(Medium).JPG","/img/nieuws/2018-06-03-Prio1MiddelbrandWoningRijkswegLimmen/IMG_8134(Medium).JPG"]
 +++
