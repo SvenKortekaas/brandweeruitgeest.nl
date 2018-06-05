@@ -1,6 +1,6 @@
 +++
 title = "Woningbrand Rijksweg in Limmen"
-date = "2017-06-05T07:00:00+02:00"
+date = "2018-06-05T07:00:00+02:00"
 author = "Sven Kortekaas"
 tags = ["brand","woningbrand"]
 categories = ["nieuws","uitruk"]
