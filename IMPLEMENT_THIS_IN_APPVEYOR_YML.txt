@@ -1,0 +1,15 @@
+#minification of JS files
+find js/ -type f \
+    -name "*.js" ! -name "*.min.*" ! -name "vfs_fonts*" \
+    -exec echo {} \; \
+    -exec uglifyjs -o {}.min {} \; \
+    -exec rm {} \; \
+    -exec mv {}.min {} \;
+
+#minification of CSS files
+find css/ -type f \
+    -name "*.css" ! -name "*.min.*" \
+    -exec echo {} \; \
+    -exec uglifycss --output {}.min {} \; \
+    -exec rm {} \; \
+    -exec mv {}.min {} \;
