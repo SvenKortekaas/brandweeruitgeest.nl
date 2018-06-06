@@ -144,7 +144,7 @@ Voor de brandweer en ambulance worden er vaak afkortingen gebruikt in het P2000 
 
 <a name="U"></a>**UGS** : Uitgangsstelling. Centrale verzamelplaats voor de hulpverleningsdiensten om vanuit die positie gezamelijk op te rijden naar een incident  
 
-<a name="V"></a>**VK** : Voorkeurskanaal. Word gevolgd door een nummer en dat is het kanaal waar de bevelvoerder met de AC kan praten  
+<a name="V"></a>**VK** : Voorkeurskanaal. Wordt gevolgd door een nummer en dat is het kanaal waar de bevelvoerder met de AC kan praten  
 **VKO** : Verkeersongeval  
 **VOS** : Vliegtuig Ongeval Scenario  
 **VWS** : Voorwaardescheppend, centraal opstellen van ambulance  
