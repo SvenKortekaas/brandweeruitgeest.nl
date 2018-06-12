@@ -9,7 +9,7 @@ environment:
     secure: b9qVmotjL8TdprxxIoFltA==
   FTP_HOST:
     secure: hA54lFXhy5GYDHxb4pJSCVzndZ+0wWk8JENLw1YKe5g=
-  HUGO_VERSION: 0.41
+  HUGO_VERSION: 0.42
 install:
 - sh: >-
     sudo pip install pygments
