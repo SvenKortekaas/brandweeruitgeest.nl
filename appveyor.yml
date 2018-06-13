@@ -21,10 +21,13 @@ install:
     sudo apt-get install curl -y
 
     pwd
+
     ls -all
     
     chmod +x file_sizes.sh
+
     chmod +x minify.sh
+
     chmod +x deploy.sh
 
     rm -rf public || exit 0
