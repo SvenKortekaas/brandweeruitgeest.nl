@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo Branch: ${APPVEYOR_REPO_BRANCH} or "${APPVEYOR_REPO_BRANCH}"
+
 if [ "${APPVEYOR_REPO_BRANCH}" == "master" ]
 then
 
