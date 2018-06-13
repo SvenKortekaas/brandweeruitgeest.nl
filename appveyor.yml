@@ -45,3 +45,5 @@ test_script:
     sh file_sizes.sh
     
     sh minify.sh
+deploy_script:
+- sh: sh deploy.sh

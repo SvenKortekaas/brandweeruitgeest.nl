@@ -1,6 +1,0 @@
-branches:
-  only:
-    - master
-    
-deploy_script:
-- sh: sh deploy.sh

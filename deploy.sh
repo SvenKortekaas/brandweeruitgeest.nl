@@ -1,11 +1,16 @@
 #!/bin/bash
 
-set -e
+if [ "${APPVEYOR_REPO_BRANCH}" == "master" ]
+then
 
-echo "Start uploading"
+    set -e
 
-pwd
+    echo "Start uploading"
 
-find . -type f -exec curl -k --ftp-create-dirs -T {} -u ${FTP_USER}:${FTP_PASSWORD} ftp://${FTP_HOST}/{} \;
+    pwd
 
+    find . -type f -exec curl -k --ftp-create-dirs -T {} -u ${FTP_USER}:${FTP_PASSWORD} ftp://${FTP_HOST}/{} \;
+else
+    echo "Not master branch"
+fi
 exit 0
