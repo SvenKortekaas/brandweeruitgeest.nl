@@ -46,4 +46,6 @@ test_script:
     
     sh minify.sh
 deploy_script:
-- sh: sh deploy.sh
+on:
+    branch: master
+    - sh: sh deploy.sh
