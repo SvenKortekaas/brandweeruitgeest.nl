@@ -1,6 +1,6 @@
 +++
 title = "Zeer grote brand Krommenie"
-date = "2018-06-14T10:00:00+02:00"
+date = "2018-06-14T07:00:00+02:00"
 author = "Sven Kortekaas"
 tags = ["brand","gebouw"]
 categories = ["nieuws","uitruk"]
