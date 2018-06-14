@@ -7,7 +7,7 @@ then
 
     echo "Start uploading"
 
-    pwd
+    cd public/
 
     find . -type f -exec curl -k --ftp-create-dirs -T {} -u ${FTP_USER}:${FTP_PASSWORD} ftp://${FTP_HOST}/{} \;
 else
