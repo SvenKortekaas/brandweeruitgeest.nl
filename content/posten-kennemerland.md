@@ -10,4 +10,4 @@ keywords = ["brandweer","posten","kazerners","kennemerland"]
 
 
 <div id="mapid" style="width: 100%; height: 600px;"></div>
-<script src="https://brandweeruitgeest.nl/static/js/leaflet_brw_posten_kennemerland.js"></script>
+<script src="https://brandweeruitgeest.nl/js/leaflet_brw_posten_kennemerland.js"></script>
