@@ -101,12 +101,3 @@ L.marker([52.346373, 4.628769], {icon: brandweerIcon}).addTo(mymap)
     .bindPopup("<b>Post Heemstede</b><br /><a href=\"http://www.brandweerheemstede.nl\">Website</a>");
     
 var popup = L.popup();
-
-function onMapClick(e) {
-    popup
-        .setLatLng(e.latlng)
-        .setContent("You clicked the map at " + e.latlng.toString())
-        .openOn(mymap);
-}
-
-mymap.on('click', onMapClick);
