@@ -9,10 +9,12 @@ curl -X POST -s --data-urlencode 'input@hpneo.gmaps.js' https://javascript-minif
 curl -X POST -s --data-urlencode 'input@load-photoswipe.js' https://javascript-minifier.com/raw > load-photoswipe.min.js
 curl -X POST -s --data-urlencode 'input@gmaps.init.js' https://javascript-minifier.com/raw > gmaps.init.min.js
 curl -X POST -s --data-urlencode 'input@front.js' https://javascript-minifier.com/raw > front.min.js
+curl -X POST -s --data-urlencode 'input@leaflet_brw_posten_kennemerland.js' https://javascript-minifier.com/raw > leaflet_brw_posten_kennemerland.min.js
 rm hpneo.gmaps.js && mv hpneo.gmaps.min.js hpneo.gmaps.js
 rm load-photoswipe.js && mv load-photoswipe.min.js load-photoswipe.js
 rm gmaps.init.js && mv gmaps.init.min.js gmaps.init.js
 rm front.js && mv front.min.js front.js
+rm leaflet_brw_posten_kennemerland.js && mv leaflet_brw_posten_kennemerland.min.js leaflet_brw_posten_kennemerland.js
 
 cd ../css/
 
@@ -77,6 +79,8 @@ html-minifier --case-sensitive --collapse-whitespace -o voertuigen/index.min.htm
 rm voertuigen/index.html && mv voertuigen/index.min.html voertuigen/index.html
 html-minifier --case-sensitive --collapse-whitespace -o over-ons/index.min.html over-ons/index.html
 rm over-ons/index.html && mv over-ons/index.min.html over-ons/index.html
+html-minifier --case-sensitive --collapse-whitespace -o posten-kennemerland/index.min.html posten-kennemerland/index.html
+rm posten-kennemerland/index.html && mv posten-kennemerland/index.min.html posten-kennemerland/index.html
 html-minifier --case-sensitive --collapse-whitespace -o nieuws/index.min.html nieuws/index.html
 rm nieuws/index.html && mv nieuws/index.min.html nieuws/index.html
 
