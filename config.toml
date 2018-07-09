@@ -110,8 +110,21 @@ paginate = 10
 
 [[menu.main]]
     name = "Over ons"
-    url  = "/over-ons/"
+    identifier = "over-ons"
+    url  = "/"
     weight = 6
+	
+[[menu.main]]
+    name = "Brandweer Uitgeest"
+    url  = "/over-ons/"
+    weight = 60
+	  parent = "over-ons"
+	
+[[menu.main]]
+    name = "Posten Kennemerland"
+    url  = "/posten-kennemerland/"
+    weight = 61
+	  parent = "over-ons"
 
 # Top bar social links menu
 
