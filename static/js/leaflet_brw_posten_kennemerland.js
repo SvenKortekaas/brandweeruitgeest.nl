@@ -1,4 +1,4 @@
-var mymap = L.map('mapid').setView([52.385658, 4.825745], 9);
+var mymap = L.map('mapid').setView([52.385717, 4.650506], 9);
 
 var brandweerIcon = L.icon({
     iconUrl: 'https://brandweeruitgeest.nl/img/map-logo-icon.png',
