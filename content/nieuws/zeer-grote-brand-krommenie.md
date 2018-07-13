@@ -20,3 +20,5 @@ Rond vier uur in de nacht werd het sein brandmeester gegeven en was de brand ech
 {{< tweet 1007125526035730432 >}}  
 
 {{< tweet 1007078217986052098 >}}  
+
+{{< incident-location 52 496803 4 767425 >}}  
