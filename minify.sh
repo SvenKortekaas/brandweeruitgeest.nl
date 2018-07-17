@@ -10,6 +10,7 @@ curl -X POST -s --data-urlencode 'input@load-photoswipe.js' https://javascript-m
 curl -X POST -s --data-urlencode 'input@gmaps.init.js' https://javascript-minifier.com/raw > gmaps.init.min.js
 curl -X POST -s --data-urlencode 'input@front.js' https://javascript-minifier.com/raw > front.min.js
 curl -X POST -s --data-urlencode 'input@leaflet_brw_posten_kennemerland.js' https://javascript-minifier.com/raw > leaflet_brw_posten_kennemerland.min.js
+echo Replace original with minified JS
 rm hpneo.gmaps.js && mv hpneo.gmaps.min.js hpneo.gmaps.js
 rm load-photoswipe.js && mv load-photoswipe.min.js load-photoswipe.js
 rm gmaps.init.js && mv gmaps.init.min.js gmaps.init.js
@@ -24,6 +25,7 @@ curl -X POST -s --data-urlencode 'input@style.red.css' https://cssminifier.com/r
 curl -X POST -s --data-urlencode 'input@custom.css' https://cssminifier.com/raw > custom.min.css
 curl -X POST -s --data-urlencode 'input@owl.carousel.css' https://cssminifier.com/raw > owl.carousel.min.css
 curl -X POST -s --data-urlencode 'input@owl.theme.css' https://cssminifier.com/raw > owl.theme.min.css
+echo Replace original with minified CSS
 rm animate.css && mv animate.min.css animate.css
 rm style.red.css && mv style.red.min.css style.red.css
 rm custom.css && mv custom.min.css custom.css
