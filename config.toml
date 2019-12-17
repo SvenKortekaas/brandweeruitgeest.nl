@@ -159,7 +159,7 @@ paginate = 10
     pre = "<i class='fa fa-2x fa-envelope'></i>"
 
 [params]
-    viewMorePostLink = "/nieuws/"
+    #viewMorePostLink = "/nieuws/"
     mainSections = ["nieuws"]
     author = "Sven Kortekaas"
     defaultKeywords = ["brandweer", "uitgeest", "vrk", "brw", "utg", "veiligheidsregio", "kennemerland", "ts", "112", "tankautospuit", "autospuit"]
