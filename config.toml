@@ -160,7 +160,7 @@ paginate = 10
 
 [params]
     viewMorePostLink = "/nieuws/"
-    mainSections = ["nieuws", "blog"]
+    mainSections = ["nieuws"]
     author = "Sven Kortekaas"
     defaultKeywords = ["brandweer", "uitgeest", "vrk", "brw", "utg", "veiligheidsregio", "kennemerland", "ts", "112", "tankautospuit", "autospuit"]
     defaultDescription = "Officiële website van brandweer Uitgeest"
