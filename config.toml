@@ -274,6 +274,8 @@ paginate = 10
   facebook_admin  = "SvenKortekaas"
   facebook_app_id = "953096171457298"
   
+[markup.goldmark.renderer]
+  unsafe = true  
   
 [related]
   # Only include matches with rank >= threshold. This is a normalized rank between 0 and 100.
