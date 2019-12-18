@@ -138,19 +138,19 @@ paginate = 10
     weight = 1
     name = "Facebook"
     url = "http://facebook.com/brandweeruitgeest"
-    pre = "<i class='fa fa-2x fa-facebook'></i>"
+    pre = "<i class='fab fa-facebook'></i>"
 
 [[menu.topbar]]
     weight = 2
     name = "Twitter"
     url = "http://twitter.com/brw_utg"
-    pre = "<i class='fa fa-2x fa-twitter'></i>"
+    pre = "<i class='fab fa-twitter'></i>"
 	
 [[menu.topbar]]
     weight = 3
     name = "GitHub"
     url = "https://github.com/svenkortekaas/brandweeruitgeest.nl/"
-    pre = "<i class='fa fa-2x fa-github'></i>"
+    pre = "<i class='fab fa-github'></i>"
 
 [[menu.topbar]]
     weight = 4
