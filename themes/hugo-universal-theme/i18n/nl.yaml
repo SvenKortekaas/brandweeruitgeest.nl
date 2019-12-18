@@ -5,10 +5,10 @@
   translation: "Template door"
 
 - id: portedBy
-  translation: "Geport naar Hugo door"
+  translation: "Omgezet naar Hugo door"
 
 - id: contactGoTo
-  translation: "Ga naar de contact pagina"
+  translation: "Ga naar de contactpagina"
 
 - id: contactAddrTitle
   translation: "Adres"
@@ -17,31 +17,28 @@
   translation: "Contact"
 
 - id: contactForm
-  translation: "Contact formulier"
+  translation: "Contactformulier"
 
 - id: contactName
-  translation: "Uw naam"
+  translation: "Je naam"
 
 - id: contactMail
-  translation: "Uw email"
-  
-- id: contactSubject
-  translation: "Onderwerp"
+  translation: "Je e-mailadres"
 
 - id: contactMessage
-  translation: "Uw bericht"
+  translation: "Je bericht"
 
 - id: contactSend
-  translation: "Stuur bericht"
+  translation: "Verstuur bericht"
 
 - id: navHome
   translation: "ga naar de homepage"
 
 - id: navToggle
-  translation: "Toggle Navigation"
+  translation: "Navigation Aan/Uit"
 
 - id: categoriesTitle
-  translation: "Categoriën"
+  translation: "Categorieën"
 
 - id: searchTitle
   translation: "Zoeken"
@@ -50,7 +47,7 @@
   translation: "Tags"
 
 - id: continueReading
-  translation: "Verder lezen"
+  translation: "Ga door met lezen"
 
 - id: readMore
   translation: "Lees meer"
@@ -59,7 +56,7 @@
   translation: "Door"
 
 - id: recentPosts
-  translation: "Recente artikelen"
+  translation: "Recente berichten"
 
 - id: aboutUs
   translation: "Over ons"
@@ -73,5 +70,11 @@
 - id: publishedOn
   translation: "op"
 
-- id: seeAlso
-  translation: "Bekijk ook"
+- id: 404Error
+  translation: "Fout 404: Pagina niet gevonden"
+
+- id: 404Message
+  translation: "Het spijt ons – deze pagina is er niet meer"
+
+- id: 404NavHome
+  translation: "Ga naar de homepage"
