@@ -69,7 +69,8 @@ Voor de brandweer en ambulance worden er vaak afkortingen gebruikt in het P2000 
 **GCC** : Gemeentelijk Coördinatiecentrum  
 **Gepaste Spoed** : Voor ambulance is dat een A2 rit en voor de brandweer Prio 2 rit.  
 **GEZONDHEID** : Gezondheidsproblemen. Dit kan alles omvatten.  
-**GGZ** : Gemeentelijke Gezondheidszorg  
+**GGD** : Gemeentelijke gezondheidsdienst  
+**GGZ** : Geestelijke Gezondheidszorg  
 **GHOR** : Geneeskundige Hulpverlening bij Ongevallen en Rampen  
 **GIS** : Gemeentelijk Informatiesysteem  
 **GM** : Gereedschap / Materiaalwagen  
