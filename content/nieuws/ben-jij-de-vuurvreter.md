@@ -17,7 +17,7 @@ Het is belangrijk, afwisselend en dankbaar werk. 24 uur per dag, 7 dagen per wee
 
 Wil jij onderdeel worden van een team dat elkaar helpt in wat voor een situatie dan ook? Ben jij een professional die naast zijn baan ook op zoek is naar avontuur? Ben jij bereid om te investeren in jezelf? En wil jij iets betekenen voor de veiligheid in je eigen omgeving?  
 
-**Wat verwachten we van je?**
+**Wat verwachten we van je?**  
 Je bent 18 jaar of ouder en je bent in goede gezondheid. Daarnaast woon en/of werk je in Uitgeest. Ook ben je bereid om de opleiding tot Manschap A te volgen of je bent al in bezit van het diploma Manschap A. Als echte vuurvreter ben je ook flexibel, hebt doorzettingsvermogen, een echte teamspeler en je houdt wel van actie.
  
 **Wat hebben wij voor jou?**  
