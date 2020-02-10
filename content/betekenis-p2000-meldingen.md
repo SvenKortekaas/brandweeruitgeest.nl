@@ -51,7 +51,8 @@ Voor de brandweer en ambulance worden er vaak afkortingen gebruikt in het P2000 
 **CVD** : Commandant van Dienst  
 **CVDG** : Commandant van Dienst Geneeskunde  
 
-<a name="D"></a>**DECO** : Decontaminatiebak. Haakarmbak ten behoeve van het ontsmetten van personen en materiaal gebruikt bij een inzet met gevaarlijke stoffen  
+<a name="D"></a>**DCU** : Decentrale Uitgifte. Bij grote drukte op de meldkamer, storm bijvoorbeeld, worden prio 2 meldingen afgehandeld op de posten zelf. Dit om de meldkamer te ontlasten.
+**DECO** : Decontaminatiebak. Haakarmbak ten behoeve van het ontsmetten van personen en materiaal gebruikt bij een inzet met gevaarlijke stoffen  
 **DIA** : Direct inzetbare ambulance  
 **DIB** : Direct inzetbare brandweer  
 **DP** : Haakarmbak met dompelpomp  
