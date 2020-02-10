@@ -12,6 +12,8 @@ environment:
   HUGO_VERSION: 0.64.1
 install:
 - sh: >-
+    sudo apt-get -y upgrade
+
     sudo pip install --upgrade pip
 
     sudo pip install pygments
