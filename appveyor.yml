@@ -12,11 +12,9 @@ environment:
   HUGO_VERSION: 0.64.1
 install:
 - sh: >-
-    sudo apt-get -y upgrade
+    sudo apt-get install python3-pip
 
-    sudo pip install --upgrade pip
-
-    sudo pip install pygments
+    sudo pip3 install pygments
 
     wget -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.deb
 
