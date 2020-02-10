@@ -1,7 +1,7 @@
 version: 1.0.{build}
 image: Ubuntu
 init:
-- sh: sudo apt-get -qq update
+- sh: sudo apt-get -y update
 environment:
   FTP_USER:
     secure: VDlRdMrQ7xsTQfrkNt321g==
@@ -12,6 +12,8 @@ environment:
   HUGO_VERSION: 0.64.1
 install:
 - sh: >-
+    sudo pip install --upgrade pip
+
     sudo pip install pygments
 
     wget -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.deb
