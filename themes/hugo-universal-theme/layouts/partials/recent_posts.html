@@ -22,9 +22,9 @@
                         <div class="top">
                             <div class="image" style="overflow:hidden">
                                 {{ if isset .Params "banner" }}
-                                <img src="{{ .Params.banner | relURL }}" class="img-responsive" alt="" >
+                                <img src="{{ .Params.banner | relURL }}" class="img-responsive" alt="" loading="lazy" >
                                 {{ else }}
-                                <img src="{{ "img/placeholder.png" | relURL }}" class="img-responsive" alt="">
+                                <img src="{{ "img/placeholder.png" | relURL }}" class="img-responsive" alt="" loading="lazy" >
                                 {{ end }}
                             </div>
                             <div class="bg"></div>
