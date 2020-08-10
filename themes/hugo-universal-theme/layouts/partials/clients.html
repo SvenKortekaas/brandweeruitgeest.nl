@@ -18,10 +18,10 @@
                     <li class="item" title="{{ .name }}">
                         {{ if .url }}
                           <a href="{{ .url }}" target="_blank">
-                            <img src="{{ .image }}" alt="{{ .name }}" class="img-responsive" />
+                            <img src="{{ .image }}" alt="{{ .name }}" class="img-responsive" loading="lazy" />
                           </a>
                         {{ else }}
-                          <img src="{{ .image }}" alt="{{ .name }}" class="img-responsive" />
+                          <img src="{{ .image }}" alt="{{ .name }}" class="img-responsive" loading="lazy" />
                         {{ end }}
                     </li>
                     {{ end }}
