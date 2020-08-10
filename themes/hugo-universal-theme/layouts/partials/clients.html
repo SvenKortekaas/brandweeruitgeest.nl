@@ -17,7 +17,7 @@
                     {{ range .Site.Data.clients }}
                     <li class="item" title="{{ .name }}">
                         {{ if .url }}
-                          <a href="{{ .url }}" target="_blank">
+                          <a href="{{ .url }}" target="_blank" rel="noreferrer" >
                             <img src="{{ .image }}" alt="{{ .name }}" class="img-responsive" loading="lazy" />
                           </a>
                         {{ else }}
