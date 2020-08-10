@@ -24,9 +24,9 @@
                     <div class="image same-height-always">
                         <a href="{{ .Permalink }}">
                           {{ if isset .Params "banner" }}
-                            <img src="{{ .Params.banner | relURL }}" class="img-responsive" alt="{{ .Title }} loading="lazy" ">
+                            <img src="{{ .Params.banner | relURL }}" class="img-responsive" alt="{{ .Title }}" loading="lazy" >
                           {{ else }}
-                            <img src="{{ "img/placeholder.png" | relURL }}" class="img-responsive" alt="{{ .Title }} loading="lazy" ">
+                            <img src="{{ "img/placeholder.png" | relURL }}" class="img-responsive" alt="{{ .Title }}" loading="lazy" >
                           {{ end }}
                         </a>
                     </div>
