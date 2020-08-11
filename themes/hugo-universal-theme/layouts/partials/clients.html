@@ -18,9 +18,11 @@
                     <li class="item" title="{{ .name }}">
                         {{ if .url }}
                           <a href="{{ .url }}" target="_blank" rel="noreferrer" >
+                            <h3>{{ .name | markdownify }}</h3>
                             <img src="{{ .image }}" alt="{{ .name }}" class="img-responsive" loading="lazy" />
                           </a>
                         {{ else }}
+                          <h3>{{ .name | markdownify }}</h3>
                           <img src="{{ .image }}" alt="{{ .name }}" class="img-responsive" loading="lazy" />
                         {{ end }}
                     </li>
