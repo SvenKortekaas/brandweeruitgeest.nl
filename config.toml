@@ -240,7 +240,7 @@ paginate = 10
     subtitle = "Het laatste nieuws van en over brandweer Uitgeest vind je hier. Je kunt hier onder andere iets lezen over de laatste uitruk die we gehad hebben, een evenement waar we aan mee hebben gewerkt of ander belangrijk nieuws."
 
 [params.features]
-    enable = true
+    enable = false
     # All features are defined in their own files. You can find example items
     # at 'exampleSite/data/features'.
     # For more information take a look at the README.
@@ -272,7 +272,7 @@ paginate = 10
     # All clients are defined in their own files. You can find example items
     # at 'exampleSite/data/clients'.
     # For more information take a look at the README.
-    title = "Links"
+    title = "Voertuigen"
     subtitle = ""
 
 [social]
