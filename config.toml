@@ -196,7 +196,7 @@ paginate = 10
     email = "info@brandweeruitgeest.nl"
 
     about_us = "<p>De brandweer post Uitgeest is onderdeel van Veiligheidsregio Kennemerland is gelegen aan de Molenwerf 25 te Uitgeest</p>"
-    copyright = "Copyright (c) 2004 - 2018, Brandweer Uitgeest; all rights reserved."
+    copyright = "Copyright (c) 2004 - 2020, Brandweer Uitgeest; all rights reserved."
 
     # Format dates with Go's time formatting
     date_format = "January 2, 2006"
