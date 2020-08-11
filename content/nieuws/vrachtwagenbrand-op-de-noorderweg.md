@@ -15,7 +15,7 @@ Op de Noorderweg in Beverwijk heeft de lading van een vrachtwagen vlam gevat. De
 
 Omdat er op die locatie slechte waterwin mogelijkheden zijn is de watertankwagen van brandweer Uitgeest opgeroepen. Hierin zit 15.000 liter water. Genoeg om in ieder geval de bak van de vrachtwagen te blussen.  
 
-{{< facebook-post https://www.facebook.com/Nikosvk112/posts/2846727858946967 >}}  
+{{< facebook-post Nikosvk112/posts/2846727858946967 >}}  
 
 {{< tweet 1290897911547650053 >}}  
 
