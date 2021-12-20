@@ -17,6 +17,6 @@ Omdat er op die locatie slechte waterwin mogelijkheden zijn is de watertankwagen
 
 {{< facebook-post Nikosvk112 2846727858946967 >}}  
 
-{{< tweet 1290897911547650053 >}}  
+{{< tweet user="ernst83" id="1290897911547650053" >}}  
 
 {{< incident-location 52 476480 4 678626 >}}
