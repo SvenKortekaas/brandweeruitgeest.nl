@@ -17,8 +17,8 @@ Een houten leegstaand gebouw dat tussen een schilders- en glaszettersbedrijf en 
 
 Rond vier uur in de nacht werd het sein brandmeester gegeven en was de brand echt onder controle. Gelukkig raakte niemand gewond tijdens de brand. Helaas is er wel veel schade aan omliggende panden.  
 
-{{< tweet 1007125526035730432 >}}  
+{{< tweet user="Brw_Zaandijk" id="1007125526035730432" >}}  
 
-{{< tweet 1007078217986052098 >}}  
+{{< tweet user="POL_Krommenie" id="1007078217986052098" >}}  
 
 {{< incident-location 52 496803 4 767425 >}}  
