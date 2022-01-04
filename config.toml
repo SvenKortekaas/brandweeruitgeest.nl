@@ -33,6 +33,12 @@ paginate = 10
     weight = 3
 	
 [[menu.main]]
+    name = "2022"
+    url  = "/2022/"
+    weight = 26
+	  parent = "uitrukken"
+	
+[[menu.main]]
     name = "2021"
     url  = "/2021/"
     weight = 27
