@@ -37,6 +37,10 @@ cd ..
 echo Minify html files
 html-minifier --case-sensitive --collapse-whitespace -o index.min.html index.html
 rm index.html && mv index.min.html index.html
+html-minifier --case-sensitive --collapse-whitespace -o 2022/index.min.html 2022/index.html
+rm 2022/index.html && mv 2022/index.min.html 2022/index.html
+html-minifier --case-sensitive --collapse-whitespace -o 2021/index.min.html 2021/index.html
+rm 2021/index.html && mv 2021/index.min.html 2021/index.html
 html-minifier --case-sensitive --collapse-whitespace -o 2020/index.min.html 2020/index.html
 rm 2020/index.html && mv 2020/index.min.html 2020/index.html
 html-minifier --case-sensitive --collapse-whitespace -o 2019/index.min.html 2019/index.html
