@@ -94,6 +94,6 @@ rm posten-kennemerland/index.html && mv posten-kennemerland/index.min.html poste
 html-minifier --case-sensitive --collapse-whitespace -o nieuws/index.min.html nieuws/index.html
 rm nieuws/index.html && mv nieuws/index.min.html nieuws/index.html
 
-ls -all
+ls -R -all
 
 exit 0
