@@ -2,9 +2,9 @@
 
 set -e
 
+cd public/js/
+
 # https://javascript-minifier.com/raw is broken - todo: need to replace with https://www.toptal.com/developers/javascript-minifier/api/raw
-# cd public/js/
-#
 # echo Minify javascript
 # curl -X POST -s --data-urlencode 'input@hpneo.gmaps.js' https://javascript-minifier.com/raw > hpneo.gmaps.min.js
 # curl -X POST -s --data-urlencode 'input@load-photoswipe.js' https://javascript-minifier.com/raw > load-photoswipe.min.js
@@ -33,8 +33,8 @@ set -e
 # rm custom.css && mv custom.min.css custom.css
 # rm owl.carousel.css && mv owl.carousel.min.css owl.carousel.css
 # rm owl.theme.css && mv owl.theme.min.css owl.theme.css
-#
-# cd ..
+
+cd ..
 
 echo Minify html files
 html-minifier --case-sensitive --collapse-whitespace -o index.min.html index.html
