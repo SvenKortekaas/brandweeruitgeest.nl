@@ -4,7 +4,7 @@ set -e
 
 cd public/js/
 
-https://javascript-minifier.com/raw is broken - todo: need to replace with https://www.toptal.com/developers/javascript-minifier/api/raw
+# https://javascript-minifier.com/raw is broken - todo: need to replace with https://www.toptal.com/developers/javascript-minifier/api/raw
 echo Minify javascript
 curl -X POST -s --data-urlencode 'input@hpneo.gmaps.js' https://www.toptal.com/developers/javascript-minifier/api/raw > hpneo.gmaps.min.js
 curl -X POST -s --data-urlencode 'input@load-photoswipe.js' https://www.toptal.com/developers/javascript-minifier/api/raw > load-photoswipe.min.js
