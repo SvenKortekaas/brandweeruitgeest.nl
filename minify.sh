@@ -4,20 +4,27 @@ set -e
 
 cd public/js/
 
-# https://javascript-minifier.com/raw is broken - todo: need to replace with https://www.toptal.com/developers/javascript-minifier/api/raw
-# echo Minify javascript
-# curl -X POST -s --data-urlencode 'input@hpneo.gmaps.js' https://javascript-minifier.com/raw > hpneo.gmaps.min.js
-# curl -X POST -s --data-urlencode 'input@load-photoswipe.js' https://javascript-minifier.com/raw > load-photoswipe.min.js
-# curl -X POST -s --data-urlencode 'input@gmaps.init.js' https://javascript-minifier.com/raw > gmaps.init.min.js
-# curl -X POST -s --data-urlencode 'input@front.js' https://javascript-minifier.com/raw > front.min.js
-# curl -X POST -s --data-urlencode 'input@leaflet_brw_posten_kennemerland.js' https://javascript-minifier.com/raw > leaflet_brw_posten_kennemerland.min.js
-# echo Replace original with minified JS
-# rm hpneo.gmaps.js && mv hpneo.gmaps.min.js hpneo.gmaps.js
-# rm load-photoswipe.js && mv load-photoswipe.min.js load-photoswipe.js
-# rm gmaps.init.js && mv gmaps.init.min.js gmaps.init.js
-# rm front.js && mv front.min.js front.js
-# rm leaflet_brw_posten_kennemerland.js && mv leaflet_brw_posten_kennemerland.min.js leaflet_brw_posten_kennemerland.js
-#
+https://javascript-minifier.com/raw is broken - todo: need to replace with https://www.toptal.com/developers/javascript-minifier/api/raw
+echo Minify javascript
+curl -X POST -s --data-urlencode 'input@hpneo.gmaps.js' https://www.toptal.com/developers/javascript-minifier/api/raw > hpneo.gmaps.min.js
+curl -X POST -s --data-urlencode 'input@load-photoswipe.js' https://www.toptal.com/developers/javascript-minifier/api/raw > load-photoswipe.min.js
+curl -X POST -s --data-urlencode 'input@gmaps.init.js' https://www.toptal.com/developers/javascript-minifier/api/raw > gmaps.init.min.js
+curl -X POST -s --data-urlencode 'input@front.js' https://www.toptal.com/developers/javascript-minifier/api/raw > front.min.js
+curl -X POST -s --data-urlencode 'input@leaflet_brw_posten_kennemerland.js' https://www.toptal.com/developers/javascript-minifier/api/raw > leaflet_brw_posten_kennemerland.min.js
+echo Replace original with minified JS
+echo cat JS files
+cat hpneo.gmaps.min.js && cat hpneo.gmaps.js
+cat load-photoswipe.min.js && cat load-photoswipe.js
+cat gmaps.init.min.js && cat gmaps.init.js
+cat front.min.js && cat front.js
+cat leaflet_brw_posten_kennemerland.min.js && cat leaflet_brw_posten_kennemerland.js
+
+rm hpneo.gmaps.js && mv hpneo.gmaps.min.js hpneo.gmaps.js
+rm load-photoswipe.js && mv load-photoswipe.min.js load-photoswipe.js
+rm gmaps.init.js && mv gmaps.init.min.js gmaps.init.js
+rm front.js && mv front.min.js front.js
+rm leaflet_brw_posten_kennemerland.js && mv leaflet_brw_posten_kennemerland.min.js leaflet_brw_posten_kennemerland.js
+
 # https://cssminifier.com/raw is broken - todo: need to replace with https://www.toptal.com/developers/cssminifier
 # cd ../css/
 # 
