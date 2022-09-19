@@ -20,7 +20,7 @@ install:
 
     sudo tar -zxvf hugo.tar.gz
 
-    sudo dpkg -i /tmp/hugo/hugo.deb
+    sudo dpkg -i /tmp/hugo/hugo
 
     sudo apt-get install curl -y
 
