@@ -13,11 +13,13 @@ curl -X POST -s --data-urlencode 'input@front.js' https://www.toptal.com/develop
 curl -X POST -s --data-urlencode 'input@leaflet_brw_posten_kennemerland.js' https://www.toptal.com/developers/javascript-minifier/api/raw > leaflet_brw_posten_kennemerland.min.js
 echo Replace original with minified JS
 echo cat JS files
-cat hpneo.gmaps.min.js && cat hpneo.gmaps.js
-cat load-photoswipe.min.js && cat load-photoswipe.js
-cat gmaps.init.min.js && cat gmaps.init.js
-cat front.min.js && cat front.js
-cat leaflet_brw_posten_kennemerland.min.js && cat leaflet_brw_posten_kennemerland.js
+cat leaflet_brw_posten_kennemerland.min.js
+echo
+echo
+echo FULL VERSION
+echo
+echo
+cat leaflet_brw_posten_kennemerland.js
 
 rm hpneo.gmaps.js && mv hpneo.gmaps.min.js hpneo.gmaps.js
 rm load-photoswipe.js && mv load-photoswipe.min.js load-photoswipe.js
