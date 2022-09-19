@@ -4,35 +4,33 @@ set -e
 
 cd public/js/
 
-# https://javascript-minifier.com/raw is broken - todo: need to replace with https://www.toptal.com/developers/javascript-minifier/api/raw
-# echo Minify javascript
-# curl -X POST -s --data-urlencode 'input@hpneo.gmaps.js' https://javascript-minifier.com/raw > hpneo.gmaps.min.js
-# curl -X POST -s --data-urlencode 'input@load-photoswipe.js' https://javascript-minifier.com/raw > load-photoswipe.min.js
-# curl -X POST -s --data-urlencode 'input@gmaps.init.js' https://javascript-minifier.com/raw > gmaps.init.min.js
-# curl -X POST -s --data-urlencode 'input@front.js' https://javascript-minifier.com/raw > front.min.js
-# curl -X POST -s --data-urlencode 'input@leaflet_brw_posten_kennemerland.js' https://javascript-minifier.com/raw > leaflet_brw_posten_kennemerland.min.js
-# echo Replace original with minified JS
-# rm hpneo.gmaps.js && mv hpneo.gmaps.min.js hpneo.gmaps.js
-# rm load-photoswipe.js && mv load-photoswipe.min.js load-photoswipe.js
-# rm gmaps.init.js && mv gmaps.init.min.js gmaps.init.js
-# rm front.js && mv front.min.js front.js
-# rm leaflet_brw_posten_kennemerland.js && mv leaflet_brw_posten_kennemerland.min.js leaflet_brw_posten_kennemerland.js
-#
-# https://cssminifier.com/raw is broken - todo: need to replace with https://www.toptal.com/developers/cssminifier
-# cd ../css/
-# 
-# echo Minify css
-# curl -X POST -s --data-urlencode 'input@animate.css' https://cssminifier.com/raw > animate.min.css
-# curl -X POST -s --data-urlencode 'input@style.red.css' https://cssminifier.com/raw > style.red.min.css
-# curl -X POST -s --data-urlencode 'input@custom.css' https://cssminifier.com/raw > custom.min.css
-# curl -X POST -s --data-urlencode 'input@owl.carousel.css' https://cssminifier.com/raw > owl.carousel.min.css
-# curl -X POST -s --data-urlencode 'input@owl.theme.css' https://cssminifier.com/raw > owl.theme.min.css
-# echo Replace original with minified CSS
-# rm animate.css && mv animate.min.css animate.css
-# rm style.red.css && mv style.red.min.css style.red.css
-# rm custom.css && mv custom.min.css custom.css
-# rm owl.carousel.css && mv owl.carousel.min.css owl.carousel.css
-# rm owl.theme.css && mv owl.theme.min.css owl.theme.css
+echo Minify javascript
+curl -X POST -s --data-urlencode 'input@hpneo.gmaps.js' https://www.toptal.com/developers/javascript-minifier/api/raw > hpneo.gmaps.min.js
+curl -X POST -s --data-urlencode 'input@load-photoswipe.js' https://www.toptal.com/developers/javascript-minifier/api/raw > load-photoswipe.min.js
+curl -X POST -s --data-urlencode 'input@gmaps.init.js' https://www.toptal.com/developers/javascript-minifier/api/raw > gmaps.init.min.js
+curl -X POST -s --data-urlencode 'input@front.js' https://www.toptal.com/developers/javascript-minifier/api/raw > front.min.js
+curl -X POST -s --data-urlencode 'input@leaflet_brw_posten_kennemerland.js' https://www.toptal.com/developers/javascript-minifier/api/raw > leaflet_brw_posten_kennemerland.min.js
+echo Replace original with minified JS
+rm hpneo.gmaps.js && mv hpneo.gmaps.min.js hpneo.gmaps.js
+rm load-photoswipe.js && mv load-photoswipe.min.js load-photoswipe.js
+rm gmaps.init.js && mv gmaps.init.min.js gmaps.init.js
+rm front.js && mv front.min.js front.js
+rm leaflet_brw_posten_kennemerland.js && mv leaflet_brw_posten_kennemerland.min.js leaflet_brw_posten_kennemerland.js
+
+cd ../css/
+ 
+echo Minify css
+curl -X POST -s --data-urlencode 'input@animate.css' https://www.toptal.com/developers/cssminifier/api/raw > animate.min.css
+curl -X POST -s --data-urlencode 'input@style.red.css' https://www.toptal.com/developers/cssminifier/api/raw > style.red.min.css
+curl -X POST -s --data-urlencode 'input@custom.css' https://www.toptal.com/developers/cssminifier/api/raw > custom.min.css
+curl -X POST -s --data-urlencode 'input@owl.carousel.css' https://www.toptal.com/developers/cssminifier/api/raw > owl.carousel.min.css
+curl -X POST -s --data-urlencode 'input@owl.theme.css' https://www.toptal.com/developers/cssminifier/api/raw > owl.theme.min.css
+echo Replace original with minified CSS
+rm animate.css && mv animate.min.css animate.css
+rm style.red.css && mv style.red.min.css style.red.css
+rm custom.css && mv custom.min.css custom.css
+rm owl.carousel.css && mv owl.carousel.min.css owl.carousel.css
+rm owl.theme.css && mv owl.theme.min.css owl.theme.css
 
 cd ..
 
