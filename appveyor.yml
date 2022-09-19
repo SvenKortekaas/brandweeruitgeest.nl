@@ -18,7 +18,7 @@ install:
 
     wget -O /tmp/hugo.tar.gz https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
 
-    sudo tar -zxvf hugo.tar.gz
+    sudo tar -zxvf /tmp/hugo.tar.gz
 
     sudo dpkg -i /tmp/hugo/hugo
 
