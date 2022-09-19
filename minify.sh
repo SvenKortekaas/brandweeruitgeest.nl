@@ -32,13 +32,13 @@ echo
 echo Cat the files
 echo
 echo
-cat animate.min.css
+cat animate.css
 echo
 echo
 echo FULL VERSION
 echo
 echo
-cat animate.css
+cat animate.min.css
 
 rm animate.css && mv animate.min.css animate.css
 rm style.red.css && mv style.red.min.css style.red.css
