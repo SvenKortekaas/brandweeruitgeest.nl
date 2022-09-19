@@ -9,14 +9,14 @@ environment:
     secure: b9qVmotjL8TdprxxIoFltA==
   FTP_HOST:
     secure: hA54lFXhy5GYDHxb4pJSCVzndZ+0wWk8JENLw1YKe5g=
-  HUGO_VERSION: 0.102.3
+  HUGO_VERSION: 0.103.1
 install:
 - sh: >-
     sudo apt-get install python3-pip
 
     sudo pip3 install pygments
 
-    wget -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.deb
+    wget -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_linux-amd64.deb 
 
     sudo dpkg -i /tmp/hugo.deb
 
