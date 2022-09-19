@@ -17,7 +17,6 @@ rm gmaps.init.js && mv gmaps.init.min.js gmaps.init.js
 rm front.js && mv front.min.js front.js
 rm leaflet_brw_posten_kennemerland.js && mv leaflet_brw_posten_kennemerland.min.js leaflet_brw_posten_kennemerland.js
 
-# https://cssminifier.com/raw is broken - todo: need to replace with https://www.toptal.com/developers/cssminifier
 cd ../css/
  
 echo Minify css
@@ -27,19 +26,6 @@ curl -X POST -s --data-urlencode 'input@custom.css' https://www.toptal.com/devel
 curl -X POST -s --data-urlencode 'input@owl.carousel.css' https://www.toptal.com/developers/cssminifier/api/raw > owl.carousel.min.css
 curl -X POST -s --data-urlencode 'input@owl.theme.css' https://www.toptal.com/developers/cssminifier/api/raw > owl.theme.min.css
 echo Replace original with minified CSS
-echo
-echo
-echo Cat the files
-echo
-echo
-cat animate.css
-echo
-echo
-echo FULL VERSION
-echo
-echo
-cat animate.min.css
-
 rm animate.css && mv animate.min.css animate.css
 rm style.red.css && mv style.red.min.css style.red.css
 rm custom.css && mv custom.min.css custom.css
