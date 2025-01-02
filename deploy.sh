@@ -9,7 +9,7 @@ then
 
     cd public/
 
-    find . -type f -exec curl -v -k --ftp-create-dirs -T {} -u ${FTP_USER}:${FTP_PASSWORD} ftp://${FTP_HOST}/{} \;
+    find . -type f -exec curl -v -k --ftp-ssl --ftp-create-dirs -T {} -u ${FTP_USER}:${FTP_PASSWORD} ftp://${FTP_HOST}/{} \;
 else
     echo "Not master branch"
 fi
