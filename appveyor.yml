@@ -8,7 +8,7 @@ environment:
   FTP_PASSWORD:
     secure: 10tfMBWMeZwxsAXFQaUuZ7N8itQfo/qwjYNvEWB34RlGoVZoNyb62IlAzCtJiASm
   FTP_HOST:
-    secure: hA54lFXhy5GYDHxb4pJSCVzndZ+0wWk8JENLw1YKe5g=
+    secure: E2ywmw/ZqRhTMvvBDaxLlniNK5a74S3d2H203hI54hQ=
   HUGO_VERSION: 0.119.0
 install:
 - sh: >-
