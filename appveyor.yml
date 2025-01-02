@@ -41,7 +41,7 @@ build_script:
 
     git submodule update --init --recursive
 
-    hugo -v
+    hugo --logLevel debug
 test_script:
 - sh: >-
     sh file_sizes.sh
