@@ -9,7 +9,7 @@ environment:
     secure: b9qVmotjL8TdprxxIoFltA==
   FTP_HOST:
     secure: hA54lFXhy5GYDHxb4pJSCVzndZ+0wWk8JENLw1YKe5g=
-  HUGO_VERSION: 0.104.0
+  HUGO_VERSION: 0.119.0
 install:
 - sh: >-
     sudo apt-get install python3-pip
@@ -41,7 +41,7 @@ build_script:
 
     git submodule update --init --recursive
 
-    hugo -v
+    hugo --logLevel debug
 test_script:
 - sh: >-
     sh file_sizes.sh
