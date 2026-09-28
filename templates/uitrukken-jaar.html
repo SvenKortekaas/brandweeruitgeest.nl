@@ -8,12 +8,25 @@
     {% if vorige %}<a href="/uitrukken/{{ vorige }}/" rel="prev">{{ vorige }}</a>{% endif %}
     {% if volgende %}<a href="/uitrukken/{{ volgende }}/" rel="next">{{ volgende }}</a>{% endif %}
   </nav>
-  <nav aria-label="Maanden">
+  <nav aria-labelledby="kop-maanden">
+    <h2 id="kop-maanden" class="filterkop">Naar maand</h2>
     <ul class="ankers">
     {% for m in per_maand %}<li><a href="#{{ maanden[m - 1] }}">{{ maanden[m - 1] }}</a></li>{% endfor %}
     </ul>
   </nav>
+  <nav aria-labelledby="kop-soort">
+    <h2 id="kop-soort" class="filterkop">Filter op soort</h2>
+    <ul class="ankers">
+      <li><a href="#alle">Alle ({{ aantal }})</a></li>
+    {% for slug, naam, n in groepen %}<li><a href="#soort-{{ slug }}">{{ naam }} ({{ n }})</a></li>{% endfor %}
+    </ul>
+  </nav>
 </div>
+<span id="alle" class="filterdoel"></span>
+{% for slug, naam, n in groepen %}<span id="soort-{{ slug }}" class="filterdoel"></span>
+{% endfor %}
+{% for slug, naam, n in groepen %}<p class="filter-actief filter-{{ slug }}" role="status">Je ziet alleen <strong>{{ naam|lower }}</strong> ({{ n }}). <a href="#alle">Toon alle uitrukken</a></p>
+{% endfor %}
 <details class="soorten">
   <summary>Totalen per soort melding</summary>
   <div class="tabel-schuif">
@@ -26,14 +39,14 @@
   </div>
 </details>
 {% for m, regels in per_maand.items() %}
-<section aria-labelledby="{{ maanden[m - 1] }}">
-  <h2 id="{{ maanden[m - 1] }}">{{ maanden[m - 1]|capitalize }} ({{ regels|length }})</h2>
+<section class="maand{% for g in groepen_per_maand[m]|sort %} heeft-{{ g }}{% endfor %}" aria-labelledby="{{ maanden[m - 1] }}">
+  <h2 id="{{ maanden[m - 1] }}">{{ maanden[m - 1]|capitalize }}<span class="maand-aantal"> ({{ regels|length }})</span></h2>
   <div class="tabel-schuif">
   <table class="uitrukken">
     <thead><tr><th scope="col">Nr.</th><th scope="col">Datum</th><th scope="col">Prio</th><th scope="col">Melding</th><th scope="col">Adres</th><th scope="col">Plaats</th></tr></thead>
     <tbody>
     {% for r in regels %}
-      <tr>
+      <tr class="s-{{ r.groep }}">
         <td>{{ r.nr }}</td>
         <td><time datetime="{{ r.datum.isoformat() }}">{{ r.datum|datum(False) }}</time></td>
         <td>{% if r.prio %}<span class="prio prio-{{ r.prio }}">{{ r.prio }}</span>{% endif %}</td>

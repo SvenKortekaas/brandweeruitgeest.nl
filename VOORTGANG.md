@@ -160,7 +160,12 @@ Fase 3: migratie. Uitgevoerd 28-09-2026, wacht op controle door Sven (op v2.bran
   - Proef via HA (28-09-2026): proefalarm kwam aan in GitHub (run 2) en is terecht overgeslagen. De keten HA, token en workflow werkt.
   - Nieuwe pagina 112NL-app alleen in de voet, niet in het hoofdmenu (Sven).
 
+- 28-09-2026, fase 4 weergave: filteren op maand en soort op de jaarpagina's, zonder JS.
+  - Maand: sprongankers naar elke maand (bestond al).
+  - Soort: zeven groepen (Brand, Automatische melding, Ongeval en hulpverlening, Ambulance en reanimatie, Water, Dieren, Overig), met aantallen. Een link naar `#soort-x` verbergt via CSS `:target` alle andere regels en lege maanden en toont "Je ziet alleen ...". De indeling staat in `SOORTGROEPEN` in `build.py` (op trefwoorden, want de oude meldingen hebben veel schrijfwijzen); de slugs staan ook in `static/css/site.css`.
+  - De tabel met totalen per exacte melding blijft. Getest in Chromium op 1200 en 390 px breed.
+
 ## Volgende stap
 
 1. Eerste echte uitruk afwachten en controleren: komt de regel in `data/uitrukken/2026.csv` en op de testsite? Nog niet getest: pushen door `github-actions[bot]` naar `v2` en publiceren via de omgeving `p2000`. Faalt de run, dan krijgt Sven een mail van GitHub.
-2. Daarna fase 4 afronden (weergave uitrukken: filteren op soort) en fase 5 (livegang).
+2. Sven: filter op de testsite bekijken (bijv. /uitrukken/2024/). Daarna fase 5 (livegang).

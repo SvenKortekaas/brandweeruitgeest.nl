@@ -164,6 +164,34 @@ thead th { background: var(--vlak); }
 .jaarnav a[rel="prev"]::before { content: "\2190\00a0"; }
 .jaarnav a[rel="next"]::after { content: "\00a0\2192"; }
 
+/* Filter op soort zonder JS: een link naar #soort-x maakt dat lege element :target.
+   De slugs komen uit SOORTGROEPEN in build.py; houd ze gelijk. */
+.filterkop { font-size: 1rem; margin: 1rem 0 .25rem; }
+.filterdoel { display: block; height: 0; scroll-margin-top: 1rem; }
+.filter-actief { display: none; padding: .6rem .8rem; background: var(--vlak); border-left: 4px solid var(--rood); }
+.filterdoel:target ~ .maand .maand-aantal { display: none; }
+#soort-automatisch:target ~ .filter-automatisch { display: block; }
+#soort-automatisch:target ~ .maand:not(.heeft-automatisch),
+#soort-automatisch:target ~ .maand tbody tr:not(.s-automatisch) { display: none; }
+#soort-ambulance:target ~ .filter-ambulance { display: block; }
+#soort-ambulance:target ~ .maand:not(.heeft-ambulance),
+#soort-ambulance:target ~ .maand tbody tr:not(.s-ambulance) { display: none; }
+#soort-dieren:target ~ .filter-dieren { display: block; }
+#soort-dieren:target ~ .maand:not(.heeft-dieren),
+#soort-dieren:target ~ .maand tbody tr:not(.s-dieren) { display: none; }
+#soort-water:target ~ .filter-water { display: block; }
+#soort-water:target ~ .maand:not(.heeft-water),
+#soort-water:target ~ .maand tbody tr:not(.s-water) { display: none; }
+#soort-brand:target ~ .filter-brand { display: block; }
+#soort-brand:target ~ .maand:not(.heeft-brand),
+#soort-brand:target ~ .maand tbody tr:not(.s-brand) { display: none; }
+#soort-hulpverlening:target ~ .filter-hulpverlening { display: block; }
+#soort-hulpverlening:target ~ .maand:not(.heeft-hulpverlening),
+#soort-hulpverlening:target ~ .maand tbody tr:not(.s-hulpverlening) { display: none; }
+#soort-overig:target ~ .filter-overig { display: block; }
+#soort-overig:target ~ .maand:not(.heeft-overig),
+#soort-overig:target ~ .maand tbody tr:not(.s-overig) { display: none; }
+
 .soorten { margin: 1rem 0 2rem; }
 .soorten summary { cursor: pointer; font-weight: 700; }
 

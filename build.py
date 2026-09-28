@@ -61,6 +61,32 @@ def lees_markdown(pad):
     return meta, Markup(body)
 
 
+# Groepen om op te filteren (jaarpagina, via ankers zonder JS). De eerste passende regel
+# wint. De slugs staan ook in static/css/site.css (filterregels); houd die gelijk.
+SOORTGROEPEN = [
+    ("automatisch", "Automatische melding", re.compile(
+        r"\babm\b|\boms\b|\bpac\b|automatisch|brandmeld|rookmeld|co[ -]?meld|rook ?/ ?co|basis alarm", re.I)),
+    ("ambulance", "Ambulance en reanimatie", re.compile(
+        r"reanim|ambu|afhijs|tillen|\btil\b|\baed\b|gezondheid|onwel|pati|huisarts|eerste hulp", re.I)),
+    ("dieren", "Dieren", re.compile(r"\bdier|\bkoe\b|schaap|paard|\bkat\b|hert\b", re.I)),
+    ("water", "Water", re.compile(r"te water|water in|watersport|\bschip|vaartuig|ongeval water|zinkend|door ijs|vuurpijl", re.I)),
+    ("brand", "Brand", re.compile(
+        r"brand(?!stof)|nacontrole|nablussen|\bwts\b|middel wo", re.I)),
+    ("hulpverlening", "Ongeval en hulpverlening", re.compile(
+        r"ongeval|\bvko\b|beknel|hulpverlening|\bhv\b|letsel|lift|storm|sneeuw|wateroverlast|gas|"
+        r"lekkage|stank|meting|wegdek|instorting|explosie|gevaarlijke|buitensluiting|openen deur|"
+        r"verdachte|treinongeval|stromschade|boom|op hoogte|vreemde lucht|luchtverontr", re.I)),
+]
+OVERIG = ("overig", "Overig")
+
+
+def soortgroep(melding):
+    for slug, naam, patroon in SOORTGROEPEN:
+        if patroon.search(melding):
+            return slug, naam
+    return OVERIG
+
+
 def is_oefening(r):
     """Oefeningen tellen apart, niet als uitruk (besluit 28-09-2026)."""
     return r["prio"] == "5" or r["melding"].strip().lower() == "oefening"
@@ -304,13 +330,19 @@ def bouw():
         for r in sorted(regels, key=lambda r: r["nr"]):
             per_maand.setdefault(r["datum"].month, []).append(r)
         soorten = Counter(r["melding"] for r in regels).most_common()
+        for r in regels:
+            r["groep"] = soortgroep(r["melding"])[0]
+        groepen = [(slug, naam, n) for (slug, naam), n in
+                   Counter(soortgroep(r["melding"]) for r in regels).most_common()]
+        groepen_per_maand = {m: {r["groep"] for r in rs} for m, rs in per_maand.items()}
         lijst = sorted(gepubliceerd)
         i = lijst.index(jaar)
         oefeningen = sum(1 for r in regels if is_oefening(r))
         aantal = len(regels) - oefeningen
         render(f"/uitrukken/{jaar}/", "uitrukken-jaar.html", jaar=jaar, aantal=aantal,
                oefeningen=oefeningen, lopend=(jaar == dt.date.today().year),
-               per_maand=per_maand, soorten=soorten,
+               per_maand=per_maand, soorten=soorten, groepen=groepen,
+               groepen_per_maand=groepen_per_maand,
                vorige=lijst[i - 1] if i > 0 else None,
                volgende=lijst[i + 1] if i + 1 < len(lijst) else None,
                titel=f"Uitrukken {jaar}",
