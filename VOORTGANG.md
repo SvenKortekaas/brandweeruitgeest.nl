@@ -165,7 +165,13 @@ Fase 3: migratie. Uitgevoerd 28-09-2026, wacht op controle door Sven (op v2.bran
   - Soort: zeven groepen (Brand, Automatische melding, Ongeval en hulpverlening, Ambulance en reanimatie, Water, Dieren, Overig), met aantallen. Een link naar `#soort-x` verbergt via CSS `:target` alle andere regels en lege maanden en toont "Je ziet alleen ...". De indeling staat in `SOORTGROEPEN` in `build.py` (op trefwoorden, want de oude meldingen hebben veel schrijfwijzen); de slugs staan ook in `static/css/site.css`.
   - De tabel met totalen per exacte melding blijft. Getest in Chromium op 1200 en 390 px breed.
 
+- 28-09-2026, fase 5 livegang gestart (Sven: filter goed, door naar livegang). Sven gaf de sessie onbeperkt internet om te testen.
+  - `tools/controleer_live.py` en workflow "Site controleren": testsite heeft alle 473 oude URL's goed, 69 pagina's 200, headers en caching goed. http naar https is vanuit de sessie niet te testen (proxy), wel in GitHub Actions.
+  - Lighthouse op de testsite: performance 98 tot 100, toegankelijkheid 100, best practices 96 (logo 187x56 is te klein voor scherpe schermen), SEO 69 alleen door `noindex` op v2.
+  - Hoofddomein en v2 staan op dezelfde server; livegang = hoofddomein naar de map van v2. Stappenplan in `MIGRATIE.md` hoofdstuk 7 ("Livegang: stappenplan").
+
 ## Volgende stap
 
-1. Eerste echte uitruk afwachten en controleren: komt de regel in `data/uitrukken/2026.csv` en op de testsite? Nog niet getest: pushen door `github-actions[bot]` naar `v2` en publiceren via de omgeving `p2000`. Faalt de run, dan krijgt Sven een mail van GitHub.
-2. Sven: filter op de testsite bekijken (bijv. /uitrukken/2024/). Daarna fase 5 (livegang).
+1. Sven: AppVeyor uit, oud FTP-wachtwoord wijzigen, backup van de map van het hoofddomein.
+2. Sven: akkoord op pull request `v2` naar `master`; Claude maakt eerst de livegang-commit.
+3. Sven: groter logo aanleveren (bij voorkeur SVG of 3x zo groot), niet blokkerend.

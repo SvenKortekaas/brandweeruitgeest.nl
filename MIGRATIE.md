@@ -241,7 +241,24 @@ Besluit 27-09-2026: publiceren via GitHub Actions naar een nieuwe FTP-server. Al
 - De eerste publicatie naar de testmap: Run workflow op `v2` met `OPRUIMEN`, eerst droog.
 - Livegang: laat bij de hosting het hoofddomein naar dezelfde map wijzen. FTP-gegevens blijven gelijk. Daarna haal ik `v2` weer uit de workflow en loopt publiceren alleen via `master`.
 
-### Eerste livegang (oude site opruimen)
+### Livegang: stappenplan (28-09-2026)
+
+Uitgangspunt (besluit Sven 28-09-2026): het hoofddomein gaat naar dezelfde map als v2.brandweeruitgeest.nl. Beide staan al op dezelfde server (LiteSpeed, 45.82.189.150). Opruimen van de oude site is daardoor niet nodig: de nieuwe map is al schoon. Het hoofdstuk hieronder ("Eerste livegang, oude site opruimen") vervalt.
+
+1. **Sven: voorbereiden.**
+   - AppVeyor-project uitschakelen en daar de oude FTP-gegevens verwijderen.
+   - Oude FTP-wachtwoord wijzigen.
+   - Backup van de huidige map van het hoofddomein (daar staat nu de tijdelijke doorverwijzing).
+2. **Claude: livegang-commit op `v2`.** Workflows publiceren alleen nog vanaf `master`; `v2` eruit. Werkwijze na livegang vastleggen in `CLAUDE.md`.
+3. **Claude: pull request `v2` naar `master`** (alleen op verzoek van Sven).
+4. **Sven: pull request samenvoegen.** "Bouwen en publiceren" publiceert vanaf `master` naar dezelfde map. Voor bezoekers verandert er nog niets.
+5. **Sven: bij de hosting het hoofddomein (en www) naar de map van v2 laten wijzen.** Dat is het moment van livegang.
+6. **Claude: controleren.** Workflow "Site controleren" met `https://brandweeruitgeest.nl` (oude URL's, headers, www en http), Lighthouse.
+7. **P2000 omzetten.** Claude zet in Home Assistant `ref` op `master`; Sven zet de omgevingen `p2000` en `productie` op alleen `master`.
+
+**Terugdraaien:** bij de hosting het hoofddomein terugzetten naar de oude map. Daar staat de tijdelijke doorverwijzing nog. Gebruik niet `TERUGDRAAIEN` in de workflow: die overschrijft de `.htaccess` in de gedeelde map en raakt dan ook de nieuwe site.
+
+### Eerste livegang (oude site opruimen) (vervallen, zie hierboven)
 
 1. **Backup:** download de volledige inhoud van de server met een FTP-programma (bijv. FileZilla) en bewaar die buiten GitHub.
 2. **Samenvoegen:** v2 gaat naar `master` (na akkoord, via pull request).
@@ -278,9 +295,9 @@ Dit bestand staat ook in de repo als `tools/htaccess-terugdraaien`. Zo zet je he
 - [ ] GitHub-omgeving `productie` met secrets ingesteld, AppVeyor uit, oud FTP-wachtwoord gewijzigd.
 - [ ] Backup van de server gemaakt.
 - [ ] Droog opruimen nagekeken.
-- [ ] Alle URL's uit `data/legacy-urls.csv` getest met `curl -I`: 200, 301 of 410.
-- [ ] Securityheaders gecontroleerd.
-- [ ] Lighthouse gedraaid.
+- [ ] Alle URL's uit `data/legacy-urls.csv` getest: 200, 301 of 410 (`tools/controleer_live.py`, workflow "Site controleren"). Testsite 28-09-2026: alle 473 goed, 69 pagina's uit de sitemap 200. Na livegang herhalen op het hoofddomein.
+- [ ] Securityheaders gecontroleerd. Testsite 28-09-2026: alle headers precies goed, caching goed, eigen 404, manifest niet op te vragen. Na livegang herhalen (ook www en http).
+- [ ] Lighthouse gedraaid. Testsite 28-09-2026: performance 98 tot 100, toegankelijkheid 100, best practices 96 (logo te klein voor scherpe schermen, groter logo nodig), SEO 69 alleen door `noindex` op v2. Na livegang herhalen.
 - [ ] Tijdelijke doorverwijzing naar brandweer.nl weg.
 - [ ] P2000-publicatie omzetten van de testsite naar de echte site: in Home Assistant `ref` van `v2` naar `master`, omgeving `p2000` alleen nog `master` (besluit Sven 28-09-2026, zie `PLAN-P2000.md`).
 - [ ] `v2` uit de workflows en uit de omgevingen `productie` en `p2000` halen.
