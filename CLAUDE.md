@@ -18,8 +18,8 @@ Schrijfregel: gebruik geen em dashes (—) in teksten, code-commentaar of commit
 - Eerste commit van fase 1 (na de commit met `CLAUDE.md` en `VOORTGANG.md`): verplaats de volledige Hugo-site met `git mv` naar `legacy/` (zodat de historie behouden blijft):
   `config.toml content/ data/ layouts/ static/ themes/ archetypes/ .forestry/ appveyor.yml deploy.sh minify.sh file_sizes.sh`
 - Blijven in de root: `LICENSE.md` (GPL-3.0, niet wijzigen), `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`, `README.md`, `.github/`, `.gitattributes`, `.gitignore`.
-- `legacy/` is alleen-lezen bron voor de migratie. Na livegang en akkoord wordt `legacy/` in een aparte commit verwijderd.
-- De 3 open pull requests zijn Dependabot-updates voor het Hugo-thema en vervallen met v2. Niet mergen.
+- `legacy/` (de oude Hugo-site) en de eenmalige migratiescripts `tools/migrate_hugo.py` en `tools/inventaris_legacy.py` zijn na de livegang verwijderd (akkoord Sven 28-09-2026). Ze staan nog in de git-historie.
+- De 3 Dependabot-pull requests voor het Hugo-thema zijn gesloten (akkoord Sven 28-09-2026).
 
 ## Overdracht tussen sessies en apparaten
 
@@ -63,7 +63,6 @@ Sven werkt afwisselend vanuit Claude Code op de iPhone (cloudsessie) en later va
 ├── requirements.txt
 ├── build.py
 ├── tools/
-│   ├── migrate_hugo.py      # eenmalig: legacy/ -> content/ en data/
 │   ├── import_p2000.py      # P2000-melding -> data/uitrukken/*.csv
 │   ├── p2000.yaml           # capcode, meldingen, plaatsen voor de P2000-import
 │   ├── meldingen.yaml       # normalisatie en publicatieregels per meldingssoort
@@ -85,11 +84,10 @@ Sven werkt afwisselend vanuit Claude Code op de iPhone (cloudsessie) en later va
 ├── templates/
 ├── static/
 ├── .github/workflows/       # nieuwe build en deploy (fase 5)
-├── legacy/                  # oude Hugo-site, alleen-lezen
 └── public/                  # build-output, in .gitignore
 ```
 
-## Wat er in legacy/ zit (inventaris vooraf)
+## Wat er in legacy/ zat (inventaris vooraf, map verwijderd na livegang)
 
 - `config.toml`: menu, adres (Molenwerf 25, 1911 DB Uitgeest), e-mail info@brandweeruitgeest.nl, social links (Facebook, Twitter, GitHub), permalinks `nieuws = /nieuws/:year/:month/:day/:filename/`.
 - `content/2008.md` t/m `content/2022.md`: uitrukken als HTML-tabel in Markdown, ca. 1550 regels in totaal. Kolommen: Nr., Datum (`1-jan` of `01-jan`, jaar volgt uit de bestandsnaam), Melding, Adres. Oudere jaren hebben één `<td>` per regel, nieuwere één `<tr>` per regel. Meldingen vanaf ca. 2015 beginnen met `Prio 1/2/3`, oudere niet. Adres is straat, soms `straat, plaats` of een hectometrering (`A9 L 58,1c`).
