@@ -1,6 +1,6 @@
 # Plan: nieuwe uitrukken automatisch uit P2000
 
-Status: plan goedgekeurd door Sven (28-09-2026). GitHub-kant gebouwd en getest met verzonnen meldingen (28-09-2026); HA nog niet aangepast.
+Status: in gebruik sinds de livegang van 28-09-2026. Home Assistant stuurt naar `master` (de echte site).
 
 ## Besluiten Sven (28-09-2026)
 

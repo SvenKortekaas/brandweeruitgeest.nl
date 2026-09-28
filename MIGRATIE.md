@@ -292,11 +292,11 @@ Dit bestand staat ook in de repo als `tools/htaccess-terugdraaien`. Zo zet je he
 
 - [x] GitHub-omgeving `productie` met secrets ingesteld (ook `_PROD`), AppVeyor uit, oud FTP-wachtwoord gewijzigd (Sven, 28-09-2026).
 - [x] Backup van de server gemaakt (Sven, 28-09-2026).
-- [ ] Droog opruimen nagekeken.
-- [ ] Alle URL's uit `data/legacy-urls.csv` getest: 200, 301 of 410 (`tools/controleer_live.py`, workflow "Site controleren"). Testsite 28-09-2026: alle 473 goed, 69 pagina's uit de sitemap 200. Na livegang herhalen op het hoofddomein.
-- [ ] Securityheaders gecontroleerd. Testsite 28-09-2026: alle headers precies goed, caching goed, eigen 404, manifest niet op te vragen. Na livegang herhalen (ook www en http).
+- [x] Droog opruimen nagekeken (28-09-2026: 889 uploaden, 417 oude Hugo-bestanden verwijderen, geen hostingmappen).
+- [x] Alle URL's uit `data/legacy-urls.csv` getest: 200, 301 of 410 (`tools/controleer_live.py`, workflow "Site controleren"). Testsite 28-09-2026: alle 473 goed, 69 pagina's uit de sitemap 200. Hoofddomein 28-09-2026: 0 fouten.
+- [x] Securityheaders gecontroleerd. Testsite 28-09-2026: alle headers precies goed, caching goed, eigen 404, manifest niet op te vragen. Hoofddomein 28-09-2026: 0 fouten, ook www en http (hier en in GitHub Actions).
 - [ ] Lighthouse gedraaid. Testsite 28-09-2026: performance 98 tot 100, toegankelijkheid 100, best practices 96 (logo te klein voor scherpe schermen, groter logo nodig), SEO 69 alleen door `noindex` op v2. Na livegang herhalen.
-- [ ] Tijdelijke doorverwijzing naar brandweer.nl weg.
-- [ ] P2000-publicatie omzetten van de testsite naar de echte site: in Home Assistant `ref` van `v2` naar `master`, omgeving `p2000` alleen nog `master` (besluit Sven 28-09-2026, zie `PLAN-P2000.md`).
+- [x] Tijdelijke doorverwijzing naar brandweer.nl weg (livegang 28-09-2026).
+- [x] P2000-publicatie omgezet naar de echte site (28-09-2026, proef geslaagd): in Home Assistant `ref` van `v2` naar `master`, omgeving `p2000` alleen nog `master` (besluit Sven 28-09-2026, zie `PLAN-P2000.md`).
 - [ ] ~~`v2` uit de workflows halen~~ vervallen: `v2` blijft de testsite (besluit Sven 28-09-2026).
-- [ ] Geen verwijzing naar het testadres in de gebouwde echte site (`tools/check.py` en `grep`).
+- [x] Geen verwijzing naar het testadres in de gebouwde echte site (`tools/check.py` en `grep`).
