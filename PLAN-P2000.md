@@ -65,7 +65,7 @@ Voor elke wijziging in HA maakt Claude eerst een kopie van de huidige automatise
 
 - HA hoeft niet extra open: HA stuurt alleen iets naar GitHub.
 - De sleutel kan alleen workflows starten, geen code wijzigen en geen secrets lezen.
-- Ergste geval als de sleutel uitlekt: iemand zet een nepmelding in het vaste formaat op de site. Oplossen: sleutel intrekken en de regel weghalen. Let op: omdat `productie` geen goedkeuring heeft, kan iemand met de sleutel ook "Bouwen en publiceren" starten, ook met `OPRUIMEN` of `TERUGDRAAIEN`. Dat is te herstellen (opnieuw publiceren), maar vervelend. Voorstel: die twee acties in een aparte omgeving `beheer` met goedkeuring (vraag aan Sven, 28-09-2026).
+- Ergste geval als de sleutel uitlekt: iemand zet een nepmelding in het vaste formaat op de site. Oplossen: sleutel intrekken en de regel weghalen. Let op: omdat `productie` geen goedkeuring heeft, kan iemand met de sleutel ook "Bouwen en publiceren" starten, ook met `OPRUIMEN` of `TERUGDRAAIEN`. Dat is te herstellen (opnieuw publiceren), maar vervelend. Voorstel: die twee acties in een aparte omgeving `beheer` met goedkeuring (Sven: voor later, 28-09-2026).
 
 ## Volgorde
 

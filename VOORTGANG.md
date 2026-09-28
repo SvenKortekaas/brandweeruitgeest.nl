@@ -30,6 +30,7 @@ Fase 3: migratie. Uitgevoerd 28-09-2026, wacht op controle door Sven (op v2.bran
 - Idee voor de wervingstekst, nog uit te werken met Sven: "help mee om dorpelijk toegankelijk te houden" (letterlijk genoteerd). Sven werkt dit later uit; tot die tijd een voorlopige kop.
 - Uitrukken 2023 t/m 27-09-2026 aangevuld (bron `eigen`). 20 uitrukken tussen 13-09-2022 en 11-01-2023 aangevuld uit P2000-meldingen die Sven plakte (28-09-2026, van p2000.page), bron `p2000`: korte meldingen, alleen straat en plaats (objectnamen weggelaten), intrekkingen en het contactbericht van 21-09-2022 niet meegenomen.
 - Open vragen uit `CLAUDE.md`.
+- Later (Sven, 28-09-2026): `OPRUIMEN` en `TERUGDRAAIEN` in een aparte GitHub-omgeving `beheer` met goedkeuring, zodat de HA-sleutel die niet zonder Sven kan starten. Zie `PLAN-P2000.md`, "Is het veilig?".
 
 - Publiceren (voorbereid, 27-09-2026): `tools/deploy.py` (FTPS met certificaatcontrole, manifest, eerste keer opruimen) en `.github/workflows/build.yml`. Lokaal getest tegen een test-FTPS-server: weigert zonder manifest, droog opruimen, echt opruimen met beschermde paden, alleen wijzigingen uploaden, verwijderen, geen geldig certificaat. Nog niet tegen de echte server getest. Eerste run van de workflow op `v2` geslaagd (bouwen en controleren; publiceren terecht overgeslagen). Let op: pushes vanuit een Claude-sessie gebruiken het account van Sven en tellen dus als "zijn" push; Claude pusht daarom nooit naar `master`.
 - **Testfase (28-09-2026):** de FTP-gegevens wijzen naar het subdomein v2.brandweeruitgeest.nl. Branch `v2` mag tijdens de testfase publiceren (workflow aangepast); Sven moet in de omgeving `productie` bij Deployment branches ook `v2` toestaan. Op host `v2.` stuurt de `.htaccess` `X-Robots-Tag: noindex`. Livegang = Sven wijst het pad van het hoofddomein naar dezelfde map; FTP-gegevens blijven gelijk. Daarna `v2` weer uit de workflow halen.
@@ -155,11 +156,11 @@ Fase 3: migratie. Uitgevoerd 28-09-2026, wacht op controle door Sven (op v2.bran
   - Claude: in "Brandweer: 112radar Notificatie" een losse stap na de `choose` (alias "Uitruk naar brandweeruitgeest.nl"): bij capcode 107711 `rest_command.brandweeruitgeest_p2000` met `ref: v2`, `continue_on_error`. Terugzetten = die laatste stap weghalen.
   - Eerste proef gaf 404: GitHub kent een workflow pas als hij een keer gedraaid heeft. `p2000.yml` draait nu ook bij een push op de P2000-bestanden, alleen een zelftest.
   - Geen required reviewer op `productie` (besluit Sven 28-09-2026): elke push van Sven naar `v2` of `master` publiceert direct.
+  - Aparte omgeving `beheer` met goedkeuring voor `OPRUIMEN` en `TERUGDRAAIEN`: nu niet, voor later (Sven, 28-09-2026). Staat bij Open.
   - Proef via HA (28-09-2026): proefalarm kwam aan in GitHub (run 2) en is terecht overgeslagen. De keten HA, token en workflow werkt.
   - Nieuwe pagina 112NL-app alleen in de voet, niet in het hoofdmenu (Sven).
 
 ## Volgende stap
 
 1. Eerste echte uitruk afwachten en controleren: komt de regel in `data/uitrukken/2026.csv` en op de testsite? Nog niet getest: pushen door `github-actions[bot]` naar `v2` en publiceren via de omgeving `p2000`. Faalt de run, dan krijgt Sven een mail van GitHub.
-2. Sven: beslissen over `OPRUIMEN` en `TERUGDRAAIEN` in een aparte omgeving `beheer` met goedkeuring (zie `PLAN-P2000.md`, "Is het veilig?").
-3. Daarna fase 4 afronden (weergave uitrukken: filteren op soort) en fase 5 (livegang).
+2. Daarna fase 4 afronden (weergave uitrukken: filteren op soort) en fase 5 (livegang).
