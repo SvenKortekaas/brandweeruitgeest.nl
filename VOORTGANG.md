@@ -145,9 +145,15 @@ Fase 3: migratie. Uitgevoerd 28-09-2026, wacht op controle door Sven (op v2.bran
   5. Plan Home Assistant goedgekeurd, met twee eisen: worden OvD Noord en Uitgeest tegelijk gealarmeerd, dan komt het gewoon als uitruk van Uitgeest op de site; de webhooknaam blijft zoals hij is.
   6. P2000-import en workflow bouwen: "denk het wel", dus eerst bouwen en testen op `v2`, pas daarna HA aanpassen.
 
+- 28-09-2026, P2000-import gebouwd (nog niet actief):
+  - `tools/import_p2000.py` en `tools/p2000.yaml`: zet één melding om in een uitruk (bron `p2000`). Alleen capcode 0107711, prio 1 t/m 3, melding via de tabel in `p2000.yaml`, alleen straat of weg met hectometer plus plaats. Overslaan bij intrekking, proefalarm, test en oefening; zelfde straat binnen 30 minuten is dezelfde uitruk; maximaal 10 per dag. Bij twijfel (onbekende melding, plaats of straat) wordt niets geschreven en faalt de run met de P2000-tekst erbij.
+  - `.github/workflows/p2000.yml`: start via `workflow_dispatch` (tijdstip, tekst, capcodes), commit naar de branch en publiceert via de omgeving `p2000`. Getest met verzonnen meldingen, nog niet op GitHub gedraaid.
+- 28-09-2026: Sven vraagt informatie over de 112NL-app op de site. Nieuwe pagina `/112nl-app/` (tekst van Sven plus de waarschuwing uit de flyer: misbruik van 112 is strafbaar, app niet testen), in de voet van de site en kort genoemd op de homepage.
+
 ## Volgende stap
 
-1. Claude: `tools/import_p2000.py` en `p2000.yml` bouwen en testen met verzonnen meldingen; daarna HA aanpassen.
-2. Sven: sleutel (token), omgeving `p2000` en `rest_command` in HA (tekst staat in het plan).
-3. Sven: required reviewer instellen op de omgeving `productie` (stappen in `MIGRATIE.md`, hoofdstuk 7).
-4. Daarna fase 4 afronden (weergave uitrukken: filteren op soort) en fase 5 (livegang).
+1. Sven: in GitHub de omgeving `p2000` maken (zelfde FTP-secrets als `productie`, branches `v2` en `master`, geen goedkeuring) en een fine-grained token (alleen deze repo, "Actions: Read and write"). Controleren dat `github-actions[bot]` naar `v2` mag pushen (branchbeveiliging).
+2. Sven: `rest_command` en token in HA zetten (tekst in `PLAN-P2000.md`).
+3. Claude: daarna de stap in de HA-automatisering toevoegen (`ref: v2`) en een proefmelding naar de testsite sturen.
+4. Sven: "Block force pushes" op `v2` weer aanzetten; required reviewer op `productie` instellen.
+5. Daarna fase 4 afronden (weergave uitrukken: filteren op soort) en fase 5 (livegang).

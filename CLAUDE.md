@@ -64,7 +64,8 @@ Sven werkt afwisselend vanuit Claude Code op de iPhone (cloudsessie) en later va
 ├── build.py
 ├── tools/
 │   ├── migrate_hugo.py      # eenmalig: legacy/ -> content/ en data/
-│   ├── import_p2000.py      # P2000-melding -> data/uitrukken/*.csv (gepland)
+│   ├── import_p2000.py      # P2000-melding -> data/uitrukken/*.csv
+│   ├── p2000.yaml           # capcode, meldingen, plaatsen voor de P2000-import
 │   ├── meldingen.yaml       # normalisatie en publicatieregels per meldingssoort
 │   └── check.py
 ├── content/
@@ -165,7 +166,7 @@ Historische data wordt zo letterlijk mogelijk overgenomen. Alleen splitsen (prio
 - `check.py` faalt op een gepubliceerde nieuwe regel zonder geldige prio, adres of plaats, en op een ingevulde prio buiten 1, 2, 3.
 - Nieuwe regels (besluit Sven 27-09-2026): huisnummers worden weggehaald en gemeld (niet afgekeurd); oefeningen zijn geen uitrukken en worden overgeslagen (besluit 28-09-2026); geen soorten meldingen verborgen; de melding is een korte tekst uit de vertaaltabel in `tools/meldingen.yaml`.
 
-### Import uit P2000 (`tools/import_p2000.py`, gepland)
+### Import uit P2000 (`tools/import_p2000.py`, `.github/workflows/p2000.yml`)
 
 - Nieuwe uitrukken komen automatisch uit P2000, via Home Assistant. Ontwerp in `PLAN-P2000.md`.
 - Alleen capcode 0107711 (Vrijwilligers) telt als uitruk van brandweer Uitgeest (besluit Sven 28-09-2026).

@@ -1,6 +1,6 @@
 # Plan: nieuwe uitrukken automatisch uit P2000
 
-Status: plan goedgekeurd door Sven (28-09-2026), nog niet gebouwd.
+Status: plan goedgekeurd door Sven (28-09-2026). GitHub-kant gebouwd en getest met verzonnen meldingen (28-09-2026); HA nog niet aangepast.
 
 ## Besluiten Sven (28-09-2026)
 
@@ -34,13 +34,13 @@ HA ontvangt al P2000-meldingen van 112radar.nl (automatisering "Brandweer: 112ra
          X-GitHub-Api-Version: "2022-11-28"
        content_type: application/json
        payload: >-
-         {"ref": {{ ref | tojson }}, "inputs": {"tijdstip": {{ tijdstip | tojson }}, "tekst": {{ tekst | tojson }}}}
+         {"ref": {{ ref | tojson }}, "inputs": {"tijdstip": {{ tijdstip | tojson }}, "tekst": {{ tekst | tojson }}, "capcodes": {{ capcodes | tojson }}}}
    ```
 
    In `secrets.yaml`: `github_p2000_token: "Bearer github_pat_..."`.
 
 2. **Automatisering "Brandweer: 112radar Notificatie" (Claude, via de HA-koppeling).** Eén stap erbij, ná de bestaande `choose`:
-   - als 107711 in de capcodes staat: `rest_command.brandweeruitgeest_p2000` met `ref: v2` (testfase), `tijdstip: first_message_at`, `tekst: body`;
+   - als 107711 in de capcodes staat: `rest_command.brandweeruitgeest_p2000` met `ref: v2` (testfase), `tijdstip: first_message_at`, `tekst: body`, `capcodes`: de capcodes van de melding (de workflow controleert zelf nog een keer op 107711);
    - `continue_on_error: true`, zodat een storing bij GitHub nooit je pushmeldingen tegenhoudt.
 
    Waarom los van de `choose`: een `choose` voert alleen de eerste passende keuze uit. Staat bij een incident ook de OvD Noord (106530) in de capcodes, dan wordt de keuze voor Uitgeest nu overgeslagen. Met een losse stap komt zo'n uitruk toch op de site: worden OvD Noord en Uitgeest tegelijk gealarmeerd, dan is het gewoon een uitruk van Uitgeest (besluit Sven 28-09-2026). De bestaande meldingen en teksten blijven verder precies zoals ze zijn.

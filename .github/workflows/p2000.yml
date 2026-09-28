@@ -1,0 +1,105 @@
+# Nieuwe uitruk uit P2000, direct publiceren (besluit Sven 28-09-2026, zie PLAN-P2000.md).
+#
+# Wordt gestart door Home Assistant (rest_command, workflow_dispatch) bij een melding voor
+# capcode 0107711. De invoer komt van buiten: die gaat alleen als omgevingsvariabele naar
+# tools/import_p2000.py, nooit rechtstreeks in een shellcommando.
+# Testfase: ref v2 (testsite). Bij livegang: ref master (checklist in MIGRATIE.md).
+
+name: P2000-uitruk
+
+on:
+  workflow_dispatch:
+    inputs:
+      tijdstip:
+        description: "Tijdstip van de melding (bijv. 2026-09-27 00:35:39)"
+        required: true
+      tekst:
+        description: "P2000-tekst"
+        required: true
+      capcodes:
+        description: "Capcodes van de melding, gescheiden door spaties of komma's"
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  importeren:
+    # Alleen de officiële repo, alleen master of v2, alleen gestart met de sleutel van Sven.
+    if: >-
+      github.repository == 'SvenKortekaas/brandweeruitgeest.nl' &&
+      (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/v2') &&
+      github.actor == 'SvenKortekaas' &&
+      github.triggering_actor == 'SvenKortekaas'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      nieuw: ${{ steps.import.outputs.nieuw }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Melding omzetten
+        id: import
+        env:
+          P2000_TIJDSTIP: ${{ inputs.tijdstip }}
+          P2000_TEKST: ${{ inputs.tekst }}
+          P2000_CAPCODES: ${{ inputs.capcodes }}
+        run: python tools/import_p2000.py --apply
+      - name: Vastleggen in de repo
+        if: steps.import.outputs.nieuw == 'ja'
+        env:
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/uitrukken
+          git commit -q -m "Nieuwe uitruk uit P2000"
+          for poging in 1 2 3 4; do
+            git push origin "HEAD:$BRANCH" && exit 0
+            sleep $((poging * 3))
+            git pull --rebase -q origin "$BRANCH"
+          done
+          exit 1
+
+  publiceren:
+    needs: importeren
+    if: needs.importeren.outputs.nieuw == 'ja'
+    runs-on: ubuntu-latest
+    environment: p2000
+    # Nooit twee publicaties tegelijk, ook niet samen met "Bouwen en publiceren".
+    # Een publicatie bouwt altijd de nieuwste stand van de branch.
+    concurrency:
+      group: publiceren
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.ref_name }}
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: .cache/img
+          key: afbeeldingen-${{ hashFiles('afbeeldingen/**', 'build.py') }}
+          restore-keys: afbeeldingen-
+      - run: python build.py
+      - run: python tools/check.py
+      - name: Publiceren via FTPS
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_POORT: ${{ secrets.FTP_POORT }}
+          FTP_GEBRUIKER: ${{ secrets.FTP_GEBRUIKER }}
+          FTP_WACHTWOORD: ${{ secrets.FTP_WACHTWOORD }}
+          FTP_MAP: ${{ secrets.FTP_MAP }}
+        run: python tools/deploy.py public

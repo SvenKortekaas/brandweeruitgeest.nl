@@ -30,6 +30,8 @@ menu:
   - titel: Over ons
     url: /over-ons/
 voetmenu:
+  - titel: De 112NL-app
+    url: /112nl-app/
   - titel: Betekenis P2000
     url: /betekenis-p2000-meldingen/
   - titel: Posten Kennemerland

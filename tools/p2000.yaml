@@ -1,0 +1,156 @@
+# Instellingen voor tools/import_p2000.py (zie PLAN-P2000.md).
+# Pas dit bestand aan als een melding niet herkend wordt; de code hoeft dan niet te veranderen.
+
+# Alleen deze capcode telt als uitruk van brandweer Uitgeest (besluit Sven 28-09-2026).
+capcode: "0107711"
+
+# Maximaal aantal nieuwe P2000-uitrukken per dag. Daarboven stopt de import (bescherming
+# tegen nepmeldingen of een storing die de site laat vollopen).
+max_per_dag: 10
+
+# Twee meldingen op dezelfde straat binnen zoveel minuten zijn dezelfde uitruk
+# (herhaalalarm, opschaling).
+zelfde_uitruk_minuten: 30
+
+# Meldingen met een van deze woorden (hoofdletterongevoelig) worden overgeslagen.
+overslaan:
+  - intrekking
+  - ingetrokken
+  - proefalarm
+  - testbericht
+  - test alarm
+  - oefening
+
+# Begin van de melding in P2000 -> korte tekst op de site (zelfde stijl als de oude site).
+# Hoofdletters maken niet uit; de langste passende tekst wint. Een melding die hier niet in
+# staat en niet met "BR" begint, wordt niet gepubliceerd: de workflow faalt en laat de
+# P2000-tekst zien. Voeg dan hier een regel toe en start de mislukte run opnieuw.
+meldingen:
+  "BR woning": Brand woning
+  "BR schoorsteen": Brand woning schoorsteen
+  "BR buiten": Buitenbrand
+  "BR berm": Bermbrand
+  "BR berm/ruigte": Bermbrand
+  "BR container": Containerbrand
+  "BR natuur": Natuurbrand
+  "BR bos": Bosbrand
+  "BR duin": Duinbrand
+  "BR wegvervoer": Brand wegvervoer
+  "BR scheepvaart": Brand scheepvaart
+  "BR agrarisch": Brand agrarisch gebouw
+  "BR bijeenkomst": Brand bijeenkomstgebouw
+  "BR gezondheidszorg": Brand zorggebouw
+  "BR industrie": Brand industrie
+  "BR winkel": Brand winkel
+  "BR bijgebouw": Brand bijgebouw
+  "Brand": Brand
+  "Brandgerucht": Brandgerucht
+  "Nacontrole": Nacontrole
+  "OMS": Automatische brandmelding OMS
+  "Autom. brand OMS": Automatische brandmelding OMS
+  "Autom. brand": Automatische brandmelding
+  "Brandmelding PAC": Automatische brandmelding PAC
+  "PAC": Automatische brandmelding PAC
+  "Rookmelder": Rookmelder
+  "Rookmelding": Rookmelder
+  "CO-melder": CO-melder
+  "CO melder": CO-melder
+  "Gaslekkage": Gaslekkage
+  "Gas": Gaslekkage
+  "Liftopsluiting": Liftopsluiting
+  "Buitensluiting": Buitensluiting
+  "Reanimatie": Reanimatie
+  "Ass. ambu": Assistentie ambulance
+  "Ass. ambulance": Assistentie ambulance
+  "Assistentie ambulance": Assistentie ambulance
+  "Afhijsen": Assistentie ambulance afhijsen
+  "Ass. politie": Assistentie politie
+  "Assistentie politie": Assistentie politie
+  "Dier te water": Dier te water
+  "Dier in problemen": Dier in problemen
+  "Dier op hoogte": Dier op hoogte
+  "Voertuig te water": Voertuig te water
+  "Persoon te water": Persoon te water
+  "Waterongeval": Waterongeval
+  "Schip in problemen": Schip of watersporter in problemen
+  "Ongeval wegvervoer": Ongeval wegvervoer
+  "Ongeval": Ongeval
+  "HV weg": Hulpverlening weg
+  "Hulpverlening weg": Hulpverlening weg
+  "HV water": Hulpverlening water
+  "Hulpverlening": Hulpverlening
+  "HV": Hulpverlening
+  "Gevaarlijke stof": Ongeval gevaarlijke stof
+  "Stormschade": Stormschade
+  "Wateroverlast": Wateroverlast
+  "Stank/hinder": Stankoverlast
+  "Stankoverlast": Stankoverlast
+  "Dienstverlening": Dienstverlening
+  "Afstemverzoek": Afstemverzoek
+  "Herbezetting": Herbezetting kazerne
+  "Peloton": Peloton
+  "Verdachte situatie": Verdachte situatie
+  "Explosie": Explosie
+
+# Plaatsen die in P2000 aan het eind van het adres kunnen staan.
+plaatsen:
+  - Uitgeest
+  - Akersloot
+  - Alkmaar
+  - Assendelft
+  - Bakkum
+  - Beverwijk
+  - Castricum
+  - Heemskerk
+  - Heiloo
+  - Krommenie
+  - Limmen
+  - Markenbinnen
+  - Oostknollendam
+  - Spijkerboor
+  - Starnmeer
+  - Velsen-Noord
+  - Westknollendam
+  - Wijk aan Zee
+  - Wormer
+  - Wormerveer
+  - Zaandam
+  - Zaandijk
+  - Haarlem
+  - IJmuiden
+  - Zandvoort
+
+# Woorden die vóór het laatste woord van een straatnaam kunnen staan
+# ("Burgemeester van Alphenstraat", "Groot Dorregeest", "J.E. de Witstraat").
+straat_voorvoegsels:
+  - van
+  - de
+  - der
+  - den
+  - het
+  - "'t"
+  - ter
+  - ten
+  - burgemeester
+  - burg.
+  - dokter
+  - dr.
+  - wethouder
+  - weth.
+  - koningin
+  - kon.
+  - prins
+  - graaf
+  - pastoor
+  - meester
+  - mr.
+  - sint
+  - st.
+  - groot
+  - klein
+  - oude
+  - nieuwe
+  - lange
+  - korte
+  - hoge
+  - lage
