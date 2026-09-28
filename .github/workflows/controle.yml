@@ -4,6 +4,12 @@
 name: Site controleren
 
 on:
+  # Bij een wijziging aan de controle zelf: de testsite controleren.
+  push:
+    branches: [v2]
+    paths:
+      - .github/workflows/controle.yml
+      - tools/controleer_live.py
   workflow_dispatch:
     inputs:
       site:
@@ -31,6 +37,7 @@ jobs:
         env:
           SITE: ${{ inputs.site }}
         run: |
+          SITE="${SITE:-https://v2.brandweeruitgeest.nl}"
           if [ "$SITE" = "https://brandweeruitgeest.nl" ]; then
             python tools/controleer_live.py "$SITE" --www
           else
