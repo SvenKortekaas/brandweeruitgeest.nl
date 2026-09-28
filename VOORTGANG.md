@@ -170,8 +170,18 @@ Fase 3: migratie. Uitgevoerd 28-09-2026, wacht op controle door Sven (op v2.bran
   - Lighthouse op de testsite: performance 98 tot 100, toegankelijkheid 100, best practices 96 (logo 187x56 is te klein voor scherpe schermen), SEO 69 alleen door `noindex` op v2.
   - Hoofddomein en v2 staan op dezelfde server; livegang = hoofddomein naar de map van v2. Stappenplan in `MIGRATIE.md` hoofdstuk 7 ("Livegang: stappenplan").
 
+- 28-09-2026, livegang (antwoorden Sven):
+  1. Stap 1 gedaan: AppVeyor uit, wachtwoord gewijzigd, backup gemaakt.
+  2. Twee FTP-accounts, zelfde server en poort: `FTP_GEBRUIKER`/`FTP_WACHTWOORD` voor de testsite (v2), `FTP_GEBRUIKER_PROD`/`FTP_WACHTWOORD_PROD` voor de echte site. `v2` blijft dus de testsite.
+  3. Pull request `v2` naar `master`: akkoord. Werkwijze daarna: Claude werkt op `v2` en opent per afgeronde stap een pull request, Sven voegt samen. P2000-uitrukken gaan direct naar `master`.
+  4. Groter logo (SVG of 3x zo groot): onthouden, later.
+  5. Na de push naar `master`: geen verwijzingen naar het testadres in de code van de echte site, nu en later. Verse start: de map van de echte site leegmaken, alleen `.cagefs`, `.cl.selector` en `.well-known` houden (zo leeg mogelijk). Juiste `.htaccess` op beide sites.
+  6. Waarschuwing in GitHub Actions over `ubuntu-latest` naar Ubuntu 26 (19-10-2026): runners vastgezet op `ubuntu-24.04`.
+  - Uitgevoerd: `BOUW_OMGEVING` (live of test) in `build.py`: alleen de testbouw krijgt `noindex` en `Disallow: /`, de livebouw bevat geen testadres meer. `tools/publiceer.py` kiest de FTP-gegevens per branch (master valt nooit terug op de testgegevens). `deploy.py` beschermt `.cagefs` en `.cl.selector`.
+
 ## Volgende stap
 
-1. Sven: AppVeyor uit, oud FTP-wachtwoord wijzigen, backup van de map van het hoofddomein.
-2. Sven: akkoord op pull request `v2` naar `master`; Claude maakt eerst de livegang-commit.
-3. Sven: groter logo aanleveren (bij voorkeur SVG of 3x zo groot), niet blokkerend.
+1. Sven: pull request `v2` naar `master` samenvoegen.
+2. Claude: opruimen op de echte site (eerst droog, dan echt), controleren, P2000 in HA naar `master`.
+3. Sven: `_PROD`-secrets ook in de omgeving `p2000` zetten.
+4. Later: groter logo (Sven).

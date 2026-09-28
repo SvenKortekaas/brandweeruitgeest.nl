@@ -10,6 +10,7 @@ import csv
 import datetime as dt
 import hashlib
 import html
+import os
 import re
 import shutil
 import sys
@@ -29,6 +30,11 @@ TEMPLATES = ROOT / "templates"
 STATIC = ROOT / "static"
 AFBEELDINGEN = ROOT / "afbeeldingen"
 PUBLIC = ROOT / "public"
+# "live" (standaard) of "test". Een testbouw vraagt zoekmachines de site over te slaan.
+# De workflows zetten BOUW_OMGEVING=test voor branch v2 (de testsite).
+OMGEVING = os.environ.get("BOUW_OMGEVING", "live")
+if OMGEVING not in ("live", "test"):
+    sys.exit(f"BOUW_OMGEVING moet live of test zijn, niet '{OMGEVING}'")
 CACHE = ROOT / ".cache" / "img"
 
 NIEUWS_PER_PAGINA = 10
@@ -258,7 +264,7 @@ def htaccess(site, gegenereerd, fotos):
         "ErrorDocument 404 /404.html",
         "ErrorDocument 410 /404.html",
         "",
-        "# HTTPS en host zonder www. Werkt op elke host (ook het testsubdomein v2.).",
+        "# HTTPS en host zonder www. Werkt op elke host.",
         "RewriteEngine On",
         "RewriteCond %{HTTP_HOST} ^www\\.(.+)$ [NC]",
         "RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]",
@@ -277,16 +283,16 @@ def htaccess(site, gegenereerd, fotos):
         '  Header always set Referrer-Policy "strict-origin-when-cross-origin"',
         '  Header always set Cross-Origin-Opener-Policy "same-origin"',
         '  Header always set Permissions-Policy "geolocation=(), camera=(), microphone=(), browsing-topics=()"',
-        "  # Testomgeving (v2.brandweeruitgeest.nl) niet in zoekmachines.",
-        '  <If "%{HTTP_HOST} =~ /^v2\\./">',
-        '    Header always set X-Robots-Tag "noindex, nofollow"',
-        "  </If>",
         '  <FilesMatch "\\.[0-9a-f]{8}\\.(css|js|webp|avif)$">',
         '    Header set Cache-Control "public, max-age=31536000, immutable"',
         "  </FilesMatch>",
         '  <FilesMatch "\\.(html|xml|txt|json)$">',
         '    Header set Cache-Control "public, max-age=300"',
         "  </FilesMatch>",
+    ]
+    if OMGEVING == "test":
+        regels += ['  # Testbouw: niet in zoekmachines.', '  Header always set X-Robots-Tag "noindex, nofollow"']
+    regels += [
         "</IfModule>",
         "",
         "# Oude URL's (data/legacy-urls.csv en data/redirects.csv)",
@@ -408,7 +414,10 @@ def bouw():
             doel.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(pad, doel)
     schrijf("/sitemap.xml", env.get_template("sitemap.xml").render(paginas=sorted(paginas)))
-    schrijf("/robots.txt", f"User-agent: *\nDisallow:\nSitemap: {site['url']}/sitemap.xml\n")
+    if OMGEVING == "test":
+        schrijf("/robots.txt", "User-agent: *\nDisallow: /\n")
+    else:
+        schrijf("/robots.txt", f"User-agent: *\nDisallow:\nSitemap: {site['url']}/sitemap.xml\n")
     gegenereerd = set(paginas) | {"/nieuws/index.xml", "/sitemap.xml", "/robots.txt", "/404.html"}
     schrijf("/.htaccess", htaccess(site, gegenereerd, fotos))
 

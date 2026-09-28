@@ -1,10 +1,11 @@
 # Bouwen, controleren en publiceren van brandweeruitgeest.nl.
 #
 # Bouwen en controleren: bij elke push en pull request, zonder toegang tot secrets.
-# Publiceren: alleen bij een push naar master (en tijdens de testfase v2) door SvenKortekaas,
-# of handmatig door SvenKortekaas, en alleen via de GitHub-omgeving "productie" waarin de
-# FTP-secrets staan. Geen goedkeuring per publicatie (besluit Sven 28-09-2026).
-# Zie MIGRATIE.md, hoofdstuk Publiceren, voor de instellingen in GitHub.
+# Publiceren: alleen door SvenKortekaas, via de GitHub-omgeving "productie" (FTP-secrets):
+#   - master: de echte site, met FTP_GEBRUIKER_PROD en FTP_WACHTWOORD_PROD;
+#   - v2:     de testsite, met FTP_GEBRUIKER en FTP_WACHTWOORD, gebouwd met noindex.
+# Server en poort (FTP_SERVER, FTP_POORT) zijn voor beide gelijk (besluit Sven 28-09-2026).
+# Geen goedkeuring per publicatie (besluit Sven 28-09-2026). Zie MIGRATIE.md, hoofdstuk 7.
 
 name: Bouwen en publiceren
 
@@ -15,7 +16,7 @@ on:
   workflow_dispatch:
     inputs:
       opruimen:
-        description: "Eerste livegang: alles op de server verwijderen wat niet bij de site hoort. Typ OPRUIMEN om te bevestigen."
+        description: "Alles op de server verwijderen wat niet bij de site hoort. Typ OPRUIMEN om te bevestigen."
         required: false
         default: ""
       terugdraaien:
@@ -30,9 +31,13 @@ on:
 permissions:
   contents: read
 
+env:
+  # v2 is de testsite, al het andere (master, pull requests) bouwt als echte site.
+  BOUW_OMGEVING: ${{ github.ref == 'refs/heads/v2' && 'test' || 'live' }}
+
 jobs:
   bouwen:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -59,19 +64,17 @@ jobs:
 
   publiceren:
     needs: bouwen
-    # Alleen de officiële repo, alleen Sven (ook bij opnieuw starten).
-    # Testfase (besluit 28-09-2026): de FTP-gegevens wijzen naar v2.brandweeruitgeest.nl,
-    # daarom mag ook branch v2 publiceren. Na livegang v2 hier weer weghalen.
+    # Alleen de officiële repo, alleen master of v2, alleen Sven (ook bij opnieuw starten).
     if: >-
       github.repository == 'SvenKortekaas/brandweeruitgeest.nl' &&
       (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/v2') &&
       (github.event_name == 'push' || github.event_name == 'workflow_dispatch') &&
       github.actor == 'SvenKortekaas' &&
       github.triggering_actor == 'SvenKortekaas'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     environment: productie
     concurrency:
-      group: publiceren
+      group: publiceren-${{ github.ref_name }}
       cancel-in-progress: false
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -86,20 +89,17 @@ jobs:
           path: public
       - name: Publiceren via FTPS
         env:
+          BRANCH: ${{ github.ref_name }}
           FTP_SERVER: ${{ secrets.FTP_SERVER }}
           FTP_POORT: ${{ secrets.FTP_POORT }}
-          FTP_GEBRUIKER: ${{ secrets.FTP_GEBRUIKER }}
-          FTP_WACHTWOORD: ${{ secrets.FTP_WACHTWOORD }}
-          FTP_MAP: ${{ secrets.FTP_MAP }}
+          TEST_GEBRUIKER: ${{ secrets.FTP_GEBRUIKER }}
+          TEST_WACHTWOORD: ${{ secrets.FTP_WACHTWOORD }}
+          TEST_MAP: ${{ secrets.FTP_MAP }}
+          PROD_GEBRUIKER: ${{ secrets.FTP_GEBRUIKER_PROD }}
+          PROD_WACHTWOORD: ${{ secrets.FTP_WACHTWOORD_PROD || secrets.FTP_PASSWORD_PROD }}
+          PROD_MAP: ${{ secrets.FTP_MAP_PROD }}
           GEBEURTENIS: ${{ github.event_name }}
           OPRUIMEN: ${{ inputs.opruimen }}
           DROOG: ${{ inputs.droog }}
           TERUGDRAAIEN: ${{ inputs.terugdraaien }}
-        run: |
-          args="public"
-          if [ "$GEBEURTENIS" = "workflow_dispatch" ]; then
-            if [ "$TERUGDRAAIEN" = "TERUGDRAAIEN" ]; then args="$args --terugdraaien";
-            elif [ "$OPRUIMEN" = "OPRUIMEN" ]; then args="$args --opruimen"; fi
-            if [ "$DROOG" = "true" ]; then args="$args --droog"; fi
-          fi
-          python tools/deploy.py $args
+        run: python tools/publiceer.py

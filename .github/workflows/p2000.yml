@@ -3,7 +3,7 @@
 # Wordt gestart door Home Assistant (rest_command, workflow_dispatch) bij een melding voor
 # capcode 0107711. De invoer komt van buiten: die gaat alleen als omgevingsvariabele naar
 # tools/import_p2000.py, nooit rechtstreeks in een shellcommando.
-# Testfase: ref v2 (testsite). Bij livegang: ref master (checklist in MIGRATIE.md).
+# ref master publiceert naar de echte site, ref v2 naar de testsite (tools/publiceer.py).
 # Bij een push die de P2000-bestanden wijzigt draait alleen een zelftest met verzonnen
 # meldingen (schrijft en publiceert niets). Zo kent GitHub de workflow ook voor Home Assistant.
 
@@ -34,7 +34,7 @@ permissions:
 jobs:
   zelftest:
     if: github.event_name == 'push'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -64,7 +64,7 @@ jobs:
       (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/v2') &&
       github.actor == 'SvenKortekaas' &&
       github.triggering_actor == 'SvenKortekaas'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     permissions:
       contents: write
     outputs:
@@ -104,13 +104,15 @@ jobs:
   publiceren:
     needs: importeren
     if: needs.importeren.outputs.nieuw == 'ja'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     environment: p2000
     # Nooit twee publicaties tegelijk, ook niet samen met "Bouwen en publiceren".
     # Een publicatie bouwt altijd de nieuwste stand van de branch.
     concurrency:
-      group: publiceren
+      group: publiceren-${{ github.ref_name }}
       cancel-in-progress: false
+    env:
+      BOUW_OMGEVING: ${{ github.ref == 'refs/heads/v2' && 'test' || 'live' }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -130,9 +132,13 @@ jobs:
       - run: python tools/check.py
       - name: Publiceren via FTPS
         env:
+          BRANCH: ${{ github.ref_name }}
           FTP_SERVER: ${{ secrets.FTP_SERVER }}
           FTP_POORT: ${{ secrets.FTP_POORT }}
-          FTP_GEBRUIKER: ${{ secrets.FTP_GEBRUIKER }}
-          FTP_WACHTWOORD: ${{ secrets.FTP_WACHTWOORD }}
-          FTP_MAP: ${{ secrets.FTP_MAP }}
-        run: python tools/deploy.py public
+          TEST_GEBRUIKER: ${{ secrets.FTP_GEBRUIKER }}
+          TEST_WACHTWOORD: ${{ secrets.FTP_WACHTWOORD }}
+          TEST_MAP: ${{ secrets.FTP_MAP }}
+          PROD_GEBRUIKER: ${{ secrets.FTP_GEBRUIKER_PROD }}
+          PROD_WACHTWOORD: ${{ secrets.FTP_WACHTWOORD_PROD || secrets.FTP_PASSWORD_PROD }}
+          PROD_MAP: ${{ secrets.FTP_MAP_PROD }}
+        run: python tools/publiceer.py

@@ -241,22 +241,20 @@ Besluit 27-09-2026: publiceren via GitHub Actions naar een nieuwe FTP-server. Al
 - De eerste publicatie naar de testmap: Run workflow op `v2` met `OPRUIMEN`, eerst droog.
 - Livegang: laat bij de hosting het hoofddomein naar dezelfde map wijzen. FTP-gegevens blijven gelijk. Daarna haal ik `v2` weer uit de workflow en loopt publiceren alleen via `master`.
 
-### Livegang: stappenplan (28-09-2026)
+### Livegang: stappenplan (28-09-2026, bijgewerkt)
 
-Uitgangspunt (besluit Sven 28-09-2026): het hoofddomein gaat naar dezelfde map als v2.brandweeruitgeest.nl. Beide staan al op dezelfde server (LiteSpeed, 45.82.189.150). Opruimen van de oude site is daardoor niet nodig: de nieuwe map is al schoon. Het hoofdstuk hieronder ("Eerste livegang, oude site opruimen") vervalt.
+Besluit Sven 28-09-2026: twee FTP-accounts op dezelfde server en poort. `FTP_GEBRUIKER` en `FTP_WACHTWOORD` komen uit in de map van v2.brandweeruitgeest.nl (testsite), `FTP_GEBRUIKER_PROD` en `FTP_WACHTWOORD_PROD` (of `FTP_PASSWORD_PROD`) in de map van de echte site. `master` publiceert naar de echte site, `v2` naar de testsite. De echte site krijgt een verse start: de map wordt leeggemaakt, alleen `.cagefs`, `.cl.selector` en `.well-known` blijven.
 
-1. **Sven: voorbereiden.**
-   - AppVeyor-project uitschakelen en daar de oude FTP-gegevens verwijderen.
-   - Oude FTP-wachtwoord wijzigen.
-   - Backup van de huidige map van het hoofddomein (daar staat nu de tijdelijke doorverwijzing).
-2. **Claude: livegang-commit op `v2`.** Workflows publiceren alleen nog vanaf `master`; `v2` eruit. Werkwijze na livegang vastleggen in `CLAUDE.md`.
-3. **Claude: pull request `v2` naar `master`** (alleen op verzoek van Sven).
-4. **Sven: pull request samenvoegen.** "Bouwen en publiceren" publiceert vanaf `master` naar dezelfde map. Voor bezoekers verandert er nog niets.
-5. **Sven: bij de hosting het hoofddomein (en www) naar de map van v2 laten wijzen.** Dat is het moment van livegang.
-6. **Claude: controleren.** Workflow "Site controleren" met `https://brandweeruitgeest.nl` (oude URL's, headers, www en http), Lighthouse.
-7. **P2000 omzetten.** Claude zet in Home Assistant `ref` op `master`; Sven zet de omgevingen `p2000` en `productie` op alleen `master`.
+1. **Sven (gedaan 28-09-2026):** AppVeyor uit, oud FTP-wachtwoord gewijzigd, backup gemaakt, `_PROD`-secrets aangemaakt.
+2. **Claude:** livegang-commit op `v2`: test- en livebouw (`BOUW_OMGEVING`), keuze FTP-gegevens per branch (`tools/publiceer.py`), beschermde mappen, runners vast op `ubuntu-24.04`.
+3. **Claude:** pull request `v2` naar `master` (akkoord Sven 28-09-2026).
+4. **Sven:** pull request samenvoegen. De eerste publicatie naar de echte map stopt bewust: daar staat nog geen manifest.
+5. **Claude:** "Bouwen en publiceren" op `master` met `OPRUIMEN`, eerst droog. De lijst nakijken; staat er iets onverwachts (bijv. mail of logs, of blijkt de FTP-map de thuismap in plaats van de webmap), dan eerst Sven vragen.
+6. **Claude:** dezelfde run echt. De oude bestanden en de tijdelijke doorverwijzing verdwijnen, de nieuwe `.htaccess` gaat als laatste omhoog. Dat is het moment van livegang.
+7. **Claude:** "Site controleren" op `https://brandweeruitgeest.nl` (oude URL's, www, http, headers) en Lighthouse.
+8. **P2000 omzetten:** Claude zet in Home Assistant `ref` op `master`. De omgeving `p2000` heeft de `_PROD`-secrets nodig (Sven).
 
-**Terugdraaien:** bij de hosting het hoofddomein terugzetten naar de oude map. Daar staat de tijdelijke doorverwijzing nog. Gebruik niet `TERUGDRAAIEN` in de workflow: die overschrijft de `.htaccess` in de gedeelde map en raakt dan ook de nieuwe site.
+**Terugdraaien:** "Bouwen en publiceren" op `master` met `TERUGDRAAIEN` (zet alleen de tijdelijke doorverwijzing terug in de map van de echte site), of de backup terugzetten.
 
 ### Eerste livegang (oude site opruimen) (vervallen, zie hierboven)
 
@@ -292,12 +290,13 @@ Dit bestand staat ook in de repo als `tools/htaccess-terugdraaien`. Zo zet je he
 
 ## 8. Livegang-checklist (fase 5)
 
-- [ ] GitHub-omgeving `productie` met secrets ingesteld, AppVeyor uit, oud FTP-wachtwoord gewijzigd.
-- [ ] Backup van de server gemaakt.
+- [x] GitHub-omgeving `productie` met secrets ingesteld (ook `_PROD`), AppVeyor uit, oud FTP-wachtwoord gewijzigd (Sven, 28-09-2026).
+- [x] Backup van de server gemaakt (Sven, 28-09-2026).
 - [ ] Droog opruimen nagekeken.
 - [ ] Alle URL's uit `data/legacy-urls.csv` getest: 200, 301 of 410 (`tools/controleer_live.py`, workflow "Site controleren"). Testsite 28-09-2026: alle 473 goed, 69 pagina's uit de sitemap 200. Na livegang herhalen op het hoofddomein.
 - [ ] Securityheaders gecontroleerd. Testsite 28-09-2026: alle headers precies goed, caching goed, eigen 404, manifest niet op te vragen. Na livegang herhalen (ook www en http).
 - [ ] Lighthouse gedraaid. Testsite 28-09-2026: performance 98 tot 100, toegankelijkheid 100, best practices 96 (logo te klein voor scherpe schermen, groter logo nodig), SEO 69 alleen door `noindex` op v2. Na livegang herhalen.
 - [ ] Tijdelijke doorverwijzing naar brandweer.nl weg.
 - [ ] P2000-publicatie omzetten van de testsite naar de echte site: in Home Assistant `ref` van `v2` naar `master`, omgeving `p2000` alleen nog `master` (besluit Sven 28-09-2026, zie `PLAN-P2000.md`).
-- [ ] `v2` uit de workflows en uit de omgevingen `productie` en `p2000` halen.
+- [ ] ~~`v2` uit de workflows halen~~ vervallen: `v2` blijft de testsite (besluit Sven 28-09-2026).
+- [ ] Geen verwijzing naar het testadres in de gebouwde echte site (`tools/check.py` en `grep`).

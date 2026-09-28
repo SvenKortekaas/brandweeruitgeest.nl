@@ -13,8 +13,8 @@ Schrijfregel: gebruik geen em dashes (—) in teksten, code-commentaar of commit
 
 - Alle werk gebeurt op branch `v2`. Heeft de sessie zelf een andere branch aangemaakt (bijv. `claude/...`), schakel dan over: `git fetch origin && (git checkout v2 || git checkout -b v2 origin/master)`.
 - Na elke afgeronde stap: commit en `git push origin v2`.
-- Nooit committen of pushen naar `master`, nooit mergen, en geen pull request openen tot Sven daar expliciet om vraagt.
-- `master` wordt door AppVeyor automatisch gebouwd en via FTP gedeployd (`appveyor.yml`, `deploy.sh`). `deploy.sh` kijkt alleen naar de doelbranch; een PR-build naar `master` kan daardoor ook deployen. Daarom pas een PR als AppVeyor is uitgeschakeld.
+- Nooit committen of pushen naar `master` en nooit zelf mergen. Werkwijze na livegang (besluit Sven 28-09-2026): Claude werkt op `v2` (de testsite v2.brandweeruitgeest.nl); is een stap af, dan opent Claude een pull request `v2` naar `master` en voegt Sven samen. Alleen P2000-uitrukken gaan automatisch rechtstreeks naar `master`.
+- AppVeyor is uitgeschakeld (Sven, 28-09-2026). `master` wordt gebouwd en gepubliceerd door GitHub Actions.
 - Eerste commit van fase 1 (na de commit met `CLAUDE.md` en `VOORTGANG.md`): verplaats de volledige Hugo-site met `git mv` naar `legacy/` (zodat de historie behouden blijft):
   `config.toml content/ data/ layouts/ static/ themes/ archetypes/ .forestry/ appveyor.yml deploy.sh minify.sh file_sizes.sh`
 - Blijven in de root: `LICENSE.md` (GPL-3.0, niet wijzigen), `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`, `README.md`, `.github/`, `.gitattributes`, `.gitignore`.
@@ -217,10 +217,10 @@ Let op: op de server staat nu een tijdelijke `.htaccess` die doorverwijst naar b
   - bij elke push en PR: `pip install -r requirements.txt`, `python build.py`, `python tools/check.py`
   - deploy alleen vanaf `master`, alleen na geslaagde check
 - De huidige deploy gebruikt `curl -k` over plain FTP (TLS-verificatie uit, wachtwoord onversleuteld). Nieuwe deploy (besluit 27-09-2026): `tools/deploy.py` via FTPS met certificaatcontrole naar een nieuwe FTP-server. Secrets `FTP_SERVER`, `FTP_POORT`, `FTP_GEBRUIKER`, `FTP_WACHTWOORD` (optioneel `FTP_MAP`) staan als environment secrets in de GitHub-omgeving `productie`.
-- Alleen een push van Sven (`SvenKortekaas`) naar `master` publiceert. De workflow controleert repo, branch en actor. Pull requests en forks krijgen nooit toegang tot de secrets.
+- Alleen een push van Sven (`SvenKortekaas`) publiceert: `master` naar de echte site met `FTP_GEBRUIKER_PROD` en `FTP_WACHTWOORD_PROD`, `v2` naar de testsite met `FTP_GEBRUIKER` en `FTP_WACHTWOORD` (besluit Sven 28-09-2026; server en poort gelijk, keuze in `tools/publiceer.py`). De workflow controleert repo, branch en actor. Pull requests en forks krijgen nooit toegang tot de secrets.
 - Eerste livegang: handmatig starten met `OPRUIMEN`, eerst droog. Dat verwijdert alles op de server wat niet bij de site hoort (alleen `.well-known` blijft). Terugdraaien naar de tijdelijke doorverwijzing: `TERUGDRAAIEN` (zet `tools/htaccess-terugdraaien` terug). Geen required reviewer op de omgeving `productie` (besluit Sven 28-09-2026): een push van Sven naar `master` (en tijdens de testfase `v2`) publiceert direct. Daarna synchroniseert elke publicatie via een manifest. Stappenplan: `MIGRATIE.md`, hoofdstuk 7.
 - Deploy synchroniseert `public/` met de server. Verwijderen van oude Hugo-bestanden op de server pas na akkoord en na een backup.
-- Voor de merge naar `master`: AppVeyor-project uitschakelen, anders probeert die nog Hugo te bouwen.
+- Geen verwijzingen naar het testadres (v2.brandweeruitgeest.nl) in de gebouwde site of de sitecode. De testsite wordt gebouwd met `BOUW_OMGEVING=test` (noindex en `Disallow: /`), de echte site met `live` (besluit Sven 28-09-2026). Runners vast op `ubuntu-24.04`.
 - Livegang-checklist in `MIGRATIE.md`: redirects getest met `curl -I` op de volledige oude URL-lijst, securityheaders gecontroleerd, Lighthouse gedraaid, tijdelijke doorverwijzing weg.
 
 ## Prestaties

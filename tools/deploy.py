@@ -44,8 +44,9 @@ TERUGDRAAIEN = Path(__file__).resolve().parent / "htaccess-terugdraaien"
 
 # Nooit verwijderen, ook niet bij --opruimen. Mappen gelden inclusief inhoud.
 # Sven (27-09-2026): alles op de server mag weg. Alleen .well-known blijft, die is nodig
-# om het HTTPS-certificaat te vernieuwen.
-BESCHERMD = {".well-known", MANIFEST}
+# om het HTTPS-certificaat te vernieuwen. Sven (28-09-2026): ook .cagefs en .cl.selector
+# (van de hosting) blijven staan.
+BESCHERMD = {".well-known", ".cagefs", ".cl.selector", MANIFEST}
 
 
 def meld(tekst):

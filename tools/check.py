@@ -14,6 +14,7 @@ Controles (zie CLAUDE.md):
 """
 
 import csv
+import os
 import re
 import sys
 from html.parser import HTMLParser
@@ -309,6 +310,16 @@ def controle_uitrukken():
             (fouten if MIGRATIE_KLAAR else waarschuwingen).append(melding)
 
 
+def controle_testadres():
+    """Een livebouw bevat nergens het adres van de testsite (besluit Sven 28-09-2026)."""
+    if os.environ.get("BOUW_OMGEVING", "live") != "live":
+        return
+    for p in PUBLIC.rglob("*"):
+        if p.is_file() and p.suffix in (".html", ".xml", ".txt", ".css", ".js", ".json", "") \
+                and re.search(r"v2\.brandweeruitgeest", p.read_text(encoding="utf-8", errors="ignore"), re.I):
+            fout(f"{p.relative_to(PUBLIC)}: bevat het adres van de testsite")
+
+
 def main():
     if not PUBLIC.is_dir():
         sys.exit("public/ bestaat niet. Draai eerst: python build.py")
@@ -316,6 +327,7 @@ def main():
     controle_bestanden()
     controle_legacy_urls()
     controle_uitrukken()
+    controle_testadres()
     if waarschuwingen:
         print(f"{len(waarschuwingen)} waarschuwing(en), fout zodra MIGRATIE_KLAAR = True:")
         for w in waarschuwingen[:15]:
