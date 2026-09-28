@@ -1,0 +1,69 @@
+# Meldingen: vertaling en publicatieregels voor nieuwe uitrukken (P2000-import, zie PLAN-P2000.md).
+#
+# Besluit Sven 27-09-2026: geen soorten meldingen verbergen, en korte meldingen zoals op de
+# oude site. De vertaling hieronder is een voorstel van Claude; Sven mag elke tekst aanpassen.
+
+# Meldingen die (hoofdletterongevoelig) een van deze woorden bevatten krijgen publiceren=nee.
+# Leeg: alles wordt getoond.
+niet_publiceren: []
+
+# Soort melding -> korte tekst op de site.
+# Staat een soort hier niet in, dan meldt de import dat.
+vertaling:
+  "Alarm, Autom. brand, Autom. brand OMS": Automatische brandmelding OMS
+  "Alarm, Autom. brand, Brandmelding PAC": Automatische brandmelding PAC
+  "Alarm, Luid/optisch alarm, CO-melder": CO-melder
+  "Alarm, Luid/optisch alarm, Rookmelder": Rookmelder
+  "Brand": Brand
+  "Brand, Bijgebouw": Brand bijgebouw
+  "Brand, Buiten": Buitenbrand
+  "Brand, Buiten, Berm/Ruigte/Bosschage": Bermbrand
+  "Brand, Buiten, Container": Containerbrand
+  "Brand, Buiten, Industrie": Buitenbrand industrie
+  "Brand, Gebouw": Brand gebouw
+  "Brand, Gebouw, Agrarisch": Brand agrarisch gebouw
+  "Brand, Gebouw, Bijeenkomst": Brand bijeenkomstgebouw
+  "Brand, Gebouw, Gezondheidszorg": Brand zorggebouw
+  "Brand, Gebouw, Overige": Brand gebouw
+  "Brand, Gebouw, Winkel": Brand winkel
+  "Brand, Gebouw, Woning/Woongebouw": Brand woning
+  "Brand, Natuur": Natuurbrand
+  "Brand, Natuur, Bos": Bosbrand
+  "Brand, Natuur, Duin": Duinbrand
+  "Brand, Natuur, Duinbrand": Duinbrand
+  "Brand, Natuur, Heide": Heidebrand
+  "Brand, Scheepvaart": Brand scheepvaart
+  "Brand, Specifiek, Brandgerucht": Brandgerucht
+  "Brand, Specifiek, Nacontrole": Nacontrole
+  "Brand, Wegvervoer": Brand wegvervoer
+  "Dienstverlening": Dienstverlening
+  "Dienstverlening, Brandweer": Dienstverlening
+  "Dienstverlening, Brandweer, Afstemverzoek": Afstemverzoek
+  "Dienstverlening, Brandweer, Bijstand": Bijstand brandweer
+  "Dienstverlening, Brandweer, Dienst aan derden": Dienstverlening
+  "Dienstverlening, Brandweer, Geplande actie": Geplande actie
+  "Dienstverlening, Brandweer, Herbez./Kazern.": Herbezetting kazerne
+  "Dienstverlening, Brandweer, Liftopsluiting": Liftopsluiting
+  "Dienstverlening, Brandweer, Oefening": Oefening
+  "Dienstverlening, Dieren, Op hoogte": Dier op hoogte
+  "Dienstverlening, Dieren, Te water": Dier te water
+  "Dienstverlening, Multi, Buitensluiting": Buitensluiting
+  "Dienstverlening, Politie, Bijstand": Bijstand politie
+  "Dienstverlening, Politie, Eigen initiatief": Assistentie politie
+  "Gezondheid": Gezondheid
+  "Gezondheid, Reanimatie": Reanimatie
+  "Leefmilieu, Stank/Hinder. Lucht": Stankoverlast
+  "Leefmilieu, Verontreiniging, Lucht": Luchtverontreiniging
+  "Leefmilieu, Water/weer problemen, Stormschade": Stormschade
+  "Leefmilieu, Water/weer problemen, Wateroverlast": Wateroverlast
+  "Ongeval": Ongeval
+  "Ongeval, Overig": Ongeval
+  "Ongeval, Overig, Gevaarlijke stof": Ongeval gevaarlijke stof
+  "Ongeval, Overig, Materieel": Ongeval materieel
+  "Ongeval, Water, Persoon te water": Persoon te water
+  "Ongeval, Water, Schip/watersp. in problemen": Schip of watersporter in problemen
+  "Ongeval, Wegvervoer, Letsel": Ongeval wegvervoer letsel
+  "Ongeval, Wegvervoer, Voertuig te water": Voertuig te water
+  "Veiligheid en openbare orde, Explosief/Munitie, Explosie": Explosie
+  "Veiligheid en openbare orde, Verdachte situatie, Gebouw": Verdachte situatie gebouw
+  "Veiligheid en openbare orde, Verdachte situatie, Voertuig/Vaartuig": Verdachte situatie voertuig of vaartuig

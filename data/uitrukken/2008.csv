@@ -1,0 +1,96 @@
+nr,datum,tijd,prio,melding,adres,plaats,bron,publiceren
+1,2008-01-01,,,Buitenbrand,Hogeweg,Uitgeest,legacy,ja
+2,2008-01-01,,,Buitenbrand,Prinses Irenelaan,Uitgeest,legacy,ja
+3,2008-01-01,,,Zeer grote brand industrie,,Haarlem,legacy,ja
+4,2008-01-01,,,Binnenbrand ( Middel ),,Heemskerk,legacy,ja
+5,2008-01-01,,,WVD ( zeer grote brand ),,Haarlem,legacy,ja
+6,2008-01-04,,,Dier te water,Koogdijk,Uitgeest,legacy,ja
+7,2008-01-08,,,Buitenbrand,Lagendijk,Uitgeest,legacy,ja
+8,2008-01-14,,,Voertuig te water,Provincialeweg,Uitgeest,legacy,ja
+9,2008-01-20,,,Buitenbrand,Benningskamplaan,Uitgeest,legacy,ja
+10,2008-01-30,,,Ongeval groot voertuig,A9 R 58.1,,legacy,ja
+11,2008-01-30,,,ABM vd Lem,Molenwerf,Uitgeest,legacy,ja
+12,2008-01-31,,,Binnenbrand gerucht,Kleis,Uitgeest,legacy,ja
+13,2008-02-02,,,ABM vd Lem,Molenwerf,Uitgeest,legacy,ja
+14,2008-02-02,,,Ongeval met beknelling,A9,,legacy,ja
+15,2008-02-05,,,ABM Geesterheem,Dokter Brugmanstraat,Uitgeest,legacy,ja
+16,2008-02-09,,,Liftopsluiting,Graskamplaan,Uitgeest,legacy,ja
+17,2008-02-16,,,Containerbrand,Prinses Beatrixlaan,Uitgeest,legacy,ja
+18,2008-02-23,,,Buitenbrand,Uitgeestermeer,Uitgeest,legacy,ja
+19,2008-03-02,,,Buitenbrand,Provincialeweg,Uitgeest,legacy,ja
+20,2008-03-04,,,Binnenbrand ( Middel ),Cnollenbijter,Uitgeest,legacy,ja
+21,2008-03-05,,,ABM de Waterjuffer,De Juffer,Uitgeest,legacy,ja
+22,2008-03-07,,,ABM vd Lem,Molenwerf,Uitgeest,legacy,ja
+23,2008-03-10,,,Stormschade,De Vrede,Uitgeest,legacy,ja
+24,2008-03-14,,,Buitenbrand,Weth. Twaalfhovenstraat,Uitgeest,legacy,ja
+25,2008-03-21,,,ABM vd Lem,Molenwerf,Uitgeest,legacy,ja
+26,2008-03-22,,,Binnenbrand ( Middel ),Populierenlaan,Uitgeest,legacy,ja
+27,2008-03-26,,,Autobrand,Stationsplein,Uitgeest,legacy,ja
+28,2008-03-30,,,Liftopsluiting,Stationsplein,Uitgeest,legacy,ja
+29,2008-04-07,,,Binnenbrand ( Middel ),De Krijgsman,Uitgeest,legacy,ja
+30,2008-04-27,,,Liftopsluiting,Stationsplein,Uitgeest,legacy,ja
+31,2008-04-27,,,Liftopsluiting,Stationsplein,Uitgeest,legacy,ja
+32,2008-05-10,,,Buitenbrand,Stationsplein,Uitgeest,legacy,ja
+33,2008-05-11,,,Buitenbrand,N203,,legacy,ja
+34,2008-05-17,,,VKO materieel,A9 L 59.0,,legacy,ja
+35,2008-05-24,,,VKO met letsel,A9 R 60.3,,legacy,ja
+36,2008-05-26,,,Dier te water,Lagendijk,Uitgeest,legacy,ja
+37,2008-06-08,,,Buitenbrand,Busch en dam,Uitgeest,legacy,ja
+38,2008-06-12,,,Binnenbrand industrie,Molenstraat,Uitgeest,legacy,ja
+39,2008-06-14,,,ABM de Waterjuffer,De Juffer,Uitgeest,legacy,ja
+40,2008-06-16,,,Autobrand,A9 L 60.8,,legacy,ja
+41,2008-06-16,,,Gaslekkage,A9 L 60.3,,legacy,ja
+42,2008-06-22,,,Stormschade,Benesserlaan,Uitgeest,legacy,ja
+43,2008-06-29,,,Vaartuig maakt water,Haven van Uitgeest,Uitgeest,legacy,ja
+44,2008-07-01,,,Brandstof lekkage,Westerwerf,Uitgeest,legacy,ja
+45,2008-07-04,,,VKO met beknelling,A9 R 59.7,,legacy,ja
+46,2008-07-10,,,ABM Geesterheem,Dokter Brugmanstraat,Uitgeest,legacy,ja
+47,2008-07-21,,,Stormschade,Geesterweg,Uitgeest,legacy,ja
+48,2008-07-22,,,Binnenbrand wonen,Middelweg,Uitgeest,legacy,ja
+49,2008-07-23,,,Autobrand,Uitgeesterweg,Uitgeest,legacy,ja
+50,2008-07-25,,,Welzijn dieren,Cnollenbijter,Uitgeest,legacy,ja
+51,2008-07-26,,,Nood oproep vaartuig,Uitgeestermeer,Uitgeest,legacy,ja
+52,2008-07-29,,,ABM Geesterheem,Dokter Brugmanstraat,Uitgeest,legacy,ja
+53,2008-08-01,,,VKO met beknelling,A9 L 58.4,,legacy,ja
+54,2008-08-07,,,Wateroverlast,Vrijburglaan,Uitgeest,legacy,ja
+55,2008-08-10,,,Stormschade,Westergeest,Uitgeest,legacy,ja
+56,2008-08-11,,,Buitenbrand,Molenstraat,Uitgeest,legacy,ja
+57,2008-08-13,,,Stormschade,Koperwiekstraat,Uitgeest,legacy,ja
+58,2008-08-16,,,Binnenbrand wonen ( zeer groot 2e peleton opkomen ),,Hoofddorp,legacy,ja
+59,2008-08-20,,,ABM Monkey town,Molenwerf,Uitgeest,legacy,ja
+60,2008-08-23,,,Dier te water,N203,,legacy,ja
+61,2008-09-01,,,ABM Geesterheem,Dokter Brugmanstraat,Uitgeest,legacy,ja
+62,2008-09-04,,,Dier te water,Lagendijk,Uitgeest,legacy,ja
+63,2008-09-14,,,Dier te water,Broekpolderweg,Uitgeest,legacy,ja
+64,2008-09-20,,,Grote brand Grip 1 industrie,,Velsen-Noord,legacy,ja
+65,2008-09-27,,,Dier te water,Lagendijk,Uitgeest,legacy,ja
+66,2008-10-03,,,ABM vd Valk,,Akersloot,legacy,ja
+67,2008-10-05,,,Binnenbrand wonen ( Groot ),,Zaandam,legacy,ja
+68,2008-10-05,,,Aardgaslek,Anne van Renneselaan,Uitgeest,legacy,ja
+69,2008-10-11,,,VKO Materieel,A9 L 60.7,,legacy,ja
+70,2008-10-12,,,Liftopsluiting,Graskamplaan,Uitgeest,legacy,ja
+71,2008-10-13,,,Liftopsluiting,Middelweg,Uitgeest,legacy,ja
+72,2008-10-18,,,ABM de Waterjuffer,De Juffer,Uitgeest,legacy,ja
+73,2008-10-18,,,Nacontrole na binnenbrand,Ziendervaart,Uitgeest,legacy,ja
+74,2008-10-20,,,Buitenbrand,Lagendijk,Uitgeest,legacy,ja
+75,2008-10-20,,,Buitenbrand,Dorregeest,Uitgeest,legacy,ja
+76,2008-10-23,,,ABM de Waterjuffer,De Juffer,Uitgeest,legacy,ja
+77,2008-10-26,,,Binnenbrand wonen,Bollenhof,Uitgeest,legacy,ja
+78,2008-10-28,,,Binnenbrand wonen,Twaalfmaat,Uitgeest,legacy,ja
+79,2008-10-31,,,ABM vd Lem,Molenwerf,Uitgeest,legacy,ja
+80,2008-11-07,,,Voertuig te water,Provincialeweg,Uitgeest,legacy,ja
+81,2008-11-07,,,Lift opsluiting,Middelweg,Uitgeest,legacy,ja
+82,2008-11-10,,,Wateroverlast,De Terp,Uitgeest,legacy,ja
+83,2008-11-10,,,Stormschade,Provincialeweg,Uitgeest,legacy,ja
+84,2008-11-11,,,Afhijsen patient,Westerwerf,Uitgeest,legacy,ja
+85,2008-11-21,,,Stormschade,Koperwiekstraat,Uitgeest,legacy,ja
+86,2008-11-21,,,Opkomen kazerne C2000,Molenwerf,Uitgeest,legacy,ja
+87,2008-11-22,,,Buitenbrand,Lagendijk,Uitgeest,legacy,ja
+88,2008-12-07,,,Voertuig te water,A9,,legacy,ja
+89,2008-12-08,,,Voertuig te water,A9,,legacy,ja
+90,2008-12-09,,,Gaslek Grip 1,Verzetstraat,Uitgeest,legacy,ja
+91,2008-12-18,,,Peleton noord grip 2,,Purmerend,legacy,ja
+92,2008-12-21,,,Binnenbrand,Prinses beatrixlaan,Uitgeest,legacy,ja
+93,2008-12-22,,,Afhijsen patient,Molenweg,Uitgeest,legacy,ja
+94,2008-12-26,,,Binnenbrand,Witte hoofden,Uitgeest,legacy,ja
+95,2008-12-31,,,Autobrand,Kleis,Uitgeest,legacy,ja

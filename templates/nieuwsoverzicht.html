@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block inhoud %}
+<div class="tekst">
+  <h1>{{ titel }}</h1>
+  {% if pagina == 1 %}<p>Berichten van brandweer Uitgeest uit 2016 tot en met 2020. Er komen voorlopig geen nieuwe berichten bij.</p>{% endif %}
+</div>
+<ul class="nieuwslijst">
+{% for a in artikelen %}
+  <li>
+    <h2><a href="{{ a.url }}">{{ a.meta.title }}</a></h2>
+    <p class="meta"><time datetime="{{ a.meta.date.date().isoformat() }}">{{ a.meta.date|datum }}</time></p>
+    <p>{{ a.meta.description }}</p>
+  </li>
+{% endfor %}
+</ul>
+{% if aantal_paginas > 1 %}
+<nav class="paginering" aria-label="Pagina's">
+  {% if pagina > 1 %}<a href="{{ '/nieuws/' if pagina == 2 else '/nieuws/page/%d/' % (pagina - 1) }}" rel="prev">Nieuwer</a>{% endif %}
+  <span>Pagina {{ pagina }} van {{ aantal_paginas }}</span>
+  {% if pagina < aantal_paginas %}<a href="/nieuws/page/{{ pagina + 1 }}/" rel="next">Ouder</a>{% endif %}
+</nav>
+{% endif %}
+{% endblock %}

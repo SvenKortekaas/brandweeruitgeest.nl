@@ -1,0 +1,107 @@
+nr,datum,tijd,prio,melding,adres,plaats,bron,publiceren
+1,2016-01-01,,2,Containerbrand,De Hoop 2a,Uitgeest,legacy,ja
+2,2016-01-01,,2,Nacontrole,Korhoenstraat 4,Uitgeest,legacy,ja
+3,2016-01-02,,2,Buitenbrand,Station Uitgeest,Uitgeest,legacy,ja
+4,2016-01-05,,2,Buitenbrand,Parallelaan 2,Uitgeest,legacy,ja
+5,2016-01-09,,1,Automatische brandmelder,Geesterheem – Dokter Brugmanstraat 15,Uitgeest,legacy,ja
+6,2016-01-13,,2,Rook / CO Melder,Geesterweg 91,Uitgeest,legacy,ja
+7,2016-01-14,,1,Ongeval wegvervoer letsel,A9 L59.8,,legacy,ja
+8,2016-01-19,,1,Prio 1 Automatische brandmelder (ingetrokken),Geesterheem – Dokter Brugmanstraat 15,Uitgeest,legacy,ja
+9,2016-01-23,,2,Metingen (aardgas),De Spin,Uitgeest,legacy,ja
+10,2016-01-26,,1,Brand wonen (schoorsteen),Bonkenburg 12,Uitgeest,legacy,ja
+11,2016-01-27,,1,Ongeval wegvervoer materieel (gasontsnapping/lekkage),A9 R60.2,,legacy,ja
+12,2016-01-28,,1,Basis alarm,Benesserlaan 258,Uitgeest,legacy,ja
+13,2016-01-29,,1,Ongeval wegvervoer letsel,N203 53.5,,legacy,ja
+14,2016-01-30,,1,Basis Alarm,Benningskamplaan 15,Uitgeest,legacy,ja
+15,2016-02-10,,2,Vervuild wegdek,Hogeweg 110,Uitgeest,legacy,ja
+16,2016-02-25,,1,Ongeval Wegvervoer Letsel,A9 61.0 R,,legacy,ja
+17,2016-02-26,,1,Ongeval Wegvervoer Letsel,A9 50.5 L,,legacy,ja
+18,2016-03-03,,1,Ongeval Wegvervoer Materieel,N203 56.4,,legacy,ja
+19,2016-03-06,,1,Liftopsluiting,Dokter Brugmanstraat 70,Uitgeest,legacy,ja
+20,2016-03-09,,1,Brandmelding OMS,De Bonkelaar 37,Uitgeest,legacy,ja
+21,2016-03-09,,1,Brand Schoorsteen,Geesterweg,Uitgeest,legacy,ja
+22,2016-03-11,,1,Rookmelder,Aan de Kromme Sloot 16,Uitgeest,legacy,ja
+23,2016-03-13,,2,Meting,Molenstraat 28,Uitgeest,legacy,ja
+24,2016-04-01,,1,Containerbrand,Dokter Brugmanstraat,Uitgeest,legacy,ja
+25,2016-04-09,,1,Afhijsen patient,Roerdompstraat,Uitgeest,legacy,ja
+26,2016-04-09,,2,Afhijsen patient,Esdoornstraat,Uitgeest,legacy,ja
+27,2016-04-15,,1,Ongeval Wegvervoer Letsel,A9 61.6 L,,legacy,ja
+28,2016-04-18,,1,Ongeval Wegvervoer Letsel,A9 59.8 L,,legacy,ja
+29,2016-04-19,,1,Brand Wegvervoer,A9 55.0 L,,legacy,ja
+30,2016-04-24,,2,Afhijsen patiënt,Bonkenburg,Uitgeest,legacy,ja
+31,2016-04-27,,1,Zeer Grote Brand GRIP 1 Brand Bijgebouw,Industriestraat,IJmuiden,legacy,ja
+32,2016-04-28,,1,Nacontrole blikseminslag,De Hoop 21,Uitgeest,legacy,ja
+33,2016-05-01,,2,Afhijsen patiënt,Waterdief,Uitgeest,legacy,ja
+34,2016-05-08,,1,Ongeval Wegvervoer Letsel,N203 54.4,,legacy,ja
+35,2016-05-08,,2,buitenbrand,Stationsplein 1,Uitgeest,legacy,ja
+36,2016-05-12,,1,Ongeval Wegvervoer Letsel,A9 L,,legacy,ja
+37,2016-05-12,,1,Reanimatie,Melis Stokelaan,Uitgeest,legacy,ja
+38,2016-05-15,,2,Koe te water,Broekpolderweg,Uitgeest,legacy,ja
+39,2016-05-17,,1,Ongeval Wegvervoer Letsel,Geesterweg,Uitgeest,legacy,ja
+40,2016-05-22,,1,Reanimatie,Molenweg,Uitgeest,legacy,ja
+41,2016-05-23,,1,Reanimatie / Afhijsen patient,De Krijgsman,Uitgeest,legacy,ja
+42,2016-05-24,,1,Reanimatie,Wethouder C. Kromstraat,Uitgeest,legacy,ja
+43,2016-05-28,,1,Reanimatie,A9 L 60.6,,legacy,ja
+44,2016-05-28,,1,Brand bijgebouw,Floraronde 4,Uitgeest,legacy,ja
+45,2016-06-03,,1,Brand woning,De Krijgsman 39,Uitgeest,legacy,ja
+46,2016-06-06,,1,Reanimatie,Middelweg,Uitgeest,legacy,ja
+47,2016-06-06,,1,Ongeval wegvervoer letsel,Westerwerf,Uitgeest,legacy,ja
+48,2016-06-19,,2,Verzorging Klein,Zuiderkade,Beverwijk,legacy,ja
+49,2016-06-22,,1,Assistentie Ambulance (Ingetrokken),Alkmaardermeer,Uitgeest,legacy,ja
+50,2016-06-23,,1,Brand wegvervoer,Hogeweg 163,Uitgeest,legacy,ja
+51,2016-06-25,,1,Voertuig te water,N203 56.8,,legacy,ja
+52,2016-06-26,,2,Buitenbrand,Geesterweg 7,Uitgeest,legacy,ja
+53,2016-07-02,,2,Dier te water (Koe),Lagendijk 14,Uitgeest,legacy,ja
+54,2016-07-08,,1,Brand woning (Grote brand),Wenckebachstraat 138,Velsen-Noord,legacy,ja
+55,2016-07-08,,2,Verzorging klein,Wenckebachstraat 138,Velsen-Noord,legacy,ja
+56,2016-07-09,,1,Brand Industrie,Houtweg,Heemskerk,legacy,ja
+57,2016-07-09,,2,Verzorging klein,Houtweg,Heemskerk,legacy,ja
+58,2016-07-11,,1,Reanimatie,De Twaalfmaat,Uitgeest,legacy,ja
+59,2016-07-13,,1,Stankoverlast (Gaslucht),Benesserlaan 15,Uitgeest,legacy,ja
+60,2016-07-14,,2,Nacontrole,Kindergarden Kleis 84,Uitgeest,legacy,ja
+61,2016-07-20,,1,Reanimatie,De Twaalfmaat,Uitgeest,legacy,ja
+62,2016-07-21,,1,Brand Woning,,Wijk aan Zee,legacy,ja
+63,2016-07-25,,2,Buitenbrand,Lagendijk 3,Uitgeest,legacy,ja
+64,2016-07-29,,2,Dienstverlening Afhijsen Patiënt,Anna van Renesseplein,Uitgeest,legacy,ja
+65,2016-08-01,,2,Brandgerucht,Middelweg 14,Uitgeest,legacy,ja
+66,2016-08-23,,2,Brandmelding PAC,Anna van Renesselaan 106,Uitgeest,legacy,ja
+67,2016-08-24,,1,Brand bijgebouw (schuur),Geesterweg 6,Uitgeest,legacy,ja
+68,2016-08-25,,1,Automatische brandmelding,Het Bollenhof 1,Uitgeest,legacy,ja
+69,2016-08-27,,2,Contrainerbrand,Zwaansmeer Lagendijk,Uitgeest,legacy,ja
+70,2016-08-28,,1,Brand woning middelbrand (Waterwagen),Laan van Broekpolder 142,Beverwijk,legacy,ja
+71,2016-09-11,,2,Kleine verzorging,Zuiderkade,Beverwijk,legacy,ja
+72,2016-09-13,,2,buitenbrand,Busch en Dam,Uitgeest,legacy,ja
+73,2016-09-17,,1,Brand wegvervoer (fiets),NS Station Uitgeest,Uitgeest,legacy,ja
+74,2016-10-02,,1,Buitenbrand (Middelbrand),Nicolaas Beetslaan,Driehuis,legacy,ja
+75,2016-10-04,,1,Brand gerucht,Dorregeesterweg,Uitgeest,legacy,ja
+76,2016-10-04,,1,Brandgerucht,Klein Dorregeest,Akersloot,legacy,ja
+77,2016-10-09,,1,Brandmelding OMS (Middelbrand),President Kennedyplein,Beverwijk,legacy,ja
+78,2016-10-11,,1,Ongeval Wegvervoer Letsel,A9 L,,legacy,ja
+79,2016-10-11,,1,Dienstverlening (til assistentie),Achterloet,Uitgeest,legacy,ja
+80,2016-10-13,,1,Brandmelding OMS,Dokter Brugmanstraat,Uitgeest,legacy,ja
+81,2016-10-15,,1,Brandmelding PAC,Kooglaan,Uitgeest,legacy,ja
+82,2016-10-16,,1,Brandmelding PAC,Kleis,Uitgeest,legacy,ja
+83,2016-10-25,,1,Brand wegvervoer (personenauto),A9 L,,legacy,ja
+84,2016-10-30,,1,Brand wegvervoer (personenauto),A9 R,,legacy,ja
+85,2016-11-02,,1,Reanimatie,De Waterdief,Uitgeest,legacy,ja
+86,2016-11-05,,1,Reanimatie,J.E. de Witstraat,Uitgeest,legacy,ja
+87,2016-11-12,,1,Brand Woning,De Melksuiker,Uitgeest,legacy,ja
+88,2016-11-14,,1,Ongeval Wegvervoer Materieel,A9 L,,legacy,ja
+89,2016-11-19,,1,Ongeval Wegvervoer Letsel,N203,,legacy,ja
+90,2016-11-21,,1,Ongeval Wegvervoer Letsel,A9 L,,legacy,ja
+91,2016-11-22,,1,Ongeval Wegvervoer Letsel,N203,,legacy,ja
+92,2016-11-24,,1,Brand Wegvervoer,A9 R,,legacy,ja
+93,2016-11-25,,2,Verzorging Klein,Aletta Jacobsstraat,Heemskerk,legacy,ja
+94,2016-11-25,,2,Verzorging Klein,Simon van Haerlemstraat,Heemskerk,legacy,ja
+95,2016-11-26,,1,Brand Wegvervoer,Wethouder Twaalfhovenstraat,Uitgeest,legacy,ja
+96,2016-11-27,,1,Brandmelding OMS,Dokter Brugmanstraat,Uitgeest,legacy,ja
+97,2016-11-28,,2,Dier te water (ree/hert),Uitgeesterweg,Uitgeest,legacy,ja
+98,2016-12-03,,1,Brand Wegvervoer (personenauto),N203,,legacy,ja
+99,2016-12-08,,1,Ongeval Wegvervoer Letsel,A9 R,,legacy,ja
+100,2016-12-09,,1,Reanimatie,Dokter Brugmanstraat,Uitgeest,legacy,ja
+101,2016-12-14,,1,Brand Woning,Ziendervaart,Uitgeest,legacy,ja
+102,2016-12-17,,1,Reanimatie,Lagendijk,Uitgeest,legacy,ja
+103,2016-12-24,,1,Middelbrand Industrie,Creutzberglaan,Beverwijk,legacy,ja
+104,2016-12-24,,1,Grote brand Industrie,Creutzberglaan,Beverwijk,legacy,ja
+105,2016-12-24,,2,Vezorging Klein,Creutzberglaan,Beverwijk,legacy,ja
+106,2016-12-24,,2,Containerbrand,Kerkbuurt,Uitgeest,legacy,ja

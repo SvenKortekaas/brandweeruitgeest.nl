@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% from "iconen.html" import icoon %}
+{% block inhoud %}
+<h1 class="visueel-verborgen">{{ site.naam }}</h1>
+<section class="werving" aria-labelledby="werving-titel">
+  <h2 id="werving-titel">{{ site.werving.titel }}</h2>
+  <p>{{ site.werving.tekst }}</p>
+  <p><a class="knop" href="{{ site.werving.link }}" rel="noopener">{{ site.werving.linktekst }} {{ icoon("pijl") }}</a></p>
+</section>
+<div class="tekst">
+{{ body }}
+</div>
+<section aria-labelledby="laatste-titel">
+  <h2 id="laatste-titel">Laatste uitrukken</h2>
+  {% if laatste %}
+  <ul class="uitruklijst">
+  {% for r in laatste %}
+    <li>
+      <span class="uitruk-datum"><time datetime="{{ r.datum.isoformat() }}">{{ r.datum|datum }}</time></span>
+      {% if r.prio %}<span class="prio prio-{{ r.prio }}">Prio {{ r.prio }}</span>{% endif %}
+      <span class="uitruk-melding">{{ r.melding }}</span>
+      <span class="uitruk-adres">{{ r.adres }}{% if r.adres and r.plaats %}, {% endif %}{{ r.plaats }}</span>
+    </li>
+  {% endfor %}
+  </ul>
+  {% endif %}
+  <p><a href="/uitrukken/">Alle uitrukken per jaar {{ icoon("pijl") }}</a></p>
+</section>
+<section class="contactblok" aria-labelledby="contact-titel">
+  <h2 id="contact-titel">Adres en contact</h2>
+  <p>{{ icoon("locatie") }} {{ site.adres.straat }}, {{ site.adres.postcode }} {{ site.adres.plaats }}</p>
+  <p>{{ icoon("mail") }} <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+  <ul class="social">
+  {% for s in site.social %}
+    <li><a href="{{ s.url }}" rel="noopener">{{ icoon(s.icoon) }} {{ s.naam }}</a></li>
+  {% endfor %}
+  </ul>
+  <p>Bij brand of een ander noodgeval: bel altijd <strong>112</strong>.</p>
+</section>
+{% endblock %}

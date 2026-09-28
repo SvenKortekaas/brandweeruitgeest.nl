@@ -1,0 +1,70 @@
+nr,datum,tijd,prio,melding,adres,plaats,bron,publiceren
+1,2022-01-01,,2,Brand gerucht,Stationsplein,Uitgeest,legacy,ja
+2,2022-01-05,,1,Brand woning,Prinses Beatrixlaan,Uitgeest,legacy,ja
+3,2022-01-20,,1,Brand wegvervoer auto,N203,,legacy,ja
+4,2022-01-20,,1,Brand woning schoorsteen,Lagendijk,Uitgeest,legacy,ja
+5,2022-01-31,,2,Stormschade,Geesterweg,Uitgeest,legacy,ja
+6,2022-02-02,,1,Brand nacontrole,Loet,Uitgeest,legacy,ja
+7,2022-02-04,,1,Brand woning,Geesterweg,Uitgeest,legacy,ja
+8,2022-02-05,,1,Middel HV Weg letsel,"N203 58,7",,legacy,ja
+9,2022-02-18,,2,Stormschade,Molenstraat,Uitgeest,legacy,ja
+10,2022-02-18,,2,Stormschade,Zienlaan,Uitgeest,legacy,ja
+11,2022-02-18,,2,Stormschade,Benesserlaan,Uitgeest,legacy,ja
+12,2022-02-18,,2,Stormschade,Zienlaan,Uitgeest,legacy,ja
+13,2022-02-18,,2,Stormschade,Handelstraat,Heemskerk,legacy,ja
+14,2022-02-18,,2,Stormschade,"A9 L 58,1c",,legacy,ja
+15,2022-02-19,,2,Stormschade,"A9 L 60,6",,legacy,ja
+16,2022-02-19,,2,Stormschade,Geesterweg,Uitgeest,legacy,ja
+17,2022-03-02,,1,Brand wegvervoer auto,"A9 R 67,4",,legacy,ja
+18,2022-03-09,,2,Stormschade,Kleis,Uitgeest,legacy,ja
+19,2022-03-09,,2,Brand berm/bosschage,Middelweg,Uitgeest,legacy,ja
+20,2022-03-10,,1,Hulpverlening weg letsel,"A9 L 60,5",,legacy,ja
+21,2022-03-23,,1,Brand wegvervoer auto,"A9 R 64,5",,legacy,ja
+22,2022-03-24,,1,Brand natuur Risico Hoog,Hondsdrafpad,Ijmuiden,legacy,ja
+23,2022-04-04,,1,Reanimatie,Middelweg,Uitgeest,legacy,ja
+24,2022-04-04,,2,Stank gaslucht buiten,Benesserlaan,Uitgeest,legacy,ja
+25,2022-04-07,,1,Middel brand bijgebouw,Aan de Kromme Sloot,Uitgeest,legacy,ja
+26,2022-04-19,,1,Buitensluiting,Bachstraat,Akersloot,legacy,ja
+27,2022-04-21,,2,Brand buiten NS Station,Stationsplein,Uitgeest,legacy,ja
+28,2022-04-22,,1,Brand buiten Kringloopwinkel Noppes,Kleis,Uitgeest,legacy,ja
+29,2022-04-27,,2,Dier in problemen,Westergeest,Uitgeest,legacy,ja
+30,2022-05-03,,1,HV weg letsel,"A9 R 62,0",,legacy,ja
+31,2022-05-18,,2,CO melder,Blauwe Venstraat,Uitgeest,legacy,ja
+32,2022-05-18,,1,Brand wegvervoer auto,"A9 R 67,4",,legacy,ja
+33,2022-05-22,,2,HV overig gaslekkage buiten,Kooglaan,Uitgeest,legacy,ja
+34,2022-05-25,,2,Dier in problemen,Hogeweg,Uitgeest,legacy,ja
+35,2022-06-04,,2,HV materieel gaslekkage buiten,Scharloo,Uitgeest,legacy,ja
+36,2022-07-05,,2,Brand buiten NS Station,Stationsplein,Uitgeest,legacy,ja
+37,2022-07-07,,1,Reanimatie,Kemphaanstraat,Uitgeest,legacy,ja
+38,2022-07-12,,2,Brand buiten,"A9 L 61,2",,legacy,ja
+39,2022-07-13,,2,Wateroverlast,Veenislaan,Uitgeest,legacy,ja
+40,2022-07-19,,1,Persoon te water,Parallelweg,Uitgeest,legacy,ja
+41,2022-07-26,,2,Assistentie ambulance afhijsen,Dokter Brugmanstraat,Uitgeest,legacy,ja
+42,2022-07-26,,1,Brand wegvervoer,"A9 R 64,0",,legacy,ja
+43,2022-08-01,,1,Peloton GWT,Voorweg,Heemskerk,legacy,ja
+44,2022-08-02,,2,Schip / Watersporter in problemen,Uitgeestermeer,Uitgeest,legacy,ja
+45,2022-08-12,,2,Assistentie politie,Uitgeestermeer,Uitgeest,legacy,ja
+46,2022-08-12,,1,Peloton GWT,Duin- en Kruidbergerweg,Santpoort-Noord,legacy,ja
+47,2022-08-20,,1,Reanimatie,Kooglaan,Uitgeest,legacy,ja
+48,2022-08-23,,2,Brand buiten,"A9 R 66,2",,legacy,ja
+49,2022-09-06,,2,OMS Politiebureau,Eerste Groenelaan,Castricum,legacy,ja
+50,2022-09-09,,1,Brand woning,De Dadelboom,Uitgeest,legacy,ja
+51,2022-09-10,,2,OMS Slimp,Dokter Brugmanstraat,Uitgeest,legacy,ja
+52,2022-09-12,,2,Aflossing,Herenweg,Heemstede,legacy,ja
+53,2022-09-21,00:27,2,Automatische brandmelding OMS,Dokter Brugmanstraat,Uitgeest,p2000,ja
+54,2022-09-21,08:18,2,Rookmelder,Dokter Brugmanstraat,Uitgeest,p2000,ja
+55,2022-09-29,16:36,1,Brand bijeenkomstgebouw,Geesterweg,Akersloot,p2000,ja
+56,2022-10-01,08:22,2,Rookmelder,Scholeksterstraat,Uitgeest,p2000,ja
+57,2022-10-09,17:33,2,Buitenbrand,Klein Dorregeest,Uitgeest,p2000,ja
+58,2022-10-11,18:50,2,Dienstverlening,Middelweg,Uitgeest,p2000,ja
+59,2022-10-17,14:02,2,Assistentie ambulance afhijsen,De Bonkelaar,Uitgeest,p2000,ja
+60,2022-10-21,08:45,1,Gaslekkage,Lagendijk,Uitgeest,p2000,ja
+61,2022-10-31,14:53,2,Gaslekkage,J.E. de Witstraat,Uitgeest,p2000,ja
+62,2022-11-09,19:58,1,Brand woning schoorsteen,Groot Dorregeest,Uitgeest,p2000,ja
+63,2022-11-17,12:58,1,Peloton,Laboratoriumweg,Westknollendam,p2000,ja
+64,2022-11-21,16:31,2,Liftopsluiting,Stationsplein,Uitgeest,p2000,ja
+65,2022-11-29,09:44,2,Brandgerucht,Geesterduin,Castricum,p2000,ja
+66,2022-12-15,00:14,1,Voertuig te water,"N246 38,5",Starnmeer,p2000,ja
+67,2022-12-17,18:19,2,Nacontrole,Hogeweg,Uitgeest,p2000,ja
+68,2022-12-22,17:09,2,Dier in problemen,Geesterweg,Uitgeest,p2000,ja
+69,2022-12-28,15:57,1,Reanimatie,Boterbloem,Uitgeest,p2000,ja

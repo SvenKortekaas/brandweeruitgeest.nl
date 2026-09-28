@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>Nieuwsarchief {{ site.naam }}</title>
+  <link>{{ site.url }}/nieuws/</link>
+  <description>Nieuwsberichten van {{ site.naam }}</description>
+  <language>nl-nl</language>
+{% for a in artikelen %}
+  <item>
+    <title>{{ a.meta.title }}</title>
+    <link>{{ site.url }}{{ a.url }}</link>
+    <guid>{{ site.url }}{{ a.url }}</guid>
+    <pubDate>{{ a.meta.date.strftime("%a, %d %b %Y %H:%M:%S +0000") }}</pubDate>
+    <description>{{ a.meta.description }}</description>
+  </item>
+{% endfor %}
+</channel>
+</rss>

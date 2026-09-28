@@ -1,0 +1,99 @@
+nr,datum,tijd,prio,melding,adres,plaats,bron,publiceren
+1,2020-01-01,,2,Containerbrand,De Waterdief,Uitgeest,legacy,ja
+2,2020-01-01,,2,Dier In Nood,Uitgeesterweg,Uitgeest,legacy,ja
+3,2020-01-02,,1,Assistentie Ambulance Afhijsen,Kemphaanstraat,Uitgeest,legacy,ja
+4,2020-01-14,,2,Buitenbrand,Zienlaan,Uitgeest,legacy,ja
+5,2020-01-19,,1,Middelbrand Agrarisch,Maerten van Heemskerckstraat,Heemskerk,legacy,ja
+6,2020-01-19,,1,Peloton Groot Watertransport,Jan Ligthartstraat,Heemskerk,legacy,ja
+7,2020-01-25,,1,Brand Woning Schoorsteen,Kerkemeer,Akersloot,legacy,ja
+8,2020-02-02,,1,Middelbrand Gebouw,Plantage,Beverwijk,legacy,ja
+9,2020-02-05,,1,Middelbrand Bijeenkomst,Dorpsduinen,Wijk aan Zee,legacy,ja
+10,2020-02-07,,1,Middelbrand Woning Schoorsteen,Julianaweg,Wijk aan Zee,legacy,ja
+11,2020-02-09,,2,Opstarten DCU,,Uitgeest,legacy,ja
+12,2020-02-10,,2,Stormschade,Kruiskamplaan,Uitgeest,legacy,ja
+13,2020-02-13,,1,Reanimatie,Middelweg,Uitgeest,legacy,ja
+14,2020-02-14,,1,Bermbrand,Westergeest,Uitgeest,legacy,ja
+15,2020-02-14,,2,Liftopsluiting,Dokter Brugmanstraat,Uitgeest,legacy,ja
+16,2020-02-14,,2,Liftopsluiting,Dokter Brugmanstraat,Uitgeest,legacy,ja
+17,2020-02-24,,1,Ongeval Wegvervoer Letsel,A9 L 58.2,,legacy,ja
+18,2020-02-24,,2,Liftopsluiting,Dokter Brugmanstraat,Uitgeest,legacy,ja
+19,2020-02-27,,1,Automatische Brandmelding,Dokter Brugmanstraat,Uitgeest,legacy,ja
+20,2020-02-27,,1,Reanimatie,Benesserlaan,Uitgeest,legacy,ja
+21,2020-03-05,,1,Brand Gebouw,De Terp,Uitgeest,legacy,ja
+22,2020-03-11,,2,Gas Lekkage Buiten,Sluiswerg,Akersloot,legacy,ja
+23,2020-03-18,,2,Gas Lekkage Buiten,Populierenlaan,Uitgeest,legacy,ja
+24,2020-03-21,,2,Peloton Grootwatertransport,Vondelweg,Haarlem,legacy,ja
+25,2020-03-25,,1,Middelbrand Woning,Anna de Renessestraat,Heemskerk,legacy,ja
+26,2020-03-28,,1,Peloton Groot Watertransport,Wagenmakerstraat,Velserbroek,legacy,ja
+27,2020-04-10,,1,Brand Buiten,A9 L 54.9,,legacy,ja
+28,2020-04-10,,1,Til Assistentie Ambulance,Molenstraat,Uitgeest,legacy,ja
+29,2020-04-12,,1,Voertuig te Water,Parallelweg,Uitgeest,legacy,ja
+30,2020-04-17,,1,Reanimatie,Lagendijk,Uitgeest,legacy,ja
+31,2020-04-24,,1,Brand Duin,Kaagweg,Heemskerk,legacy,ja
+32,2020-04-24,,1,Peloton Groot Watertransport,Zeestraat,Wijk aan Zee,legacy,ja
+33,2020-05-06,,1,Brand Duin,Reyndersweg,Velsen-Noord,legacy,ja
+34,2020-05-06,,1,Peloton Groot Watertransport,Reyndersweg,Velsen-Noord,legacy,ja
+35,2020-05-06,,2,Verzorging Klein,Reyndersweg,Velsen-Noord,legacy,ja
+36,2020-05-09,,1,Grote Brand Woning,Mercuriusstraat,Haarlem,legacy,ja
+37,2020-05-09,,1,Brand Spoorvervoer,Stationsplein,Uitgeest,legacy,ja
+38,2020-05-12,,2,Dier te Water,Wiekenlaan,Uitgeest,legacy,ja
+39,2020-05-17,,1,Assistentie Ambulance Afhijsen,Middelweg,Uitgeest,legacy,ja
+40,2020-05-20,,1,Grote Brand Berm,Lisserweg,Weteringbrug,legacy,ja
+41,2020-05-28,,1,Brand Container,De Helling,Alkmaar,legacy,ja
+42,2020-05-28,,2,Brand buiten,Stationsplein,Uitgeest,legacy,ja
+43,2020-05-29,,1,Middelbrand Gebouw,Professor ten Doesschatestraat,Heemskerk,legacy,ja
+44,2020-06-02,,1,Assistentie Ambulance,Zwaansmeerpad,Uitgeest,legacy,ja
+45,2020-06-03,,1,Automatische Brandmelding,De Juffer,Uitgeest,legacy,ja
+46,2020-06-13,,2,Liftopsluiting,Stationsplein,Uitgeest,legacy,ja
+47,2020-06-14,,1,Brandgerucht,Westergeest,Uitgeest,legacy,ja
+48,2020-06-18,,2,Assistentie Ambulance Afhijsen,Cornelis Corneliszoonstraat,Uitgeest,legacy,ja
+49,2020-06-23,,2,Brand buiten,Stationsplein,Uitgeest,legacy,ja
+50,2020-07-02,,1,Zeer Grote Brand Gebouw,Berenkoog,Alkmaar,legacy,ja
+51,2020-07-03,,1,Persoon te Water,Maalwater,Heiloo,legacy,ja
+52,2020-07-05,,1,Grote Brand Bijeenkomst,Strandafgang De Favauge,Zandvoort,legacy,ja
+53,2020-07-11,,1,Hulpverlening Weg Letsel,A9 L 61.1,,legacy,ja
+54,2020-07-12,,1,Reanimatie,Lagendijk,Uitgeest,legacy,ja
+55,2020-07-21,,1,Automatische Brandmelding,Dokter Brugmanstraat,Uitgeest,legacy,ja
+56,2020-07-27,,2,Assistentie Ambulance Afhijsen,Loet,Uitgeest,legacy,ja
+57,2020-07-30,,2,Liftopsluiting,Stationsplein,Uitgeest,legacy,ja
+58,2020-08-02,,1,Hulpverlening Weg Letsel,A9 L 60.7,,legacy,ja
+59,2020-08-05,,1,Brand Wegvervoer Vrachtwagen,Noorderwerg,Beverwijk,legacy,ja
+60,2020-08-11,,2,Verzorging Klein,Deutzstraat,Heemskerk,legacy,ja
+61,2020-08-15,,2,Wateroverlast,Ziendervaart,Uitgeest,legacy,ja
+62,2020-08-17,,1,Middelbrand Gezondheidszorg,Plesmanweg,Beverwijk,legacy,ja
+63,2020-08-22,,1,Schip / Watersporter in problemen,Lagendijk,Uitgeest,legacy,ja
+64,2020-08-23,,2,Brand Afval,De Melksuiker,Uitgeest,legacy,ja
+65,2020-08-24,,1,Brand wegvervoer,A9 R 65.2,,legacy,ja
+66,2020-08-26,,2,Stormschade,Klein Dorregeest,Uitgeest,legacy,ja
+67,2020-09-08,,1,Hulpverlening Gas Lekkage Binnen,Middelweg,Uitgeest,legacy,ja
+68,2020-09-20,,1,Reanimatie,Dokter Brugmanstraat,Uitgeest,legacy,ja
+69,2020-09-25,,2,Schip / Watersporter in problemen,Jachthaven,Akersloot,legacy,ja
+70,2020-09-26,,1,Brand Bijeenkomst,"Bobs Party Palace, Westerwerf",Uitgeest,legacy,ja
+71,2020-09-26,,2,Nacontrole auto,Westerwerf,Uitgeest,legacy,ja
+72,2020-10-02,,1,Brand Bijeenkomst,"De Lelie, Rembrandtsingel",Akersloot,legacy,ja
+73,2020-10-06,,1,Nacontrole auto,A9 R 67.1,,legacy,ja
+74,2020-10-09,,1,Reanimatie,Middelweg,Uitgeest,legacy,ja
+75,2020-10-11,,1,Brand wegvervoer,A9 R 68.0,,legacy,ja
+76,2020-10-12,,1,Middelbrand industrie,Steenkade,Beverwijk,legacy,ja
+77,2020-10-16,,2,Assistentie Ambulance,Buurtweg,Akersloot,legacy,ja
+78,2020-10-16,,1,Automatische Brandmelding,Dokter Brugmanstraat,Uitgeest,legacy,ja
+79,2020-10-17,,1,Assistentie Ambulance Afhijsen,Kemphaanstraat,Uitgeest,legacy,ja
+80,2020-10-18,,2,Dienstverlening meten,Burgemeester van Lithstraat,Uitgeest,legacy,ja
+81,2020-10-19,,1,Zeer Grote Brand Gebouw,Parallelweg,Beverwijk,legacy,ja
+82,2020-10-21,,1,Assistentie Ambulance Afhijsen,Hogeweg,Uitgeest,legacy,ja
+83,2020-10-23,,1,Automatische Brandmelding,Dokter Brugmanstraat,Uitgeest,legacy,ja
+84,2020-10-26,,1,Assistentie Ambulance Afhijsen,Esdoornstraat,Uitgeest,legacy,ja
+85,2020-10-26,,1,Hulpverlening Gas Lekkage Buiten,Wethouder Twaalfhovenstraat,Uitgeest,legacy,ja
+86,2020-10-26,,1,Automatische Brandmelding,Dokter Brugmanstraat,Uitgeest,legacy,ja
+87,2020-11-05,,1,Middelbrand Woning,Mientekade,Halfweg,legacy,ja
+88,2020-11-10,,1,Brand Woning,Hogeweg,Uitgeest,legacy,ja
+89,2020-11-18,,1,Hulpverlening Gas Lekkage,Boterbloem,Uitgeest,legacy,ja
+90,2020-12-05,,2,Assistentie Politie,Adelaertlaan,Heemskerk,legacy,ja
+91,2020-12-06,,1,Zeer Grote Brand,Rijksstraatweg,Heemskerk,legacy,ja
+92,2020-12-15,,1,Grote IBGS Gas Lekkage,Uranuslaan,Krommenie,legacy,ja
+93,2020-12-15,,2,Brand Buiten,Melis Stokelaan,Uitgeest,legacy,ja
+94,2020-12-18,,1,Middelbrand Wegvervoer Vrachtwagen,De Visserstraat,Heemskerk,legacy,ja
+95,2020-12-18,,1,Middelbrand Winkel,Kleine Houtstraat,Haarlem,legacy,ja
+96,2020-12-22,,1,Middelbrand Woning,Dennenstraat,Ijmuiden,legacy,ja
+97,2020-12-26,,1,Automatische Brandmelding,Dokter Brugmanstraat,Uitgeest,legacy,ja
+98,2020-12-31,,1,Brand Buiten,Geesterweg,Uitgeest,legacy,ja

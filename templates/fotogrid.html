@@ -1,0 +1,10 @@
+<ul class="fotogrid">
+{% for f in meta.fotos %}
+  <li>
+    <figure>
+      <a href="{{ foto_groot(f.src) }}">{{ foto(f.src, f.alt, sizes="(min-width: 40rem) 15rem, 50vw") }}</a>
+      {% if f.bijschrift is defined %}<figcaption>{{ f.bijschrift }}</figcaption>{% endif %}
+    </figure>
+  </li>
+{% endfor %}
+</ul>

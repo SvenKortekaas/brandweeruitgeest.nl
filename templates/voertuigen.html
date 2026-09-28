@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block inhoud %}
+<div class="tekst">
+  <h1>{{ titel }}</h1>
+  {{ body }}
+</div>
+<ul class="kaarten">
+{% for v in voertuigen %}
+  <li class="kaart">
+    <a href="{{ v.url }}">
+      {% if v.meta.fotos %}{{ foto(v.meta.fotos[0].src, "", sizes="(min-width: 40rem) 20rem, 100vw") }}{% else %}<span class="kaart-leeg">Foto volgt</span>{% endif %}
+      <span class="kaart-titel">{{ v.meta.title }}</span>
+    </a>
+  </li>
+{% endfor %}
+</ul>
+{% endblock %}

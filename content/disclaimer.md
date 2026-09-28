@@ -1,21 +1,36 @@
-+++
-title = "Disclaimer"
-description = "Disclaimer"
-keywords = ["Disclaimer","brandweer","uitgeest"]
-+++
+---
+title: Disclaimer
+description: Disclaimer van de website van brandweer Uitgeest over de informatie, externe links, auteursrecht en bijdragen.
+---
 
-# Disclaimer
+## Informatie op deze website
 
-De brandweer van Uitgeest besteedt veel zorg aan de inhoud en het actualiseren van de informatie op haar website. Desondanks kan het voorkomen dat er onvolkomenheden in de geplubiceerde informatie zit. De brandweer van Uitgeest kan niet aansprakelijk gesteld worden voor de inhoud van de informatie of voor de gevolgen van het gebruik daarvan. Aan de gegevens, zoals die worden weegegeven, kunnen geen rechten worden ontleend.
+Brandweer Uitgeest besteedt zorg aan de inhoud van deze website. Toch kan de informatie onvolledig, verouderd of onjuist zijn. Aan de informatie kun je geen rechten ontlenen. Brandweer Uitgeest is niet aansprakelijk voor schade die ontstaat door het gebruik van deze website of van de informatie erop.
 
-Gebruikers kunnen zelf inhoud plaatsen op de website door middel van een pull-request op de Github pagina. De brandweer van Uitgeest zal klachten over gebruikersinhoud serieus onderzoeken en waar nodig ingrijpen. Neem hiervoor contact met ons op via het contact formulier.
+Deze website is een informatiesite van de vrijwilligers van brandweer Uitgeest. Voor officiële informatie van de brandweer in de regio kijk je op de website van [Veiligheidsregio Kennemerland](https://www.vrk.nl).
 
-Alle rechten van intellectuele eigendom betreffende deze materialen liggen bij de brandweer van Uitgeest en haar licentiegevers en gebruikers.
+**Bij brand of een ander noodgeval bel je altijd 112.** Via deze website kun je geen hulp inroepen.
 
-# Privacy
+## Uitrukken
 
-Brandweer Uitgeest verzameld geen persoonlijke informatie. Ook doen wij geen poging om u te traceren of profileren.
+Het overzicht van uitrukken is bedoeld als informatie en archief. Het is geen officiële registratie en kan onvolledig zijn. Recente uitrukken tonen alleen de straat en plaats, nooit persoonsgegevens.
 
-#### Update
-Wij behouden ons het recht voor deze informatie aan te passen. Wijzigingen zullen op deze website worden gepubliceerd.  
-Laatste update: **30 augustus 2017**
+## Externe links
+
+Deze website bevat links naar websites van anderen. Brandweer Uitgeest is niet verantwoordelijk voor de inhoud of het privacybeleid van die websites.
+
+## Auteursrecht
+
+De teksten en foto's op deze website zijn van brandweer Uitgeest of van de genoemde fotografen, zoals 112-Uitgeest.nl. Overnemen mag alleen met toestemming. Wil je een foto gebruiken, mail dan naar [info@brandweeruitgeest.nl](mailto:info@brandweeruitgeest.nl).
+
+De broncode van deze website is openbaar op [GitHub](https://github.com/svenkortekaas/brandweeruitgeest.nl) onder de GPL-3.0-licentie.
+
+## Bijdragen en klachten
+
+Iedereen kan via een pull request op GitHub een verbetering voorstellen. Wij beoordelen elke bijdrage voordat die op de website komt. Heb je een klacht over de inhoud, of staat er iets over jou op de site dat je weg wilt hebben? Mail naar [info@brandweeruitgeest.nl](mailto:info@brandweeruitgeest.nl), dan kijken we er zo snel mogelijk naar.
+
+## Wijzigingen
+
+Brandweer Uitgeest kan deze disclaimer aanpassen. De nieuwste versie staat altijd op deze pagina.
+
+Laatst bijgewerkt: 28 september 2026.

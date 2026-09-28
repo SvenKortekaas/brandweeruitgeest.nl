@@ -1,2 +1,12 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Regeleinden altijd LF, op elk platform
+* text=auto eol=lf
+
+# Binaire bestanden
+*.jpg binary
+*.jpeg binary
+*.JPG binary
+*.png binary
+*.gif binary
+*.ico binary
+*.webp binary
+*.avif binary

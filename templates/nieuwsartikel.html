@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block inhoud %}
+<article class="tekst">
+  <p class="kruimel"><a href="/nieuws/">Nieuwsarchief</a></p>
+  <h1>{{ titel }}</h1>
+  <p class="meta"><time datetime="{{ meta.date.date().isoformat() }}">{{ meta.date|datum }}</time>{% if meta.author is defined %}, {{ meta.author }}{% endif %}</p>
+  {% if meta.banner is defined %}
+  <figure class="banner">{{ foto(meta.banner.src, meta.banner.alt, lui=False) }}
+    {% if meta.banner.bijschrift is defined %}<figcaption>{{ meta.banner.bijschrift }}</figcaption>{% endif %}
+  </figure>
+  {% endif %}
+  {{ body }}
+  {% if meta.fotos is defined and meta.fotos %}
+  <h2>Foto's</h2>
+  {% include "fotogrid.html" %}
+  {% endif %}
+</article>
+{% endblock %}

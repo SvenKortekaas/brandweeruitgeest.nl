@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block inhoud %}
+<div class="tekst">
+  <p class="kruimel"><a href="/uitrukken/">Uitrukken</a></p>
+  <h1>{{ titel }}</h1>
+  <p>In {{ jaar }} rukte brandweer Uitgeest {% if lopend %}tot nu toe {% endif %}{{ aantal }} keer uit.{% if oefeningen %} Daarnaast {{ "was er 1 oefening" if oefeningen == 1 else "waren er %d oefeningen" % oefeningen }}, die tellen niet mee.{% endif %}</p>
+  <nav class="jaarnav" aria-label="Andere jaren">
+    {% if vorige %}<a href="/uitrukken/{{ vorige }}/" rel="prev">{{ vorige }}</a>{% endif %}
+    {% if volgende %}<a href="/uitrukken/{{ volgende }}/" rel="next">{{ volgende }}</a>{% endif %}
+  </nav>
+  <nav aria-label="Maanden">
+    <ul class="ankers">
+    {% for m in per_maand %}<li><a href="#{{ maanden[m - 1] }}">{{ maanden[m - 1] }}</a></li>{% endfor %}
+    </ul>
+  </nav>
+</div>
+<details class="soorten">
+  <summary>Totalen per soort melding</summary>
+  <div class="tabel-schuif">
+  <table>
+    <thead><tr><th scope="col">Melding</th><th scope="col">Aantal</th></tr></thead>
+    <tbody>
+    {% for melding, n in soorten %}<tr><td>{{ melding }}</td><td>{{ n }}</td></tr>{% endfor %}
+    </tbody>
+  </table>
+  </div>
+</details>
+{% for m, regels in per_maand.items() %}
+<section aria-labelledby="{{ maanden[m - 1] }}">
+  <h2 id="{{ maanden[m - 1] }}">{{ maanden[m - 1]|capitalize }} ({{ regels|length }})</h2>
+  <div class="tabel-schuif">
+  <table class="uitrukken">
+    <thead><tr><th scope="col">Nr.</th><th scope="col">Datum</th><th scope="col">Prio</th><th scope="col">Melding</th><th scope="col">Adres</th><th scope="col">Plaats</th></tr></thead>
+    <tbody>
+    {% for r in regels %}
+      <tr>
+        <td>{{ r.nr }}</td>
+        <td><time datetime="{{ r.datum.isoformat() }}">{{ r.datum|datum(False) }}</time></td>
+        <td>{% if r.prio %}<span class="prio prio-{{ r.prio }}">{{ r.prio }}</span>{% endif %}</td>
+        <td>{{ r.melding }}</td>
+        <td>{{ r.adres }}</td>
+        <td>{{ r.plaats }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  </div>
+</section>
+{% endfor %}
+{% endblock %}

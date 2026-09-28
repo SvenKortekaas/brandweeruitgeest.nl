@@ -87,3 +87,14 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/go,hugo,linux,macos,windows,notepadpp
+### v2 (Python) ###
+public/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.hugo_build.lock
+.cache/
+
+### Invoerbestanden: nooit in git ###
+invoer/

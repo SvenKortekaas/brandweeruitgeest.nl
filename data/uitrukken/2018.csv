@@ -1,0 +1,125 @@
+nr,datum,tijd,prio,melding,adres,plaats,bron,publiceren
+1,2018-01-01,,1,Middelbrand,Schulpweg,Velsen-Noord,legacy,ja
+2,2018-01-03,,2,Stormschade,Burgemeester van Roosmalenstraat,Uitgeest,legacy,ja
+3,2018-01-03,,1,Watersporter in problemen,Lagendijk,Uitgeest,legacy,ja
+4,2018-01-09,,1,Automatische Brandmelding OMS,Dokter Brugmanstraat,Uitgeest,legacy,ja
+5,2018-01-11,,2,Stankoverlast (Verzorging),Hertogenven,Heemskerk,legacy,ja
+6,2018-01-11,,2,Buitensluiting,De Cnollenbijter,Uitgeest,legacy,ja
+7,2018-01-11,,2,Stankoverlast (Waterwagen),Hertogenven,Heemskerk,legacy,ja
+8,2018-01-14,,1,Zeer Grote Brand,Bleyenhoevelaan,Velsen-Noord,legacy,ja
+9,2018-01-18,,2,Stormschade,Hogeweg,Uitgeest,legacy,ja
+10,2018-01-18,,2,Stormschade,,Uitgeest,legacy,ja
+11,2018-01-18,,2,Stormschade,Kruiskamplaan,Uitgeest,legacy,ja
+12,2018-01-19,,2,Assistentie Huisarts,Molenstraat,Uitgeest,legacy,ja
+13,2018-01-21,,1,Brand wegvervoer,A9,,legacy,ja
+14,2018-01-23,,2,Assistentie Ambulance Afhijsen,Anna van Renesselaan,Uitgeest,legacy,ja
+15,2018-01-27,,1,Middelbrand,Breestraat,Beverwijk,legacy,ja
+16,2018-02-06,,2,Assistentie Ambulance Afhijsen,Middelweg,Uitgeest,legacy,ja
+17,2018-02-12,,1,Assistentie Ambulance Afhijsen,Middelweg,Uitgeest,legacy,ja
+18,2018-02-15,,1,Middelbrand industrie,Industrieweg,Beverwijk,legacy,ja
+19,2018-02-18,,2,Aflossing Zeer Grote Brand,Jan van Gentstraat,Badhoevedorp,legacy,ja
+20,2018-02-19,,2,Dier in nood,Uitgeesterweg,Uitgeest,legacy,ja
+21,2018-02-21,,1,Ongeval buiten Gas,Meldijk,Uitgeest,legacy,ja
+22,2018-02-26,,1,Middelbrand wegvervoer,A9,,legacy,ja
+23,2018-02-26,,1,Middelbrand wegvervoer,A9,,legacy,ja
+24,2018-03-01,,2,Wateroverlast,Anna van Renesselaan,Uitgeest,legacy,ja
+25,2018-03-02,,2,Wateroverlast,J.E. de Witstraat,Uitgeest,legacy,ja
+26,2018-03-02,,2,Wateroverlast,Benesserlaan,Uitgeest,legacy,ja
+27,2018-03-03,,1,Middelbrand riet,Parallelweg,Uitgeest,legacy,ja
+28,2018-03-04,,2,wateroverlast,Middelweg,Uitgeest,legacy,ja
+29,2018-03-04,,2,Bermbrand,Broekpolderweg,Uitgeest,legacy,ja
+30,2018-03-06,,1,Automatische brandmelding OMS,Dokter Brugmanstraat,Uitgeest,legacy,ja
+31,2018-03-06,,2,brandgerucht,Parallelweg,Uitgeest,legacy,ja
+32,2018-03-08,,1,Ongeval Buiten IBGS,Klein Dorregeest,Uitgeest,legacy,ja
+33,2018-03-11,,1,Ongeval Wegvervoer Letsel,A9,,legacy,ja
+34,2018-03-20,,2,Schip in problemen,Lagendijk,Uitgeest,legacy,ja
+35,2018-04-05,,1,Automatische brandmelding OMS,Dokter Brugmanstraat,Uitgeest,legacy,ja
+36,2018-04-09,,2,Dier te water,Lagendijk,Uitgeest,legacy,ja
+37,2018-04-13,,2,Liftopsluiting,Stationsplein,Uitgeest,legacy,ja
+38,2018-04-14,,1,Automatische brandmelding OMS,Dokter Brugmanstraat,Uitgeest,legacy,ja
+39,2018-04-20,,1,PAC Brandmelding,Lagendijk,Uitgeest,legacy,ja
+40,2018-04-21,,1,Buitenbrand,Hoogegeest,Akersloot,legacy,ja
+41,2018-04-25,,1,Assistentie Ambulance Afhijsen,Meerkoetstraat,Uitgeest,legacy,ja
+42,2018-04-27,,2,Ongeval Buiten Materieel Gas,Meldijk,Uitgeest,legacy,ja
+43,2018-04-27,,1,Til Assistentie Ambulance,Burgemeester van Roosmalenstraat,Uitgeest,legacy,ja
+44,2018-05-03,,1,Zeer grote brand,Dusseldorperweg,Limmen,legacy,ja
+45,2018-05-04,,1,Reanimatie,Kooglaan,Uitgeest,legacy,ja
+46,2018-05-12,,2,Verzorging,Jan Ligthartstraat,Heemskerk,legacy,ja
+47,2018-06-03,,1,Middelbrand Woning,Rijksweg,Limmen,legacy,ja
+48,2018-06-05,,2,Liftopsluiting,Stationsplein,Uitgeest,legacy,ja
+49,2018-06-13,,2,Liftopsluiting,Stationsplein,Uitgeest,legacy,ja
+50,2018-06-14,,1,Zeer Grote Brand Gebouw,Weiver,Krommenie,legacy,ja
+51,2018-06-20,,2,Schip/watersporter in problemen,Uitgeestermeer,Uitgeest,legacy,ja
+52,2018-06-20,,2,Schip/watersporter in problemen,Uitgeestermeer,Uitgeest,legacy,ja
+53,2018-06-26,,1,Brand bijgebouw,Doodweg,Castricum,legacy,ja
+54,2018-06-28,,1,Middelbrand Gebouw,Zuidermaatweg,Heemskerk,legacy,ja
+55,2018-07-02,,1,Bermbrand,Olieweg,Velsen-Noord,legacy,ja
+56,2018-07-04,,1,Bermbrand,Adelaertlaan,Heemskerk,legacy,ja
+57,2018-07-04,,1,Ongeval Wegvervoer Letsel,Provincialeweg,Uitgeest,legacy,ja
+58,2018-07-07,,1,Ongeval Binnen,Prinses Beatrixlaan,Uitgeest,legacy,ja
+59,2018-07-08,,2,Liftopsluiting,De Melksuiker,Uitgeest,legacy,ja
+60,2018-07-09,,2,Dier Te Water,A9 Rechts,,legacy,ja
+61,2018-07-10,,1,Middelbrand Winkel,Velsderduinplein,IJmuiden,legacy,ja
+62,2018-07-11,,2,Brandgerucht,Sandenburg,Heemskerk,legacy,ja
+63,2018-07-13,,2,Dienstverlening,Lagendijk,Uitgeest,legacy,ja
+64,2018-07-14,,1,Meting,Langebuurt,Uitgeest,legacy,ja
+65,2018-07-14,,1,Voertuig Te Water,Broekpolderweg,Uitgeest,legacy,ja
+66,2018-07-15,,2,Buitenbrand,Melis Stokelaan,Uitgeest,legacy,ja
+67,2018-07-16,,1,Duinbrand,Rijksstraatweg,Heemskerk,legacy,ja
+68,2018-07-16,,1,Duinbrand,Zeeweg,Overveen,legacy,ja
+69,2018-07-18,,2,Nacontrole,Schapenweg,Heemskerk,legacy,ja
+70,2018-07-21,,2,Nacontrole,Schapenweg,Heemskerk,legacy,ja
+71,2018-07-22,,1,Dienstverlening,Stierop,Uitgeest,legacy,ja
+72,2018-07-23,,2,Nacontrole,Kruisberg,Heemskerk,legacy,ja
+73,2018-07-23,,2,Verzorging,Kruisberg,Heemskerk,legacy,ja
+74,2018-07-27,,1,Middelbrand Wonen,Voorstraat,Wijk aan Zee,legacy,ja
+75,2018-07-27,,1,Verzorging,Voorstraat,Wijk aan Zee,legacy,ja
+76,2018-07-31,,1,Natuurbrand,Zeeweg,Castricum,legacy,ja
+77,2018-08-04,,2,Dier Te Water,A9 Links,,legacy,ja
+78,2018-08-05,,1,Buitenbrand,Klein Dorregeest,Uitgeest,legacy,ja
+79,2018-08-07,,1,Grote Brand Bijgebouw,Bronsstraat,IJmuiden,legacy,ja
+80,2018-08-08,,1,Duinbrand,Bosweg,Wijk aan Zee,legacy,ja
+81,2018-08-16,,1,Brand Wegvervoer,A9 Links,,legacy,ja
+82,2018-08-17,,2,Dienstverlening,Uitgeestermeer,Uitgeest,legacy,ja
+83,2018-08-20,,2,Til Assistentie Politie,Dokter Brugmanstraat,Uitgeest,legacy,ja
+84,2018-08-23,,2,Dienstverlening,Dokter Brugmanstraat,Uitgeest,legacy,ja
+85,2018-08-26,,1,Automatische Brandmelding OMS,Dokter Brugmanstraat,Uitgeest,legacy,ja
+86,2018-09-03,,1,Reanimatie,Westergeest,Uitgeest,legacy,ja
+87,2018-09-04,,2,Liftopsluiting,De Melksuiker,Uitgeest,legacy,ja
+88,2018-09-16,,1,Ongeval Wegvervoer Letsel,A9 Links 60.5,,legacy,ja
+89,2018-09-21,,1,Brand Industrie,Johannisweg,Castricum,legacy,ja
+90,2018-09-22,,1,Middelbrand woning,Gildenlaan,Velsen-Noord,legacy,ja
+91,2018-09-23,,2,Liftopsluiting,Stationsplein,Uitgeest,legacy,ja
+92,2018-09-24,,1,Schip in problemen,Stierop,Akersloot,legacy,ja
+93,2018-09-26,,2,Schip in problemen,Uitgeestermeer,Uitgeest,legacy,ja
+94,2018-09-26,,2,Bermbrand,A9 Links 59.9,,legacy,ja
+95,2018-10-01,,1,Ongeval Wegvervoer Letsel,A9 Links,,legacy,ja
+96,2018-10-08,,1,Middelbrand woning,Rijnenberg,Heemskerk,legacy,ja
+97,2018-10-09,,1,Middelbrand Wegvervoer,Bachstraat,Heemskerk,legacy,ja
+98,2018-10-11,,2,Dier te water,Molenwerf,Uitgeest,legacy,ja
+99,2018-10-11,,1,Brand Gezondheidszorg,Oude Parklaan,Castricum,legacy,ja
+100,2018-10-12,,1,Brand Wegvervoer,A9 Links 61.0,,legacy,ja
+101,2018-10-13,,2,Verzorging,Wijkermeerweg,Velsen-Noord,legacy,ja
+102,2018-10-15,,1,Middelbrand Gebouw,Industrieweg,Wormerveer,legacy,ja
+103,2018-10-16,,1,Grote Brand Woning,Marktstraat,Wormerveer,legacy,ja
+104,2018-10-20,,1,Reanimatie,Castricummerweg,Uitgeest,legacy,ja
+105,2018-10-20,,1,Brand Wegvervoer,Boterbloem,Uitgeest,legacy,ja
+106,2018-10-20,,1,Reanimatie,Dokter Brugmanstraat,Uitgeest,legacy,ja
+107,2018-10-26,,1,Reanimatie,Wittebroodslaantje,Uitgeest,legacy,ja
+108,2018-10-31,,1,Ongeval Wegvervoer Letsel,De Witte Hoofden,Uitgeest,legacy,ja
+109,2018-11-06,,1,Reanimatie,J.E. de Witstraat,Uitgeest,legacy,ja
+110,2018-11-23,,1,Grote Brand Woning,Zaanweg,Wormerveer,legacy,ja
+111,2018-11-24,,1,Grote Brand Woning,Nieuwland,Uitgeest,legacy,ja
+112,2018-11-24,,1,Brand Woning,Nieuwland,Uitgeest,legacy,ja
+113,2018-11-24,,2,Nacontrole,Nieuwland,Uitgeest,legacy,ja
+114,2018-11-24,,2,Wateroverlast,Nieuwland,Uitgeest,legacy,ja
+115,2018-11-30,,1,Brand Wegvervoer,A9 Rechts 62.8,,legacy,ja
+116,2018-12-02,,,CO Melder,Middelweg,Uitgeest,legacy,ja
+117,2018-12-03,,1,Middelbrand Bijeenkomst,Handelskade,Beverwijk,legacy,ja
+118,2018-12-04,,1,Ongeval Wegvervoer Letsel,N203,,legacy,ja
+119,2018-12-14,,1,Middelbrand Gezondheidszorg,Westerheem,Heemskerk,legacy,ja
+120,2018-12-14,,1,Automatische Brandmelding OMS,Dokter Brugmanstraat,Uitgeest,legacy,ja
+121,2018-12-25,,1,Brand Industrie,Akerhof,Akersloot,legacy,ja
+122,2018-12-29,,1,Middelbrand Bijgebouw,Delving,Akersloot,legacy,ja
+123,2018-12-31,,2,Buitenbrand,Pinksterbloempad,Akersloot,legacy,ja
+124,2018-12-31,,2,Containerbrand,Dokter Brugmanstraat,Uitgeest,legacy,ja
