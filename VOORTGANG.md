@@ -179,9 +179,12 @@ Fase 3: migratie. Uitgevoerd 28-09-2026, wacht op controle door Sven (op v2.bran
   6. Waarschuwing in GitHub Actions over `ubuntu-latest` naar Ubuntu 26 (19-10-2026): runners vastgezet op `ubuntu-24.04`.
   - Uitgevoerd: `BOUW_OMGEVING` (live of test) in `build.py`: alleen de testbouw krijgt `noindex` en `Disallow: /`, de livebouw bevat geen testadres meer. `tools/publiceer.py` kiest de FTP-gegevens per branch (master valt nooit terug op de testgegevens). `deploy.py` beschermt `.cagefs` en `.cl.selector`.
 
+- 28-09-2026, livegang uitgevoerd:
+  - Sven voegde pull request #56 samen (squash) en zette de `_PROD`-secrets ook in de omgeving `p2000`. De eerste publicatie vanaf `master` stopte bewust (geen manifest), de `_PROD`-gegevens werkten.
+  - `master` samengevoegd in `v2` (inhoud gelijk), zodat volgende pull requests alleen nieuwe wijzigingen tonen.
+  - Droog opruimen op de echte site: 889 bestanden uploaden, 417 verwijderen, allemaal van de oude Hugo-site (img, tags, categories, css, js, oude jaar- en voertuigpagina's, oude iconen). Geen mail-, log- of hostingmappen: de FTP-map van het PROD-account is de webmap. Daarna echt opgeruimd (Claude, op verzoek van Sven).
+
 ## Volgende stap
 
-1. Sven: pull request `v2` naar `master` samenvoegen.
-2. Claude: opruimen op de echte site (eerst droog, dan echt), controleren, P2000 in HA naar `master`.
-3. Sven: `_PROD`-secrets ook in de omgeving `p2000` zetten.
-4. Later: groter logo (Sven).
+1. Claude: echte site controleren (workflow "Site controleren" met www en http, Lighthouse), P2000 in Home Assistant naar `master`.
+2. Later: groter logo (Sven), `legacy/` verwijderen na akkoord, Dependabot-pull requests voor het Hugo-thema sluiten.
