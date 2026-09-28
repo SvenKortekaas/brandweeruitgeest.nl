@@ -195,6 +195,6 @@ Fase 3: migratie. Uitgevoerd 28-09-2026, wacht op controle door Sven (op v2.bran
 
 ## Volgende stap
 
-1. Sven: pull request "Oude Hugo-site verwijderd" samenvoegen.
+1. Sven: pull request #57 samenvoegen (documentatie en verwijderen van `legacy/`, samen in één pull request).
 2. Eerste echte P2000-uitruk na livegang controleren op de site.
 3. Later: groter logo (Sven).
