@@ -33,7 +33,7 @@ Fase 3: migratie. Uitgevoerd 28-09-2026, wacht op controle door Sven (op v2.bran
 
 - Publiceren (voorbereid, 27-09-2026): `tools/deploy.py` (FTPS met certificaatcontrole, manifest, eerste keer opruimen) en `.github/workflows/build.yml`. Lokaal getest tegen een test-FTPS-server: weigert zonder manifest, droog opruimen, echt opruimen met beschermde paden, alleen wijzigingen uploaden, verwijderen, geen geldig certificaat. Nog niet tegen de echte server getest. Eerste run van de workflow op `v2` geslaagd (bouwen en controleren; publiceren terecht overgeslagen). Let op: pushes vanuit een Claude-sessie gebruiken het account van Sven en tellen dus als "zijn" push; Claude pusht daarom nooit naar `master`.
 - **Testfase (28-09-2026):** de FTP-gegevens wijzen naar het subdomein v2.brandweeruitgeest.nl. Branch `v2` mag tijdens de testfase publiceren (workflow aangepast); Sven moet in de omgeving `productie` bij Deployment branches ook `v2` toestaan. Op host `v2.` stuurt de `.htaccess` `X-Robots-Tag: noindex`. Livegang = Sven wijst het pad van het hoofddomein naar dezelfde map; FTP-gegevens blijven gelijk. Daarna `v2` weer uit de workflow halen.
-- **Sven:** GitHub-omgeving `productie` met secrets en required reviewer instellen, AppVeyor uitzetten, oud FTP-wachtwoord wijzigen, backup maken. Stappen in `MIGRATIE.md` hoofdstuk 7.
+- **Sven:** GitHub-omgeving `productie` met secrets instellen (geen required reviewer, besluit 28-09-2026), AppVeyor uitzetten, oud FTP-wachtwoord wijzigen, backup maken. Stappen in `MIGRATIE.md` hoofdstuk 7.
 - **Onthouden voor terugdraaien:** huidige `.htaccess` op de server (27-09-2026) is een tijdelijke 302 naar https://www.brandweer.nl/kazerne/uitgeest/. Staat in `tools/htaccess-terugdraaien` en `MIGRATIE.md` (Terugdraaien). Workflow-optie `TERUGDRAAIEN` zet hem terug.
 - Fase 3 uitgevoerd (28-09-2026), zie `MIGRATIE.md` hoofdstuk 5b. `MIGRATIE_KLAAR = True`: alle controles slagen strikt. CI heeft een cache voor omgezette afbeeldingen. HTML-controle is een nestingcontrole, geen volledige W3C-validatie.
 - AVG: bij 29 oude uitrukken met een medische melding is het huisnummer weggehaald (`tools/migrate_hugo.py`, controle in `check.py`). Hectometers als "Provincialeweg 53.7" blijven staan.
@@ -86,7 +86,7 @@ Fase 3: migratie. Uitgevoerd 28-09-2026, wacht op controle door Sven (op v2.bran
 - 27-09-2026: uploadplan. Sven zet een nieuwe FTP-server, poort, gebruikersnaam en wachtwoord in GitHub Secrets. Bij de eerste keer moet al het oude weg wat niet nodig is; daarna werkt elke nieuwe versie de site bij. Alleen een push van Sven mag de website bijwerken.
 - 27-09-2026, uploadplan vervolg:
   1. De nieuwe FTP-server ondersteunt echt FTPS.
-  2. Elke publicatie met één klik goedkeuren (required reviewer in de omgeving `productie`).
+  2. Elke publicatie met één klik goedkeuren (required reviewer in de omgeving `productie`). Vervallen op 28-09-2026: geen goedkeuring.
   3. Alles op de server mag weg bij de eerste livegang. Alleen `.well-known` blijft (nodig voor het HTTPS-certificaat).
   4. Huidige `.htaccess` op de server bewaren voor terugdraaien (zie Open).
 - 27-09-2026: alle huidige voertuigen moeten op de site (12-2030, 12-2001, 12-2002, 12-2060, 12-2011). Gedaan, ook 12-1536 (voorlopig zonder foto en details).
@@ -154,11 +154,12 @@ Fase 3: migratie. Uitgevoerd 28-09-2026, wacht op controle door Sven (op v2.bran
   - Sven: omgeving `p2000`, token, `rest_command.brandweeruitgeest_p2000` in HA, "Block force pushes" op `v2` weer aan. Of `github-actions[bot]` naar `v2` mag pushen is nog niet zeker.
   - Claude: in "Brandweer: 112radar Notificatie" een losse stap na de `choose` (alias "Uitruk naar brandweeruitgeest.nl"): bij capcode 107711 `rest_command.brandweeruitgeest_p2000` met `ref: v2`, `continue_on_error`. Terugzetten = die laatste stap weghalen.
   - Eerste proef gaf 404: GitHub kent een workflow pas als hij een keer gedraaid heeft. `p2000.yml` draait nu ook bij een push op de P2000-bestanden, alleen een zelftest.
+  - Geen required reviewer op `productie` (besluit Sven 28-09-2026): elke push van Sven naar `v2` of `master` publiceert direct.
   - Proef via HA (28-09-2026): proefalarm kwam aan in GitHub (run 2) en is terecht overgeslagen. De keten HA, token en workflow werkt.
   - Nieuwe pagina 112NL-app alleen in de voet, niet in het hoofdmenu (Sven).
 
 ## Volgende stap
 
 1. Eerste echte uitruk afwachten en controleren: komt de regel in `data/uitrukken/2026.csv` en op de testsite? Nog niet getest: pushen door `github-actions[bot]` naar `v2` en publiceren via de omgeving `p2000`. Faalt de run, dan krijgt Sven een mail van GitHub.
-2. Sven: required reviewer instellen op de omgeving `productie` (stappen in `MIGRATIE.md`, hoofdstuk 7).
+2. Sven: beslissen over `OPRUIMEN` en `TERUGDRAAIEN` in een aparte omgeving `beheer` met goedkeuring (zie `PLAN-P2000.md`, "Is het veilig?").
 3. Daarna fase 4 afronden (weergave uitrukken: filteren op soort) en fase 5 (livegang).

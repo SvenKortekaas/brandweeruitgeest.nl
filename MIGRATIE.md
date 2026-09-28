@@ -218,8 +218,7 @@ Besluit 27-09-2026: publiceren via GitHub Actions naar een nieuwe FTP-server. Al
 
 1. **Omgeving:** Settings, Environments, New environment `productie`.
    - Bij Deployment branches kies je "Selected branches" met alleen `master`.
-   - Required reviewers: `SvenKortekaas` (besluit 27-09-2026). Stap voor stap: github.com, repo, Settings, Environments, `productie`, vink "Required reviewers" aan, typ `SvenKortekaas`, laat "Prevent self-review" uit, en klik "Save protection rules".
-   - Pas daarna verschijnt bij een run de knop "Review deployments" en dan "Approve and deploy". Zonder deze instelling publiceert de workflow meteen, zonder te vragen (zo liep het op 28-09-2026).
+   - Geen required reviewers (besluit Sven 28-09-2026, het plan van 27-09-2026 vervalt): elke push van Sven naar `v2` of `master` publiceert meteen, zonder te vragen.
 2. **Secrets in die omgeving** (Environment secrets, niet Repository secrets):
    - `FTP_SERVER`, bijv. ftp.jouwhost.nl
    - `FTP_POORT`, meestal 21

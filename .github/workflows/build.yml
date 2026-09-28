@@ -3,7 +3,7 @@
 # Bouwen en controleren: bij elke push en pull request, zonder toegang tot secrets.
 # Publiceren: alleen bij een push naar master (en tijdens de testfase v2) door SvenKortekaas,
 # of handmatig door SvenKortekaas, en alleen via de GitHub-omgeving "productie" waarin de
-# FTP-secrets staan. Elke publicatie wacht op goedkeuring van Sven.
+# FTP-secrets staan. Geen goedkeuring per publicatie (besluit Sven 28-09-2026).
 # Zie MIGRATIE.md, hoofdstuk Publiceren, voor de instellingen in GitHub.
 
 name: Bouwen en publiceren

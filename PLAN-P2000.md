@@ -58,14 +58,14 @@ Voor elke wijziging in HA maakt Claude eerst een kopie van de huidige automatise
    - proefalarmen, testberichten, intrekkingen en oefeningen worden overgeslagen;
    - bron `p2000`; opnieuw draaien geeft geen dubbele regels.
 2. **`.github/workflows/p2000.yml`** (Claude): start alleen via `workflow_dispatch` met de twee invoervelden. De invoer gaat als omgevingsvariabele naar het script en nooit direct in een shellcommando (tegen script-injectie). Maximaal 10 meldingen per dag. Na de import: commit naar de branch uit `ref`, `build.py`, `check.py` en `deploy.py` (alleen gewijzigde bestanden, enkele minuten).
-3. **Omgeving `p2000`** (Sven): nieuwe GitHub-omgeving met dezelfde FTP-secrets als `productie`, zonder goedkeuring, alleen voor de branches `v2` (testfase) en `master`. `productie` houdt de goedkeuring voor gewone publicaties, `OPRUIMEN` en `TERUGDRAAIEN`.
+3. **Omgeving `p2000`** (Sven): nieuwe GitHub-omgeving met dezelfde FTP-secrets als `productie`, zonder goedkeuring, alleen voor de branches `v2` (testfase) en `master`. `productie` heeft ook geen goedkeuring (besluit Sven 28-09-2026).
 4. **Sleutel voor HA** (Sven): fine-grained personal access token, alleen deze repo, alleen "Actions: Read and write", verloopt na een jaar (herinnering zetten).
 
 ## Is het veilig?
 
 - HA hoeft niet extra open: HA stuurt alleen iets naar GitHub.
 - De sleutel kan alleen workflows starten, geen code wijzigen en geen secrets lezen.
-- Ergste geval als de sleutel uitlekt: iemand zet een nepmelding in het vaste formaat op de site. Oplossen: sleutel intrekken en de regel weghalen. De site vervangen of bestanden verwijderen kan niet zonder goedkeuring van Sven.
+- Ergste geval als de sleutel uitlekt: iemand zet een nepmelding in het vaste formaat op de site. Oplossen: sleutel intrekken en de regel weghalen. Let op: omdat `productie` geen goedkeuring heeft, kan iemand met de sleutel ook "Bouwen en publiceren" starten, ook met `OPRUIMEN` of `TERUGDRAAIEN`. Dat is te herstellen (opnieuw publiceren), maar vervelend. Voorstel: die twee acties in een aparte omgeving `beheer` met goedkeuring (vraag aan Sven, 28-09-2026).
 
 ## Volgorde
 
