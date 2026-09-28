@@ -171,7 +171,7 @@ Historische data wordt zo letterlijk mogelijk overgenomen. Alleen splitsen (prio
 - Nieuwe uitrukken komen automatisch uit P2000, via Home Assistant. Ontwerp in `PLAN-P2000.md`.
 - Alleen capcode 0107711 (Vrijwilligers) telt als uitruk van brandweer Uitgeest (besluit Sven 28-09-2026).
 - Idempotent: opnieuw draaien geeft geen dubbele regels. Keurt een regel zonder geldige prio, adres of plaats af.
-- Tijdens de testfase publiceert de P2000-import naar v2.brandweeruitgeest.nl; bij livegang omzetten naar de echte site (besluit Sven 28-09-2026, staat in de livegang-checklist).
+- Home Assistant stuurt P2000-uitrukken naar `master` (de echte site) sinds de livegang van 28-09-2026. Met `ref: v2` gaat een melding naar de testsite.
 - Er komt geen andere import bij. De herkomst van regels met `bron=eigen` wordt nergens beschreven, niet in code, documentatie, commits of op de site (besluit Sven 28-09-2026).
 
 ### Privacyfilter (in de import en nogmaals in `check.py`, alleen op uitrukkendata)
@@ -218,7 +218,7 @@ Let op: op de server staat nu een tijdelijke `.htaccess` die doorverwijst naar b
   - deploy alleen vanaf `master`, alleen na geslaagde check
 - De huidige deploy gebruikt `curl -k` over plain FTP (TLS-verificatie uit, wachtwoord onversleuteld). Nieuwe deploy (besluit 27-09-2026): `tools/deploy.py` via FTPS met certificaatcontrole naar een nieuwe FTP-server. Secrets `FTP_SERVER`, `FTP_POORT`, `FTP_GEBRUIKER`, `FTP_WACHTWOORD` (optioneel `FTP_MAP`) staan als environment secrets in de GitHub-omgeving `productie`.
 - Alleen een push van Sven (`SvenKortekaas`) publiceert: `master` naar de echte site met `FTP_GEBRUIKER_PROD` en `FTP_WACHTWOORD_PROD`, `v2` naar de testsite met `FTP_GEBRUIKER` en `FTP_WACHTWOORD` (besluit Sven 28-09-2026; server en poort gelijk, keuze in `tools/publiceer.py`). De workflow controleert repo, branch en actor. Pull requests en forks krijgen nooit toegang tot de secrets.
-- Eerste livegang: handmatig starten met `OPRUIMEN`, eerst droog. Dat verwijdert alles op de server wat niet bij de site hoort (alleen `.well-known` blijft). Terugdraaien naar de tijdelijke doorverwijzing: `TERUGDRAAIEN` (zet `tools/htaccess-terugdraaien` terug). Geen required reviewer op de omgeving `productie` (besluit Sven 28-09-2026): een push van Sven naar `master` (en tijdens de testfase `v2`) publiceert direct. Daarna synchroniseert elke publicatie via een manifest. Stappenplan: `MIGRATIE.md`, hoofdstuk 7.
+- Livegang gedaan op 28-09-2026 met `OPRUIMEN` op `master` (eerst droog). Opruimen verwijdert alles wat niet bij de site hoort; `.well-known`, `.cagefs` en `.cl.selector` blijven. Terugdraaien naar de tijdelijke doorverwijzing: `TERUGDRAAIEN` (zet `tools/htaccess-terugdraaien` terug). Geen required reviewer op de omgeving `productie` (besluit Sven 28-09-2026): een push van Sven naar `master` (en tijdens de testfase `v2`) publiceert direct. Daarna synchroniseert elke publicatie via een manifest. Stappenplan: `MIGRATIE.md`, hoofdstuk 7.
 - Deploy synchroniseert `public/` met de server. Verwijderen van oude Hugo-bestanden op de server pas na akkoord en na een backup.
 - Geen verwijzingen naar het testadres (v2.brandweeruitgeest.nl) in de gebouwde site of de sitecode. De testsite wordt gebouwd met `BOUW_OMGEVING=test` (noindex en `Disallow: /`), de echte site met `live` (besluit Sven 28-09-2026). Runners vast op `ubuntu-24.04`.
 - Livegang-checklist in `MIGRATIE.md`: redirects getest met `curl -I` op de volledige oude URL-lijst, securityheaders gecontroleerd, Lighthouse gedraaid, tijdelijke doorverwijzing weg.

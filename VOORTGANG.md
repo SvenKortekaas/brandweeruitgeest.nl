@@ -4,6 +4,8 @@ Logboek voor overdracht tussen sessies. Lees eerst `CLAUDE.md`, dan dit bestand.
 
 ## Huidige fase
 
+Live sinds 28-09-2026: brandweeruitgeest.nl draait op de nieuwe site. Werkwijze: Claude werkt op `v2` (testsite), Sven voegt pull requests samen naar `master`.
+
 Fase 3: migratie. Uitgevoerd 28-09-2026, wacht op controle door Sven (op v2.brandweeruitgeest.nl). Fase 2 afgerond en goedgekeurd (27-09-2026). Fase 1 is goedgekeurd (27-09-2026).
 
 ## Gedaan
@@ -179,9 +181,15 @@ Fase 3: migratie. Uitgevoerd 28-09-2026, wacht op controle door Sven (op v2.bran
   6. Waarschuwing in GitHub Actions over `ubuntu-latest` naar Ubuntu 26 (19-10-2026): runners vastgezet op `ubuntu-24.04`.
   - Uitgevoerd: `BOUW_OMGEVING` (live of test) in `build.py`: alleen de testbouw krijgt `noindex` en `Disallow: /`, de livebouw bevat geen testadres meer. `tools/publiceer.py` kiest de FTP-gegevens per branch (master valt nooit terug op de testgegevens). `deploy.py` beschermt `.cagefs` en `.cl.selector`.
 
+- 28-09-2026, livegang uitgevoerd:
+  - Sven voegde pull request #56 samen (squash) en zette de `_PROD`-secrets ook in de omgeving `p2000`. De eerste publicatie vanaf `master` stopte bewust (geen manifest), de `_PROD`-gegevens werkten.
+  - `master` samengevoegd in `v2` (inhoud gelijk), zodat volgende pull requests alleen nieuwe wijzigingen tonen.
+  - Droog opruimen op de echte site: 889 bestanden uploaden, 417 verwijderen, allemaal van de oude Hugo-site (img, tags, categories, css, js, oude jaar- en voertuigpagina's, oude iconen). Geen mail-, log- of hostingmappen: de FTP-map van het PROD-account is de webmap. Daarna echt opgeruimd (Claude, op verzoek van Sven).
+
+- 28-09-2026, livegang afgerond: echte opruim-run geslaagd, brandweeruitgeest.nl live. Controle op het hoofddomein: 473 oude URL's, 69 pagina's, headers, www en http, 0 fouten (hier en in GitHub Actions). Geen testadres in de site. Home Assistant stuurt P2000 nu naar `master`; proefalarm via `master` terecht overgeslagen.
+
 ## Volgende stap
 
-1. Sven: pull request `v2` naar `master` samenvoegen.
-2. Claude: opruimen op de echte site (eerst droog, dan echt), controleren, P2000 in HA naar `master`.
-3. Sven: `_PROD`-secrets ook in de omgeving `p2000` zetten.
-4. Later: groter logo (Sven).
+1. Sven: pull request met deze documentatie samenvoegen.
+2. Later, na akkoord Sven: `legacy/` verwijderen, de drie Dependabot-pull requests voor het Hugo-thema sluiten, groter logo.
+3. Eerste echte P2000-uitruk na livegang controleren op de site.
