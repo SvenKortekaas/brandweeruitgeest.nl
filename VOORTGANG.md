@@ -154,11 +154,11 @@ Fase 3: migratie. Uitgevoerd 28-09-2026, wacht op controle door Sven (op v2.bran
   - Sven: omgeving `p2000`, token, `rest_command.brandweeruitgeest_p2000` in HA, "Block force pushes" op `v2` weer aan. Of `github-actions[bot]` naar `v2` mag pushen is nog niet zeker.
   - Claude: in "Brandweer: 112radar Notificatie" een losse stap na de `choose` (alias "Uitruk naar brandweeruitgeest.nl"): bij capcode 107711 `rest_command.brandweeruitgeest_p2000` met `ref: v2`, `continue_on_error`. Terugzetten = die laatste stap weghalen.
   - Eerste proef gaf 404: GitHub kent een workflow pas als hij een keer gedraaid heeft. `p2000.yml` draait nu ook bij een push op de P2000-bestanden, alleen een zelftest.
+  - Proef via HA (28-09-2026): proefalarm kwam aan in GitHub (run 2) en is terecht overgeslagen. De keten HA, token en workflow werkt.
   - Nieuwe pagina 112NL-app alleen in de voet, niet in het hoofdmenu (Sven).
 
 ## Volgende stap
 
-1. Claude: proefmelding (proefalarm, schrijft niets) opnieuw via HA sturen en de run controleren.
-2. Eerste echte uitruk afwachten en controleren op de testsite.
-3. Sven: required reviewer instellen op de omgeving `productie` (stappen in `MIGRATIE.md`, hoofdstuk 7).
-4. Daarna fase 4 afronden (weergave uitrukken: filteren op soort) en fase 5 (livegang).
+1. Eerste echte uitruk afwachten en controleren: komt de regel in `data/uitrukken/2026.csv` en op de testsite? Nog niet getest: pushen door `github-actions[bot]` naar `v2` en publiceren via de omgeving `p2000`. Faalt de run, dan krijgt Sven een mail van GitHub.
+2. Sven: required reviewer instellen op de omgeving `productie` (stappen in `MIGRATIE.md`, hoofdstuk 7).
+3. Daarna fase 4 afronden (weergave uitrukken: filteren op soort) en fase 5 (livegang).
