@@ -150,10 +150,15 @@ Fase 3: migratie. Uitgevoerd 28-09-2026, wacht op controle door Sven (op v2.bran
   - `.github/workflows/p2000.yml`: start via `workflow_dispatch` (tijdstip, tekst, capcodes), commit naar de branch en publiceert via de omgeving `p2000`. Getest met verzonnen meldingen, nog niet op GitHub gedraaid.
 - 28-09-2026: Sven vraagt informatie over de 112NL-app op de site. Nieuwe pagina `/112nl-app/` (tekst van Sven plus de waarschuwing uit de flyer: misbruik van 112 is strafbaar, app niet testen), in de voet van de site en kort genoemd op de homepage.
 
+- 28-09-2026, koppeling Home Assistant:
+  - Sven: omgeving `p2000`, token, `rest_command.brandweeruitgeest_p2000` in HA, "Block force pushes" op `v2` weer aan. Of `github-actions[bot]` naar `v2` mag pushen is nog niet zeker.
+  - Claude: in "Brandweer: 112radar Notificatie" een losse stap na de `choose` (alias "Uitruk naar brandweeruitgeest.nl"): bij capcode 107711 `rest_command.brandweeruitgeest_p2000` met `ref: v2`, `continue_on_error`. Terugzetten = die laatste stap weghalen.
+  - Eerste proef gaf 404: GitHub kent een workflow pas als hij een keer gedraaid heeft. `p2000.yml` draait nu ook bij een push op de P2000-bestanden, alleen een zelftest.
+  - Nieuwe pagina 112NL-app alleen in de voet, niet in het hoofdmenu (Sven).
+
 ## Volgende stap
 
-1. Sven: in GitHub de omgeving `p2000` maken (zelfde FTP-secrets als `productie`, branches `v2` en `master`, geen goedkeuring) en een fine-grained token (alleen deze repo, "Actions: Read and write"). Controleren dat `github-actions[bot]` naar `v2` mag pushen (branchbeveiliging).
-2. Sven: `rest_command` en token in HA zetten (tekst in `PLAN-P2000.md`).
-3. Claude: daarna de stap in de HA-automatisering toevoegen (`ref: v2`) en een proefmelding naar de testsite sturen.
-4. Sven: "Block force pushes" op `v2` weer aanzetten; required reviewer op `productie` instellen.
-5. Daarna fase 4 afronden (weergave uitrukken: filteren op soort) en fase 5 (livegang).
+1. Claude: proefmelding (proefalarm, schrijft niets) opnieuw via HA sturen en de run controleren.
+2. Eerste echte uitruk afwachten en controleren op de testsite.
+3. Sven: required reviewer instellen op de omgeving `productie` (stappen in `MIGRATIE.md`, hoofdstuk 7).
+4. Daarna fase 4 afronden (weergave uitrukken: filteren op soort) en fase 5 (livegang).

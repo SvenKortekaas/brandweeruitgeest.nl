@@ -4,10 +4,18 @@
 # capcode 0107711. De invoer komt van buiten: die gaat alleen als omgevingsvariabele naar
 # tools/import_p2000.py, nooit rechtstreeks in een shellcommando.
 # Testfase: ref v2 (testsite). Bij livegang: ref master (checklist in MIGRATIE.md).
+# Bij een push die de P2000-bestanden wijzigt draait alleen een zelftest met verzonnen
+# meldingen (schrijft en publiceert niets). Zo kent GitHub de workflow ook voor Home Assistant.
 
 name: P2000-uitruk
 
 on:
+  push:
+    branches: [master, v2]
+    paths:
+      - .github/workflows/p2000.yml
+      - tools/import_p2000.py
+      - tools/p2000.yaml
   workflow_dispatch:
     inputs:
       tijdstip:
@@ -24,9 +32,34 @@ permissions:
   contents: read
 
 jobs:
+  zelftest:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Verzonnen meldingen (zonder --apply)
+        run: |
+          nu=$(TZ=Europe/Amsterdam date '+%Y-%m-%d %H:%M:%S')
+          python tools/import_p2000.py --tijdstip "$nu" --capcodes 0107711 \
+            --tekst "P 1 BNH-01 BR wegvervoer Broekpolderweg Uitgeest 122030"
+          python tools/import_p2000.py --tijdstip "$nu" --capcodes 0107711 \
+            --tekst "P 2 BNH-01 Proefalarm kazerne Molenwerf Uitgeest"
+          if python tools/import_p2000.py --tijdstip "$nu" --capcodes 0106530 \
+              --tekst "P 1 BNH-01 BR woning Molenwerf Uitgeest"; then
+            echo "FOUT: melding zonder capcode 0107711 is niet afgekeurd"; exit 1
+          fi
+
   importeren:
     # Alleen de officiële repo, alleen master of v2, alleen gestart met de sleutel van Sven.
     if: >-
+      github.event_name == 'workflow_dispatch' &&
       github.repository == 'SvenKortekaas/brandweeruitgeest.nl' &&
       (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/v2') &&
       github.actor == 'SvenKortekaas' &&
