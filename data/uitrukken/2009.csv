@@ -1,0 +1,114 @@
+nr,datum,tijd,prio,melding,adres,plaats,bron,publiceren
+1,2009-01-01,,,Zeer grote brand (Grip 2),,Nieuw-Vennep,legacy,ja
+2,2009-01-02,,,ABM vd Lem,Molenwerf,Uitgeest,legacy,ja
+3,2009-01-03,,,Persoon door ijs,A9 R 64.0,,legacy,ja
+4,2009-01-05,,,Schoorsteenbrand,De Witte Hoofden,Uitgeest,legacy,ja
+5,2009-01-08,,,Wateroverlast,Middelweg,Uitgeest,legacy,ja
+6,2009-01-13,,,Alarm Compagnie 2e Peleton,,Nieuw-Vennep,legacy,ja
+7,2009-01-16,,,Buitenbrand,Broekpolderweg,Uitgeest,legacy,ja
+8,2009-01-17,,,Assistentie ambulance,Koogdijk,Uitgeest,legacy,ja
+9,2009-01-21,,,Opkomen kazerne ivm C2000,Molenwerf,Uitgeest,legacy,ja
+10,2009-01-23,,,Vko met beknelling,A9 64.0 R,,legacy,ja
+11,2009-01-31,,,Dier te water,Koogdijk,Uitgeest,legacy,ja
+12,2009-02-03,,,Auto te water,Provincialeweg,Uitgeest,legacy,ja
+13,2009-02-04,,,Buitenbrand,Broekpolderweg,Uitgeest,legacy,ja
+14,2009-02-13,,,Binnenbrand onderwijs Grip1,De Hoop,Uitgeest,legacy,ja
+15,2009-03-04,,,Peleton noord opkomen UGS,,Zaandam,legacy,ja
+16,2009-03-08,,,Liftopsluiting,Station,Uitgeest,legacy,ja
+17,2009-03-08,,,Buitenbrand,A9 R 62.0,,legacy,ja
+18,2009-03-10,,,Abm Geesterheem,Dr.Brugmanstraat,Uitgeest,legacy,ja
+19,2009-03-11,,,Hulp aan derden,Uitgeestermeer,Uitgeest,legacy,ja
+20,2009-03-15,,,Vaartuig in nood,Uitgeestermeer,Uitgeest,legacy,ja
+21,2009-03-26,,,Reinigen wegdek na aanrijding,Provincialeweg,Uitgeest,legacy,ja
+22,2009-03-31,,,Rode vuurpijl op meer,Uitgeestermeer,Uitgeest,legacy,ja
+23,2009-04-05,,,ABM Geesterheem,Dr Brugmanstraat,Uitgeest,legacy,ja
+24,2009-04-06,,,Buitenbrand,Dorregeest,Uitgeest,legacy,ja
+25,2009-04-06,,,Buitenbrand,Lagendijk,Uitgeest,legacy,ja
+26,2009-04-11,,,ABM Geesterheem,Dr Brugmanstraat,Uitgeest,legacy,ja
+27,2009-04-14,,,ABM Kindergarden Waldijk,Benningskamplaan,Uitgeest,legacy,ja
+28,2009-04-26,,,ABM Monkey town,Molenwerf,Uitgeest,legacy,ja
+29,2009-04-27,,,Vko met beknelling,A9,,legacy,ja
+30,2009-04-27,,,ABM Monkey town,Molenwerf,Uitgeest,legacy,ja
+31,2009-04-27,,,ABM Monkey town,Molenwerf,Uitgeest,legacy,ja
+32,2009-05-03,,,ABM Monkey town,Molenwerf,Uitgeest,legacy,ja
+33,2009-05-03,,,Spoed eerste hulp,Berkenstraat,Uitgeest,legacy,ja
+34,2009-05-06,,,ABM De Waterjuffer,Juffer,Uitgeest,legacy,ja
+35,2009-05-08,,,ABM Geesterheem,Dr.Brugmanstraat,Uitgeest,legacy,ja
+36,2009-05-12,,,Buitenbrand,Uiitgeester strand,Uitgeest,legacy,ja
+37,2009-05-13,,,Hulpverlening,Uitgeestermeer,Uitgeest,legacy,ja
+38,2009-05-20,,,Binnenbrand HMS (Grote brand),Provincialeweg,Uitgeest,legacy,ja
+39,2009-05-26,,,Binnenbrand wonen (Middelbrand),,Heemskerk,legacy,ja
+40,2009-05-26,,,Wateroverlast,,Heemskerk,legacy,ja
+41,2009-05-26,,,Binnenbrand wonen (Grote brand),,Heemskerk,legacy,ja
+42,2009-05-31,,,Voertuig te water,Busch en dam,Uitgeest,legacy,ja
+43,2009-06-03,,,Wateroverlast,Pr.Irenelaan,Uitgeest,legacy,ja
+44,2009-06-03,,,Buitenbrand,Castricummerweg,Uitgeest,legacy,ja
+45,2009-06-04,,,ABM Geesterheem,Dr.Brugmanstraat,Uitgeest,legacy,ja
+46,2009-06-04,,,VKO met letsel,A9 R 60.9,,legacy,ja
+47,2009-06-12,,,ABM Geesterheem,Dr.Brugmanstraat,Uitgeest,legacy,ja
+48,2009-06-20,,,Persoon op hoogte,Boetevenstraat,Uitgeest,legacy,ja
+49,2009-06-24,,,Buitenbrand berm / ruigte,Goesinnestraat,Uitgeest,legacy,ja
+50,2009-06-29,,,Autobrand,Provincialeweg,Uitgeest,legacy,ja
+51,2009-07-01,,,Buitenbrand berm / ruigte,Tolpad,Uitgeest,legacy,ja
+52,2009-07-04,,,Container brand,Molenwerf,Uitgeest,legacy,ja
+53,2009-07-08,,,ABM Monkey Town,Molenwerf,Uitgeest,legacy,ja
+54,2009-07-10,,,Boom op weg,Provincialeweg,Uitgeest,legacy,ja
+55,2009-07-10,,,ABM Monkey Town,Molenwerf,Uitgeest,legacy,ja
+56,2009-07-11,,,ABM Waterjuffer,De Juffer,Uitgeest,legacy,ja
+57,2009-07-15,,,Vko met beknelling,Provincialeweg,Uitgeest,legacy,ja
+58,2009-07-20,,,Wegdek reinigen,A9 afrit Castricum,,legacy,ja
+59,2009-07-24,,,Dier te water,Woudpolderweg,Uitgeest,legacy,ja
+60,2009-07-26,,,Buitenbrand,Uitgeesterweg,Uitgeest,legacy,ja
+61,2009-08-03,,,Schoorsteenbrand,Schevelstraat,Uitgeest,legacy,ja
+62,2009-08-06,,,ABM Heliomare,Lagendijk,Uitgeest,legacy,ja
+63,2009-08-06,,,Dier te water,Lagendijk,Uitgeest,legacy,ja
+64,2009-08-14,,,Buitenbrand,Zwaansmeerpad,Uitgeest,legacy,ja
+65,2009-08-14,,,Nablussen na buitenbrand,Binnenkruierstraat,Uitgeest,legacy,ja
+66,2009-08-15,,,Nablussen na buitenbrand,Binnenkruierstraat,Uitgeest,legacy,ja
+67,2009-08-16,,,Onderzoek buitenbrand gerucht,A9 R61.7,,legacy,ja
+68,2009-08-19,,,Onderzoek vreemde lucht,Graskamplaan,Uitgeest,legacy,ja
+69,2009-08-19,,,Dier bekneld,Startingerweg,Uitgeest,legacy,ja
+70,2009-08-20,,,ABM van der Lem,Molenwerf,Uitgeest,legacy,ja
+71,2009-08-24,,,ABM GVT De Waterjuffer,De Juffer,Uitgeest,legacy,ja
+72,2009-08-24,,,Onderzoek buitenbrand gerucht,Provincialeweg,Uitgeest,legacy,ja
+73,2009-08-28,,,Compagnie alarm UGS Twaalfmaat,,Schoorl,legacy,ja
+74,2009-08-29,,,Stormschade,Klein Dorregeest,Uitgeest,legacy,ja
+75,2009-09-01,,,ABM Geesterheem,Dr Brugmanstraat,Uitgeest,legacy,ja
+76,2009-09-02,,,Onderzoek Gas / Vreemde lucht,De Herderin,Uitgeest,legacy,ja
+77,2009-09-02,,,Onderzoek Gas / Vreemde lucht,Breekamplaan,Uitgeest,legacy,ja
+78,2009-09-05,,,Autobrand klein voertuig,Dijkerhemmerweg,Uitgeest,legacy,ja
+79,2009-09-08,,,Dier te water,Lagendijk,Uitgeest,legacy,ja
+80,2009-09-14,,,VKO met letsel,Geesterweg,Uitgeest,legacy,ja
+81,2009-09-16,,,Peleton noord opkomen Bergen Grip 3 duin/bos brand,,Bergen,legacy,ja
+82,2009-09-18,,,Dier te water,"A9 L 59,7",,legacy,ja
+83,2009-09-19,,,Onderzoek buitenbrand gerucht,Westergeest,Uitgeest,legacy,ja
+84,2009-10-03,,,Stormschade,Jacoba van Beierenlaan,Uitgeest,legacy,ja
+85,2009-10-03,,,Assistentie ambulance,Uitgeestermeer,Uitgeest,legacy,ja
+86,2009-10-03,,,ABM Monkey Town,Molenwerf,Uitgeest,legacy,ja
+87,2009-10-04,,,VKO met letsel,A9 Rechts 59.9,,legacy,ja
+88,2009-10-07,,,VKO met beknelling,A9 Rechts 59.4,,legacy,ja
+89,2009-10-13,,,VKO met beknelling,A9 Rechts 63.8,,legacy,ja
+90,2009-10-18,,,VKO met letsel,Geesterweg,Uitgeest,legacy,ja
+91,2009-10-25,,,Binnenbrand wonen,Lepelaarstraat,Uitgeest,legacy,ja
+92,2009-10-25,,,Buitenbrand,Plevierstraat,Uitgeest,legacy,ja
+93,2009-10-29,,,VKO met beknelling,A9 Links 60.6,,legacy,ja
+94,2009-11-05,,,VKO materieel,A9 R 59.2 B oprit Castricum,,legacy,ja
+95,2009-11-05,,,Wateroverlast,Benesserlaan,Uitgeest,legacy,ja
+96,2009-11-06,,,Buitenbrand,Dorregeest,Uitgeest,legacy,ja
+97,2009-11-06,,,Buitenbrand,Uitgeesterweg,Uitgeest,legacy,ja
+98,2009-11-13,,,VKO met letsel,A9 L 60.9,,legacy,ja
+99,2009-11-16,,,Buitenbrand klein voertuig,De Loet,Uitgeest,legacy,ja
+100,2009-11-18,,,Stormschade algemeen,Benesserlaan,Uitgeest,legacy,ja
+101,2009-11-18,,,VKO met Letsel,A9 L 61.4,,legacy,ja
+102,2009-11-20,,,VKO met Letsel,A9 R 58.6,,legacy,ja
+103,2009-11-21,,,Buitenbrand klein voertuig,Benesserlaan,Uitgeest,legacy,ja
+104,2009-11-22,,,Voertuig te water,Geesterweg,Uitgeest,legacy,ja
+105,2009-11-22,,,ABM Geesterheem,Dokter Brugmanstraat,Uitgeest,legacy,ja
+106,2009-11-26,,,VKO met beknelling,A9 R 59.2,,legacy,ja
+107,2009-11-27,,,Wateroverlast,Kleistunnel,Uitgeest,legacy,ja
+108,2009-12-06,,,VKO met letsel,A9 L 61.0,Uitgeest,legacy,ja
+109,2009-12-15,,,Binnenbrand wonen (Middel),Westergeest,Uitgeest,legacy,ja
+110,2009-12-17,,,VKO met beknelling,"Provincialeweg 54,6",Uitgeest,legacy,ja
+111,2009-12-19,,,Schoorsteenbrand,J.E. De witstraat,Uitgeest,legacy,ja
+112,2009-12-19,,,Buitenbrand,Assum,Uitgeest,legacy,ja
+113,2009-12-21,,,ABM kdv de regenboog,Benningskamplaan,Uitgeest,legacy,ja

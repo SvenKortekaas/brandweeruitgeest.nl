@@ -1,0 +1,44 @@
+# Algemene gegevens van de site. Wijzigen hier werkt door in alle pagina's.
+naam: Brandweer Uitgeest
+url: https://brandweeruitgeest.nl
+taal: nl
+beschrijving: Informatie over brandweer Uitgeest, de voertuigen en het uitrukkenarchief.
+adres:
+  straat: Molenwerf 25
+  postcode: 1911 DB
+  plaats: Uitgeest
+email: info@brandweeruitgeest.nl
+social:
+  - naam: Facebook
+    url: https://www.facebook.com/brandweeruitgeest
+    icoon: facebook
+  - naam: Instagram
+    url: https://www.instagram.com/brandweeruitgeest/
+    icoon: instagram
+werving:
+  titel: Helden gezocht
+  tekst: Word brandweervrijwilliger in Uitgeest. Bekijk de vacature bij Veiligheidsregio Kennemerland.
+  link: https://www.werkenbijdevrk.nl/vacatures/brandweervrijwilliger/8fa2ec35-00b3-4844-be28-4cba4928301b
+  linktekst: Bekijk de vacature
+menu:
+  - titel: Home
+    url: /
+  - titel: Uitrukken
+    url: /uitrukken/
+  - titel: Voertuigen
+    url: /voertuigen/
+  - titel: Over ons
+    url: /over-ons/
+voetmenu:
+  - titel: De 112NL-app
+    url: /112nl-app/
+  - titel: Betekenis P2000
+    url: /betekenis-p2000-meldingen/
+  - titel: Posten Kennemerland
+    url: /posten-kennemerland/
+  - titel: Nieuwsarchief
+    url: /nieuws/
+  - titel: Disclaimer
+    url: /disclaimer/
+  - titel: Privacy
+    url: /privacy/

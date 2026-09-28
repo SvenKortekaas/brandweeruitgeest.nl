@@ -1,0 +1,120 @@
+nr,datum,tijd,prio,melding,adres,plaats,bron,publiceren
+1,2010-01-01,,,ABM vd Lem,Molenwerf,Uitgeest,legacy,ja
+2,2010-01-01,,,Binnenbrand boerderij,Weeg,Uitgeest,legacy,ja
+3,2010-01-06,,,ABM vd Lem,Molenwerf,Uitgeest,legacy,ja
+4,2010-01-06,,,Kazernering Grip 2 sneeuw,Molenwerf,Uitgeest,legacy,ja
+5,2010-01-07,,,Binnenbrand Industrie,Molenweg,Uitgeest,legacy,ja
+6,2010-01-12,,,ABM vd Lem,Molenwerf,Uitgeest,legacy,ja
+7,2010-01-19,,,ABM de Slimp,Dr. Brugmanstraat,Uitgeest,legacy,ja
+8,2010-01-19,,,ABM de Slimp,Dr. Brugmanstraat,Uitgeest,legacy,ja
+9,2010-01-24,,,Voertuig te water,A9 R 61.2,Uitgeest,legacy,ja
+10,2010-01-27,,,ABM Spanjaard HDC,,Beverwijk,legacy,ja
+11,2010-02-02,,,Dier te water,Provincialeweg,Uitgeest,legacy,ja
+12,2010-02-04,,,VKO met letsel,Oprit 10 A9 Castricum,,legacy,ja
+13,2010-02-08,,,Buitenbrand groot voertuig,A9 R 61.0,,legacy,ja
+14,2010-02-10,,,ABM Geesterheem,Dr. Brugmanstraat,Uitgeest,legacy,ja
+15,2010-02-20,,,VKO met letsel,A9 L 60.3,Uitgeest,legacy,ja
+16,2010-02-20,,,VKO Materieel,A9 L 60.5,Uitgeest,legacy,ja
+17,2010-02-22,,,Gas vreemde lucht,Molenwerf,Uitgeest,legacy,ja
+18,2010-02-25,,,Binnenbrand gerucht,Dr. Brugmanstraat,Uitgeest,legacy,ja
+19,2010-03-01,,,VKO met letsel ( middel HV ),A9 R 60.4,Uitgeest,legacy,ja
+20,2010-03-02,,,Persoon te water,Provincialeweg 53.7,Uitgeest,legacy,ja
+21,2010-03-03,,,ABM Gvt de Waterjuffer,De Juffer,Uitgeest,legacy,ja
+22,2010-03-04,,,Treinbrand reizigers TIS 2.2,Stationsplein,Uitgeest,legacy,ja
+23,2010-03-08,,,Buitenbrand afval,Stationsplein,Uitgeest,legacy,ja
+24,2010-03-11,,,Buitenbrand berm / ruigte,Broekpolderweg,Uitgeest,legacy,ja
+25,2010-03-11,,,Schoorsteenbrand,Westergeest,Uitgeest,legacy,ja
+26,2010-03-14,,,ABM vd Lem,Molenwerf,Uitgeest,legacy,ja
+27,2010-03-14,,,Grote brand WTS 2500,,Ijmuiden,legacy,ja
+28,2010-03-16,,,Buitenbrand,"A9 R 58,7",Heemskerk,legacy,ja
+29,2010-03-24,,,Binnenbrand gerucht,J.E. De Witstraat,Uitgeest,legacy,ja
+30,2010-03-28,,,Liftopsluiting,Stationsplein,Uitgeest,legacy,ja
+31,2010-03-30,,,Afhijsen patient,Meerkoetstraat,Uitgeest,legacy,ja
+32,2010-04-03,,,TIS 3.1 Treinongeval,,Heemskerk,legacy,ja
+33,2010-04-03,,,ABM Westerheem,,Heemskerk,legacy,ja
+34,2010-04-05,,,Buitenbrand berm/ruigte,A9 R 58.6,,legacy,ja
+35,2010-04-10,,,Binnenbrand loods,Kleis,Uitgeest,legacy,ja
+36,2010-04-12,,,Buitenbrand boom,Provincialeweg,Uitgeest,legacy,ja
+37,2010-04-12,,,Vko materieel,Busch en dam,Uitgeest,legacy,ja
+38,2010-04-15,,,Peloton inzet WTS 2500,,Bergen,legacy,ja
+39,2010-04-15,,,Compagnie inzet brand,,Bergen,legacy,ja
+40,2010-04-24,,,Buitenbrand afval container,Parallelweg,Uitgeest,legacy,ja
+41,2010-05-22,,,Liftopsluiting Station Uitgeest,Stationsplein,Uitgeest,legacy,ja
+42,2010-05-26,,,Buitenbrand berm / ruigte,Waldijk,Uitgeest,legacy,ja
+43,2010-05-27,,,Binnenbrand Schuur,Klein Dorregeest,Uitgeest,legacy,ja
+44,2010-05-30,,,Buitenbrand Groot Voertuig,Stationsplein,Uitgeest,legacy,ja
+45,2010-05-30,,,ABM Monkeytown,Molenwerf,Uitgeest,legacy,ja
+46,2010-06-02,,,Vko Met Letsel,A9 R 60.9,Uitgeest,legacy,ja
+47,2010-06-04,,,Buitenbrand Gerucht,Gorskamplaan,Uitgeest,legacy,ja
+48,2010-06-09,,,Voertuig Te Water,A9 L 63.0,Akersloot,legacy,ja
+49,2010-06-12,,,Binnenbrand Wonen,Hogeweg,Uitgeest,legacy,ja
+50,2010-06-13,,,Verrichten Van Metingen,Lagendijk,Uitgeest,legacy,ja
+51,2010-06-17,,,Persoon te water,Uitgeestermeer,Uitgeest,legacy,ja
+52,2010-06-18,,,Assistentie Ambulance,Provincialeweg 54.0,Uitgeest,legacy,ja
+53,2010-06-18,,,Buitenbrand Klein Voertuig,A9 R 60.8,Uitgeest,legacy,ja
+54,2010-06-21,,,Vko Met Beknelling,A9 R 62.0,Uitgeest,legacy,ja
+55,2010-06-22,,,Openen Deur,Graskamplaan,Uitgeest,legacy,ja
+56,2010-06-22,,,Lekkage Brandstoftang LPG,Middelweg,Uitgeest,legacy,ja
+57,2010-06-22,,,Vko Met Letsel,Provincialeweg 54.8,Uitgeest,legacy,ja
+58,2010-06-24,,,Vko Met Letsel,Provincialeweg 54.8,Uitgeest,legacy,ja
+59,2010-06-25,,,Dier Te Water,Provincialeweg,Uitgeest,legacy,ja
+60,2010-06-25,,,Buitenbrand Afval/Container,Waldijk,Uitgeest,legacy,ja
+61,2010-06-27,,,Nacontrole Na Binnenbrand,Lagendijk,Uitgeest,legacy,ja
+62,2010-06-27,,,Buitenbrand Klein Voertuig,Molenwerf,Uitgeest,legacy,ja
+63,2010-06-30,,,Buitenbrand Afval/Container,Dorregeesterweg,Uitgeest,legacy,ja
+64,2010-06-30,,,Dier Te Water,Lagendijk,Uitgeest,legacy,ja
+65,2010-07-05,,,Onderzoek Buitenbrand,A9 R 62.0,,legacy,ja
+66,2010-07-09,,,Voertuig Te Water,Provincialeweg,Uitgeest,legacy,ja
+67,2010-07-10,,,Binnenbrand Gerucht,Westerwerf,Uitgeest,legacy,ja
+68,2010-07-10,,,Wateroverlast,Middelweg,Uitgeest,legacy,ja
+69,2010-07-11,,,Binnenbrand Wonen,Voorvenstraat,Uitgeest,legacy,ja
+70,2010-07-12,,,VKO Met Beknelling,A9 L 58.8,Uitgeest,legacy,ja
+71,2010-07-13,,,VKO Met Beknelling ( GRIP 1 ),A9 L 59.9,Uitgeest,legacy,ja
+72,2010-07-18,,,Buitenbrand Container,Zwaansmeerpad,Uitgeest,legacy,ja
+73,2010-07-28,,,Dier Te Water,Meldijk,Uitgeest,legacy,ja
+74,2010-08-05,,,Dier Te Water,Lagendijk,Uitgeest,legacy,ja
+75,2010-08-09,,,Buitenbrand Klein Voertuig,Lagendijk,Uitgeest,legacy,ja
+76,2010-08-23,,,Voertuig Te Water,Provincialeweg,Uitgeest,legacy,ja
+77,2010-08-23,,,Stormschade,Bergvenstraat,Uitgeest,legacy,ja
+78,2010-08-24,,,Stormschade,Weegbree,Uitgeest,legacy,ja
+79,2010-08-24,,,Vko Met Letsel,A9 R 59.5,Uitgeest,legacy,ja
+80,2010-08-25,,,Middelbrand Industrie,,Beverwijk,legacy,ja
+81,2010-08-25,,,Buitenbrand Klein Voertuig,A9 R 59.1,Uitgeest,legacy,ja
+82,2010-09-06,,,Vko Met Letsel,A9 L 53.9,Beverwijk,legacy,ja
+83,2010-09-07,,,Vko Met Letsel,A9 L 61.9,Uitgeest,legacy,ja
+84,2010-09-07,,,Buitenbrand Container,A9 L Akermaat Heemskerk,,legacy,ja
+85,2010-09-12,,,Buitenbrand Container,Kleis,Uitgeest,legacy,ja
+86,2010-09-19,,,Binnenbrand Wonen Groot Verzorging,,Beverwijk,legacy,ja
+87,2010-09-19,,,Binnenbrand Wonen Groot WTS 2500,,Beverwijk,legacy,ja
+88,2010-09-21,,,Vko Materieel,A9 L 60.3,Uitgeest,legacy,ja
+89,2010-09-26,,,Dier Te Water,Uitgeesterweg,Uitgeest,legacy,ja
+90,2010-10-09,,,Dier Te Water,Lagendijk,Uitgeest,legacy,ja
+91,2010-10-19,,,Vko Met Letsel,A9 R Afrit 11 Akersloot,,legacy,ja
+92,2010-10-24,,,Buitenbrand Container,Melis Stokelaan,Uitgeest,legacy,ja
+93,2010-10-26,,,Dier Bekneld,Uitgeesterweg,Uitgeest,legacy,ja
+94,2010-10-27,,,Zeer Grote Brand Grip 3,,Haarlem,legacy,ja
+95,2010-11-09,,,ABM Recreatieschap UTG,Lagendijk,Uitgeest,legacy,ja
+96,2010-11-10,,,Dier Bekneld,Westergeestervaart,Uitgeest,legacy,ja
+97,2010-11-18,,,ABM De Waterjuffer,De Juffer,Uitgeest,legacy,ja
+98,2010-11-20,,,ABM Heliomare Wonen,Lagendijk,Uitgeest,legacy,ja
+99,2010-11-21,,,VKO Met Beknelling,A9 R 58.2,Heemskerk,legacy,ja
+100,2010-11-23,,,Beknelling Groot Voertuig,A9 L 60.7,Uitgeest,legacy,ja
+101,2010-11-29,,,ABM De Waterjuffer,De Juffer,Uitgeest,legacy,ja
+102,2010-12-02,,,ABM Geesterheem,Dr. Brugmanstraat,Uitgeest,legacy,ja
+103,2010-12-04,,,ABM Geesterheem,Dr. Brugmanstraat,Uitgeest,legacy,ja
+104,2010-12-04,,,Binnenbrand industrie Kelly,,Beverwijk,legacy,ja
+105,2010-12-07,,,ABM Geesterheem,Dr. Brugmanstraat,Uitgeest,legacy,ja
+106,2010-12-09,,,Vko Met Letsel ( Middel Hv),A9 L 60.6,Uitgeest,legacy,ja
+107,2010-12-09,,,Buitenbrand Container,Jacoba van Beierenlaan,Uitgeest,legacy,ja
+108,2010-12-12,,,Wateroverlast,Dr Brugmanstraat,Uitgeest,legacy,ja
+109,2010-12-12,,,Buitenbrand Container,De Spin,Uitgeest,legacy,ja
+110,2010-12-17,,,Kazernering Grip 2 Regio,Molenwerf,Uitgeest,legacy,ja
+111,2010-12-17,,,Vko Met Beknelling,"Provincialeweg 54,5",Uitgeest,legacy,ja
+112,2010-12-17,,,Assistentie Ambulance AED,"A9 R 59,2",Uitgeest,legacy,ja
+113,2010-12-20,,,Sneeuwschade ( Dak ),Sluisbuurt,Uitgeest,legacy,ja
+114,2010-12-27,,,Binnenbrand Industrie ( Groot ) Verzorging,Corus,Beverwijk,legacy,ja
+115,2010-12-27,,,Binnenbrand Industrie ( Zeer Groot ) WTS 2500,Corus,Beverwijk,legacy,ja
+116,2010-12-28,,,Binnenbrand Industrie ( Aflossing WTS 2500 ),Corus,Beverwijk,legacy,ja
+117,2010-12-28,,,Binnenbrand Industrie ( Aflossing Tankautospuit ),Corus,Beverwijk,legacy,ja
+118,2010-12-30,,,Buitenbrand Klein Voertuig,Stationsplein,Uitgeest,legacy,ja
+119,2010-12-31,,,Buitenbrand Container,De Hoop,Uitgeest,legacy,ja

@@ -1,0 +1,70 @@
+nr,datum,tijd,prio,melding,adres,plaats,bron,publiceren
+1,2021-01-01,,2,Brand Afval,Jacoba van Beierenlaan,Uitgeest,legacy,ja
+2,2021-01-01,,2,Dienstverlening aan derden,Lagendijk,Uitgeest,legacy,ja
+3,2021-01-02,,1,Hulpverlening Gas Lekkage,Molenwerf,Uitgeest,legacy,ja
+4,2021-01-07,,1,Hulpverlening Weg Letsel (THV: Licht),Jacoba van Beierenlaan,Uitgeest,legacy,ja
+5,2021-01-07,,1,Brand Gebouw Dak,Kooglaan,Uitgeest,legacy,ja
+6,2021-01-21,,2,Til Assistentie Ambulance,Loet,Uitgeest,legacy,ja
+7,2021-02-10,,2,HV Materieel Gas Lekkage Binnen (Ingetrokken),Floraronde,Uitgeest,legacy,ja
+8,2021-02-12,,2,Assistentie Ambulance (Ingetrokken),N518,Marken,legacy,ja
+9,2021-02-15,,1,Dier te water,Lagendijk,Uitgeest,legacy,ja
+10,2021-02-16,,2,Schip in problemen (Woonboot lek),Populierenlaan,Uitgeest,legacy,ja
+11,2021-02-26,,1,Stank/hind. Lucht (Gaslucht),Middelweg,Uitgeest,legacy,ja
+12,2021-03-02,,1,Reanimatie,De Wilgen,Uitgeest,legacy,ja
+13,2021-03-03,,1,Middel HV Voertuig te water,"N203 58,3",,legacy,ja
+14,2021-03-03,,1,Middel Brand Gebouw,Kloosterstraat,Beverwijk,legacy,ja
+15,2021-03-05,,2,Brand Buiten,Molenwerf,Uitgeest,legacy,ja
+16,2021-03-09,,2,Stank/hind. Lucht (Binnen),Kooglaan,Uitgeest,legacy,ja
+17,2021-03-09,,2,Stank/hind. Lucht,Kooglaan,Uitgeest,legacy,ja
+18,2021-03-10,,1,Stank/hind. Lucht (Gaslucht) (Binnen),Kooglaan,Uitgeest,legacy,ja
+19,2021-03-10,,2,Stormschade,Populierenlaan,Uitgeest,legacy,ja
+20,2021-03-14,,1,Assistentie Ambulance (Afhijsen),Sternstraat,Uitgeest,legacy,ja
+21,2021-03-19,,2,Brand Buiten,Assum,Uitgeest,legacy,ja
+22,2021-03-23,,1,Grote Brand Woning (Ventilator),Vinkenstraat,Wormerveer,legacy,ja
+23,2021-03-31,,2,Brand Buiten,Lagendijk,Uitgeest,legacy,ja
+24,2021-03-31,,1,Zeer Grote Brand Industrie (GRIP 1),Dieselstraat,Volendam,legacy,ja
+25,2021-04-04,,2,Stank/hind. Lucht (Binnen),De Pollen,Uitgeest,legacy,ja
+26,2021-04-08,,2,HV Materieel Gas Lekkage Buiten,Kooglaan,Uitgeest,legacy,ja
+27,2021-04-11,,1,Middel Brand Agrarisch,Zeedijk,Assendelft,legacy,ja
+28,2021-04-18,,2,Rookmelder,Koningin Wilhelminastraat,Uitgeest,legacy,ja
+29,2021-04-18,,2,Brand Gebouw,Middelweg,Uitgeest,legacy,ja
+30,2021-04-22,,2,Brand Buiten,"N203 55,4",,legacy,ja
+31,2021-04-22,,1,Middel Brand Woning,De Lethstraat,Velsen-Noord,legacy,ja
+32,2021-04-28,,2,Assistentie Ambulance (Til assistentie),Benesserlaan,Uitgeest,legacy,ja
+33,2021-05-04,,1,Stank/Hind. Lucht (Gaslucht binnen),Populierenlaan,Uitgeest,legacy,ja
+34,2021-05-04,,2,Stormschade,Kemphaanstraat,Uitgeest,legacy,ja
+35,2021-05-06,,2,Dier in problemen,Klein Dorregeest,Uitgeest,legacy,ja
+36,2021-05-12,,1,Brand Gebouw,Kousenmakersweg,Haarlem,legacy,ja
+37,2021-05-19,,1,Assistentie Ambulance (Afhijsen),Binnenkruierstraat,Uitgeest,legacy,ja
+38,2021-05-21,,1,Middel Brand Gebouw Dak,Hefnerstraat,Ijmuiden,legacy,ja
+39,2021-05-27,,1,Reanimatie (Ingetrokken),Dokter Brugmanstraat,Uitgeest,legacy,ja
+40,2021-06-07,,1,Reanimatie,Vrijburglaan,Uitgeest,legacy,ja
+41,2021-06-14,,2,Dier te water,Geesterweg,Uitgeest,legacy,ja
+42,2021-06-19,,2,CO-melder,De Wilgen,Uitgeest,legacy,ja
+43,2021-07-09,,1,Brand Bijgebouw,Geesterweg,Uitgeest,legacy,ja
+44,2021-07-20,,1,Middel Brand Woning Chalet,Klaas Hoornlaan,Akersloot,legacy,ja
+45,2021-07-20,,1,Brand Duin,Spartelmeer,Overveen,legacy,ja
+46,2021-07-22,,1,Brand Wegvervoer (Vrachtwagen),"A9 Links 60,8",,legacy,ja
+47,2021-07-28,,1,Voertuig te water,Lagendijk,Uitgeest,legacy,ja
+48,2021-08-03,,1,Brand Bijeenkomst,Lagendijk,Uitgeest,legacy,ja
+49,2021-08-12,,1,Reanimatie,Populierenlaan,Uitgeest,legacy,ja
+50,2021-08-21,,1,Assistentie Ambulance (Afhijsen),Plevierstraat,Uitgeest,legacy,ja
+51,2021-08-21,,2,Brand Gerucht,Parallelweg,Uitgeest,legacy,ja
+52,2021-08-22,,1,Brand Wegvervoer (Scooter),Langebuurt,Uitgeest,legacy,ja
+53,2021-09-01,,1,Reanimatie,Populierenlaan,Uitgeest,legacy,ja
+54,2021-09-02,,1,Voertuig te water,"A9 Rechts 64,3",,legacy,ja
+55,2021-09-04,,1,Brand Woning (Keuken),Cornelis Corneliszoonstraat,Uitgeest,legacy,ja
+56,2021-09-07,,1,Brand Wegvervoer,"A9 Links 60,8",,legacy,ja
+57,2021-10-01,,1,Middel Brand Gebouw,Simon Pauwelslaan,Akersloot,legacy,ja
+58,2021-10-08,,1,Persoon te water,Westerwerf,Uitgeest,legacy,ja
+59,2021-10-10,,1,Assistentie Ambulance (Til assistentie),Dokter Brugmanstraat,Uitgeest,legacy,ja
+60,2021-10-21,,2,Dienstverlening aan derden,Molenwerf,Uitgeest,legacy,ja
+61,2021-10-25,,2,Assistentie Ambulance (Afhijsen),Populierenlaan,Uitgeest,legacy,ja
+62,2021-10-28,,1,Brand Woning,De Pollen,Uitgeest,legacy,ja
+63,2021-11-13,,1,Peloton Grootwatervoorziening,Westergracht,Haarlem,legacy,ja
+64,2021-11-22,,1,Hulpverlening Weg Letsel (THV: Licht),Geesterweg,Uitgeest,legacy,ja
+65,2021-12-06,,2,Buitensluiting,Prinses Beatrixlaan,Uitgeest,legacy,ja
+66,2021-12-07,,1,Brand Wegvervoer (Auto),Geesterweg,Uitgeest,legacy,ja
+67,2021-12-10,,2,Hulpverlening Materiaal (Gas lekkage buiten),Kooglaan,Uitgeest,legacy,ja
+68,2021-12-10,,2,Hulpverlening Materiaal (Gas lekkage buiten),Kooglaan,Uitgeest,legacy,ja
+69,2021-12-10,,1,Brand woning,Vrijburglaan,Uitgeest,legacy,ja

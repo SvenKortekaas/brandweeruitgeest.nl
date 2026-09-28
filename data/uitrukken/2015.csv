@@ -1,0 +1,92 @@
+nr,datum,tijd,prio,melding,adres,plaats,bron,publiceren
+1,2015-01-01,,1,Buitenbrand,Wethouder Zonneveldstraat,Uitgeest,legacy,ja
+2,2015-01-01,,2,Containerbrand (Ondergronds),De Spin 76,Uitgeest,legacy,ja
+3,2015-01-01,,2,Aflossing Zeer Grote Brand GRIP 1 – Peleton Noord,Langestraat 56,Alkmaar,legacy,ja
+4,2015-01-06,,1,Brandmelding via PAC,Populierenlaan 41a,Uitgeest,legacy,ja
+5,2015-01-14,,1,Brand wegvervoer (personenauto),N203,,legacy,ja
+6,2015-01-15,,1,Ongeval Wegvervoer Letsel,A9 R59.1b,,legacy,ja
+7,2015-01-15,,2,Verzorging Klein,Schulperspad,Velsen-Noord,legacy,ja
+8,2015-01-15,,1,Brand Wonen (Schoorsteen),Vrijburglaan 71,Uitgeest,legacy,ja
+9,2015-01-18,,2,Dier Te Water,Kemphaanstraat,Uitgeest,legacy,ja
+10,2015-01-28,,2,Ongeval Wegvervoer Letsel,N203 54.5,,legacy,ja
+11,2015-01-30,,2,Metingen,Hogeweg 55,Uitgeest,legacy,ja
+12,2015-01-30,,2,Onderzoek brandgerucht,Uitgeesterweg,Uitgeest,legacy,ja
+13,2015-02-08,,1,Brand wegvervoer (personenauto),Broekpolderweg,Uitgeest,legacy,ja
+14,2015-02-08,,2,Buitenbrand,Stationsplein 1,Uitgeest,legacy,ja
+15,2015-02-10,,2,Buitenbrand,Parallelweg,Uitgeest,legacy,ja
+16,2015-02-17,,1,Brand wonen ( Schoorsteen ),Langendijk 37,Uitgeest,legacy,ja
+17,2015-03-01,,1,Voertuig te water,N203 52.8,,legacy,ja
+18,2015-03-12,,1,Automatische brandmelder,Geesterheem,Uitgeest,legacy,ja
+19,2015-03-13,,1,PAC Melding,Westerwerf 2,Uitgeest,legacy,ja
+20,2015-03-15,,1,Reanimatie AED inzet,Paltrokstraat,Uitgeest,legacy,ja
+21,2015-03-25,,1,Automatische brandmelding,Molenwerf 20,Uitgeest,legacy,ja
+22,2015-03-26,,1,Ongeval wegvervoer letsel,Geesterweg/Westerwerf,Uitgeest,legacy,ja
+23,2015-04-01,,1,PAC Melding,Molenwerf 14,Uitgeest,legacy,ja
+24,2015-04-09,,1,Brand wegvervoer (Personenauto),A9 L 58.1,,legacy,ja
+25,2015-04-11,,1,Brand wegvervoer (aanhanger),Parallelweg,Uitgeest,legacy,ja
+26,2015-04-20,,1,Hand brandmelder,Geesterheem,Uitgeest,legacy,ja
+27,2015-04-28,,2,Verzorging Klein,Alkmaarseweg 180,Beverwijk,legacy,ja
+28,2015-05-05,,2,Stormschade,Westergeest 31,Uitgeest,legacy,ja
+29,2015-05-06,,2,Stormschade,Provincialeweg 6,Uitgeest,legacy,ja
+30,2015-05-09,,1,Brand Wonen,Middelweg 136,Uitgeest,legacy,ja
+31,2015-05-11,,2,Waterongeval,Uitgeestermeer,Uitgeest,legacy,ja
+32,2015-05-17,,1,Brand bijgebouw ( Schuur ),Kemphaanstraat 11,Uitgeest,legacy,ja
+33,2015-05-24,,2,Dier te water ( Paard ),Bus en Dam 13a,Assendelft,legacy,ja
+34,2015-05-29,,1,Ongeval Wegvervoer Letsel,A9 R 59.3b,,legacy,ja
+35,2015-05-29,,1,Ongeval Wegvervoer Letsel,A9 R 59.1b,,legacy,ja
+36,2015-05-30,,2,Bijstand ( NHN ),Uitgeestermeer,Uitgeest,legacy,ja
+37,2015-06-09,,2,Dienstverlening ( Til assistentie ),Scillapad 5,Uitgeest,legacy,ja
+38,2015-06-09,,1,Brand wegvervoer ( Personenauto ),N203,,legacy,ja
+39,2015-06-11,,2,Openen Deur,Geesterheem,Uitgeest,legacy,ja
+40,2015-06-12,,3,Buitenbrand,Parallelweg thv Buurman & Buurman,Uitgeest,legacy,ja
+41,2015-06-17,,2,Buitenbrand,Stationsplein 1,Uitgeest,legacy,ja
+42,2015-06-23,,2,Onderzoek Gas/Vreemde lucht,Schevelstraat 3,Uitgeest,legacy,ja
+43,2015-07-02,,2,Dier te water,Geesterweg,Uitgeest,legacy,ja
+44,2015-07-08,,2,Containerbrand,Lepelaarstraat 6,Uitgeest,legacy,ja
+45,2015-07-16,,1,Voertuig te water,Uitgeesterweg,Uitgeest,legacy,ja
+46,2015-07-18,,2,Dier te water (Koe),Lagendijk 45,Uitgeest,legacy,ja
+47,2015-07-24,,1,Brandmelder,Dokter Brugmanstraat 120,Uitgeest,legacy,ja
+48,2015-07-25,,2,Stormschade,Mozartstraat 140a,Heemskerk,legacy,ja
+49,2015-07-25,,2,Stormschade Peleton,Zijlweg 200,Haarlem,legacy,ja
+50,2015-07-26,,2,Verzorging,Breedweerlaan,Heemskerk,legacy,ja
+51,2015-08-01,,1,Brand wonen,Hoorne 14,Uitgeest,legacy,ja
+52,2015-08-01,,1,Lekke / Zinkende woonboot,Lagendijk 29,Uitgeest,legacy,ja
+53,2015-08-03,,1,Brand wegvervoer (Fiets),Stationsplein 1,Uitgeest,legacy,ja
+54,2015-08-05,,1,Persoon te water,Alkmaardermeer,Uitgeest,legacy,ja
+55,2015-08-07,,1,Onderzoek brandgerucht,Westergeest 39,Uitgeest,legacy,ja
+56,2015-09-08,,1,Onderzoek brandgerucht,Paltrokstraat 5,Uitgeest,legacy,ja
+57,2015-09-10,,1,Ongeval Wegvervoer (INGETROKKEN),A9 L 58.0 C,,legacy,ja
+58,2015-09-15,,2,Kleine Verzorging,A9 L 52.9,,legacy,ja
+59,2015-09-15,,1,Reanimatie,Middelweg,Uitgeest,legacy,ja
+60,2015-09-17,,1,Ongeval Wegvervoer Letsel,N203 54.8,,legacy,ja
+61,2015-09-18,,2,Dier te water (Koe),Lagendijk,Uitgeest,legacy,ja
+62,2015-09-20,,2,Buitenbrand,Stationsplein 1,Uitgeest,legacy,ja
+63,2015-09-27,,2,Hulp aan derden,Uitgeestermeer,Uitgeest,legacy,ja
+64,2015-09-30,,1,Ongeval wegvervoer letsel,A9 L 61.1,,legacy,ja
+65,2015-10-01,,2,Dier op hoogte (kat),Klein Dorregeest,Uitgeest,legacy,ja
+66,2015-10-05,,1,Buitenbrand,Anna van Renesseplein 1,Uitgeest,legacy,ja
+67,2015-10-14,,2,Buitenbrand,Melis Stokelaan,Uitgeest,legacy,ja
+68,2015-10-16,,1,Afhijsing,Westergeest,Uitgeest,legacy,ja
+69,2015-10-20,,1,Ongeval wegvervoer letsel,A9 L 60.3,,legacy,ja
+70,2015-10-21,,2,Wateroverlast,Anna van Renesselaan 4b,Uitgeest,legacy,ja
+71,2015-10-23,,2,Buitenbrand,Parallelweg,Uitgeest,legacy,ja
+72,2015-10-27,,1,Brand wonen,De Pollen 80,Uitgeest,legacy,ja
+73,2015-10-28,,2,Dier te water (koe),N203 55.0,,legacy,ja
+74,2015-11-01,,1,Brand wegvervoer (personenauto),N203 55.0,,legacy,ja
+75,2015-11-05,,2,Kleine Verzorging,Zwaaihaven,Beverwijk,legacy,ja
+76,2015-11-05,,2,Liftsopsluiting,Station NS,Uitgeest,legacy,ja
+77,2015-11-05,,2,Buitenbrand,Anna van Renesseplein 1,Uitgeest,legacy,ja
+78,2015-11-06,,1,Afhijsing,De Pollen,Uitgeest,legacy,ja
+79,2015-11-06,,2,Kleine Verzorging,Noordersluisweg,Velsen-Noord,legacy,ja
+80,2015-11-07,,2,Vervuild wegdek,Molenwerf 27,Uitgeest,legacy,ja
+81,2015-11-09,,1,PAC Brandmelding,"Gemeentehuis, Middelweg 28",Uitgeest,legacy,ja
+82,2015-11-17,,1,Ongeval Wegvervoer Materieel,A9 L 61.0,,legacy,ja
+83,2015-11-17,,2,Stormschade,Uitgeesterweg,Uitgeest,legacy,ja
+84,2015-11-25,,1,Brand bijgebouw (Loods) (Zeer grote brand) (wts 1000) (Grip 1),Rondweg 10,IJmuiden,legacy,ja
+85,2015-12-05,,1,Automatische brandmelder,Geesterheem,Uitgeest,legacy,ja
+86,2015-12-08,,1,Automatische brandmelder,Zienlaan 10,Uitgeest,legacy,ja
+87,2015-12-24,,1,Voertuig te water,Broekpolderweg,Uitgeest,legacy,ja
+88,2015-12-25,,2,Dienstverlening,Alkmaardermeer,Uitgeest,legacy,ja
+89,2015-12-26,,1,Metingen ( aardgas ),Vrijburglaan 40,Uitgeest,legacy,ja
+90,2015-12-27,,2,Buitenbrand afval,Station Uitgeest,Uitgeest,legacy,ja
+91,2015-12-29,,2,Dier in problemen ( vogel ),Twaalfhovenstraat 73,Uitgeest,legacy,ja

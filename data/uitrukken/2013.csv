@@ -1,0 +1,117 @@
+nr,datum,tijd,prio,melding,adres,plaats,bron,publiceren
+1,2013-01-02,,1,Ongeval spoorvervoer letsel,Stationsplein,Uitgeest,legacy,ja
+2,2013-01-10,,2,Dier te water,Molenweg 12 (Molen De Kat),Uitgeest,legacy,ja
+3,2013-01-11,,1,Liftopsluiting,Burgemeester van Roosmalenstraat 1,Uitgeest,legacy,ja
+4,2013-01-15,,2,Afhijsen patiënt,Geesterweg,Uitgeest,legacy,ja
+5,2013-01-25,,1,Meting gas-/vreemde lucht,Benningskamplaan 66,Uitgeest,legacy,ja
+6,2013-01-31,,1,Ongeval wegvervoer (Beknelling),A9 R 59.1,,legacy,ja
+7,2013-02-10,,2,Liftopsluiting,Dokter Brugmanstraat 15 – Geesterheem,Uitgeest,legacy,ja
+8,2013-02-11,,1,Brand wegvervoer (personenauto),A9 R 58.9,,legacy,ja
+9,2013-02-19,,2,Buitenbrand,Parallelweg,Uitgeest,legacy,ja
+10,2013-02-21,,1,Afhijsen patiënt,Geesterweg,Uitgeest,legacy,ja
+11,2013-03-02,,2,Liftopsluiting,Geesterheem,Uitgeest,legacy,ja
+12,2013-03-17,,1,Brand wegvervoer (scooter),Langebuurt 27A,Uitgeest,legacy,ja
+13,2013-03-21,,1,Ongeval Wegvervoer Letsel,A22 L Velsertunnel,,legacy,ja
+14,2013-03-21,,1,Ongeval Wegvervoer Letsel,A9 R 65.0,,legacy,ja
+15,2013-03-25,,1,Ongeval Wegvervoer Letsel,Shell Express N203,,legacy,ja
+16,2013-03-30,,1,Ongeval Wegvervoer Letsel,A9 R 58.4,,legacy,ja
+17,2013-04-03,,2,Buitenbrand Berm,A9 R 59.4,,legacy,ja
+18,2013-04-04,,2,Middelbrand Woning Verzorging Klein,Pieter Acker 112,Heemskerk,legacy,ja
+19,2013-04-07,,2,Buitenbrand,Benningskamplaan 20,Uitgeest,legacy,ja
+20,2013-04-08,,1,Woningbrand Woonboot,Populierenlaan,Uitgeest,legacy,ja
+21,2013-04-11,,1,Automatische Brandmelding,Dokter Brugmanstraat 15 – Geesterheem,Uitgeest,legacy,ja
+22,2013-04-11,,1,Automatische Brandmelding,Dokter Brugmanstraat 15 – Geesterheem,Uitgeest,legacy,ja
+23,2013-04-11,,1,Ongeval Wegvervoer Letsel,A9 L59.3,,legacy,ja
+24,2013-04-15,,2,Containerbrand,Castricummerweg 8,Uitgeest,legacy,ja
+25,2013-04-18,,1,Ongeval Buiten Letsel,Stationsplein,Uitgeest,legacy,ja
+26,2013-04-18,,1,Middelbrand Aanleunwoning Gezondheidszorg,Dokter Brugmanstraat 220,Uitgeest,legacy,ja
+27,2013-04-19,,2,Buitenbrand Berm,Stationsplein 1,Uitgeest,legacy,ja
+28,2013-04-20,,1,Hand Brandmelder,Molenwerf 26 – Van Der Lem,Uitgeest,legacy,ja
+29,2013-04-26,,1,Ongeval Wegvervoer Letsel,A9 L 61.2,,legacy,ja
+30,2013-04-29,,1,Brand Wegvervoer,Lagendijk 33,Uitgeest,legacy,ja
+31,2013-05-07,,1,Ongeval Wegvervoer Letsel,Melis Stokelaan / Geesterweg,Uitgeest,legacy,ja
+32,2013-05-07,,2,Reinigen Wegdek,Melis Stokelaan / Geesterweg,Uitgeest,legacy,ja
+33,2013-05-10,,2,Containerbrand (Papier),Melis Stokelaan 18,Uitgeest,legacy,ja
+34,2013-05-10,,2,Containerbrand,Melis Stokelaan 1-3,Uitgeest,legacy,ja
+35,2013-05-14,,2,Containerbrand,Parallelweg,Uitgeest,legacy,ja
+36,2013-06-07,,1,Dienstverlening Afhijsen Patiënt,De Kuil,Uitgeest,legacy,ja
+37,2013-06-09,,2,Containerbrand,Parallelweg,Uitgeest,legacy,ja
+38,2013-06-27,,1,Hand Brandmelder,Molenwerf 26 – Van Der Lem,Uitgeest,legacy,ja
+39,2013-06-27,,1,Automatische Brandmelding,Dokter Brugmanstraat 220,Uitgeest,legacy,ja
+40,2013-06-27,,1,Automatische Brandmelding,Dokter Brugmanstraat 220,Uitgeest,legacy,ja
+41,2013-06-27,,1,Automatische Brandmelding,Dokter Brugmanstraat 220,Uitgeest,legacy,ja
+42,2013-07-02,,2,Buitenbrand,Anna van Renesselaan,Uitgeest,legacy,ja
+43,2013-07-05,,2,Buitenbrand,Benesserlaan 89,Uitgeest,legacy,ja
+44,2013-07-06,,1,Ongeval Water In Problemen,Groot Dorregeest 2 thv Uitgeest,Uitgeest,legacy,ja
+45,2013-07-07,,2,Buitenbrand,Stationsplein 1,Uitgeest,legacy,ja
+46,2013-07-13,,1,Brand Wegvervoer Personenauto,A9 R 58.3,,legacy,ja
+47,2013-07-17,,1,Hand Brandmelder,Molenwerf 26 – Van Der Lem,Uitgeest,legacy,ja
+48,2013-07-17,,2,Aflossing Zeer Grote Brand,Drostenburg 1,Amsterdam Zuidoost,legacy,ja
+49,2013-07-18,,1,Water In Problemen (INGETROKKEN),Uitgeestermeer,Uitgeest,legacy,ja
+50,2013-07-19,,2,Wateroverlast,De Cnollenbijter 3,Uitgeest,legacy,ja
+51,2013-07-23,,1,Brand Wegvervoer Personenauto,A9 L 58.4,,legacy,ja
+52,2013-07-23,,2,Middelbrand Bermbrand,Genieweg 1,Heemskerk,legacy,ja
+53,2013-07-23,,2,Verzorging Klein Middelbrand Bermbrand,Genieweg 1,Heemskerk,legacy,ja
+54,2013-07-23,,1,Persoon Te Water,Lagendijk,Uitgeest,legacy,ja
+55,2013-07-27,,1,Automatische Brandmelding,Dokter Brugmanstraat 15 – Geesterheem,Uitgeest,legacy,ja
+56,2013-07-29,,1,Buitenbrand,Parallelweg,Uitgeest,legacy,ja
+57,2013-07-29,,1,Brand Wonen,Kerverslaan 1 B,Uitgeest,legacy,ja
+58,2013-07-30,,2,Dier In Put / Kelder,Busch en Dam 22,Uitgeest,legacy,ja
+59,2013-08-02,,2,Bermbrand,A9 R 62.1,,legacy,ja
+60,2013-08-04,,2,Bijstand Noord Holland Noord,Uitgeestermeer,Uitgeest,legacy,ja
+61,2013-08-12,,1,Dienstverlening AED Inzet,Witte Venstraat 8,Uitgeest,legacy,ja
+62,2013-08-17,,2,Brand Wegvervoer Personenauto,Parallelweg,Uitgeest,legacy,ja
+63,2013-08-26,,2,Dier Te Water (Schaap),Lagendijk,Uitgeest,legacy,ja
+64,2013-08-30,,2,Dier Te Water (Koe),De Terp,Uitgeest,legacy,ja
+65,2013-09-06,,1,Brand Gebouw (Grote Brand),Bachplein 5 Mama El,Heemskerk,legacy,ja
+66,2013-09-09,,1,Dienstverlening (Afhijsen Patient),Dokter Brugmanstraat,Uitgeest,legacy,ja
+67,2013-09-15,,2,Buitenbrand (Fiets),Stationsplein 1,Uitgeest,legacy,ja
+68,2013-09-25,,2,Kleine Verzorging,Communicatieweg 4,Heemskerk,legacy,ja
+69,2013-10-07,,1,Ongeval Wegvervoer Letsel,A9 L 59.0,,legacy,ja
+70,2013-10-08,,2,Dier Te Water,N203 54.2,,legacy,ja
+71,2013-10-09,,2,Stormschade,Geesterweg / Populierenlaan,Uitgeest,legacy,ja
+72,2013-10-16,,1,Middel WO (Ingetrokken),3e Rijksbinnenhaven,Velsen-Noord,legacy,ja
+73,2013-10-16,,2,Kleine Verzorging,3e Rijksbinnenhaven,Velsen-Noord,legacy,ja
+74,2013-10-20,,1,Hand Brandmelder,Molenwerf 26 – Van Der Lem,Uitgeest,legacy,ja
+75,2013-10-22,,2,Dier Te Water (Koe),N203 55.0,,legacy,ja
+76,2013-10-24,,2,Dier Te Water (Koe),Lagendijk,Uitgeest,legacy,ja
+77,2013-10-28,,2,Stormschade Boom,Boterbloem,Uitgeest,legacy,ja
+78,2013-10-28,,2,Stormschade Dak,Bollenhof,Uitgeest,legacy,ja
+79,2013-10-28,,2,Stormschade Dak,De Aak,Uitgeest,legacy,ja
+80,2013-10-28,,2,Stormschade Dak,Graskamplaan,Uitgeest,legacy,ja
+81,2013-10-28,,2,Stormschade Boom,Sluisbuurt,Uitgeest,legacy,ja
+82,2013-10-28,,2,Stormschade Dak,Paardekamplaan,Uitgeest,legacy,ja
+83,2013-10-28,,2,Stormschade Boom,Wittebroodslaantje,Uitgeest,legacy,ja
+84,2013-10-28,,2,Stormschade Dak,Melksuiker,Uitgeest,legacy,ja
+85,2013-10-28,,2,Stormschade Boom,Pollen,Uitgeest,legacy,ja
+86,2013-10-28,,2,Stormschade Boom,Shell Station N203,,legacy,ja
+87,2013-10-28,,1,Stormschade Boom,Assum,Uitgeest,legacy,ja
+88,2013-10-28,,2,Stormschade Dak,Langebuurt,Uitgeest,legacy,ja
+89,2013-10-28,,2,Stormschade Boom,Westergeest,Uitgeest,legacy,ja
+90,2013-10-29,,2,Stormschade Dak,Molenwerf,Uitgeest,legacy,ja
+91,2013-10-30,,1,Rook/CO Melder,Kooglaan 1,Uitgeest,legacy,ja
+92,2013-11-04,,2,Dienstverlening,Shell Station N203,,legacy,ja
+93,2013-11-05,,1,Dier Te Water (Hert),Stationsplein 1,Uitgeest,legacy,ja
+94,2013-11-06,,1,Dienstverlening AED Inzet,Dokter Brugmanstraat 104,Uitgeest,legacy,ja
+95,2013-11-06,,1,Dienstverlening AED Inzet,Anna van Renesselaan 27,Uitgeest,legacy,ja
+96,2013-11-10,,2,Kleine Verzorging,Vrijburglaan 3,Heemskerk,legacy,ja
+97,2013-11-11,,1,Brandgerucht,Busch en Dam,Uitgeest,legacy,ja
+98,2013-11-14,,2,Ongeval Binnen Letsel,De Bakker,Uitgeest,legacy,ja
+99,2013-11-24,,2,Liftopsluiting,Stationsplein 1,Uitgeest,legacy,ja
+100,2013-11-28,,1,Brand Wegvervoer Personenauto,Parallelweg,Uitgeest,legacy,ja
+101,2013-11-30,,2,Verzorging Klein,Hoflanderweg 200,Beverwijk,legacy,ja
+102,2013-12-03,,1,Ongeval Wegvervoer Lets (Beknelling),A9 L 60.9,,legacy,ja
+103,2013-12-03,,1,Ongeval Wegvervoer Letsel,A9 L 57.9,,legacy,ja
+104,2013-12-05,,2,Buitensluiting,Korhoenstraat,Uitgeest,legacy,ja
+105,2013-12-05,,2,Stormschade Steiger,Molenwerf,Uitgeest,legacy,ja
+106,2013-12-05,,2,Stormschade Tak,N203,,legacy,ja
+107,2013-12-05,,2,Fiets te water,N203,,legacy,ja
+108,2013-12-05,,2,Stormschade Tak,N203,,legacy,ja
+109,2013-12-06,,1,Ongeval Water,N203,,legacy,ja
+110,2013-12-07,,1,Ongeval Water,N203 57.0,,legacy,ja
+111,2013-12-08,,1,Dienstverlening (Afhijsen Patient),De Melksuiker,Uitgeest,legacy,ja
+112,2013-12-13,,2,Liftopsluiting,Stationsplein 1,Uitgeest,legacy,ja
+113,2013-12-25,,1,Dienstverlening ( Afhijsen patiënt ),Meerkoetstraat,Uitgeest,legacy,ja
+114,2013-12-29,,1,Ongeval Wegvervoer Letsel,A9 L 58.4,,legacy,ja
+115,2013-12-31,,2,Containerbrand,De Hoop 3,Uitgeest,legacy,ja
+116,2013-12-31,,1,Brand Gebouw,Ooievaarsterrein,Uitgeest,legacy,ja

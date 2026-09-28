@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block inhoud %}
+<div class="tekst">
+  <h1>{{ titel }}</h1>
+  <p>Een overzicht van alle uitrukken van brandweer Uitgeest sinds 2008. Kies een jaar voor alle meldingen.</p>
+</div>
+<table class="trend">
+  <caption>Aantal uitrukken per jaar</caption>
+  <thead><tr><th scope="col">Jaar</th><th scope="col">Uitrukken</th>{% if met_oefeningen %}<th scope="col">Oefeningen</th>{% endif %}<th scope="col"><span class="visueel-verborgen">Grafiek</span></th></tr></thead>
+  <tbody>
+  {% for jaar, aantal, oefeningen in totalen|reverse %}
+    <tr>
+      <th scope="row"><a href="/uitrukken/{{ jaar }}/">{{ jaar }}</a></th>
+      <td>{{ aantal }}</td>
+      {% if met_oefeningen %}<td>{{ oefeningen if oefeningen else "" }}</td>{% endif %}
+      <td class="balk-cel"><svg class="balk" viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true" focusable="false"><rect width="{{ (100 * aantal / hoogste)|round(1) }}" height="10"/></svg></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,65 @@
+nr,datum,tijd,prio,melding,adres,plaats,bron,publiceren
+1,2025-01-04,16:48,1,Gezondheid,Sternstraat,Uitgeest,eigen,ja
+2,2025-01-05,02:23,2,CO-melder,De Melksuiker,Uitgeest,eigen,ja
+3,2025-01-05,14:06,2,Buitenbrand,Geesterweg,Uitgeest,eigen,ja
+4,2025-01-12,02:44,1,Brand zorggebouw,Vondellaan,Beverwijk,eigen,ja
+5,2025-01-12,02:48,1,Explosie,Vondellaan,Beverwijk,eigen,ja
+6,2025-01-12,02:57,1,Bijstand brandweer,Velserweg,Beverwijk,eigen,ja
+7,2025-01-13,21:30,2,CO-melder,Lepelaarstraat,Uitgeest,eigen,ja
+8,2025-01-24,12:12,2,Gezondheid,Leeghwaterstraat,Uitgeest,eigen,ja
+9,2025-01-28,23:30,2,Containerbrand,Zienlaan,Uitgeest,eigen,ja
+10,2025-01-29,18:01,2,Buitenbrand,Lagendijk,Uitgeest,eigen,ja
+11,2025-02-03,19:29,2,Liftopsluiting,Meerkoetstraat,Uitgeest,eigen,ja
+12,2025-02-19,23:58,1,Reanimatie,Middelweg,Uitgeest,eigen,ja
+13,2025-02-23,00:07,1,Rookmelder,Westerwerf,Uitgeest,eigen,ja
+14,2025-02-27,21:13,2,Liftopsluiting,Westerwerf,Uitgeest,eigen,ja
+15,2025-03-02,19:06,1,Brand woning,Kastanjestraat,Uitgeest,eigen,ja
+16,2025-03-07,22:37,2,CO-melder,Dokter Brugmanstraat,Uitgeest,eigen,ja
+17,2025-03-18,14:21,2,Automatische brandmelding OMS,Dokter Brugmanstraat,Uitgeest,eigen,ja
+18,2025-03-19,12:07,1,Brand bijgebouw,Hemweg,Akersloot,eigen,ja
+19,2025-04-02,17:38,1,Duinbrand,Kruisberg,Heemskerk,eigen,ja
+20,2025-04-02,17:41,1,Bijstand brandweer,Noordermaatweg,Heemskerk,eigen,ja
+21,2025-04-07,18:12,1,Duinbrand,Kruisberg,Heemskerk,eigen,ja
+22,2025-04-09,05:36,1,Brand woning,Kortenaerplantsoen,Castricum,eigen,ja
+23,2025-04-10,12:06,1,Ongeval gevaarlijke stof,Molenwerf,Uitgeest,eigen,ja
+24,2025-04-13,13:59,1,Reanimatie,Molenweg,Uitgeest,eigen,ja
+25,2025-04-14,01:53,2,CO-melder,Benesserlaan,Uitgeest,eigen,ja
+26,2025-04-21,20:03,1,Brand winkel,Middelweg,Uitgeest,eigen,ja
+27,2025-04-26,13:27,2,Automatische brandmelding OMS,Dokter Brugmanstraat,Uitgeest,eigen,ja
+28,2025-04-28,13:42,1,Brand scheepvaart,Klaas Hoornlaan,Akersloot,eigen,ja
+29,2025-04-29,19:55,1,Reanimatie,Witte Venstraat,Uitgeest,eigen,ja
+30,2025-05-08,14:56,2,Liftopsluiting,Stationsplein,Uitgeest,eigen,ja
+31,2025-05-15,05:13,1,Duinbrand,Fietspad Tollensstraat,Zandvoort,eigen,ja
+32,2025-05-15,23:39,1,Duinbrand,Dr Jac P Thijsseweg,Zandvoort,eigen,ja
+33,2025-05-18,02:01,1,Brand bijgebouw,Heereweg,Castricum,eigen,ja
+34,2025-05-23,22:15,1,Brand scheepvaart,N514 - Ned Benedictweg,Wormerveer,eigen,ja
+35,2025-05-26,10:10,1,Reanimatie,Niesvenstraat,Uitgeest,eigen,ja
+36,2025-06-05,17:01,2,Liftopsluiting,Stationsplein,Uitgeest,eigen,ja
+37,2025-06-06,16:07,2,Brandgerucht,Middelweg,Uitgeest,eigen,ja
+38,2025-06-19,02:58,1,Bijstand brandweer,Westdijk,Westbeemster,eigen,ja
+39,2025-06-22,00:52,2,Schip of watersporter in problemen,WTR Alkmaardermeer Akersloot,Akersloot,eigen,ja
+40,2025-07-01,18:25,2,Liftopsluiting,Stationsplein,Uitgeest,eigen,ja
+41,2025-07-09,10:38,1,Reanimatie,Meerkoetstraat,Uitgeest,eigen,ja
+42,2025-07-13,01:34,1,Gezondheid,Benesserlaan,Uitgeest,eigen,ja
+43,2025-08-03,12:19,1,Schip of watersporter in problemen,WTR Uitgeestermeer,Uitgeest,eigen,ja
+44,2025-08-07,01:08,1,Brand zorggebouw,Oude Parklaan,Castricum,eigen,ja
+45,2025-08-16,20:18,2,Containerbrand,Lagendijk,Uitgeest,eigen,ja
+46,2025-08-18,09:13,2,Bermbrand,A9 Re 68,Heiloo,eigen,ja
+47,2025-09-04,18:36,1,Persoon te water,Korte Brakersweg,Castricum,eigen,ja
+48,2025-09-05,09:54,2,Ongeval gevaarlijke stof,Kerkemeer,Akersloot,eigen,ja
+49,2025-09-09,02:27,2,Stankoverlast,Benesserlaan,Uitgeest,eigen,ja
+50,2025-09-21,07:07,1,Brand bijeenkomstgebouw,Zeeweg,Castricum,eigen,ja
+51,2025-09-26,16:23,1,Persoon te water,Uitgeesterweg,Uitgeest,eigen,ja
+52,2025-09-28,10:56,2,Gezondheid,Prinses Irenelaan,Uitgeest,eigen,ja
+53,2025-10-02,22:38,2,Stankoverlast,Kooglaan,Uitgeest,eigen,ja
+54,2025-10-04,12:07,1,Bijstand brandweer,De Meerlanden,Beverwijk,eigen,ja
+55,2025-10-04,16:46,1,Stormschade,A9 Li 59,Uitgeest,eigen,ja
+56,2025-10-16,20:10,2,Dier op hoogte,Korhoenstraat,Uitgeest,eigen,ja
+57,2025-10-19,10:10,1,Reanimatie,Boetenvenstraat,Uitgeest,eigen,ja
+58,2025-10-19,18:26,2,Schip of watersporter in problemen,WTR Uitgeestermeer,Uitgeest,eigen,ja
+59,2025-10-26,00:23,1,Reanimatie,J.E. de Witstraat,Uitgeest,eigen,ja
+60,2025-10-30,23:25,1,Voertuig te water,Parallelweg,Uitgeest,eigen,ja
+61,2025-11-01,21:46,1,Automatische brandmelding PAC,Molenwerf,Uitgeest,eigen,ja
+62,2025-11-14,07:08,1,Voertuig te water,Meldijk,Uitgeest,eigen,ja
+63,2025-11-26,10:04,1,Bijstand brandweer,Kanaalkade,Alkmaar,eigen,ja
+64,2025-12-05,13:36,1,Brand woning,Heereweg,Castricum,eigen,ja

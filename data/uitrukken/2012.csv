@@ -1,0 +1,112 @@
+nr,datum,tijd,prio,melding,adres,plaats,bron,publiceren
+1,2012-01-01,,,Zeer Grote Brand Buurthuis De Mel,,Velsen – Noord,legacy,ja
+2,2012-01-01,,,Tillen Patient,Kooglaan,Uitgeest,legacy,ja
+3,2012-01-03,,,Vko Met Letsel,A9 R 59.2 a Oprit Castricum,,legacy,ja
+4,2012-01-07,,,Assistentie aan Politie,Uitgeestermeer,Uitgeest,legacy,ja
+5,2012-01-07,,,Stormschade,Geesterweg,Uitgeest,legacy,ja
+6,2012-01-09,,,ABM Geesterheem,Dr Brugmanstraat,Uitgeest,legacy,ja
+7,2012-01-09,,,Afhijsen Patient,Meerkoetstraat,Uitgeest,legacy,ja
+8,2012-01-13,,,Schoorsteenbrand,Benesserlaan,Uitgeest,legacy,ja
+9,2012-01-22,,,Openen Deur,De Spin,Uitgeest,legacy,ja
+10,2012-02-01,,,Binnenbrand Wonen,De Woude,Uitgeest,legacy,ja
+11,2012-02-02,,,Hulp aan derden,Kogerpolder,Uitgeest,legacy,ja
+12,2012-02-03,,,Auto Te Water,Provincialeweg,Uitgeest,legacy,ja
+13,2012-02-05,,,Persoon Te Water,Lagendijk,Uitgeest,legacy,ja
+14,2012-02-06,,,Binnenbrand Wonen,De Hartemaat,Uitgeest,legacy,ja
+15,2012-02-11,,,ABM Van De Valk Hotel,,Akersloot,legacy,ja
+16,2012-02-11,,,Binnenbrand Wonen Middel,De Kleis,Uitgeest,legacy,ja
+17,2012-02-23,,,Openen Deur Ambulance,De Bakker,Uitgeest,legacy,ja
+18,2012-02-24,,,Afhijsen Patient,Geesterweg,Uitgeest,legacy,ja
+19,2012-02-25,,,Dier Bekneld,Groot Dorregeest,Uitgeest,legacy,ja
+20,2012-02-28,,,Vko Met Beknelling,A9 L 58.1 C Oprit Heemskerk,,legacy,ja
+21,2012-02-28,,,Liftopsluiting,Stationsplein,Uitgeest,legacy,ja
+22,2012-03-01,,,ABM Vrijburgschool,Niesvenstraat,Uitgeest,legacy,ja
+23,2012-03-06,,,Afhijsen Patient,Wethouder C Kromstraat,Uitgeest,legacy,ja
+24,2012-03-10,,,Opkomen Kazerne Regio Dekking,Molenwerf,Uitgeest,legacy,ja
+25,2012-03-10,,,WTS 2500 Zeer Grote Brand Grip 2,,Velsen-Noord,legacy,ja
+26,2012-03-10,,,Aflossing Zeer Grote Brand Grip 2,,Velsen-Noord,legacy,ja
+27,2012-03-12,,,Opruimen WTS 2500,,Velsen-Noord,legacy,ja
+28,2012-03-13,,,Buitenbrand,Uitgeestermeer,Uitgeest,legacy,ja
+29,2012-03-24,,,Buitenbrand,Lagendijk,Uitgeest,legacy,ja
+30,2012-04-01,,,Buitenbrand Container,Melis Stokelaan,Uitgeest,legacy,ja
+31,2012-04-06,,,Buitenbrand Klein Voertuig,A9 L 62.0,,legacy,ja
+32,2012-04-06,,,Buitenbrand,Anna van Renesselaan,Uitgeest,legacy,ja
+33,2012-04-08,,,Binnenbrand Schuur,Boterbloem,Uitgeest,legacy,ja
+34,2012-04-08,,,Vaartuig In Nood,Uitgeestermeer,Uitgeest,legacy,ja
+35,2012-04-09,,,VKO Met Beknelling,A9 R 59.2 Oprit Castricum,,legacy,ja
+36,2012-04-10,,,VKO Met Beknelling,A9 L 60.1,,legacy,ja
+37,2012-04-15,,,Auto Te Water,A9 R / Provincialeweg,,legacy,ja
+38,2012-04-16,,,Buitenbrand,Anna van Renesselaan,Uitgeest,legacy,ja
+39,2012-04-22,,,Openen Deur,Meerkoetstraat,Uitgeest,legacy,ja
+40,2012-04-24,,,ABM Geesterheem,Dr Brugmanstraat,Uitgeest,legacy,ja
+41,2012-04-26,,,Buitenbrand,,Heemskerk,legacy,ja
+42,2012-04-30,,,ABM Vos Industrial Group,Molenwerf,Uitgeest,legacy,ja
+43,2012-05-04,,,Gas / Vreemde Lucht,Meerkoetstraat,Uitgeest,legacy,ja
+44,2012-05-05,,,VKO Met Letsel,A9 L 60.2,Uitgeest,legacy,ja
+45,2012-05-12,,,Treinbrand Locomotief,Station Uitgeest,Uitgeest,legacy,ja
+46,2012-05-13,,,Verrichten Van Meting ( CO ),De Twaalfmaat,Uitgeest,legacy,ja
+47,2012-05-17,,,Buitenbrand,Uitgeestermeer,Uitgeest,legacy,ja
+48,2012-05-24,,,Buitenbrand,Provincialeweg,Uitgeest,legacy,ja
+49,2012-05-25,,,Buitenbrand Klein Voertuig,A9 L 59.7,Uitgeest,legacy,ja
+50,2012-05-29,,,Buitenbrand Klein Voertuig,A9 L 61.8,Uitgeest,legacy,ja
+51,2012-05-29,,,Buitenbrand,Parallelweg,Uitgeest,legacy,ja
+52,2012-06-08,,,Stormschade,De Melksuiker,Uitgeest,legacy,ja
+53,2012-06-14,,,ABM Geesterheem,Dr Brugmanstraat,Uitgeest,legacy,ja
+54,2012-06-15,,,Dier Te Water,Geesterweg,Uitgeest,legacy,ja
+55,2012-06-16,,,Hulp Aan Derden,De Darse,Uitgeest,legacy,ja
+56,2012-06-22,,,ABM vd Lem,Molenwerf,Uitgeest,legacy,ja
+57,2012-06-23,,,Persoon Te Water,Uitgeestermeer,Uitgeest,legacy,ja
+58,2012-06-29,,,Stormschade,Dillenburg,Uitgeest,legacy,ja
+59,2012-07-04,,,Voertuig Te Water,Provincialeweg,Uitgeest,legacy,ja
+60,2012-07-05,,,Dier Te Water,Zwaansmeerpad,Uitgeest,legacy,ja
+61,2012-07-06,,,Vko Met Letsel,Provincialeweg,Uitgeest,legacy,ja
+62,2012-07-07,,,Bijstand NHN,Uitgeestermeer,Uitgeest,legacy,ja
+63,2012-07-13,,,Dier Te Water,Provincialeweg,Uitgeest,legacy,ja
+64,2012-07-13,,,ABM Recreatieschap,Lagendijk,Uitgeest,legacy,ja
+65,2012-07-18,,,Dier Te Water,Lagendijk,Uitgeest,legacy,ja
+66,2012-07-18,,,Vko Met Letsel,Provincialeweg,Uitgeest,legacy,ja
+67,2012-07-19,,,Vko Met Beknelling,De Terp,Uitgeest,legacy,ja
+68,2012-07-23,,,ABM Geesterheem,Dr Brugmanstraat,Uitgeest,legacy,ja
+69,2012-07-27,,,Wateroverlast,Anna Van Renesselaan,Uitgeest,legacy,ja
+70,2012-07-28,,,Vko Met Beknelling,A9 L 59.4,Uitgeest,legacy,ja
+71,2012-07-28,,,Brandstof Lekkage,Molenwerf,Uitgeest,legacy,ja
+72,2012-07-31,,,Afhijssen Patient,Anna Van Renesselaan,Uitgeest,legacy,ja
+73,2012-08-02,,,Vko Met Letsel,A9 R 59.2 A,,legacy,ja
+74,2012-08-04,,,Hulp Aan Derden,Prinses Irenelaan,Uitgeest,legacy,ja
+75,2012-08-08,,,Afhijsen patient,Esdoornstraat,Uitgeest,legacy,ja
+76,2012-08-09,,,Hulp aan derden,Uitgeestermeer,Uitgeest,legacy,ja
+77,2012-08-16,,,Buitenbrand,Kruiskamplaan,Uitgeest,legacy,ja
+78,2012-08-17,,,AED inzet,Benesserlaan,Uitgeest,legacy,ja
+79,2012-08-19,,,Automatische brandmelding,De Waterjuffer,Uitgeest,legacy,ja
+80,2012-08-27,,,Dier te water (Paard),Uitgeesterweg,Uitgeest,legacy,ja
+81,2012-09-02,,,Verzorging klein,Ringvaart,Beverwijk,legacy,ja
+82,2012-09-05,,,Verzorging klein,Breestraat,Beverwijk,legacy,ja
+83,2012-09-06,,,Onderzoek brandgerucht,Deen Supermarkt,Uitgeest,legacy,ja
+84,2012-09-12,,,Verzorging klein,"Nuon centrale, Hoflaan",Velsen-Noord,legacy,ja
+85,2012-09-24,,,Dier te water,De Terp,Uitgeest,legacy,ja
+86,2012-09-26,,,Verzorging klein,Rosa Manussingel,Heemskerk,legacy,ja
+87,2012-09-26,,,VKO met letsel,"Provincialeweg N203 56,8",,legacy,ja
+88,2012-09-30,,,VKO met beknelling,Busch en Dam – N203,,legacy,ja
+89,2012-10-01,,,VKO met beknelling,"A9 L 58,5",,legacy,ja
+90,2012-10-03,,,Buitenbrand klein voertuig,De Melksuiker,Uitgeest,legacy,ja
+91,2012-10-04,,,VKO Materieel,N203 / A9,,legacy,ja
+92,2012-10-06,,,VKO met letsel,A9,,legacy,ja
+93,2012-10-07,,,VKO beknelling,N203 – Busch en Dam,,legacy,ja
+94,2012-10-16,,,Vaartuig maakt water. Ingetrokken,Uitgeestermeer,Uitgeest,legacy,ja
+95,2012-10-17,,,Automatische brandmelding,Sein – Meer en Bosch,Heemstede,legacy,ja
+96,2012-10-22,,,Nacontrole na buitenbrand,Kindergarden KDV – Kleis,Uitgeest,legacy,ja
+97,2012-10-24,,,Buitenbrand klein voertuig,"A9 R 62,7",Akersloot,legacy,ja
+98,2012-10-24,,,VKO scooter / wegdek reinigen,Geesterweg,Uitgeest,legacy,ja
+99,2012-10-30,,,Lift opsluiting,Burgemeester van Roosmalenstraat (HMS),,legacy,ja
+100,2012-11-07,,,Zeer Grote Brand CMF Services,,Velsen – Noord,legacy,ja
+101,2012-11-08,,,Instorting / verzakking,De Cnollenbijter,Uitgeest,legacy,ja
+102,2012-11-24,,,Hand brandmelder,Van der Lem BV – Molenwerf,Uitgeest,legacy,ja
+103,2012-11-25,,,Stormschade,Niesvenstraat – De Vrijburg,Uitgeest,legacy,ja
+104,2012-11-25,,,Onwel/ziekte,Recreatieschap Uitgeestermeer – Lagendijk,Uitgeest,legacy,ja
+105,2012-11-26,,,Hand brandmelder,Van der Lem BV – Molenwerf,Uitgeest,legacy,ja
+106,2012-11-28,,,Hand brandmelder,Van der Lem BV – Molenwerf,Uitgeest,legacy,ja
+107,2012-12-02,,,Hand brandmelder,Van der Lem BV – Molenwerf,Uitgeest,legacy,ja
+108,2012-12-13,,,Wateroverlast,Wiekenlaan,Uitgeest,legacy,ja
+109,2012-12-15,,,Ongeval wegvervoer letsel,A9 R 59.0,,legacy,ja
+110,2012-12-18,,,Ongeval wegvervoer letsel,"A9 L 59,2",,legacy,ja
+111,2012-12-19,,,Brand gebouw overige,Dorregeest,Uitgeest,legacy,ja

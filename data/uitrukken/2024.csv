@@ -1,0 +1,78 @@
+nr,datum,tijd,prio,melding,adres,plaats,bron,publiceren
+1,2024-01-02,18:54,1,Reanimatie,Populierenlaan,Uitgeest,eigen,ja
+2,2024-01-02,22:08,1,Stormschade,A9 Li 61,Uitgeest,eigen,ja
+3,2024-01-13,21:07,1,Gezondheid,Binnenvenstraat,Uitgeest,eigen,ja
+4,2024-01-17,18:41,1,Reanimatie,Busch en Dam,Uitgeest,eigen,ja
+5,2024-01-29,13:51,2,Ongeval materieel,Benesserlaan,Uitgeest,eigen,ja
+6,2024-01-30,11:13,1,Ongeval,Korhoenstraat,Uitgeest,eigen,ja
+7,2024-02-07,19:42,1,Brand wegvervoer,Lagendijk,Uitgeest,eigen,ja
+8,2024-02-13,20:37,2,Automatische brandmelding PAC,Molenwerf,Uitgeest,eigen,ja
+9,2024-02-17,01:33,1,Brand woning,Nieuwstraat,Beverwijk,eigen,ja
+10,2024-02-19,15:46,1,Bijstand brandweer,Achterasweg,Vijfhuizen,eigen,ja
+11,2024-02-21,05:54,2,Herbezetting kazerne,Zijlweg,Haarlem,eigen,ja
+12,2024-02-27,03:54,1,Bijstand brandweer,Gaasterland,Beverwijk,eigen,ja
+13,2024-02-27,18:30,2,Nacontrole,Vrijburglaan,Uitgeest,eigen,ja
+14,2024-03-07,11:38,2,Gezondheid,Meerkoetstraat,Uitgeest,eigen,ja
+15,2024-03-13,21:33,2,Liftopsluiting,Stationsplein,Uitgeest,eigen,ja
+16,2024-03-18,18:22,1,Reanimatie,Prins Bernhardstraat,Uitgeest,eigen,ja
+17,2024-03-23,09:55,2,Schip of watersporter in problemen,Uitgeestermeer,Uitgeest,eigen,ja
+18,2024-03-26,14:14,2,Liftopsluiting,Stationsplein,Uitgeest,eigen,ja
+19,2024-03-28,16:44,1,Brand woning,Lepelaarstraat,Uitgeest,eigen,ja
+20,2024-03-28,17:48,1,Brand woning,Lepelaarstraat,Uitgeest,eigen,ja
+21,2024-04-06,16:12,1,Bijstand brandweer,Relweg,Wijk aan Zee,eigen,ja
+22,2024-04-10,17:29,1,Reanimatie,Prinses Beatrixlaan,Uitgeest,eigen,ja
+23,2024-04-15,08:19,1,Reanimatie,Geesterweg,Uitgeest,eigen,ja
+24,2024-04-23,15:44,1,Brand woning,Wittebroodslaantje,Uitgeest,eigen,ja
+25,2024-04-25,16:26,1,Brand woning,Niesvenstraat,Uitgeest,eigen,ja
+26,2024-04-27,16:08,2,Dienstverlening,Kuppersweg,Haarlem,eigen,ja
+27,2024-05-02,14:54,2,Stankoverlast,Geesterweg,Uitgeest,eigen,ja
+28,2024-05-02,19:08,1,Bijstand brandweer,Parallelweg,Beverwijk,eigen,ja
+29,2024-05-03,20:07,2,Ongeval gevaarlijke stof,De Bonkelaar,Uitgeest,eigen,ja
+30,2024-05-03,20:26,1,Gezondheid,Meerkoetstraat,Uitgeest,eigen,ja
+31,2024-05-15,15:10,1,Reanimatie,Westergeest,Uitgeest,eigen,ja
+32,2024-05-21,18:59,2,Stormschade,A9 Re 63,Akersloot,eigen,ja
+33,2024-06-03,20:16,2,Stankoverlast,De Pollen,Uitgeest,eigen,ja
+34,2024-06-06,08:23,1,Reanimatie,Lagendijk,Uitgeest,eigen,ja
+35,2024-06-15,20:50,1,Reanimatie,Middelweg,Uitgeest,eigen,ja
+36,2024-06-21,00:14,1,Reanimatie,De Grote Weid,Uitgeest,eigen,ja
+37,2024-07-01,18:55,1,Brand gebouw,De Twaalfmaat,Uitgeest,eigen,ja
+38,2024-07-05,15:38,1,Brand bijgebouw,Provincialeweg,Uitgeest,eigen,ja
+39,2024-07-13,15:39,1,Brand wegvervoer,A9 Re 63,Akersloot,eigen,ja
+40,2024-07-17,10:45,1,Brand woning,Scholeksterstraat,Uitgeest,eigen,ja
+41,2024-07-26,12:37,1,Voertuig te water,Uitgeesterweg,Limmen,eigen,ja
+42,2024-08-04,03:57,2,Buitenbrand,Lagendijk,Uitgeest,eigen,ja
+43,2024-08-06,09:40,1,Gezondheid,Kooglaan,Uitgeest,eigen,ja
+44,2024-08-11,02:40,1,Brand woning,De Twaalfmaat,Uitgeest,eigen,ja
+45,2024-08-15,22:47,2,Verdachte situatie voertuig of vaartuig,Geesterweg,Akersloot,eigen,ja
+46,2024-08-16,02:24,2,Dienstverlening,Geesterweg,Akersloot,eigen,ja
+47,2024-08-17,17:20,2,Dienstverlening,Haasjesven,Heemskerk,eigen,ja
+48,2024-08-18,09:10,2,Nacontrole,Blauwe Venstraat,Uitgeest,eigen,ja
+49,2024-08-19,13:17,2,Stankoverlast,Oude Parklaan,Castricum,eigen,ja
+50,2024-08-22,03:31,1,Reanimatie,Kemphaanstraat,Uitgeest,eigen,ja
+51,2024-08-24,05:06,2,Gezondheid,De Grote Weid,Uitgeest,eigen,ja
+52,2024-08-24,22:03,2,Liftopsluiting,Stationsplein,Uitgeest,eigen,ja
+53,2024-09-01,02:04,1,Gezondheid,Kruiskamplaan,Uitgeest,eigen,ja
+54,2024-09-04,17:05,1,Ongeval wegvervoer letsel,A9 Li 57,Heemskerk,eigen,ja
+55,2024-09-04,17:06,1,Ongeval wegvervoer letsel,A9 Li 57,Heemskerk,eigen,ja
+56,2024-09-05,14:50,1,Brand woning,Molijnstraat,Haarlem,eigen,ja
+57,2024-09-08,11:50,2,Containerbrand,Benesserlaan,Uitgeest,eigen,ja
+58,2024-09-14,02:29,1,Ongeval wegvervoer letsel,A9 Re 68,Heiloo,eigen,ja
+59,2024-09-14,03:25,1,Gezondheid,Zwarte Venstraat,Uitgeest,eigen,ja
+60,2024-09-20,10:13,1,Gezondheid,Klein Dorregeest,Uitgeest,eigen,ja
+61,2024-09-22,20:01,1,Brand gebouw,Benesserlaan,Uitgeest,eigen,ja
+62,2024-09-27,13:42,2,Wateroverlast,Molenwerf,Uitgeest,eigen,ja
+63,2024-10-08,10:49,2,Assistentie politie,Parallelweg,Uitgeest,eigen,ja
+64,2024-10-09,18:40,2,CO-melder,Hogeweg,Uitgeest,eigen,ja
+65,2024-10-14,00:31,1,Reanimatie,De Melksuiker,Uitgeest,eigen,ja
+66,2024-10-25,08:31,1,Reanimatie,Prinses Beatrixlaan,Uitgeest,eigen,ja
+67,2024-10-25,13:39,2,Ongeval gevaarlijke stof,Hogeweg,Limmen,eigen,ja
+68,2024-11-02,18:49,1,Gezondheid,Lagendijk,Uitgeest,eigen,ja
+69,2024-11-18,12:40,1,Reanimatie,Lepelaarstraat,Uitgeest,eigen,ja
+70,2024-11-21,12:27,1,Reanimatie,De Grote Weid,Uitgeest,eigen,ja
+71,2024-11-27,19:16,2,Stormschade,De Grote Weid,Uitgeest,eigen,ja
+72,2024-12-06,00:22,1,Reanimatie,Watermunt,Uitgeest,eigen,ja
+73,2024-12-06,21:22,1,Brand woning,Kerverslaan,Uitgeest,eigen,ja
+74,2024-12-07,00:46,1,Brand bijgebouw,Noorddijk,Wormerveer,eigen,ja
+75,2024-12-07,14:52,2,Rookmelder,Smallekamplaan,Uitgeest,eigen,ja
+76,2024-12-11,13:22,1,Brand wegvervoer,Afrit A9 Li - Uitgeest 10 59,Uitgeest,eigen,ja
+77,2024-12-27,00:08,2,CO-melder,Meerkoetstraat,Uitgeest,eigen,ja

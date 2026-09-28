@@ -1,0 +1,63 @@
+{% from "iconen.html" import icoon %}
+<!doctype html>
+<html lang="{{ site.taal }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if url == "/" %}{{ site.naam }}{% else %}{{ titel }} | {{ site.naam }}{% endif %}</title>
+<meta name="description" content="{{ beschrijving }}">
+<link rel="canonical" href="{{ site.url }}{{ url }}">
+<link rel="stylesheet" href="{{ asset('css/site.css') }}">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="alternate" type="application/rss+xml" title="Nieuwsarchief {{ site.naam }}" href="/nieuws/index.xml">
+<meta name="theme-color" content="#b3001b">
+</head>
+<body>
+<a class="skiplink" href="#inhoud">Direct naar de inhoud</a>
+<header class="kop">
+  <div class="kop-binnen">
+    <a class="logo" href="/"><img src="/logo.png" width="187" height="56" alt="{{ site.naam }}, naar de homepage"></a>
+    <nav aria-label="Hoofdmenu">
+      <ul class="menu">
+      {% for item in site.menu %}
+        <li><a href="{{ item.url }}"{% if item.url == url or (item.url != "/" and url.startswith(item.url)) %} aria-current="page"{% endif %}>{{ item.titel }}</a></li>
+      {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="inhoud" class="inhoud">
+{% block inhoud %}{% endblock %}
+</main>
+<footer class="voet">
+  <div class="voet-binnen">
+    <section aria-labelledby="voet-contact">
+      <h2 id="voet-contact">Contact</h2>
+      <p>{{ icoon("locatie") }} {{ site.naam }}<br>{{ site.adres.straat }}<br>{{ site.adres.postcode }} {{ site.adres.plaats }}</p>
+      <p>{{ icoon("mail") }} <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      <p>In geval van nood: bel <strong>112</strong>.</p>
+    </section>
+    <nav aria-labelledby="voet-meer">
+      <h2 id="voet-meer">Meer</h2>
+      <ul>
+      {% for item in site.voetmenu %}
+        <li><a href="{{ item.url }}">{{ item.titel }}</a></li>
+      {% endfor %}
+      </ul>
+    </nav>
+    <section aria-labelledby="voet-social">
+      <h2 id="voet-social">Volg ons</h2>
+      <ul class="social">
+      {% for s in site.social %}
+        <li><a href="{{ s.url }}" rel="noopener">{{ icoon(s.icoon) }} {{ s.naam }}</a></li>
+      {% endfor %}
+      </ul>
+    </section>
+  </div>
+  <p class="voet-klein">{{ site.naam }}. Deze site gebruikt geen cookies en volgt je niet. <a href="https://github.com/svenkortekaas/brandweeruitgeest.nl" rel="noopener">Broncode op GitHub</a>.</p>
+</footer>
+</body>
+</html>

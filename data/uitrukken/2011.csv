@@ -1,0 +1,128 @@
+nr,datum,tijd,prio,melding,adres,plaats,bron,publiceren
+1,2011-01-02,,,Binnenbrand Gerucht,Hogeweg,Uitgeest,legacy,ja
+2,2011-01-03,,,Vko Met Beknelling,A9 R 58.8 Afrit Heemskerk,,legacy,ja
+3,2011-01-09,,,Binnenbrand Schuur,Weth. Twaalfhovenstraat,Uitgeest,legacy,ja
+4,2011-01-09,,,Schoorsteenbrand,Hogeweg,Uitgeest,legacy,ja
+5,2011-01-09,,,Hulp Aan Derden,Weth. Twaalfhovenstraat,Uitgeest,legacy,ja
+6,2011-01-14,,,Autobrand,A9 R 62.5 Afrit Akersloot,,legacy,ja
+7,2011-01-23,,,Gas / Vreemde lucht,DR Brugmanstraat,Uitgeest,legacy,ja
+8,2011-01-27,,,Rietbrand,Provincialeweg N203,,legacy,ja
+9,2011-02-03,,,ABM Recreatieschap,Lagendijk,Uitgeest,legacy,ja
+10,2011-02-04,,,Stormschade,Burg. Van Nienesstraat,Uitgeest,legacy,ja
+11,2011-02-05,,,Stormschade,Provincialeweg N203 HMS,,legacy,ja
+12,2011-02-06,,,Voertuig Te Water,Provincialeweg N203,,legacy,ja
+13,2011-02-09,,,Vko Met Beknelling,Provincialeweg N203,,legacy,ja
+14,2011-02-12,,,Openen Deur,Molenwerf,Uitgeest,legacy,ja
+15,2011-02-17,,,ABM vd Lem,Molenwerf,Uitgeest,legacy,ja
+16,2011-02-25,,,Afhijsen Patient,De Waterdief,Uitgeest,legacy,ja
+17,2011-03-01,,,ABM Van Der Valk Hotel,,Akersloot,legacy,ja
+18,2011-03-03,,,Buitenbrand,A9 R 58.6 Oprit Heemskerk,,legacy,ja
+19,2011-03-04,,,Vko Met Beknelling,Provincialeweg N203,,legacy,ja
+20,2011-03-05,,,Binnenbrand Bijzonder Object,Dr. Brugmanstraat,Uitgeest,legacy,ja
+21,2011-03-11,,,Vko Met Letsel,A9 R 58.8 Oprit Heemskerk,,legacy,ja
+22,2011-03-14,,,Buitenbrand Klein Voertuig,Stationsplein,Uitgeest,legacy,ja
+23,2011-03-14,,,ABM Geesterheem,Dr. Brugmanstraat,Uitgeest,legacy,ja
+24,2011-03-23,,,ABM KDV De Regenboog,Benningskamplaan,Uitgeest,legacy,ja
+25,2011-04-03,,,Hulp Aan Derden,Uitgeestermeer,Uitgeest,legacy,ja
+26,2011-04-08,,,Buitenbrand,Parallelweg,Uitgeest,legacy,ja
+27,2011-04-14,,,Buitenbrand,Niesvenstraat,Uitgeest,legacy,ja
+28,2011-04-19,,,ABM vd Lem,Molenwerf,Uitgeest,legacy,ja
+29,2011-04-23,,,Buitenbrand Middelbrand Grip 1 Koster Metalen (Verzorging),,Beverwijk,legacy,ja
+30,2011-04-24,,,Buitenbrand,Uitgeestermeer,Uitgeest,legacy,ja
+31,2011-05-01,,,Compagnie Kennemerland,,Bergen,legacy,ja
+32,2011-05-02,,,Vko Met Letsel,A9 R 62.0,Uitgeest,legacy,ja
+33,2011-05-03,,,Gaslekkage,Busch en Dam,Uitgeest,legacy,ja
+34,2011-05-04,,,Liftopsluiting,Stationsplein,Uitgeest,legacy,ja
+35,2011-05-06,,,AED Inzet,Rosmalenstraat,Uitgeest,legacy,ja
+36,2011-05-08,,,Binnenbrand Middel Scouting,,Beverwijk,legacy,ja
+37,2011-05-08,,,Gas / Vreemde Lucht,De Terp,Uitgeest,legacy,ja
+38,2011-05-13,,,Buitenbrand Gerucht,Parallelweg,Uitgeest,legacy,ja
+39,2011-05-15,,,Binnenbrand Industrie,,Beverwijk,legacy,ja
+40,2011-05-17,,,Dier Te Water,Geesterweg,Uitgeest,legacy,ja
+41,2011-05-20,,,ABM Geesterheem,Dr Brugmanstraat,Uitgeest,legacy,ja
+42,2011-05-22,,,Buitenbrand ( Berm ),A9 L 61.3,Uitgeest,legacy,ja
+43,2011-05-23,,,Persoon Bekneld,Zwartevenstraat,Uitgeest,legacy,ja
+44,2011-05-24,,,Buitenbrand ( Blokhut ),Benesserlaan,Uitgeest,legacy,ja
+45,2011-05-25,,,Vko Met Beknelling (Groot Voertuig),Provincialeweg N 203,,legacy,ja
+46,2011-05-29,,,Stormschade Boom/Tak op Hoogte,Lepelaarstraat,Uitgeest,legacy,ja
+47,2011-06-02,,,Vko Met Beknelling,A9 R 58.0,Heemskerk,legacy,ja
+48,2011-06-14,,,Persoon Te Water,Lagendijk,Uitgeest,legacy,ja
+49,2011-06-14,,,Dier Te Water,Uitgeesterweg,Uitgeest,legacy,ja
+50,2011-06-15,,,Gaslekkage,Lagendijk,Uitgeest,legacy,ja
+51,2011-06-15,,,Gaslekkage,Geesterweg,Uitgeest,legacy,ja
+52,2011-06-16,,,Dier Te Water,Lagendijk,Uitgeest,legacy,ja
+53,2011-06-25,,,Buitenbrand,De Terp,Uitgeest,legacy,ja
+54,2011-06-27,,,Rookmelder Woonhuis,Lagendijk,Uitgeest,legacy,ja
+55,2011-06-28,,,ABM vd Lem,Molenwerf,Uitgeest,legacy,ja
+56,2011-06-30,,,Aantreffen Gevaarlijke Stoffen Grip 2,,Velsen – Noord,legacy,ja
+57,2011-07-02,,,Voertuig Te Water,A9 R Oprit Heemskerk,,legacy,ja
+58,2011-07-05,,,Binnenbrand Gerucht,Dr. Brugmanstraat,Uitgeest,legacy,ja
+59,2011-07-14,,,Stormschade,Busch en Dam,Uitgeest,legacy,ja
+60,2011-07-16,,,Rookmelder Woonhuis,De Darse,Uitgeest,legacy,ja
+61,2011-07-16,,,ABM Geesterheem,Dr. Brugmanstraat,Uitgeest,legacy,ja
+62,2011-07-19,,,Vko Met Letsel,A9 L 58.7,,legacy,ja
+63,2011-08-01,,,Explosie Vaartuig,Uitgeestermeer,Uitgeest,legacy,ja
+64,2011-08-05,,,Nacontrole na Binnenbrand,Kerkbuurt,Uitgeest,legacy,ja
+65,2011-08-06,,,Persoon te Water,Binnenmeer,Uitgeest,legacy,ja
+66,2011-08-06,,,Wateroverlast,Middelweg,Uitgeest,legacy,ja
+67,2011-08-07,,,Buitenbrand Klein Voertuig ( Middelbrand ),Provincialeweg,Uitgeest,legacy,ja
+68,2011-08-07,,,Vaartuig Maakt Water,Lagendijk,Uitgeest,legacy,ja
+69,2011-08-20,,,Assistentie Ambulance,Sluisbuurt,Uitgeest,legacy,ja
+70,2011-08-22,,,ABM Geesterheem,Dr Brugmanstraat,Uitgeest,legacy,ja
+71,2011-09-03,,,Binnenbrand Gerucht,Kon. Wilhelminastraat,Uitgeest,legacy,ja
+72,2011-09-04,,,ABM vd Lem,Molenwerf,Uitgeest,legacy,ja
+73,2011-09-06,,,Wateroverlast,Zwanebloem,Uitgeest,legacy,ja
+74,2011-09-06,,,Wateroverlast,Molenwerf,Uitgeest,legacy,ja
+75,2011-09-06,,,Wateroverlast,Verzetstraat,Uitgeest,legacy,ja
+76,2011-09-06,,,Wateroverlast,Hoorne,Uitgeest,legacy,ja
+77,2011-09-06,,,Wateroverlast,Voorvenstraat,Uitgeest,legacy,ja
+78,2011-09-11,,,Buitenbrand,De Kuil,Uitgeest,legacy,ja
+79,2011-09-12,,,Stormschade,Zienlaan,Uitgeest,legacy,ja
+80,2011-09-14,,,Buitenbrand Klein Voertuig,Stationsplein,Uitgeest,legacy,ja
+81,2011-09-16,,,Vko Met Letsel,A9 L 60.5,Uitgeest,legacy,ja
+82,2011-09-25,,,ABM vd Lem,Molenwerf,Uitgeest,legacy,ja
+83,2011-09-26,,,ABM De Slimp,Dr. Brugmanstraat,Uitgeest,legacy,ja
+84,2011-09-26,,,Beknelling Groot Voertuig,Provincialeweg,Uitgeest,legacy,ja
+85,2011-09-26,,,ABM Geesterheem,Dr Brugmanstraat,Uitgeest,legacy,ja
+86,2011-09-28,,,Vko Met Beknelling,Geesterweg,Uitgeest,legacy,ja
+87,2011-09-29,,,Vko Met Beknelling,A9 R 58.0 Oprit Heemskerk,,legacy,ja
+88,2011-10-05,,,AED Inzet,Pr. Irenelaan,Uitgeest,legacy,ja
+89,2011-10-05,,,Binnenbrand Wonen ( Middel Brand ),Hogeweg,Uitgeest,legacy,ja
+90,2011-10-07,,,Stormschade,Geesterweg,Uitgeest,legacy,ja
+91,2011-10-09,,,Vko Met Letsel,Provincialeweg,Uitgeest,legacy,ja
+92,2011-10-09,,,Vko Met Letsel,Provincialeweg / Oprit A9,,legacy,ja
+93,2011-10-09,,,Vko Met Letsel ( Middel Ongeval ),A9 L 58.3,Uitgeest,legacy,ja
+94,2011-10-12,,,Vko Met Letsel,Provincialeweg / Oprit A9,,legacy,ja
+95,2011-10-13,,,Dier Te Water,Limmerweg,Uitgeest,legacy,ja
+96,2011-10-16,,,Vko Met Letsel,"A9 R 58,2B Oprit Heemskerk",,legacy,ja
+97,2011-10-20,,,Vko Met Letsel,A9 R 59.1B Oprit Uitgeest,,legacy,ja
+98,2011-10-21,,,ABM Geesterheem,Dr Brugmanstraat,Uitgeest,legacy,ja
+99,2011-10-22,,,Vko Met Letsel,A9 R 61.5,Uitgeest,legacy,ja
+100,2011-10-22,,,Vko Met Letsel,A9 L 60.6,Uitgeest,legacy,ja
+101,2011-10-25,,,AED Inzet,De Spin,Uitgeest,legacy,ja
+102,2011-10-25,,,Vko Met Letsel,A9 L 62.5,Akersloot,legacy,ja
+103,2011-11-01,,,ABM Geesterheem,Dr. Brugmanstraat,Uitgeest,legacy,ja
+104,2011-11-04,,,Schaap in Nood,Broekpolderweg,Uitgeest,legacy,ja
+105,2011-11-06,,,Vko Met Beknelling,A9 R Tankstation Twaalfmaat,,legacy,ja
+106,2011-11-07,,,ABM Geesterheem,Dr. Brugmanstraat,Uitgeest,legacy,ja
+107,2011-11-09,,,ABM vd Lem,Molenwerf,Uitgeest,legacy,ja
+108,2011-11-09,,,Gas / Vreemde Lucht,Kruiskamplaan,Uitgeest,legacy,ja
+109,2011-11-10,,,Vko Met Letsel,A9 R 58.3 Oprit Heemskerk,,legacy,ja
+110,2011-11-11,,,Vko Met Beknelling,A9 L 56.2,Heemskerk,legacy,ja
+111,2011-11-12,,,Afhijsen Patient,Veenislaan,Uitgeest,legacy,ja
+112,2011-11-17,,,Vko Met Letsel,A9 L 61.8 Oprit Akersloot,,legacy,ja
+113,2011-11-19,,,Peloton Noord (Zeer Grote Brand),Zaandam Vredeweg,Uitgeest,legacy,ja
+114,2011-11-19,,,Hulp Aan Derden,Bollenhof,Uitgeest,legacy,ja
+115,2011-11-25,,,Binnenbrand Wonen ( Middel ),Assum,Uitgeest,legacy,ja
+116,2011-12-04,,,ABM Atece,Molenwerf,Uitgeest,legacy,ja
+117,2011-12-05,,,Binnenbrand Wonen,Plevierstraat,Uitgeest,legacy,ja
+118,2011-12-06,,,Vko Met Letsel,Provincialeweg,Uitgeest,legacy,ja
+119,2011-12-07,,,Stormschade,Benesserlaan,Uitgeest,legacy,ja
+120,2011-12-15,,,Binnenbrand Gerucht,Dr Brugmanstraat,Uitgeest,legacy,ja
+121,2011-12-22,,,Gas Vreemde Lucht,Kleis,Uitgeest,legacy,ja
+122,2011-12-23,,,ABM VD Valk Hotel,,Akersloot,legacy,ja
+123,2011-12-24,,,Liftopsluiting,Dr. Brugmanstraat,Uitgeest,legacy,ja
+124,2011-12-27,,,Dier Te Water,Populierenlaan,Uitgeest,legacy,ja
+125,2011-12-28,,,Tillen / Reanimatie Patient,Hogeweg,Uitgeest,legacy,ja
+126,2011-12-29,,,ABM Monkey Town,Molenwerf,Uitgeest,legacy,ja
+127,2011-12-29,,,ABM Monkey Town,Molenwerf,Uitgeest,legacy,ja

@@ -1,0 +1,127 @@
+nr,datum,tijd,prio,melding,adres,plaats,bron,publiceren
+1,2017-01-02,,1,Middelbrand,Westerheem,Heemskerk,legacy,ja
+2,2017-01-04,,2,Kleine verzorging,Wijkermeerweg,Velsen-Noord,legacy,ja
+3,2017-01-08,,2,Dier op hoogte,Sluisbuurt,Uitgeest,legacy,ja
+4,2017-01-28,,1,Ongeval buiten (beknelling),Verzetstraat 1940-1945,Uitgeest,legacy,ja
+5,2017-02-01,,1,Ongeval Wegvervoer Letsel (personenauto),Populierenlaan,Uitgeest,legacy,ja
+6,2017-02-14,,1,Brand Woning (keuken),Koningin Wilhelminastraat,Uitgeest,legacy,ja
+7,2017-02-18,,1,Gaslekkage,Wethouder C. Kromstraat,Uitgeest,legacy,ja
+8,2017-02-18,,1,Brandgerucht,Kooglaan,Uitgeest,legacy,ja
+9,2017-02-22,,1,Brand wegvervoer,A9 R,,legacy,ja
+10,2017-02-22,,1,Assistentie Ambulance,Middelweg,Uitgeest,legacy,ja
+11,2017-02-23,,2,Liftopsluiting,Stationsplein,Uitgeest,legacy,ja
+12,2017-02-26,,2,Dienstverlening,Paltrokstraat,Uitgeest,legacy,ja
+13,2017-02-26,,1,Reanimatie,De Kleis,Uitgeest,legacy,ja
+14,2017-03-01,,1,Reanimatie,Kooglaan,Uitgeest,legacy,ja
+15,2017-03-22,,2,Buitenbrand,Parallelweg,Uitgeest,legacy,ja
+16,2017-03-23,,2,Bermbrand,A9 L,,legacy,ja
+17,2017-04-02,,1,Afhijsen patiënt,Boetenvenstraat,Uitgeest,legacy,ja
+18,2017-04-03,,1,Reanimatie,Hogeweg,Uitgeest,legacy,ja
+19,2017-04-03,,1,Brand Woning Middelbrand,Alkmaarseweg,Beverwijk,legacy,ja
+20,2017-04-07,,2,Nacontrole,Spoorlaan,Uitgeest,legacy,ja
+21,2017-04-18,,1,Reanimatie,Prins Bernhardstraat,Uitgeest,legacy,ja
+22,2017-04-22,,1,Reanimatie,Lydweg,Akersloot,legacy,ja
+23,2017-04-25,,1,Ongeval Binnen,Middelweg,Uitgeest,legacy,ja
+24,2017-04-29,,2,Afhijsen patiënt,Prinses Irenelaan,Uitgeest,legacy,ja
+25,2017-04-29,,1,Brand wegvervoer,Burgemeester van Roosmalenstraat,Uitgeest,legacy,ja
+26,2017-04-30,,1,Duinbrand – Zeer Groot,Zeeweg,Overveen,legacy,ja
+27,2017-04-30,,1,Buitenbrand afval Middelbrand,Gooiland,Beverwijk,legacy,ja
+28,2017-05-03,,1,Automatische brandmelder,Dokter Brugmanstraat,Uitgeest,legacy,ja
+29,2017-05-06,,1,Middelbrand Brand Woning Flat,Debora Bakenlaan,Heemskerk,legacy,ja
+30,2017-05-09,,1,Voertuig te water,N203,,legacy,ja
+31,2017-05-11,,1,Ongeval Wegvervoer Letsel,A9,,legacy,ja
+32,2017-05-12,,1,Brand Wegvervoer,A9,,legacy,ja
+33,2017-05-13,,1,Middelbrand Brand Kantoor,Breestraat,Beverwijk,legacy,ja
+34,2017-05-13,,1,Brand Wegvervoer,A9,,legacy,ja
+35,2017-05-13,,1,Ongeval Buiten Materieel,Kooglaan,Uitgeest,legacy,ja
+36,2017-05-14,,1,Grote Brand Kantoor,Breestraat,Beverwijk,legacy,ja
+37,2017-05-18,,2,Bermbrand,A9,,legacy,ja
+38,2017-05-19,,1,Ongeval Buiten Letsel,Molenstraat,Uitgeest,legacy,ja
+39,2017-05-20,,1,Persoon te Water,De Woude,Uitgeest,legacy,ja
+40,2017-05-24,,1,Duinbrand,Rijckert Aertszweg,Wijk aan Zee,legacy,ja
+41,2017-05-24,,2,Dier te Water,Broekpolderweg,Uitgeest,legacy,ja
+42,2017-05-24,,2,Buitenbrand,Kruiskamplaan,Uitgeest,legacy,ja
+43,2017-05-29,,1,Ongeval Buiten Materieel,Busch en Dam,Uitgeest,legacy,ja
+44,2017-06-03,,1,Voertuig te water,N203,,legacy,ja
+45,2017-06-04,,2,Buitenbrand,Niesvenstraat,Uitgeest,legacy,ja
+46,2017-06-04,,1,Brand,Vrijburglaan,Uitgeest,legacy,ja
+47,2017-06-05,,1,Brand industrie,TATA Steel,Uitgeest,legacy,ja
+48,2017-06-05,,2,Kleine verzorging,TATA Steel,Uitgeest,legacy,ja
+49,2017-06-06,,1,Middelbrand,Waalstraat,Beverwijk,legacy,ja
+50,2017-06-06,,2,Stormschade,Molenwerf,Uitgeest,legacy,ja
+51,2017-06-06,,2,Stormschade,De Melksuiker,Uitgeest,legacy,ja
+52,2017-06-07,,1,Ongeval Wegvervoer Letsel,N203,,legacy,ja
+53,2017-06-09,,2,Dienstverlening,Binnenkruierstraat,Uitgeest,legacy,ja
+54,2017-06-10,,2,CO Melder,Kooglaan,Uitgeest,legacy,ja
+55,2017-06-12,,1,Voertuig te water,N203,,legacy,ja
+56,2017-06-20,,1,Buitenbrand,Niesvenstraat,Uitgeest,legacy,ja
+57,2017-06-22,,1,Brand wegvervoer (personenauto),Kooglaan,Uitgeest,legacy,ja
+58,2017-06-29,,1,Ongeval wegvervoer letsel,Geesterweg,Uitgeest,legacy,ja
+59,2017-06-30,,1,Assistentie ambulance,Ziendijk,Uitgeest,legacy,ja
+60,2017-07-03,,1,Buitenbrand Middelbrand,Nijverheidsweg,Beverwijk,legacy,ja
+61,2017-07-05,,1,Brand,De Darse,Uitgeest,legacy,ja
+62,2017-07-06,,2,CO Melder,Wethouder Twaalfhovenstraat,Uitgeest,legacy,ja
+63,2017-07-09,,1,Duinbrand,Reyndersweg,Wijk aan Zee,legacy,ja
+64,2017-07-14,,1,Persoon te water,Alkmaardermeer,Uitgeest,legacy,ja
+65,2017-07-15,,2,Dier te water (vee),Krommenieweg,Uitgeest,legacy,ja
+66,2017-07-16,,2,Dier te water (vee),Lagendijk,Uitgeest,legacy,ja
+67,2017-07-18,,2,Til assistentie,Burgemeester van Roosmalenstraat,Uitgeest,legacy,ja
+68,2017-07-19,,2,Buitenbrand,Lagendijk,Uitgeest,legacy,ja
+69,2017-07-20,,1,Til assistentie,Benesserlaan,Uitgeest,legacy,ja
+70,2017-07-25,,1,Buitenbrand,Broekpolderweg,Uitgeest,legacy,ja
+71,2017-07-28,,1,Schip/Watersporter in problemen,Uitgeestermeer,Uitgeest,legacy,ja
+72,2017-07-29,,1,Brand Wegvervoer Middelbrand,Beneluxlaan,Heemskerk,legacy,ja
+73,2017-08-10,,1,Reanimatie,Binnenkruierstraat,Uitgeest,legacy,ja
+74,2017-08-12,,1,Brand Woning Middelbrand,Debora Bakenlaan,Heemskerk,legacy,ja
+75,2017-08-21,,2,Dier in nood,Lagendijk,Uitgeest,legacy,ja
+76,2017-08-23,,2,Dier te water,Lagendijk,Uitgeest,legacy,ja
+77,2017-08-23,,1,Buitenbrand,Zeeweg,Castricum,legacy,ja
+78,2017-08-25,,2,Dier te water,N203,,legacy,ja
+79,2017-08-30,,1,Ongeval wegvervoer letsel,A9 R,,legacy,ja
+80,2017-09-04,,1,PAC Melding Van Der Lem,Molenwerf,Uitgeest,legacy,ja
+81,2017-09-07,,2,Stankoverlast,Dokter Brugmanstraat,Uitgeest,legacy,ja
+82,2017-09-07,,2,Dier te water,Zwaansmeerpad,Uitgeest,legacy,ja
+83,2017-09-13,,2,Stormschade,Ziendervaart,Uitgeest,legacy,ja
+84,2017-09-13,,1,Stormschade,A9 L,,legacy,ja
+85,2017-09-16,,1,Reanimatie,Westerwerf,Uitgeest,legacy,ja
+86,2017-09-18,,1,Assistentie Ambulance Afhijsen,Prins Bernhardstraat,Uitgeest,legacy,ja
+87,2017-09-26,,2,Buitenbrand,Molenwerf,Uitgeest,legacy,ja
+88,2017-09-29,,2,Wateroverlast,Molenwerf,Uitgeest,legacy,ja
+89,2017-09-29,,2,Wateroverlast,Westergeest,Uitgeest,legacy,ja
+90,2017-10-03,,2,Dier in nood,Lagendijk,Uitgeest,legacy,ja
+91,2017-10-05,,2,Stromschade,A9,,legacy,ja
+92,2017-10-05,,1,Reanimatie,Zienlaan,Uitgeest,legacy,ja
+93,2017-10-07,,1,Ongeval Buiten Aardgas,Benesserlaan,Uitgeest,legacy,ja
+94,2017-10-07,,2,Ongeval Binnen,Wethouder Twaalfhovenstraat,Uitgeest,legacy,ja
+95,2017-10-08,,1,Grote Brand Gezondheidszorg,Peperstraat,Beverwijk,legacy,ja
+96,2017-10-12,,1,OMS,Zienlaan,Uitgeest,legacy,ja
+97,2017-10-14,,1,Reanimatie,Zienlaan,Uitgeest,legacy,ja
+98,2017-10-15,,1,Middelbrand Woning Flat,Luxemburglaan,Heemskerk,legacy,ja
+99,2017-10-18,,1,OMS (Ingetrokken),Dokter Brugmanstraat,Uitgeest,legacy,ja
+100,2017-10-19,,2,Dienstverlening (meting),J.E. De Witstraat,Uitgeest,legacy,ja
+101,2017-10-19,,2,Dienstverlening,Wiekenlaan,Uitgeest,legacy,ja
+102,2017-10-20,,1,Ongeval Wegvervoer Letsel,A9,,legacy,ja
+103,2017-10-26,,2,CO melder,Koningin Wilhelminastraat,Uitgeest,legacy,ja
+104,2017-10-27,,1,Assistentie (intrekken alarmering),A9,,legacy,ja
+105,2017-11-01,,1,Grote HV Ongeval Wegvervoer Letsel,A9,,legacy,ja
+106,2017-11-03,,1,Brandmelding OMS,Lagendijk,Uitgeest,legacy,ja
+107,2017-11-07,,1,Ongeval Wegvervoer Letsel,A9,,legacy,ja
+108,2017-11-12,,1,Voertuig te water,Busch en Dam,Uitgeest,legacy,ja
+109,2017-11-18,,1,Ongeval buiten,Lagendijk,Uitgeest,legacy,ja
+110,2017-11-19,,1,Brand woning,De Darse,Uitgeest,legacy,ja
+111,2017-11-21,,1,Ongeval Wegvervoer Letsel,A9,,legacy,ja
+112,2017-11-25,,2,Nacontrole,Dokter Brugmanstraat,Uitgeest,legacy,ja
+113,2017-11-29,,1,Ongeval Wegvervoer Letsel,A9,,legacy,ja
+114,2017-11-30,,1,Buitenbrand afval,Niesvenstraat,Uitgeest,legacy,ja
+115,2017-12-04,,2,Containerbrand,Stationsplein,Uitgeest,legacy,ja
+116,2017-12-08,,1,Nacontrole,Blauwe Venstraat,Uitgeest,legacy,ja
+117,2017-12-08,,1,Middelbrand Woning,Groenelaan,Beverwijk,legacy,ja
+118,2017-12-11,,1,Voertuig te water,N203,,legacy,ja
+119,2017-12-11,,2,Kazernering,,Uitgeest,legacy,ja
+120,2017-12-15,,1,Middelbrand,BUKO Bedrijvenpark,Beverwijk,legacy,ja
+121,2017-12-22,,2,Assistentie Ambulance,Anna van Renesselaan,Uitgeest,legacy,ja
+122,2017-12-25,,2,Dier te water,A9,,legacy,ja
+123,2017-12-26,,1,Middelbrand,Zuidermaatweg,Heemskerk,legacy,ja
+124,2017-12-27,,1,Middelbrand Woning,Soetemanstraat,Beverwijk,legacy,ja
+125,2017-12-27,,1,Brand Woning,Floraronde,Uitgeest,legacy,ja
+126,2017-12-31,,2,Assistentie ambulance,Kooglaan,Uitgeest,legacy,ja

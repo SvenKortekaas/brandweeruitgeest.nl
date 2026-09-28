@@ -1,0 +1,89 @@
+nr,datum,tijd,prio,melding,adres,plaats,bron,publiceren
+1,2023-01-01,01:54,1,Buitenbrand,Dillenburg,Uitgeest,p2000,ja
+2,2023-01-01,02:53,1,Bermbrand,Tulpstraat,Uitgeest,p2000,ja
+3,2023-01-11,13:23,1,Hulpverlening weg,"N203 57,6",Castricum,p2000,ja
+4,2023-01-18,11:11,2,Liftopsluiting,Dokter Brugmanstraat,Uitgeest,eigen,ja
+5,2023-01-19,14:55,2,Stankoverlast,Hogeweg,Uitgeest,eigen,ja
+6,2023-01-21,19:53,2,Brandgerucht,Kerverslaan,Uitgeest,eigen,ja
+7,2023-01-23,20:36,2,Stankoverlast,Geesterweg,Uitgeest,eigen,ja
+8,2023-01-25,08:37,1,Brand wegvervoer,N203 Li 54,Uitgeest,eigen,ja
+9,2023-02-06,04:09,2,CO-melder,Benesserlaan,Uitgeest,eigen,ja
+10,2023-02-14,09:40,2,Ongeval materieel,Dotterbloem,Uitgeest,eigen,ja
+11,2023-02-21,12:19,2,Gezondheid,Meerkoetstraat,Uitgeest,eigen,ja
+12,2023-03-07,14:37,1,Reanimatie,Parallelweg,Uitgeest,eigen,ja
+13,2023-03-09,15:10,2,Ongeval materieel,Tulpstraat,Uitgeest,eigen,ja
+14,2023-03-11,16:29,2,Gezondheid,Prinses Beatrixlaan,Uitgeest,eigen,ja
+15,2023-03-30,14:38,2,Stankoverlast,Westergeest,Uitgeest,eigen,ja
+16,2023-03-31,15:45,1,Reanimatie,Langebuurt,Uitgeest,eigen,ja
+17,2023-04-05,16:09,2,Gezondheid,Wagnerlaan,Akersloot,eigen,ja
+18,2023-04-11,14:51,1,Ongeval materieel,Achterloet,Uitgeest,eigen,ja
+19,2023-04-12,19:42,1,Brand,Kanaalweg,Beverwijk,eigen,ja
+20,2023-04-16,11:45,2,Containerbrand,Stationsplein,Uitgeest,eigen,ja
+21,2023-04-20,13:54,1,Brand agrarisch gebouw,Woudpolderweg,Uitgeest,eigen,ja
+22,2023-04-20,18:23,1,Brand wegvervoer,N203 55,Uitgeest,eigen,ja
+23,2023-04-26,02:25,1,Voertuig te water,N203 56,Uitgeest,eigen,ja
+24,2023-04-27,11:15,2,Gezondheid,Meldijk,Uitgeest,eigen,ja
+25,2023-05-06,10:44,2,Nacontrole,Molenwerf,Uitgeest,eigen,ja
+26,2023-05-14,17:00,1,Duinbrand,Reyndersweg,Velsen-Noord,eigen,ja
+27,2023-05-21,01:05,1,Brand,N200 Li - Zeeweg,Overveen,eigen,ja
+28,2023-05-23,18:56,1,Duinbrand,Zeewindepad,IJmuiden,eigen,ja
+29,2023-05-24,11:11,1,Reanimatie,Meldijk,Uitgeest,eigen,ja
+30,2023-05-25,05:21,2,CO-melder,De Pollen,Uitgeest,eigen,ja
+31,2023-05-26,16:52,1,Brand bijgebouw,Wethouder C. Kromstraat,Uitgeest,eigen,ja
+32,2023-05-27,21:00,2,Nacontrole,Keizerskroon,Limmen,eigen,ja
+33,2023-05-30,08:29,2,Ongeval materieel,Scharloo,Uitgeest,eigen,ja
+34,2023-06-04,19:35,1,Voertuig te water,Lagendijk,Uitgeest,eigen,ja
+35,2023-06-10,14:34,1,Brand wegvervoer,Geesterweg,Akersloot,eigen,ja
+36,2023-06-12,16:04,2,Automatische brandmelding OMS,Vermaningspad,Uitgeest,eigen,ja
+37,2023-06-13,01:40,2,Automatische brandmelding OMS,Vermaningspad,Uitgeest,eigen,ja
+38,2023-06-15,14:47,2,Ongeval,Geesterweg,Akersloot,eigen,ja
+39,2023-06-16,14:42,1,Brand wegvervoer,Provincialeweg,Uitgeest,eigen,ja
+40,2023-06-16,22:39,1,Bermbrand,Geesterweg,Uitgeest,eigen,ja
+41,2023-06-24,00:00,1,Brand woning,Biatlon,Assendelft,eigen,ja
+42,2023-06-25,15:14,1,Brand,Zijkanaal C,Spaarndam,eigen,ja
+43,2023-06-30,10:38,2,Liftopsluiting,Smallekamplaan,Uitgeest,eigen,ja
+44,2023-07-02,23:55,2,Voertuig te water,N246 37,Markenbinnen,eigen,ja
+45,2023-07-05,11:05,2,Stormschade,A9 Li 58,Uitgeest,eigen,ja
+46,2023-07-06,06:30,2,Dier te water,Sluisweg,Akersloot,eigen,ja
+47,2023-07-08,11:57,2,Containerbrand,Lagendijk,Uitgeest,eigen,ja
+48,2023-07-14,16:06,1,Duinbrand,Heemskerkerrelweg,Wijk aan Zee,eigen,ja
+49,2023-07-16,11:48,2,Stormschade,A9 Li 61,Uitgeest,eigen,ja
+50,2023-07-16,13:35,1,Persoon te water,Parallelweg,Uitgeest,eigen,ja
+51,2023-07-16,17:36,1,Buitenbrand,PKP N200 Re - Zeeweg 22,Overveen,eigen,ja
+52,2023-07-17,14:53,1,Buitenbrand,Verlengde Voorstraat,Wijk aan Zee,eigen,ja
+53,2023-07-18,09:23,2,Ongeval,Kooglaan,Uitgeest,eigen,ja
+54,2023-07-22,09:46,2,Geplande actie,Zijlweg,Haarlem,eigen,ja
+55,2023-07-24,15:15,2,Ongeval,Vinkenbaan,Limmen,eigen,ja
+56,2023-08-11,06:44,1,Brand,Waterpeloton Schoterweg,Haarlem,eigen,ja
+57,2023-08-23,00:36,2,Automatische brandmelding PAC,Westerwerf,Uitgeest,eigen,ja
+58,2023-08-24,12:53,2,Buitenbrand,Julianalaan,Haarlem,eigen,ja
+59,2023-08-26,12:39,2,Wateroverlast,Middelweg,Uitgeest,eigen,ja
+60,2023-08-27,12:13,1,Gezondheid,Middelweg,Uitgeest,eigen,ja
+61,2023-08-27,18:53,1,Bijstand brandweer,Kleverlaan,Haarlem,eigen,ja
+62,2023-08-27,18:53,1,Bijstand brandweer,Paul Krugerstraat,Haarlem,eigen,ja
+63,2023-09-15,21:10,1,Brand,Verlengde Voorstraat,Wijk aan Zee,eigen,ja
+64,2023-09-22,07:57,1,Stankoverlast,Prins Bernhardstraat,Uitgeest,eigen,ja
+65,2023-09-27,12:59,1,Stankoverlast,Westerwerf,Uitgeest,eigen,ja
+66,2023-09-27,13:00,1,Luchtverontreiniging,Westerwerf,Uitgeest,eigen,ja
+67,2023-10-04,21:21,1,Reanimatie,Achterloet,Uitgeest,eigen,ja
+68,2023-10-06,10:06,1,Gezondheid,Het Mollenveld,Uitgeest,eigen,ja
+69,2023-10-08,18:33,2,Brandgerucht,PKP Parallelweg,Uitgeest,eigen,ja
+70,2023-10-11,10:19,2,Liftopsluiting,Stationsplein,Uitgeest,eigen,ja
+71,2023-10-17,21:23,1,Brand woning,Hogeweg,Uitgeest,eigen,ja
+72,2023-10-20,19:54,2,Dienstverlening,Roerdompstraat,Uitgeest,eigen,ja
+73,2023-10-25,16:10,1,Reanimatie,Benesserlaan,Uitgeest,eigen,ja
+74,2023-10-26,11:28,1,Reanimatie,Dillenburg,Uitgeest,eigen,ja
+75,2023-10-30,20:41,1,Brand wegvervoer,Burgemeester van Roosmalenstraat,Uitgeest,eigen,ja
+76,2023-10-31,08:16,1,Gezondheid,Kooglaan,Uitgeest,eigen,ja
+77,2023-11-04,14:36,2,Stankoverlast,Wethouder Zonneveldstraat,Uitgeest,eigen,ja
+78,2023-11-12,08:07,2,Gezondheid,Kleibroek,Castricum,eigen,ja
+79,2023-11-12,10:06,2,Brandgerucht,Uitgeesterweg,Limmen,eigen,ja
+80,2023-11-14,16:59,1,Brand woning,De Grote Aak,Uitgeest,eigen,ja
+81,2023-11-16,09:01,1,Afstemverzoek,Geesterweg,Akersloot,eigen,ja
+82,2023-11-21,09:26,1,Reanimatie,De Twaalfmaat,Uitgeest,eigen,ja
+83,2023-11-27,12:34,2,Automatische brandmelding OMS,Oude Parklaan,Castricum,eigen,ja
+84,2023-11-30,22:28,2,Liftopsluiting,Stationsplein,Uitgeest,eigen,ja
+85,2023-12-01,21:08,2,Brandgerucht,Penningkruid,Uitgeest,eigen,ja
+86,2023-12-06,21:59,2,Brand,Herenweg,Heemstede,eigen,ja
+87,2023-12-14,23:56,1,Brand gebouw,Mantelmeeuwpad,IJmuiden,eigen,ja
+88,2023-12-21,11:15,2,Dier te water,Sternstraat,Uitgeest,eigen,ja

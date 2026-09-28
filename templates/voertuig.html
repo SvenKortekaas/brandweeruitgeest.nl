@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block inhoud %}
+<article class="tekst">
+  <p class="kruimel"><a href="/voertuigen/">Voertuigen</a></p>
+  <h1>{{ titel }}</h1>
+  {% if meta.fotos %}
+  <figure class="banner">{{ foto(meta.fotos[0].src, meta.fotos[0].alt, lui=False) }}</figure>
+  {% endif %}
+  {{ body }}
+  {% if meta.gegevens %}
+  <h2>Voertuiggegevens</h2>
+  <dl class="gegevens">
+  {% for label, waarde in meta.gegevens.items() %}
+    <dt>{{ label }}</dt><dd>{{ waarde if waarde else "-" }}</dd>
+  {% endfor %}
+  </dl>
+  {% endif %}
+  {% if meta.fotos|length > 1 %}
+  <h2>Foto's</h2>
+  {% include "fotogrid.html" %}
+  {% endif %}
+</article>
+{% endblock %}

@@ -1,0 +1,105 @@
+# Bouwen, controleren en publiceren van brandweeruitgeest.nl.
+#
+# Bouwen en controleren: bij elke push en pull request, zonder toegang tot secrets.
+# Publiceren: alleen door SvenKortekaas, via de GitHub-omgeving "productie" (FTP-secrets):
+#   - master: de echte site, met FTP_GEBRUIKER_PROD en FTP_WACHTWOORD_PROD;
+#   - v2:     de testsite, met FTP_GEBRUIKER en FTP_WACHTWOORD, gebouwd met noindex.
+# Server en poort (FTP_SERVER, FTP_POORT) zijn voor beide gelijk (besluit Sven 28-09-2026).
+# Geen goedkeuring per publicatie (besluit Sven 28-09-2026). Zie MIGRATIE.md, hoofdstuk 7.
+
+name: Bouwen en publiceren
+
+on:
+  push:
+    branches: [master, v2]
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      opruimen:
+        description: "Alles op de server verwijderen wat niet bij de site hoort. Typ OPRUIMEN om te bevestigen."
+        required: false
+        default: ""
+      terugdraaien:
+        description: "Noodgeval: zet de tijdelijke doorverwijzing naar brandweer.nl terug. Typ TERUGDRAAIEN om te bevestigen."
+        required: false
+        default: ""
+      droog:
+        description: "Droog: alleen tonen wat er zou gebeuren, niets wijzigen op de server."
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+env:
+  # v2 is de testsite, al het andere (master, pull requests) bouwt als echte site.
+  BOUW_OMGEVING: ${{ github.ref == 'refs/heads/v2' && 'test' || 'live' }}
+
+jobs:
+  bouwen:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      # Omgezette afbeeldingen (WebP/AVIF) bewaren tussen runs; alleen gewijzigde foto's opnieuw.
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: .cache/img
+          key: afbeeldingen-${{ hashFiles('afbeeldingen/**', 'build.py') }}
+          restore-keys: afbeeldingen-
+      - run: python build.py
+      - run: python tools/check.py
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: site
+          path: public
+          include-hidden-files: true
+          retention-days: 3
+
+  publiceren:
+    needs: bouwen
+    # Alleen de officiële repo, alleen master of v2, alleen Sven (ook bij opnieuw starten).
+    if: >-
+      github.repository == 'SvenKortekaas/brandweeruitgeest.nl' &&
+      (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/v2') &&
+      (github.event_name == 'push' || github.event_name == 'workflow_dispatch') &&
+      github.actor == 'SvenKortekaas' &&
+      github.triggering_actor == 'SvenKortekaas'
+    runs-on: ubuntu-24.04
+    environment: productie
+    concurrency:
+      group: publiceren-${{ github.ref_name }}
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: site
+          path: public
+      - name: Publiceren via FTPS
+        env:
+          BRANCH: ${{ github.ref_name }}
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_POORT: ${{ secrets.FTP_POORT }}
+          TEST_GEBRUIKER: ${{ secrets.FTP_GEBRUIKER }}
+          TEST_WACHTWOORD: ${{ secrets.FTP_WACHTWOORD }}
+          TEST_MAP: ${{ secrets.FTP_MAP }}
+          PROD_GEBRUIKER: ${{ secrets.FTP_GEBRUIKER_PROD }}
+          PROD_WACHTWOORD: ${{ secrets.FTP_WACHTWOORD_PROD || secrets.FTP_PASSWORD_PROD }}
+          PROD_MAP: ${{ secrets.FTP_MAP_PROD }}
+          GEBEURTENIS: ${{ github.event_name }}
+          OPRUIMEN: ${{ inputs.opruimen }}
+          DROOG: ${{ inputs.droog }}
+          TERUGDRAAIEN: ${{ inputs.terugdraaien }}
+        run: python tools/publiceer.py
