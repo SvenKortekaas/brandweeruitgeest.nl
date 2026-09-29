@@ -193,6 +193,12 @@ Fase 3: migratie. Uitgevoerd 28-09-2026, wacht op controle door Sven (op v2.bran
   2. `legacy/` verwijderd, samen met de eenmalige scripts `tools/migrate_hugo.py` en `tools/inventaris_legacy.py` die alleen `legacy/` lazen. `data/legacy-urls.csv` en de tellingen in `check.py` blijven. De bestanden staan nog in de git-historie (ook de ongeldige Google-key in `legacy/config.toml`).
   3. De drie Dependabot-pull requests (#53, #54, #55) voor het Hugo-thema gesloten, met uitleg.
 
+- 29-09-2026: Sven vraagt waar uitrukken als afhijsen en til assistentie zijn gebleven; die moeten blijven bestaan.
+  - 2008 t/m 2022: staan er allemaal nog (bijv. "Assistentie Ambulance Afhijsen", "Til Assistentie Ambulance").
+  - 2023 t/m nu (`bron=eigen`): de gegevens bevatten alleen de algemene soort, op de site "Gezondheid" (28 regels). Sven leverde de P2000-berichten van capcode 0107711 (p2000.page) aan; op datum en straat gekoppeld: 18 keer "Assistentie ambulance afhijsen", 7 keer "Assistentie ambulance til assistentie" en 3 keer "Assistentie ambulance" (05-04-2023 Wagnerlaan, Akersloot en 03-02-2026 Handelstraat, Akersloot: P2000 zonder detail; 03-05-2024 Meerkoetstraat: niet in de aangeleverde lijst). "Gezondheid" komt niet meer voor.
+  - P2000-import: herkende afhijsen alleen als "Assistentie ambulance" en til assistentie helemaal niet. `tools/p2000.yaml` aangevuld: "Assistentie ambulance afhijsen" en "Assistentie ambulance til assistentie", ook in de echte P2000-vorm "Ass. Ambu (afhijsen)" en "Ass. Ambu (tilassistentie)". Sven bevestigt dat de twee ingetrokken meldingen in Akersloot blijven staan; wat 03-05-2024 Meerkoetstraat was is niet bekend, blijft "Assistentie ambulance".
+- Besluit Sven 29-09-2026: een ingetrokken alarmering telt als uitruk. Het intrekbericht is geen aparte uitruk: "Brand woning Hogeweg" en daarna de intrekking is samen 1 uitruk "Brand woning, Hogeweg, Uitgeest". Intrekken gebeurt binnen een kwartier (Sven); de import koppelt een intrekbericht daarom aan de uitruk op dezelfde straat binnen het bestaande venster van 30 minuten (`zelfde_uitruk_minuten`); staat die er niet, dan komt de uitruk er één keer bij. Vastgelegd in `CLAUDE.md` en `PLAN-P2000.md`, zelftest aangevuld.
+
 ## Volgende stap
 
 1. Sven: pull request "Oude Hugo-site verwijderd" samenvoegen. #57 (documentatie) is samengevoegd voordat het verwijderen van `legacy/` erin kwam; dat volgt daarom alsnog apart.

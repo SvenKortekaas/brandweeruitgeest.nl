@@ -55,7 +55,8 @@ Voor elke wijziging in HA maakt Claude eerst een kopie van de huidige automatise
    - accepteert alleen het vaste formaat: tijdstip als datum en tijd, tekst die begint met een prio (`P 1`, `A1`, `B2` enz.), maximale lengte;
    - één regel per incident: dezelfde straat binnen 30 minuten is dezelfde uitruk (herhaalalarm, opschaling);
    - melding wordt de korte tekst uit `tools/meldingen.yaml`, adres wordt straat en plaats; huisnummers, objectnamen, regiocodes (`BNH-01`) en eenheidsnummers gaan eruit;
-   - proefalarmen, testberichten, intrekkingen en oefeningen worden overgeslagen;
+   - proefalarmen, testberichten en oefeningen worden overgeslagen;
+   - een ingetrokken alarmering telt als uitruk, het intrekbericht niet: het hoort bij de uitruk op dezelfde straat (intrekken gebeurt binnen een kwartier, dus binnen het venster van 30 minuten), en staat die er nog niet dan komt de uitruk er één keer bij (besluit Sven 29-09-2026);
    - bron `p2000`; opnieuw draaien geeft geen dubbele regels.
 2. **`.github/workflows/p2000.yml`** (Claude): start alleen via `workflow_dispatch` met de twee invoervelden. De invoer gaat als omgevingsvariabele naar het script en nooit direct in een shellcommando (tegen script-injectie). Maximaal 10 meldingen per dag. Na de import: commit naar de branch uit `ref`, `build.py`, `check.py` en `deploy.py` (alleen gewijzigde bestanden, enkele minuten).
 3. **Omgeving `p2000`** (Sven): nieuwe GitHub-omgeving met dezelfde FTP-secrets als `productie`, zonder goedkeuring, alleen voor de branches `v2` (testfase) en `master`. `productie` heeft ook geen goedkeuring (besluit Sven 28-09-2026).

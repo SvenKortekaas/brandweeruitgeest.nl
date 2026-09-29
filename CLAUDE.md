@@ -162,7 +162,7 @@ Historische data wordt zo letterlijk mogelijk overgenomen. Alleen splitsen (prio
 - Historische regels met een huisnummer (2013 t/m 2016) behouden het huisnummer vanwege de historische waarde. Uitzondering (besluit 28-09-2026, AVG): bij medische meldingen (reanimatie, afhijsen, letsel, persoon te water e.d.) wordt het huisnummer weggehaald; `check.py` faalt daarop.
 - Bedrijfs- en instellingsnamen in historische regels (bijv. `ABM vd Lem`) blijven staan.
 - `check.py` faalt op een gepubliceerde nieuwe regel zonder geldige prio, adres of plaats, en op een ingevulde prio buiten 1, 2, 3.
-- Nieuwe regels (besluit Sven 27-09-2026): huisnummers worden weggehaald en gemeld (niet afgekeurd); oefeningen zijn geen uitrukken en worden overgeslagen (besluit 28-09-2026); geen soorten meldingen verborgen; de melding is een korte tekst uit de vertaaltabel in `tools/meldingen.yaml`.
+- Nieuwe regels (besluit Sven 27-09-2026): huisnummers worden weggehaald en gemeld (niet afgekeurd); oefeningen zijn geen uitrukken en worden overgeslagen (besluit 28-09-2026); een alarmering die daarna wordt ingetrokken telt wel als uitruk, maar het intrekbericht is geen aparte uitruk: alarm plus intrekking is samen 1 uitruk met de oorspronkelijke melding (besluit 29-09-2026); geen soorten meldingen verborgen; de melding is een korte tekst uit de vertaaltabel in `tools/meldingen.yaml`.
 
 ### Import uit P2000 (`tools/import_p2000.py`, `.github/workflows/p2000.yml`)
 

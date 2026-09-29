@@ -9,13 +9,15 @@ Zonder argumenten worden P2000_TIJDSTIP, P2000_TEKST en P2000_CAPCODES uit de om
 De invoer komt van buiten en wordt behandeld als data: alleen het vaste formaat wordt geaccepteerd.
 
 Uitkomst (exitcode):
-    0  nieuw (geschreven met --apply) of bewust overgeslagen (al aanwezig, intrekking, ...)
+    0  nieuw (geschreven met --apply) of bewust overgeslagen (al aanwezig, proefalarm, ...)
     2  afgekeurd: niets geschreven, de reden staat in de uitvoer
 
 Regels (CLAUDE.md, PLAN-P2000.md):
 - alleen capcode 0107711 (Vrijwilligers) telt;
 - prio 1, 2 of 3; melding via tools/p2000.yaml; alleen straat (of weg en hectometer) en plaats;
 - geen huisnummers, objectnamen of eenheidsnummers; vrije tekst wordt nooit overgenomen;
+- een ingetrokken alarmering telt als uitruk, het intrekbericht zelf niet: het wordt gekoppeld
+  aan de uitruk op dezelfde straat, en staat die er nog niet dan komt de uitruk er één keer bij;
 - bij twijfel niet publiceren: de regel wordt dan niet geschreven en de import faalt zichtbaar.
 """
 
@@ -41,6 +43,9 @@ TOEGESTAAN = re.compile(r"^[\w\s.,:;/()'&+\-]*$")
 PRIO = re.compile(r"^\s*(?:P|PRIO)\s*(\d)\b\s*", re.I)
 REGIO = re.compile(r"^(?:[A-Z]{2,4}-\d{1,2}\b\s*)+")                  # BNH-01
 EXTRA = re.compile(r"\((?:dia|ter info)[^)]*\)|\bdia\s*:\s*\w+", re.I)  # (dia: ja)
+INTREKKEN = re.compile(                                                # (Intrekken Alarm Brw)
+    r"\([^)]*\b(?:intrek\w*|ingetrokken)\b[^)]*\)"
+    r"|\b(?:intrekken|intrekking|ingetrokken)\b(?:\s+alarm\w*)?(?:\s+brw\b)?", re.I)
 EENHEDEN = re.compile(r"(?:\s+\d{4,7})+\s*$")                          # 122030 122002
 WEG = re.compile(r"\b[AN]\s?\d{1,3}\b.*$")                             # A9 Li 61,0 / N203 57,6
 HUISNUMMER = re.compile(r"\s+\d{1,5}\s?[a-zA-Z]{0,2}(?:\s?-\s?\d+)?$")
@@ -165,6 +170,8 @@ def verwerk(tijdstip, tekst, capcodes, cfg, straten, nu):
     for woord in cfg["overslaan"]:
         if woord.lower() in laag:
             return "overgeslagen", None, f"bevat '{woord}'"
+    # Intrekbericht: geen aparte uitruk, wel dezelfde uitruk als de alarmering.
+    tekst = " ".join(INTREKKEN.sub(" ", tekst).split())
     t = lees_tijdstip(tijdstip, nu)
     m = PRIO.match(tekst)
     if not m:
@@ -182,11 +189,12 @@ def verwerk(tijdstip, tekst, capcodes, cfg, straten, nu):
     for woord in cfg.get("niet_publiceren", []):
         if woord.lower() in melding.lower():
             regel["publiceren"] = "nee"
-    # Zelfde uitruk al aanwezig (herhaalalarm, opschaling, of dezelfde melding nog een keer)?
+    # Zelfde uitruk al aanwezig (herhaalalarm, opschaling, intrekking, of dezelfde melding nog een keer)?
     venster = dt.timedelta(minutes=cfg["zelfde_uitruk_minuten"])
     bestaand = lees_jaar(t.year)
-    for r in bestaand:
-        if r["datum"] != regel["datum"] or not r["tijd"]:
+    eerder = bestaand + (lees_jaar(t.year - 1) if (t - venster).year < t.year else [])
+    for r in eerder:
+        if not r["tijd"]:
             continue
         t2 = dt.datetime.fromisoformat(f"{r['datum']} {r['tijd']}").replace(tzinfo=TIJDZONE)
         if abs(t - t2) <= venster and (r["adres"].lower(), r["plaats"].lower()) == (adres.lower(), plaats.lower()):
