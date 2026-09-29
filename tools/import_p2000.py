@@ -171,7 +171,6 @@ def verwerk(tijdstip, tekst, capcodes, cfg, straten, nu):
         if woord.lower() in laag:
             return "overgeslagen", None, f"bevat '{woord}'"
     # Intrekbericht: geen aparte uitruk, wel dezelfde uitruk als de alarmering.
-    intrekking = bool(INTREKKEN.search(tekst))
     tekst = " ".join(INTREKKEN.sub(" ", tekst).split())
     t = lees_tijdstip(tijdstip, nu)
     m = PRIO.match(tekst)
@@ -191,8 +190,7 @@ def verwerk(tijdstip, tekst, capcodes, cfg, straten, nu):
         if woord.lower() in melding.lower():
             regel["publiceren"] = "nee"
     # Zelfde uitruk al aanwezig (herhaalalarm, opschaling, intrekking, of dezelfde melding nog een keer)?
-    minuten = cfg["intrekking_uitruk_minuten"] if intrekking else cfg["zelfde_uitruk_minuten"]
-    venster = dt.timedelta(minutes=minuten)
+    venster = dt.timedelta(minutes=cfg["zelfde_uitruk_minuten"])
     bestaand = lees_jaar(t.year)
     eerder = bestaand + (lees_jaar(t.year - 1) if (t - venster).year < t.year else [])
     for r in eerder:
