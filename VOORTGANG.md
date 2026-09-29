@@ -199,12 +199,14 @@ Fase 3: migratie. Uitgevoerd 28-09-2026, wacht op controle door Sven (op v2.bran
   - P2000-import: herkende afhijsen alleen als "Assistentie ambulance" en til assistentie helemaal niet. `tools/p2000.yaml` aangevuld: "Assistentie ambulance afhijsen" en "Assistentie ambulance til assistentie", ook in de echte P2000-vorm "Ass. Ambu (afhijsen)" en "Ass. Ambu (tilassistentie)". Sven bevestigt dat de twee ingetrokken meldingen in Akersloot blijven staan; wat 03-05-2024 Meerkoetstraat was is niet bekend, blijft "Assistentie ambulance".
 - Besluit Sven 29-09-2026: een ingetrokken alarmering telt als uitruk. Het intrekbericht is geen aparte uitruk: "Brand woning Hogeweg" en daarna de intrekking is samen 1 uitruk "Brand woning, Hogeweg, Uitgeest". Intrekken gebeurt binnen een kwartier (Sven); de import koppelt een intrekbericht daarom aan de uitruk op dezelfde straat binnen het bestaande venster van 30 minuten (`zelfde_uitruk_minuten`); staat die er niet, dan komt de uitruk er één keer bij. Vastgelegd in `CLAUDE.md` en `PLAN-P2000.md`, zelftest aangevuld.
 
+- P2000-import robuuster (29-09-2026): alle 38 berichten van capcode 0107711 uit de tekst van Sven worden goed verwerkt (voorheen 7 afgekeurd). Nieuw: groepen tussen haakjes vooraan ("(Grote BR)" wordt "Grote brand ...", "(Basis pel.1)" wordt Peloton, "(aflossing)" wordt Aflossing), meldingen als "Stank/hind. lucht", "HV materieel (Gaslekkage)", "DV door derden", "BR gerucht", "Ongeval op water", "Herbezet./kazerneren", meer plaatsen (o.a. Heemstede, Santpoort-Noord). Een intrekbericht zonder prio wordt aan de alarmering gekoppeld en anders overgeslagen (zonder prio kan er geen regel komen). "Contact MK"-berichten worden overgeslagen. Onbekende meldingen blijven afgekeurd, zodat Sven het ziet.
+
 ## Volgende stap
 
 Stand 29-09-2026: alles is samengevoegd in `master` (laatste: #59). `v2` en `master` hebben dezelfde inhoud.
 
 1. Eerste echte P2000-uitruk na livegang controleren op de site (nog geen binnengekomen sinds 28-09-2026).
-2. Import robuuster maken met de echte P2000-teksten die Sven plakte (voorvoegsels als "(Grote BR)", meldingen als "OMS brandmelding", "Stank/hind. lucht", "Dier op hoogte").
+2. Import robuuster gemaakt (29-09-2026, zie hieronder). Sven: pull request samenvoegen.
 3. Actuele feiten (Sven): eisen voor nieuwe leden, copyrighttekst, wervingstekst.
 4. Foto's 12-2001 en 12-1536 (Sven, nog niet).
 5. Later: groter logo, omgeving `beheer`, alt-teksten nieuwsfoto's per foto.

@@ -23,6 +23,23 @@ overslaan:
   - testbericht
   - test alarm
   - oefening
+  - contact mk
+
+# Groepen tussen haakjes vóór de melding. "(Grote BR) BR woning" wordt "Grote brand woning".
+schaal:
+  "Grote BR": Grote brand
+  "Middel BR": Middelbrand
+  "Zeer gr. BR": Zeer grote brand
+  "Zeer grote BR": Zeer grote brand
+
+# Groepen tussen haakjes vóór de melding (begin van de tekst binnen de haakjes). Volgt er een
+# herkende melding, dan wint die ("(Pel. GW G3000 1) BR natuur" wordt Natuurbrand); anders is
+# dit de melding ("(Basis pel.1) UGS Laboratoriumweg" wordt Peloton).
+voorvoegsels:
+  "Basis pel": Peloton
+  "Pel.": Peloton
+  "Peloton": Peloton
+  "Aflossing": Aflossing
 
 # Begin van de melding in P2000 -> korte tekst op de site (zelfde stijl als de oude site).
 # Hoofdletters maken niet uit; de langste passende tekst wint. Een melding die hier niet in
@@ -46,6 +63,9 @@ meldingen:
   "BR industrie": Brand industrie
   "BR winkel": Brand winkel
   "BR bijgebouw": Brand bijgebouw
+  "BR woning (schoorsteen)": Brand woning schoorsteen
+  "BR gerucht": Brandgerucht
+  "BR nacontrole": Nacontrole
   "Brand": Brand
   "Brandgerucht": Brandgerucht
   "Nacontrole": Nacontrole
@@ -60,6 +80,11 @@ meldingen:
   "CO melder": CO-melder
   "Gaslekkage": Gaslekkage
   "Gas": Gaslekkage
+  "HV materieel (Gaslekkage)": Gaslekkage
+  "HV overig (Gaslekkage)": Gaslekkage
+  "Stank/hind. lucht (Gaslekkage)": Gaslekkage
+  "Ongeval gev. stof (Gaslekkage)": Gaslekkage
+  "Stank/hind. lucht (gaslucht)": Gaslucht
   "Liftopsluiting": Liftopsluiting
   "Buitensluiting": Buitensluiting
   "Reanimatie": Reanimatie
@@ -93,20 +118,31 @@ meldingen:
   "Waterongeval": Waterongeval
   "Schip in problemen": Schip of watersporter in problemen
   "Ongeval wegvervoer": Ongeval wegvervoer
+  "Ongeval op water": Waterongeval
+  "Ongeval gev. stof": Ongeval gevaarlijke stof
   "Ongeval": Ongeval
   "HV weg": Hulpverlening weg
   "Hulpverlening weg": Hulpverlening weg
   "HV water": Hulpverlening water
+  "HV materieel": Hulpverlening materieel
+  "HV overig": Hulpverlening
   "Hulpverlening": Hulpverlening
   "HV": Hulpverlening
   "Gevaarlijke stof": Ongeval gevaarlijke stof
   "Stormschade": Stormschade
   "Wateroverlast": Wateroverlast
   "Stank/hinder": Stankoverlast
+  "Stank/hind. lucht": Stankoverlast
   "Stankoverlast": Stankoverlast
   "Dienstverlening": Dienstverlening
+  "DV door derden": Dienstverlening
+  "DV": Dienstverlening
+  "Verzorging": Verzorging
+  "Luchtverontreiniging": Luchtverontreiniging
   "Afstemverzoek": Afstemverzoek
   "Herbezetting": Herbezetting kazerne
+  "Herbezet.": Herbezetting kazerne
+  "Herbezet./kazerneren": Herbezetting kazerne
   "Peloton": Peloton
   "Verdachte situatie": Verdachte situatie
   "Explosie": Explosie
@@ -138,6 +174,19 @@ plaatsen:
   - Haarlem
   - IJmuiden
   - Zandvoort
+  - Heemstede
+  - Bloemendaal
+  - Overveen
+  - Santpoort-Noord
+  - Santpoort-Zuid
+  - Driehuis
+  - Velsen-Zuid
+  - Egmond aan Zee
+  - Egmond aan den Hoef
+  - Egmond-Binnen
+  - Koog aan de Zaan
+  - Krommeniedijk
+  - Jisp
 
 # Woorden die vóór het laatste woord van een straatnaam kunnen staan
 # ("Burgemeester van Alphenstraat", "Groot Dorregeest", "J.E. de Witstraat").

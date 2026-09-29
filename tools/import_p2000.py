@@ -108,6 +108,24 @@ def lees_tijdstip(tekst, nu):
     return t
 
 
+def zoek_voorvoegsels(rest, cfg):
+    """Haalt bekende groepen tussen haakjes vooraan weg, zoals "(Grote BR)" of "(Basis pel.1)".
+    Geeft (rest, schaal of None, melding uit het voorvoegsel of None)."""
+    schaal = voor = None
+    while rest.startswith("("):
+        eind = rest.find(")")
+        if eind < 0:
+            break
+        binnen = rest[1:eind].strip().lower()
+        s = next((v for k, v in cfg["schaal"].items() if binnen == k.lower()), None)
+        v = next((v for k, v in cfg["voorvoegsels"].items() if binnen.startswith(k.lower())), None)
+        if not (s or v):
+            break
+        schaal, voor = s or schaal, v or voor
+        rest = rest[eind + 1:].strip()
+    return rest, schaal, voor
+
+
 def zoek_melding(rest, cfg):
     """(korte melding, rest van de tekst na de melding)."""
     laag = rest.lower()
@@ -171,20 +189,34 @@ def verwerk(tijdstip, tekst, capcodes, cfg, straten, nu):
         if woord.lower() in laag:
             return "overgeslagen", None, f"bevat '{woord}'"
     # Intrekbericht: geen aparte uitruk, wel dezelfde uitruk als de alarmering.
+    intrekking = bool(INTREKKEN.search(tekst))
     tekst = " ".join(INTREKKEN.sub(" ", tekst).split())
     t = lees_tijdstip(tijdstip, nu)
     m = PRIO.match(tekst)
-    if not m:
+    if m:
+        prio = m.group(1)
+        if prio not in ("1", "2", "3"):
+            raise Afgekeurd(f"prio {prio} is geen 1, 2 of 3")
+        tekst = tekst[m.end():]
+    elif intrekking:
+        prio = None  # intrekbericht zonder prio: alleen koppelen aan de alarmering
+    else:
         raise Afgekeurd("geen prio (P 1, P 2 of P 3) aan het begin")
-    if m.group(1) not in ("1", "2", "3"):
-        raise Afgekeurd(f"prio {m.group(1)} is geen 1, 2 of 3")
-    rest = REGIO.sub("", tekst[m.end():]).strip()
+    rest = REGIO.sub("", tekst).strip()
     rest = EXTRA.sub(" ", rest)
     rest = EENHEDEN.sub("", " ".join(rest.split())).strip()
-    melding, rest = zoek_melding(rest, cfg)
+    rest, schaal, voor = zoek_voorvoegsels(rest, cfg)
+    try:
+        melding, rest = zoek_melding(rest, cfg)
+    except Afgekeurd:
+        if not voor:
+            raise
+        melding = voor  # "(aflossing) Herenweg Heemstede": het voorvoegsel is de melding
+    if schaal and melding.startswith("Brand "):
+        melding = f"{schaal} {melding[len('Brand '):]}"  # "(Grote BR) BR woning" -> Grote brand woning
     rest, plaats = zoek_plaats(rest, cfg)
     adres = zoek_adres(rest, cfg, straten)
-    regel = {"nr": "", "datum": t.date().isoformat(), "tijd": t.strftime("%H:%M"), "prio": m.group(1),
+    regel = {"nr": "", "datum": t.date().isoformat(), "tijd": t.strftime("%H:%M"), "prio": prio,
              "melding": melding, "adres": adres, "plaats": plaats, "bron": "p2000", "publiceren": "ja"}
     for woord in cfg.get("niet_publiceren", []):
         if woord.lower() in melding.lower():
@@ -199,6 +231,8 @@ def verwerk(tijdstip, tekst, capcodes, cfg, straten, nu):
         t2 = dt.datetime.fromisoformat(f"{r['datum']} {r['tijd']}").replace(tzinfo=TIJDZONE)
         if abs(t - t2) <= venster and (r["adres"].lower(), r["plaats"].lower()) == (adres.lower(), plaats.lower()):
             return "overgeslagen", None, f"al aanwezig als nr {r['nr']} ({r['datum']} {r['tijd']})"
+    if prio is None:
+        return "overgeslagen", None, "intrekbericht zonder prio en zonder alarmering op deze straat binnen het venster"
     vandaag = sum(1 for r in bestaand if r["datum"] == regel["datum"] and r["bron"] == "p2000")
     if vandaag >= cfg["max_per_dag"]:
         raise Afgekeurd(f"al {vandaag} P2000-uitrukken op {regel['datum']}, maximum is {cfg['max_per_dag']}")
