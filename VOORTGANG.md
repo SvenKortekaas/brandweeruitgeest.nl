@@ -200,6 +200,12 @@ Fase 3: migratie. Uitgevoerd 28-09-2026, wacht op controle door Sven (op v2.bran
 - Besluit Sven 29-09-2026: een ingetrokken alarmering telt als uitruk. Het intrekbericht is geen aparte uitruk: "Brand woning Hogeweg" en daarna de intrekking is samen 1 uitruk "Brand woning, Hogeweg, Uitgeest". Intrekken gebeurt binnen een kwartier (Sven); de import koppelt een intrekbericht daarom aan de uitruk op dezelfde straat binnen het bestaande venster van 30 minuten (`zelfde_uitruk_minuten`); staat die er niet, dan komt de uitruk er één keer bij. Vastgelegd in `CLAUDE.md` en `PLAN-P2000.md`, zelftest aangevuld.
 
 - P2000-import robuuster (29-09-2026): alle 38 berichten van capcode 0107711 uit de tekst van Sven worden goed verwerkt (voorheen 7 afgekeurd). Nieuw: groepen tussen haakjes vooraan ("(Grote BR)" wordt "Grote brand ...", "(Basis pel.1)" wordt Peloton, "(aflossing)" wordt Aflossing), meldingen als "Stank/hind. lucht", "HV materieel (Gaslekkage)", "DV door derden", "BR gerucht", "Ongeval op water", "Herbezet./kazerneren", meer plaatsen (o.a. Heemstede, Santpoort-Noord). Een intrekbericht zonder prio wordt aan de alarmering gekoppeld en anders overgeslagen (zonder prio kan er geen regel komen). "Contact MK"-berichten worden overgeslagen. Onbekende meldingen blijven afgekeurd, zodat Sven het ziet.
+- Besluiten Sven 29-09-2026 (P2000-import):
+  1. "Gaslucht" als melding voor "Stank/hind. lucht (gaslucht)": akkoord.
+  2. Intrekbericht zonder prio en zonder eerdere alarmering wordt overgeslagen: akkoord.
+  3. Classificatie van incidenten: klein (1 TS), middel (2 TS en OvD), groot (3 TS en ondersteuning), zeer groot (4 of meer TS, pelotons). Geldt voor BR, HV, WO en IBGS. Op de site: "(Grote BR) BR woning" wordt "Grote brand woning", "(Grote BR) BR duin" wordt "Duinbrand (grote brand)", "(Middel HV) HV weg" wordt "Hulpverlening weg (middelgrote inzet)". Klein krijgt geen toevoeging.
+  4. "Pel. GW G3000" is peloton grootwatervoorziening 3000 meter: op de site "Waterpeloton", bijv. "Natuurbrand (waterpeloton)".
+  5. Plaatsen: alle woonplaatsen (niet alleen gemeenten) in de veiligheidsregio's Kennemerland, Noord-Holland-Noord, Zaanstreek-Waterland en Amsterdam-Amstelland. Staan in `tools/plaatsen.yaml` (225 plaatsen, samengesteld door Claude; ontbreekt er een, dan keurt de import af en kan hij worden toegevoegd).
 
 ## Volgende stap
 

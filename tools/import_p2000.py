@@ -35,6 +35,7 @@ import yaml
 ROOT = Path(__file__).resolve().parent.parent
 UITRUKKEN = ROOT / "data" / "uitrukken"
 INSTELLINGEN = ROOT / "tools" / "p2000.yaml"
+PLAATSEN = ROOT / "tools" / "plaatsen.yaml"
 KOLOMMEN = ["nr", "datum", "tijd", "prio", "melding", "adres", "plaats", "bron", "publiceren"]
 TIJDZONE = ZoneInfo("Europe/Amsterdam")
 
@@ -62,7 +63,10 @@ class Afgekeurd(Exception):
 
 def lees_instellingen():
     with INSTELLINGEN.open(encoding="utf-8") as f:
-        return yaml.safe_load(f)
+        cfg = yaml.safe_load(f)
+    with PLAATSEN.open(encoding="utf-8") as f:
+        cfg["plaatsen"] = [p for regio in yaml.safe_load(f).values() for p in regio]
+    return cfg
 
 
 def lees_jaar(jaar):
@@ -108,22 +112,47 @@ def lees_tijdstip(tekst, nu):
     return t
 
 
+INZET = re.compile(r"^(zeer\s*gr(?:\.|oot|ote)?|grote?|middel|kleine?)\s*(br|brand|hv|wo|ibgs)$", re.I)
+
+
 def zoek_voorvoegsels(rest, cfg):
     """Haalt bekende groepen tussen haakjes vooraan weg, zoals "(Grote BR)" of "(Basis pel.1)".
-    Geeft (rest, schaal of None, melding uit het voorvoegsel of None)."""
-    schaal = voor = None
+    Geeft (rest, inzet of None, melding uit het voorvoegsel of None).
+    inzet is (grootte, soort), bijv. ("groot", "BR"); klein geeft geen inzet."""
+    inzet = voor = None
     while rest.startswith("("):
         eind = rest.find(")")
         if eind < 0:
             break
-        binnen = rest[1:eind].strip().lower()
-        s = next((v for k, v in cfg["schaal"].items() if binnen == k.lower()), None)
-        v = next((v for k, v in cfg["voorvoegsels"].items() if binnen.startswith(k.lower())), None)
-        if not (s or v):
-            break
-        schaal, voor = s or schaal, v or voor
+        binnen = " ".join(rest[1:eind].split())
+        m = INZET.match(binnen)
+        v = None
+        if not m:
+            passend = [k for k in cfg["voorvoegsels"] if binnen.lower().startswith(k.lower())]
+            if not passend:
+                break
+            v = cfg["voorvoegsels"][max(passend, key=len)]
+        elif not m.group(1).lower().startswith("klein"):
+            g = m.group(1).lower()
+            grootte = "zeer groot" if g.startswith("zeer") else "groot" if g.startswith("gro") else "middel"
+            soort = "BR" if m.group(2).lower() == "brand" else m.group(2).upper()
+            inzet = (grootte, soort)
+        voor = v or voor
         rest = rest[eind + 1:].strip()
-    return rest, schaal, voor
+    return rest, inzet, voor
+
+
+def met_inzet(melding, inzet, cfg):
+    """Voegt de inzetgrootte toe aan de melding (None als melding: alleen de classificatie)."""
+    namen = cfg["inzet"]["groottes"][inzet[0]]
+    soort = cfg["inzet"]["soorten"][inzet[1]]
+    if inzet[1] == "BR":
+        if melding is None or melding == "Brand":
+            return namen["brand"]
+        if melding.startswith("Brand "):
+            return f"{namen['brand']} {melding[len('Brand '):]}"
+        return f"{melding} ({namen['brand'].lower()})"  # Duinbrand (grote brand)
+    return f"{melding or soort} ({namen['inzet']})"
 
 
 def zoek_melding(rest, cfg):
@@ -147,7 +176,7 @@ def zoek_plaats(rest, cfg):
     for p in sorted(cfg["plaatsen"], key=len, reverse=True):
         if rest.lower().endswith(" " + p.lower()) or rest.lower() == p.lower():
             return rest[: len(rest) - len(p)].strip(), p
-    raise Afgekeurd("geen bekende plaats aan het eind; voeg de plaats toe aan 'plaatsen' in tools/p2000.yaml")
+    raise Afgekeurd("geen bekende plaats aan het eind; voeg de plaats toe aan tools/plaatsen.yaml")
 
 
 def zoek_adres(rest, cfg, straten):
@@ -205,15 +234,17 @@ def verwerk(tijdstip, tekst, capcodes, cfg, straten, nu):
     rest = REGIO.sub("", tekst).strip()
     rest = EXTRA.sub(" ", rest)
     rest = EENHEDEN.sub("", " ".join(rest.split())).strip()
-    rest, schaal, voor = zoek_voorvoegsels(rest, cfg)
+    rest, inzet, voor = zoek_voorvoegsels(rest, cfg)
     try:
         melding, rest = zoek_melding(rest, cfg)
+        if voor:
+            melding = f"{melding} ({voor.lower()})"  # "(Pel. GW G3000 1) BR natuur"
     except Afgekeurd:
-        if not voor:
+        if not (voor or inzet):
             raise
         melding = voor  # "(aflossing) Herenweg Heemstede": het voorvoegsel is de melding
-    if schaal and melding.startswith("Brand "):
-        melding = f"{schaal} {melding[len('Brand '):]}"  # "(Grote BR) BR woning" -> Grote brand woning
+    if inzet:
+        melding = met_inzet(melding, inzet, cfg)
     rest, plaats = zoek_plaats(rest, cfg)
     adres = zoek_adres(rest, cfg, straten)
     regel = {"nr": "", "datum": t.date().isoformat(), "tijd": t.strftime("%H:%M"), "prio": prio,

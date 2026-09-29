@@ -25,17 +25,31 @@ overslaan:
   - oefening
   - contact mk
 
-# Groepen tussen haakjes vóór de melding. "(Grote BR) BR woning" wordt "Grote brand woning".
-schaal:
-  "Grote BR": Grote brand
-  "Middel BR": Middelbrand
-  "Zeer gr. BR": Zeer grote brand
-  "Zeer grote BR": Zeer grote brand
+# Classificatie van de inzet, tussen haakjes vóór de melding: "(Middel BR)", "(Grote HV)",
+# "(Zeer gr. BR)". Klein is de gewone inzet en krijgt geen toevoeging. Soorten: BR (brand),
+# HV (hulpverlening), WO (waterongeval), IBGS (incidentbestrijding gevaarlijke stoffen).
+#   brand:  "(Grote BR) BR woning" wordt "Grote brand woning", "(Grote BR) BR duin" wordt
+#           "Duinbrand (grote brand)"
+#   anders: "(Middel HV) HV weg" wordt "Hulpverlening weg (middelgrote inzet)"
+# Volgt er geen herkende melding, dan wordt de melding "<soort> (<inzet>)".
+inzet:
+  groottes:
+    middel: {brand: Middelbrand, inzet: middelgrote inzet}
+    groot: {brand: Grote brand, inzet: grote inzet}
+    zeer groot: {brand: Zeer grote brand, inzet: zeer grote inzet}
+  soorten:
+    BR: Brand
+    HV: Hulpverlening
+    WO: Waterongeval
+    IBGS: Ongeval gevaarlijke stof
 
-# Groepen tussen haakjes vóór de melding (begin van de tekst binnen de haakjes). Volgt er een
-# herkende melding, dan wint die ("(Pel. GW G3000 1) BR natuur" wordt Natuurbrand); anders is
-# dit de melding ("(Basis pel.1) UGS Laboratoriumweg" wordt Peloton).
+# Groepen tussen haakjes vóór de melding (begin van de tekst binnen de haakjes, de langste
+# wint). Volgt er een herkende melding, dan komt dit erachter: "(Pel. GW G3000 1) BR natuur"
+# wordt "Natuurbrand (waterpeloton)". Anders is dit de melding: "(Basis pel.1) UGS
+# Laboratoriumweg" wordt "Peloton". Pel. GW G3000 = peloton grootwatervoorziening 3000 m.
 voorvoegsels:
+  "Pel. GW": Waterpeloton
+  "Pel GW": Waterpeloton
   "Basis pel": Peloton
   "Pel.": Peloton
   "Peloton": Peloton
@@ -147,46 +161,7 @@ meldingen:
   "Verdachte situatie": Verdachte situatie
   "Explosie": Explosie
 
-# Plaatsen die in P2000 aan het eind van het adres kunnen staan.
-plaatsen:
-  - Uitgeest
-  - Akersloot
-  - Alkmaar
-  - Assendelft
-  - Bakkum
-  - Beverwijk
-  - Castricum
-  - Heemskerk
-  - Heiloo
-  - Krommenie
-  - Limmen
-  - Markenbinnen
-  - Oostknollendam
-  - Spijkerboor
-  - Starnmeer
-  - Velsen-Noord
-  - Westknollendam
-  - Wijk aan Zee
-  - Wormer
-  - Wormerveer
-  - Zaandam
-  - Zaandijk
-  - Haarlem
-  - IJmuiden
-  - Zandvoort
-  - Heemstede
-  - Bloemendaal
-  - Overveen
-  - Santpoort-Noord
-  - Santpoort-Zuid
-  - Driehuis
-  - Velsen-Zuid
-  - Egmond aan Zee
-  - Egmond aan den Hoef
-  - Egmond-Binnen
-  - Koog aan de Zaan
-  - Krommeniedijk
-  - Jisp
+# Plaatsen staan in tools/plaatsen.yaml (per veiligheidsregio).
 
 # Woorden die vóór het laatste woord van een straatnaam kunnen staan
 # ("Burgemeester van Alphenstraat", "Groot Dorregeest", "J.E. de Witstraat").
