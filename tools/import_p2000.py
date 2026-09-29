@@ -152,7 +152,7 @@ def met_inzet(melding, inzet, cfg):
         if melding.startswith("Brand "):
             return f"{namen['brand']} {melding[len('Brand '):]}"
         return f"{melding} ({namen['brand'].lower()})"  # Duinbrand (grote brand)
-    return f"{melding or soort} ({namen['inzet']})"
+    return f"{melding or soort} ({namen['inzet']} {inzet[1]})"  # Hulpverlening weg (middel HV)
 
 
 def zoek_melding(rest, cfg):

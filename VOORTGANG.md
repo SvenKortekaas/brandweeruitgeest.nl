@@ -203,7 +203,7 @@ Fase 3: migratie. Uitgevoerd 28-09-2026, wacht op controle door Sven (op v2.bran
 - Besluiten Sven 29-09-2026 (P2000-import):
   1. "Gaslucht" als melding voor "Stank/hind. lucht (gaslucht)": akkoord.
   2. Intrekbericht zonder prio en zonder eerdere alarmering wordt overgeslagen: akkoord.
-  3. Classificatie van incidenten: klein (1 TS), middel (2 TS en OvD), groot (3 TS en ondersteuning), zeer groot (4 of meer TS, pelotons). Geldt voor BR, HV, WO en IBGS. Op de site: "(Grote BR) BR woning" wordt "Grote brand woning", "(Grote BR) BR duin" wordt "Duinbrand (grote brand)", "(Middel HV) HV weg" wordt "Hulpverlening weg (middelgrote inzet)". Klein krijgt geen toevoeging.
+  3. Classificatie van incidenten: klein (1 TS), middel (2 TS en OvD), groot (3 TS en ondersteuning), zeer groot (4 of meer TS, pelotons). Geldt voor BR, HV, WO en IBGS. Op de site: "(Grote BR) BR woning" wordt "Grote brand woning", "(Grote BR) BR duin" wordt "Duinbrand (grote brand)", "(Middel HV) HV weg" wordt "Hulpverlening weg (middel HV)", "(Grote WO)" wordt "(groot WO)", "(Grote IBGS)" wordt "(groot IBGS)". Brand vooraan, de rest erachter: akkoord Sven. Klein krijgt geen toevoeging.
   4. "Pel. GW G3000" is peloton grootwatervoorziening 3000 meter: op de site "Waterpeloton", bijv. "Natuurbrand (waterpeloton)".
   5. Plaatsen: alle woonplaatsen (niet alleen gemeenten) in de veiligheidsregio's Kennemerland, Noord-Holland-Noord, Zaanstreek-Waterland en Amsterdam-Amstelland. Staan in `tools/plaatsen.yaml` (225 plaatsen, samengesteld door Claude; ontbreekt er een, dan keurt de import af en kan hij worden toegevoegd).
 

@@ -30,13 +30,14 @@ overslaan:
 # HV (hulpverlening), WO (waterongeval), IBGS (incidentbestrijding gevaarlijke stoffen).
 #   brand:  "(Grote BR) BR woning" wordt "Grote brand woning", "(Grote BR) BR duin" wordt
 #           "Duinbrand (grote brand)"
-#   anders: "(Middel HV) HV weg" wordt "Hulpverlening weg (middelgrote inzet)"
-# Volgt er geen herkende melding, dan wordt de melding "<soort> (<inzet>)".
+#   anders: "(Middel HV) HV weg" wordt "Hulpverlening weg (middel HV)", "(Grote WO)" wordt
+#           "(groot WO)", "(Grote IBGS)" wordt "(groot IBGS)" (besluit Sven 29-09-2026)
+# Volgt er geen herkende melding, dan wordt de melding "<soort> (<inzet> <code>)".
 inzet:
   groottes:
-    middel: {brand: Middelbrand, inzet: middelgrote inzet}
-    groot: {brand: Grote brand, inzet: grote inzet}
-    zeer groot: {brand: Zeer grote brand, inzet: zeer grote inzet}
+    middel: {brand: Middelbrand, inzet: middel}
+    groot: {brand: Grote brand, inzet: groot}
+    zeer groot: {brand: Zeer grote brand, inzet: zeer groot}
   soorten:
     BR: Brand
     HV: Hulpverlening
