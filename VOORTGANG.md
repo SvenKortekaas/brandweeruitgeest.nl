@@ -188,8 +188,13 @@ Fase 3: migratie. Uitgevoerd 28-09-2026, wacht op controle door Sven (op v2.bran
 
 - 28-09-2026, livegang afgerond: echte opruim-run geslaagd, brandweeruitgeest.nl live. Controle op het hoofddomein: 473 oude URL's, 69 pagina's, headers, www en http, 0 fouten (hier en in GitHub Actions). Geen testadres in de site. Home Assistant stuurt P2000 nu naar `master`; proefalarm via `master` terecht overgeslagen.
 
+- 28-09-2026, opruimen repo (akkoord Sven: "ja, ja en ja"):
+  1. Pull request #57 (documentatie): Sven voegt samen.
+  2. `legacy/` verwijderd, samen met de eenmalige scripts `tools/migrate_hugo.py` en `tools/inventaris_legacy.py` die alleen `legacy/` lazen. `data/legacy-urls.csv` en de tellingen in `check.py` blijven. De bestanden staan nog in de git-historie (ook de ongeldige Google-key in `legacy/config.toml`).
+  3. De drie Dependabot-pull requests (#53, #54, #55) voor het Hugo-thema gesloten, met uitleg.
+
 ## Volgende stap
 
-1. Sven: pull request met deze documentatie samenvoegen.
-2. Later, na akkoord Sven: `legacy/` verwijderen, de drie Dependabot-pull requests voor het Hugo-thema sluiten, groter logo.
-3. Eerste echte P2000-uitruk na livegang controleren op de site.
+1. Sven: pull request "Oude Hugo-site verwijderd" samenvoegen. #57 (documentatie) is samengevoegd voordat het verwijderen van `legacy/` erin kwam; dat volgt daarom alsnog apart.
+2. Eerste echte P2000-uitruk na livegang controleren op de site.
+3. Later: groter logo (Sven).

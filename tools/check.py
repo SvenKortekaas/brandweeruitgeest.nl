@@ -29,7 +29,7 @@ DATA = ROOT / "data"
 # (oude URL's die 200 moeten geven, en tellingen per jaar) alleen waarschuwingen.
 MIGRATIE_KLAAR = True
 
-# Telling uit legacy/content/JJJJ.md (fase 1, MIGRATIE.md).
+# Telling uit de oude site (legacy/content/JJJJ.md, fase 1, MIGRATIE.md). Vast gegeven, de map is verwijderd.
 LEGACY_TELLING = {2008: 95, 2009: 113, 2010: 119, 2011: 127, 2012: 112, 2013: 116, 2014: 104,
                   2015: 91, 2016: 106, 2017: 126, 2018: 124, 2019: 76, 2020: 98, 2021: 69, 2022: 52}
 # Oude regels die bewust niet zijn overgenomen (oefening 2012, besluit Sven 28-09-2026),
