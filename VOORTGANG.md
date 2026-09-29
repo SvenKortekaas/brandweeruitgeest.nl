@@ -195,8 +195,8 @@ Fase 3: migratie. Uitgevoerd 28-09-2026, wacht op controle door Sven (op v2.bran
 
 - 29-09-2026: Sven vraagt waar uitrukken als afhijsen en til assistentie zijn gebleven; die moeten blijven bestaan.
   - 2008 t/m 2022: staan er allemaal nog (bijv. "Assistentie Ambulance Afhijsen", "Til Assistentie Ambulance").
-  - 2023 t/m nu (`bron=eigen`): de gegevens bevatten alleen de algemene soort, op de site "Gezondheid" (28 regels). Of het afhijsen of til assistentie was, staat er niet in. Vraag aan Sven hoe die te noemen.
-  - P2000-import: herkende afhijsen alleen als "Assistentie ambulance" en til assistentie helemaal niet. `tools/p2000.yaml` aangevuld: "Assistentie ambulance afhijsen" en "Assistentie ambulance til assistentie".
+  - 2023 t/m nu (`bron=eigen`): de gegevens bevatten alleen de algemene soort, op de site "Gezondheid" (28 regels). Sven leverde de P2000-berichten van capcode 0107711 (p2000.page) aan; op datum en straat gekoppeld: 18 keer "Assistentie ambulance afhijsen", 7 keer "Assistentie ambulance til assistentie" en 3 keer "Assistentie ambulance" (05-04-2023 Wagnerlaan, Akersloot en 03-02-2026 Handelstraat, Akersloot: P2000 zonder detail; 03-05-2024 Meerkoetstraat: niet in de aangeleverde lijst). "Gezondheid" komt niet meer voor.
+  - P2000-import: herkende afhijsen alleen als "Assistentie ambulance" en til assistentie helemaal niet. `tools/p2000.yaml` aangevuld: "Assistentie ambulance afhijsen" en "Assistentie ambulance til assistentie", ook in de echte P2000-vorm "Ass. Ambu (afhijsen)" en "Ass. Ambu (tilassistentie)". "Intrekken" (bijv. "(Intrekken Alarm Brw)") wordt overgeslagen.
 
 ## Volgende stap
 

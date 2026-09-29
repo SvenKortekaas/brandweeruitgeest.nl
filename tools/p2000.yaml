@@ -16,6 +16,7 @@ zelfde_uitruk_minuten: 30
 overslaan:
   - intrekking
   - ingetrokken
+  - intrekken
   - proefalarm
   - testbericht
   - test alarm
@@ -69,6 +70,9 @@ meldingen:
   "Assistentie ambulance afhijsen": Assistentie ambulance afhijsen
   "Afhijsen patient": Assistentie ambulance afhijsen
   "Afhijsen patiënt": Assistentie ambulance afhijsen
+  "Ass. ambu (afhijsen)": Assistentie ambulance afhijsen
+  "Ass. ambu (tilassistentie)": Assistentie ambulance til assistentie
+  "Ass. ambu (til assistentie)": Assistentie ambulance til assistentie
   "Til assistentie": Assistentie ambulance til assistentie
   "Tilassistentie": Assistentie ambulance til assistentie
   "Ass. ambu til assistentie": Assistentie ambulance til assistentie
