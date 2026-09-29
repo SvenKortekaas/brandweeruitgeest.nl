@@ -201,6 +201,10 @@ Fase 3: migratie. Uitgevoerd 28-09-2026, wacht op controle door Sven (op v2.bran
 
 ## Volgende stap
 
-1. Sven: pull request "Oude Hugo-site verwijderd" samenvoegen. #57 (documentatie) is samengevoegd voordat het verwijderen van `legacy/` erin kwam; dat volgt daarom alsnog apart.
-2. Eerste echte P2000-uitruk na livegang controleren op de site.
-3. Later: groter logo (Sven).
+Stand 29-09-2026: alles is samengevoegd in `master` (laatste: #59). `v2` en `master` hebben dezelfde inhoud.
+
+1. Eerste echte P2000-uitruk na livegang controleren op de site (nog geen binnengekomen sinds 28-09-2026).
+2. Import robuuster maken met de echte P2000-teksten die Sven plakte (voorvoegsels als "(Grote BR)", meldingen als "OMS brandmelding", "Stank/hind. lucht", "Dier op hoogte").
+3. Actuele feiten (Sven): eisen voor nieuwe leden, copyrighttekst, wervingstekst.
+4. Foto's 12-2001 en 12-1536 (Sven, nog niet).
+5. Later: groter logo, omgeving `beheer`, alt-teksten nieuwsfoto's per foto.
