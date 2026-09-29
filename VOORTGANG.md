@@ -193,6 +193,11 @@ Fase 3: migratie. Uitgevoerd 28-09-2026, wacht op controle door Sven (op v2.bran
   2. `legacy/` verwijderd, samen met de eenmalige scripts `tools/migrate_hugo.py` en `tools/inventaris_legacy.py` die alleen `legacy/` lazen. `data/legacy-urls.csv` en de tellingen in `check.py` blijven. De bestanden staan nog in de git-historie (ook de ongeldige Google-key in `legacy/config.toml`).
   3. De drie Dependabot-pull requests (#53, #54, #55) voor het Hugo-thema gesloten, met uitleg.
 
+- 29-09-2026: Sven vraagt waar uitrukken als afhijsen en til assistentie zijn gebleven; die moeten blijven bestaan.
+  - 2008 t/m 2022: staan er allemaal nog (bijv. "Assistentie Ambulance Afhijsen", "Til Assistentie Ambulance").
+  - 2023 t/m nu (`bron=eigen`): de gegevens bevatten alleen de algemene soort, op de site "Gezondheid" (28 regels). Of het afhijsen of til assistentie was, staat er niet in. Vraag aan Sven hoe die te noemen.
+  - P2000-import: herkende afhijsen alleen als "Assistentie ambulance" en til assistentie helemaal niet. `tools/p2000.yaml` aangevuld: "Assistentie ambulance afhijsen" en "Assistentie ambulance til assistentie".
+
 ## Volgende stap
 
 1. Sven: pull request "Oude Hugo-site verwijderd" samenvoegen. #57 (documentatie) is samengevoegd voordat het verwijderen van `legacy/` erin kwam; dat volgt daarom alsnog apart.
