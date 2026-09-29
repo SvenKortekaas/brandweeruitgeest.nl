@@ -211,7 +211,7 @@ Fase 3: migratie. Uitgevoerd 28-09-2026, wacht op controle door Sven (op v2.bran
 
 Stand 29-09-2026: alles is samengevoegd in `master` (laatste: #59). `v2` en `master` hebben dezelfde inhoud.
 
-1. Eerste echte P2000-uitruk na livegang controleren op de site (nog geen binnengekomen sinds 28-09-2026).
+1. Eerste echte P2000-uitruk (29-09-2026 18:51, OMS brandmelding Vermaningspad, Uitgeest): Home Assistant en de import werkten, maar het wegschrijven naar `master` werd geweigerd door de branchbeveiliging ("Changes must be made through a pull request"). Sven: de workflow moet direct naar `master` mogen (bypass voor GitHub Actions, of de regel voor pull requests en verplichte checks uit), daarna de mislukte run "P2000-uitruk" opnieuw starten.
 2. Import robuuster gemaakt (29-09-2026, zie hieronder). Sven: pull request samenvoegen.
 3. Actuele feiten (Sven): eisen voor nieuwe leden, copyrighttekst, wervingstekst.
 4. Foto's 12-2001 en 12-1536 (Sven, nog niet).
