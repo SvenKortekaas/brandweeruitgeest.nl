@@ -53,6 +53,12 @@ jobs:
             --tekst "P 2 BNH-01 Proefalarm kazerne Molenwerf Uitgeest"
           python tools/import_p2000.py --tijdstip "$nu" --capcodes 0107711 \
             --tekst "P 1 BNH-01 (Intrekken Alarm Brw) BR woning Molenwerf Uitgeest 127131"
+          python tools/import_p2000.py --tijdstip "$nu" --capcodes 0107711 \
+            --tekst "P 1 BNH-01 (Grote BR) BR woning (schoorsteen) Molenwerf Uitgeest 122030"
+          python tools/import_p2000.py --tijdstip "$nu" --capcodes 0107711 \
+            --tekst "P 2 BNH-02 Stank/hind. lucht (Gaslekkage) (gaslucht) (buiten) Molenwerf Uitgeest 122030"
+          python tools/import_p2000.py --tijdstip "$nu" --capcodes 0107711 \
+            --tekst "P 1 BNH-01 (Middel HV) HV weg A9 Li 60,1 Uitgeest 122030"
           if python tools/import_p2000.py --tijdstip "$nu" --capcodes 0106530 \
               --tekst "P 1 BNH-01 BR woning Molenwerf Uitgeest"; then
             echo "FOUT: melding zonder capcode 0107711 is niet afgekeurd"; exit 1

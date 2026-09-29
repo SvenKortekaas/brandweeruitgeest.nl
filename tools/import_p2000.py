@@ -35,6 +35,7 @@ import yaml
 ROOT = Path(__file__).resolve().parent.parent
 UITRUKKEN = ROOT / "data" / "uitrukken"
 INSTELLINGEN = ROOT / "tools" / "p2000.yaml"
+PLAATSEN = ROOT / "tools" / "plaatsen.yaml"
 KOLOMMEN = ["nr", "datum", "tijd", "prio", "melding", "adres", "plaats", "bron", "publiceren"]
 TIJDZONE = ZoneInfo("Europe/Amsterdam")
 
@@ -62,7 +63,10 @@ class Afgekeurd(Exception):
 
 def lees_instellingen():
     with INSTELLINGEN.open(encoding="utf-8") as f:
-        return yaml.safe_load(f)
+        cfg = yaml.safe_load(f)
+    with PLAATSEN.open(encoding="utf-8") as f:
+        cfg["plaatsen"] = [p for regio in yaml.safe_load(f).values() for p in regio]
+    return cfg
 
 
 def lees_jaar(jaar):
@@ -108,6 +112,49 @@ def lees_tijdstip(tekst, nu):
     return t
 
 
+INZET = re.compile(r"^(zeer\s*gr(?:\.|oot|ote)?|grote?|middel|kleine?)\s*(br|brand|hv|wo|ibgs)$", re.I)
+
+
+def zoek_voorvoegsels(rest, cfg):
+    """Haalt bekende groepen tussen haakjes vooraan weg, zoals "(Grote BR)" of "(Basis pel.1)".
+    Geeft (rest, inzet of None, melding uit het voorvoegsel of None).
+    inzet is (grootte, soort), bijv. ("groot", "BR"); klein geeft geen inzet."""
+    inzet = voor = None
+    while rest.startswith("("):
+        eind = rest.find(")")
+        if eind < 0:
+            break
+        binnen = " ".join(rest[1:eind].split())
+        m = INZET.match(binnen)
+        v = None
+        if not m:
+            passend = [k for k in cfg["voorvoegsels"] if binnen.lower().startswith(k.lower())]
+            if not passend:
+                break
+            v = cfg["voorvoegsels"][max(passend, key=len)]
+        elif not m.group(1).lower().startswith("klein"):
+            g = m.group(1).lower()
+            grootte = "zeer groot" if g.startswith("zeer") else "groot" if g.startswith("gro") else "middel"
+            soort = "BR" if m.group(2).lower() == "brand" else m.group(2).upper()
+            inzet = (grootte, soort)
+        voor = v or voor
+        rest = rest[eind + 1:].strip()
+    return rest, inzet, voor
+
+
+def met_inzet(melding, inzet, cfg):
+    """Voegt de inzetgrootte toe aan de melding (None als melding: alleen de classificatie)."""
+    namen = cfg["inzet"]["groottes"][inzet[0]]
+    soort = cfg["inzet"]["soorten"][inzet[1]]
+    if inzet[1] == "BR":
+        if melding is None or melding == "Brand":
+            return namen["brand"]
+        if melding.startswith("Brand "):
+            return f"{namen['brand']} {melding[len('Brand '):]}"
+        return f"{melding} ({namen['brand'].lower()})"  # Duinbrand (grote brand)
+    return f"{melding or soort} ({namen['inzet']} {inzet[1]})"  # Hulpverlening weg (middel HV)
+
+
 def zoek_melding(rest, cfg):
     """(korte melding, rest van de tekst na de melding)."""
     laag = rest.lower()
@@ -129,7 +176,7 @@ def zoek_plaats(rest, cfg):
     for p in sorted(cfg["plaatsen"], key=len, reverse=True):
         if rest.lower().endswith(" " + p.lower()) or rest.lower() == p.lower():
             return rest[: len(rest) - len(p)].strip(), p
-    raise Afgekeurd("geen bekende plaats aan het eind; voeg de plaats toe aan 'plaatsen' in tools/p2000.yaml")
+    raise Afgekeurd("geen bekende plaats aan het eind; voeg de plaats toe aan tools/plaatsen.yaml")
 
 
 def zoek_adres(rest, cfg, straten):
@@ -171,20 +218,36 @@ def verwerk(tijdstip, tekst, capcodes, cfg, straten, nu):
         if woord.lower() in laag:
             return "overgeslagen", None, f"bevat '{woord}'"
     # Intrekbericht: geen aparte uitruk, wel dezelfde uitruk als de alarmering.
+    intrekking = bool(INTREKKEN.search(tekst))
     tekst = " ".join(INTREKKEN.sub(" ", tekst).split())
     t = lees_tijdstip(tijdstip, nu)
     m = PRIO.match(tekst)
-    if not m:
+    if m:
+        prio = m.group(1)
+        if prio not in ("1", "2", "3"):
+            raise Afgekeurd(f"prio {prio} is geen 1, 2 of 3")
+        tekst = tekst[m.end():]
+    elif intrekking:
+        prio = None  # intrekbericht zonder prio: alleen koppelen aan de alarmering
+    else:
         raise Afgekeurd("geen prio (P 1, P 2 of P 3) aan het begin")
-    if m.group(1) not in ("1", "2", "3"):
-        raise Afgekeurd(f"prio {m.group(1)} is geen 1, 2 of 3")
-    rest = REGIO.sub("", tekst[m.end():]).strip()
+    rest = REGIO.sub("", tekst).strip()
     rest = EXTRA.sub(" ", rest)
     rest = EENHEDEN.sub("", " ".join(rest.split())).strip()
-    melding, rest = zoek_melding(rest, cfg)
+    rest, inzet, voor = zoek_voorvoegsels(rest, cfg)
+    try:
+        melding, rest = zoek_melding(rest, cfg)
+        if voor:
+            melding = f"{melding} ({voor.lower()})"  # "(Pel. GW G3000 1) BR natuur"
+    except Afgekeurd:
+        if not (voor or inzet):
+            raise
+        melding = voor  # "(aflossing) Herenweg Heemstede": het voorvoegsel is de melding
+    if inzet:
+        melding = met_inzet(melding, inzet, cfg)
     rest, plaats = zoek_plaats(rest, cfg)
     adres = zoek_adres(rest, cfg, straten)
-    regel = {"nr": "", "datum": t.date().isoformat(), "tijd": t.strftime("%H:%M"), "prio": m.group(1),
+    regel = {"nr": "", "datum": t.date().isoformat(), "tijd": t.strftime("%H:%M"), "prio": prio,
              "melding": melding, "adres": adres, "plaats": plaats, "bron": "p2000", "publiceren": "ja"}
     for woord in cfg.get("niet_publiceren", []):
         if woord.lower() in melding.lower():
@@ -199,6 +262,8 @@ def verwerk(tijdstip, tekst, capcodes, cfg, straten, nu):
         t2 = dt.datetime.fromisoformat(f"{r['datum']} {r['tijd']}").replace(tzinfo=TIJDZONE)
         if abs(t - t2) <= venster and (r["adres"].lower(), r["plaats"].lower()) == (adres.lower(), plaats.lower()):
             return "overgeslagen", None, f"al aanwezig als nr {r['nr']} ({r['datum']} {r['tijd']})"
+    if prio is None:
+        return "overgeslagen", None, "intrekbericht zonder prio en zonder alarmering op deze straat binnen het venster"
     vandaag = sum(1 for r in bestaand if r["datum"] == regel["datum"] and r["bron"] == "p2000")
     if vandaag >= cfg["max_per_dag"]:
         raise Afgekeurd(f"al {vandaag} P2000-uitrukken op {regel['datum']}, maximum is {cfg['max_per_dag']}")

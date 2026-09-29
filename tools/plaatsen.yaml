@@ -1,0 +1,237 @@
+# Plaatsen (woonplaatsen, niet alleen gemeenten) in de veiligheidsregio's waar brandweer
+# Uitgeest naartoe kan worden gealarmeerd (besluit Sven 29-09-2026). Gebruikt door
+# tools/import_p2000.py: de plaats staat in P2000 aan het eind van het adres.
+# Ontbreekt een plaats, dan keurt de import de melding af; voeg hem dan hier toe.
+
+Kennemerland:
+  - Aerdenhout
+  - Akersloot
+  - Bakkum
+  - Badhoevedorp
+  - Beinsdorp
+  - Bennebroek
+  - Bentveld
+  - Beverwijk
+  - Bloemendaal
+  - Boesingheliede
+  - Buitenkaag
+  - Burgerveen
+  - Castricum
+  - Cruquius
+  - De Woude
+  - Driehuis
+  - Haarlem
+  - Halfweg
+  - Heemskerk
+  - Heemstede
+  - Hoofddorp
+  - IJmuiden
+  - Leimuiderbrug
+  - Lijnden
+  - Limmen
+  - Lisserbroek
+  - Nieuw-Vennep
+  - Nieuwebrug
+  - Oude Meer
+  - Overveen
+  - Rijsenhout
+  - Rozenburg
+  - Santpoort-Noord
+  - Santpoort-Zuid
+  - Schiphol
+  - Schiphol-Rijk
+  - Spaarndam
+  - Uitgeest
+  - Velsen-Noord
+  - Velsen-Zuid
+  - Velserbroek
+  - Vijfhuizen
+  - Vogelenzang
+  - Weteringbrug
+  - Wijk aan Zee
+  - Zandvoort
+  - Zwaanshoek
+  - Zwanenburg
+
+Noord-Holland-Noord:
+  - Aartswoud
+  - Abbekerk
+  - Alkmaar
+  - Andijk
+  - Anna Paulowna
+  - Avenhorn
+  - Barsingerhorn
+  - Benningbroek
+  - Bergen
+  - Bergen aan Zee
+  - Berkhout
+  - Blokker
+  - Bovenkarspel
+  - Breezand
+  - Broek op Langedijk
+  - Burgerbrug
+  - Callantsoog
+  - Camperduin
+  - De Cocksdorp
+  - De Goorn
+  - De Koog
+  - De Rijp
+  - De Waal
+  - De Weere
+  - Den Burg
+  - Den Helder
+  - Den Hoorn
+  - Den Oever
+  - Dirkshorn
+  - Driehuizen
+  - Egmond aan den Hoef
+  - Egmond aan Zee
+  - Egmond-Binnen
+  - Eenigenburg
+  - Enkhuizen
+  - Graft
+  - Groet
+  - Grootebroek
+  - Grootschermer
+  - Grosthuizen
+  - Hargen
+  - Haringhuizen
+  - Hauwert
+  - Heerhugowaard
+  - Heiloo
+  - Hem
+  - Hensbroek
+  - Hippolytushoef
+  - Hoogkarspel
+  - Hoogwoud
+  - Hoorn
+  - Huisduinen
+  - Julianadorp
+  - Koedijk
+  - Kolhorn
+  - Krabbendam
+  - Kreileroord
+  - Lambertschaag
+  - Lutjebroek
+  - Lutjewinkel
+  - Markenbinnen
+  - Medemblik
+  - Middenmeer
+  - Midwoud
+  - Nibbixwoud
+  - Nieuwe Niedorp
+  - Noord-Scharwoude
+  - Noordeinde
+  - Obdam
+  - Onderdijk
+  - Oost-Graftdijk
+  - Oosterblokker
+  - Oosterend
+  - Oosterland
+  - Oosterleek
+  - Oostwoud
+  - Opmeer
+  - Opperdoes
+  - Oterleek
+  - Oude Niedorp
+  - Oudendijk
+  - Oudeschild
+  - Oudesluis
+  - Oudkarspel
+  - Oudorp
+  - Petten
+  - Scharwoude
+  - Schagen
+  - Schagerbrug
+  - Schellinkhout
+  - Schermerhorn
+  - Schoorl
+  - Sijbekarspel
+  - Sint Maarten
+  - Sint Maartensbrug
+  - Sint Maartensvlotbrug
+  - Sint Pancras
+  - Slootdorp
+  - Spanbroek
+  - Spierdijk
+  - Starnmeer
+  - Stompetoren
+  - "'t Veld"
+  - "'t Zand"
+  - Tuitjenhorn
+  - Twisk
+  - Ursem
+  - Venhuizen
+  - Waarland
+  - Warmenhuizen
+  - Wervershoof
+  - West-Graftdijk
+  - Westerland
+  - Westwoud
+  - Wieringerwaard
+  - Wieringerwerf
+  - Wijdenes
+  - Winkel
+  - Wognum
+  - Zijdewind
+  - Zuid-Scharwoude
+  - Zuidermeer
+  - Zuidschermer
+  - Zwaag
+  - Zwaagdijk-Oost
+  - Zwaagdijk-West
+
+Zaanstreek-Waterland:
+  - Assendelft
+  - Beets
+  - Broek in Waterland
+  - Den Ilp
+  - Edam
+  - Etersheim
+  - Hobrede
+  - Ilpendam
+  - Jisp
+  - Katwoude
+  - Koog aan de Zaan
+  - Krommenie
+  - Krommeniedijk
+  - Kwadijk
+  - Landsmeer
+  - Marken
+  - Middelie
+  - Middenbeemster
+  - Monnickendam
+  - Noordbeemster
+  - Oosthuizen
+  - Oostknollendam
+  - Oostzaan
+  - Purmerend
+  - Purmerland
+  - Schardam
+  - Spijkerboor
+  - Uitdam
+  - Volendam
+  - Warder
+  - Watergang
+  - Westbeemster
+  - Westknollendam
+  - Westzaan
+  - Wijdewormer
+  - Wormer
+  - Wormerveer
+  - Zaandam
+  - Zaandijk
+  - Zuiderwoude
+  - Zuidoostbeemster
+
+Amsterdam-Amstelland:
+  - Aalsmeer
+  - Amstelveen
+  - Amsterdam
+  - De Kwakel
+  - Diemen
+  - Duivendrecht
+  - Kudelstaart
+  - Ouderkerk aan de Amstel
+  - Uithoorn
+  - Weesp

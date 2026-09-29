@@ -23,6 +23,38 @@ overslaan:
   - testbericht
   - test alarm
   - oefening
+  - contact mk
+
+# Classificatie van de inzet, tussen haakjes vóór de melding: "(Middel BR)", "(Grote HV)",
+# "(Zeer gr. BR)". Klein is de gewone inzet en krijgt geen toevoeging. Soorten: BR (brand),
+# HV (hulpverlening), WO (waterongeval), IBGS (incidentbestrijding gevaarlijke stoffen).
+#   brand:  "(Grote BR) BR woning" wordt "Grote brand woning", "(Grote BR) BR duin" wordt
+#           "Duinbrand (grote brand)"
+#   anders: "(Middel HV) HV weg" wordt "Hulpverlening weg (middel HV)", "(Grote WO)" wordt
+#           "(groot WO)", "(Grote IBGS)" wordt "(groot IBGS)" (besluit Sven 29-09-2026)
+# Volgt er geen herkende melding, dan wordt de melding "<soort> (<inzet> <code>)".
+inzet:
+  groottes:
+    middel: {brand: Middelbrand, inzet: middel}
+    groot: {brand: Grote brand, inzet: groot}
+    zeer groot: {brand: Zeer grote brand, inzet: zeer groot}
+  soorten:
+    BR: Brand
+    HV: Hulpverlening
+    WO: Waterongeval
+    IBGS: Ongeval gevaarlijke stof
+
+# Groepen tussen haakjes vóór de melding (begin van de tekst binnen de haakjes, de langste
+# wint). Volgt er een herkende melding, dan komt dit erachter: "(Pel. GW G3000 1) BR natuur"
+# wordt "Natuurbrand (waterpeloton)". Anders is dit de melding: "(Basis pel.1) UGS
+# Laboratoriumweg" wordt "Peloton". Pel. GW G3000 = peloton grootwatervoorziening 3000 m.
+voorvoegsels:
+  "Pel. GW": Waterpeloton
+  "Pel GW": Waterpeloton
+  "Basis pel": Peloton
+  "Pel.": Peloton
+  "Peloton": Peloton
+  "Aflossing": Aflossing
 
 # Begin van de melding in P2000 -> korte tekst op de site (zelfde stijl als de oude site).
 # Hoofdletters maken niet uit; de langste passende tekst wint. Een melding die hier niet in
@@ -46,6 +78,9 @@ meldingen:
   "BR industrie": Brand industrie
   "BR winkel": Brand winkel
   "BR bijgebouw": Brand bijgebouw
+  "BR woning (schoorsteen)": Brand woning schoorsteen
+  "BR gerucht": Brandgerucht
+  "BR nacontrole": Nacontrole
   "Brand": Brand
   "Brandgerucht": Brandgerucht
   "Nacontrole": Nacontrole
@@ -60,6 +95,11 @@ meldingen:
   "CO melder": CO-melder
   "Gaslekkage": Gaslekkage
   "Gas": Gaslekkage
+  "HV materieel (Gaslekkage)": Gaslekkage
+  "HV overig (Gaslekkage)": Gaslekkage
+  "Stank/hind. lucht (Gaslekkage)": Gaslekkage
+  "Ongeval gev. stof (Gaslekkage)": Gaslekkage
+  "Stank/hind. lucht (gaslucht)": Gaslucht
   "Liftopsluiting": Liftopsluiting
   "Buitensluiting": Buitensluiting
   "Reanimatie": Reanimatie
@@ -93,51 +133,36 @@ meldingen:
   "Waterongeval": Waterongeval
   "Schip in problemen": Schip of watersporter in problemen
   "Ongeval wegvervoer": Ongeval wegvervoer
+  "Ongeval op water": Waterongeval
+  "Ongeval gev. stof": Ongeval gevaarlijke stof
   "Ongeval": Ongeval
   "HV weg": Hulpverlening weg
   "Hulpverlening weg": Hulpverlening weg
   "HV water": Hulpverlening water
+  "HV materieel": Hulpverlening materieel
+  "HV overig": Hulpverlening
   "Hulpverlening": Hulpverlening
   "HV": Hulpverlening
   "Gevaarlijke stof": Ongeval gevaarlijke stof
   "Stormschade": Stormschade
   "Wateroverlast": Wateroverlast
   "Stank/hinder": Stankoverlast
+  "Stank/hind. lucht": Stankoverlast
   "Stankoverlast": Stankoverlast
   "Dienstverlening": Dienstverlening
+  "DV door derden": Dienstverlening
+  "DV": Dienstverlening
+  "Verzorging": Verzorging
+  "Luchtverontreiniging": Luchtverontreiniging
   "Afstemverzoek": Afstemverzoek
   "Herbezetting": Herbezetting kazerne
+  "Herbezet.": Herbezetting kazerne
+  "Herbezet./kazerneren": Herbezetting kazerne
   "Peloton": Peloton
   "Verdachte situatie": Verdachte situatie
   "Explosie": Explosie
 
-# Plaatsen die in P2000 aan het eind van het adres kunnen staan.
-plaatsen:
-  - Uitgeest
-  - Akersloot
-  - Alkmaar
-  - Assendelft
-  - Bakkum
-  - Beverwijk
-  - Castricum
-  - Heemskerk
-  - Heiloo
-  - Krommenie
-  - Limmen
-  - Markenbinnen
-  - Oostknollendam
-  - Spijkerboor
-  - Starnmeer
-  - Velsen-Noord
-  - Westknollendam
-  - Wijk aan Zee
-  - Wormer
-  - Wormerveer
-  - Zaandam
-  - Zaandijk
-  - Haarlem
-  - IJmuiden
-  - Zandvoort
+# Plaatsen staan in tools/plaatsen.yaml (per veiligheidsregio).
 
 # Woorden die vóór het laatste woord van een straatnaam kunnen staan
 # ("Burgemeester van Alphenstraat", "Groot Dorregeest", "J.E. de Witstraat").

@@ -64,7 +64,8 @@ Sven werkt afwisselend vanuit Claude Code op de iPhone (cloudsessie) en later va
 ├── build.py
 ├── tools/
 │   ├── import_p2000.py      # P2000-melding -> data/uitrukken/*.csv
-│   ├── p2000.yaml           # capcode, meldingen, plaatsen voor de P2000-import
+│   ├── p2000.yaml           # capcode, meldingen, inzetgrootte voor de P2000-import
+│   ├── plaatsen.yaml        # woonplaatsen in VR Kennemerland, NHN, Zaanstreek-Waterland, Amsterdam-Amstelland
 │   ├── meldingen.yaml       # normalisatie en publicatieregels per meldingssoort
 │   └── check.py
 ├── content/
