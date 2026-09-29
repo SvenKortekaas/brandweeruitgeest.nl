@@ -12,11 +12,13 @@ max_per_dag: 10
 # (herhaalalarm, opschaling).
 zelfde_uitruk_minuten: 30
 
+# Een ingetrokken alarmering telt als uitruk (besluit Sven 29-09-2026), het intrekbericht
+# ("(Intrekken Alarm Brw)") is geen aparte uitruk. Het intrekbericht hoort bij de uitruk op
+# dezelfde straat binnen zoveel minuten. Staat die er niet, dan komt de uitruk er één keer bij.
+intrekking_uitruk_minuten: 720
+
 # Meldingen met een van deze woorden (hoofdletterongevoelig) worden overgeslagen.
 overslaan:
-  - intrekking
-  - ingetrokken
-  - intrekken
   - proefalarm
   - testbericht
   - test alarm
