@@ -66,6 +66,7 @@ Sven werkt afwisselend vanuit Claude Code op de iPhone (cloudsessie) en later va
 │   ├── import_p2000.py      # P2000-melding -> data/uitrukken/*.csv
 │   ├── p2000.yaml           # capcode, meldingen, inzetgrootte voor de P2000-import
 │   ├── plaatsen.yaml        # woonplaatsen in VR Kennemerland, NHN, Zaanstreek-Waterland, Amsterdam-Amstelland
+│   ├── sociaal.py           # nieuwe P2000-uitruk naar Facebook en Instagram
 │   ├── meldingen.yaml       # normalisatie en publicatieregels per meldingssoort
 │   └── check.py
 ├── content/
@@ -171,6 +172,7 @@ Historische data wordt zo letterlijk mogelijk overgenomen. Alleen splitsen (prio
 - Alleen capcode 0107711 (Vrijwilligers) telt als uitruk van brandweer Uitgeest (besluit Sven 28-09-2026).
 - Idempotent: opnieuw draaien geeft geen dubbele regels. Keurt een regel zonder geldige prio, adres of plaats af.
 - Home Assistant stuurt P2000-uitrukken naar `master` (de echte site) sinds de livegang van 28-09-2026. Met `ref: v2` gaat een melding naar de testsite.
+- Elke nieuwe P2000-uitruk met `publiceren=ja` wordt na het publiceren van de site automatisch op Facebook en Instagram geplaatst (`tools/sociaal.py`, besluit Sven 01-10-2026, mag van de VRK): alle soorten, dezelfde gegevens als op de site, met een vaste afbeelding in de huisstijl. Alleen vanaf `master`.
 - Er komt geen andere import bij. De herkomst van regels met `bron=eigen` wordt nergens beschreven, niet in code, documentatie, commits of op de site (besluit Sven 28-09-2026).
 
 ### Privacyfilter (in de import en nogmaals in `check.py`, alleen op uitrukkendata)

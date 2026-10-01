@@ -23,6 +23,9 @@ from jinja2 import Environment, FileSystemLoader, StrictUndefined
 from markupsafe import Markup
 from PIL import Image, ImageOps
 
+sys.path.insert(0, str(Path(__file__).resolve().parent / "tools"))
+import sociaal  # noqa: E402  afbeeldingen voor Facebook en Instagram
+
 ROOT = Path(__file__).resolve().parent
 CONTENT = ROOT / "content"
 DATA = ROOT / "data"
@@ -413,6 +416,10 @@ def bouw():
             doel = PUBLIC / pad.relative_to(STATIC)
             doel.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(pad, doel)
+    # Afbeeldingen voor Facebook en Instagram bij recente P2000-uitrukken (tools/sociaal.py)
+    for r in sociaal.recente_p2000(jaren, dt.date.today()):
+        r = dict(r, datum=r["datum"].isoformat())
+        sociaal.maak_afbeelding(r, PUBLIC / sociaal.afbeelding_pad(r).lstrip("/"))
     schrijf("/sitemap.xml", env.get_template("sitemap.xml").render(paginas=sorted(paginas)))
     if OMGEVING == "test":
         schrijf("/robots.txt", "User-agent: *\nDisallow: /\n")
