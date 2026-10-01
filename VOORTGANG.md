@@ -212,10 +212,16 @@ Fase 3: migratie. Uitgevoerd 28-09-2026, wacht op controle door Sven (op v2.bran
 
 ## Volgende stap
 
-Stand 29-09-2026: alles is samengevoegd in `master` (laatste: #59). `v2` en `master` hebben dezelfde inhoud.
+Stand 01-10-2026 (overdracht naar een nieuwe sessie): de site is live en alles tot en met #62 staat in `master`. Op `v2` staan daarna alleen nog `VOORTGANG.md`-updates.
 
-1. Afgerond: eerste echte P2000-uitruk (29-09-2026 18:51, OMS brandmelding Vermaningspad, Uitgeest): Home Assistant en de import werkten, maar het wegschrijven naar `master` werd geweigerd door de branchbeveiliging ("Changes must be made through a pull request"). Sven: de workflow moet direct naar `master` mogen (bypass voor GitHub Actions, of de regel voor pull requests en verplichte checks uit), daarna de mislukte run "P2000-uitruk" opnieuw starten. Gedaan door Sven (bypass): de regel staat nu in `master`. Daarna faalde publiceren: de omgeving `p2000` mist `FTP_GEBRUIKER_PROD` en `FTP_WACHTWOORD_PROD` (en eventueel `FTP_MAP_PROD`); die stonden alleen in `productie`. Opgelost 29-09-2026: Sven zette de `_PROD`-gegevens in `p2000`. Op verzoek van Sven heeft Claude "Bouwen en publiceren" op `master` gestart (uitruk online) en daarna de P2000-publicatie opnieuw gedraaid: geslaagd (inloggen werkt, niets meer te uploaden). De hele keten werkt nu: Home Assistant, import, vastleggen in `master` (bypass) en publiceren met `p2000`. Tweede uitruk (01-10-2026 03:47, "OMS handmelder Molenwerf") ging volledig automatisch binnen een minuut online. "OMS handmelder" blijft "Automatische brandmelding OMS" (Sven, 01-10-2026).
-2. Import robuuster gemaakt (29-09-2026, zie hieronder). Sven: pull request samenvoegen.
-3. Actuele feiten (Sven): eisen voor nieuwe leden, copyrighttekst, wervingstekst.
+Wat werkt:
+- P2000-keten volledig automatisch: Home Assistant, import, vastleggen in `master` (bypass op de branchbeveiliging), publiceren met omgeving `p2000`. Getest met twee echte uitrukken (29-09 en 01-10-2026).
+- Facebook en Instagram: gebouwd (#61), koppeling gecontroleerd met "Facebook en Instagram controleren" (01-10-2026, in orde). Echt posten nog niet gezien.
+- Bewaking tegen sessielinks (#61), alle oude PR-beschrijvingen opgeschoond.
+
+Eerstvolgende stappen:
+1. Bij de eerstvolgende uitruk de run "P2000-uitruk" nakijken: site, job `facebook`, job `instagram`.
+2. Sven: in de branchbeveiliging van `master` de check "Geen sessielinks / controleren" verplicht maken.
+3. Actuele feiten (Sven): eisen voor nieuwe leden, copyrighttekst, wervingstekst op de site.
 4. Foto's 12-2001 en 12-1536 (Sven, nog niet).
 5. Later: groter logo, omgeving `beheer`, alt-teksten nieuwsfoto's per foto.
