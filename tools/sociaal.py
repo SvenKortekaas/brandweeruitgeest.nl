@@ -37,6 +37,7 @@ DAGEN = ["maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag", "
 ROOD = (179, 0, 27)
 WIT = (255, 255, 255)
 MAAT = 1080
+WERVING = "Wil jij de volgende keer ook mee? Word lid van brandweer Uitgeest!"
 DAGEN_BEWAREN = 7  # build.py maakt afbeeldingen voor P2000-uitrukken van de laatste zoveel dagen
 
 
@@ -67,13 +68,16 @@ def regels_tekst(regel):
 
 def bericht(regel, platform):
     melding, adres = regels_tekst(regel)
-    url = f"{site()['url']}/uitrukken/{regel['datum'][:4]}/"
-    delen = ["Uitruk brandweer Uitgeest", "", melding, adres, datum_tekst(regel).capitalize(), ""]
+    gegevens = site()
+    url = f"{gegevens['url']}/uitrukken/{regel['datum'][:4]}/"
+    delen = ["Uitruk brandweer Uitgeest", "", melding, adres, datum_tekst(regel).capitalize(), "",
+             WERVING]  # werving (besluit Sven 01-10-2026)
     if platform == "instagram":  # links zijn op Instagram niet klikbaar
-        delen += ["Alle uitrukken staan op brandweeruitgeest.nl", "",
-                  "#brandweer #brandweeruitgeest #uitgeest #112"]
+        delen += ["Kijk voor de vacature en alle uitrukken op brandweeruitgeest.nl", "",
+                  "#brandweer #brandweeruitgeest #uitgeest #112 #heldengezocht"]
     else:
-        delen += [f"Alle uitrukken: {url}"]
+        delen += [f"Bekijk de vacature: {gegevens['werving']['link']}", "",
+                  f"Alle uitrukken: {url}"]
     return "\n".join(delen)
 
 
