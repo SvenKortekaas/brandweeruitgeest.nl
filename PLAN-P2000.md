@@ -59,8 +59,19 @@ Voor elke wijziging in HA maakt Claude eerst een kopie van de huidige automatise
    - een ingetrokken alarmering telt als uitruk, het intrekbericht niet: het hoort bij de uitruk op dezelfde straat (intrekken gebeurt binnen een kwartier, dus binnen het venster van 30 minuten), en staat die er nog niet dan komt de uitruk er één keer bij (besluit Sven 29-09-2026);
    - bron `p2000`; opnieuw draaien geeft geen dubbele regels.
 2. **`.github/workflows/p2000.yml`** (Claude): start alleen via `workflow_dispatch` met de twee invoervelden. De invoer gaat als omgevingsvariabele naar het script en nooit direct in een shellcommando (tegen script-injectie). Maximaal 10 meldingen per dag. Na de import: commit naar de branch uit `ref`, `build.py`, `check.py` en `deploy.py` (alleen gewijzigde bestanden, enkele minuten).
-3. **Omgeving `p2000`** (Sven): nieuwe GitHub-omgeving met dezelfde FTP-secrets als `productie`, zonder goedkeuring, alleen voor de branches `v2` (testfase) en `master`. `productie` heeft ook geen goedkeuring (besluit Sven 28-09-2026).
+3. **Omgeving `p2000`** (Sven): nieuwe GitHub-omgeving met dezelfde FTP-secrets als `productie`, dus ook `FTP_GEBRUIKER_PROD`, `FTP_WACHTWOORD_PROD` en eventueel `FTP_MAP_PROD` voor de echte site. De workflow moet bovendien direct naar `master` mogen schrijven (bypass op de branchbeveiliging). zonder goedkeuring, alleen voor de branches `v2` (testfase) en `master`. `productie` heeft ook geen goedkeuring (besluit Sven 28-09-2026).
 4. **Sleutel voor HA** (Sven): fine-grained personal access token, alleen deze repo, alleen "Actions: Read and write", verloopt na een jaar (herinnering zetten).
+
+## Facebook en Instagram (besluit Sven 01-10-2026)
+
+- Elke nieuwe uitruk met `publiceren=ja` gaat na het publiceren van de site automatisch naar de Facebook-pagina en Instagram (`tools/sociaal.py`). Alle soorten meldingen. Mag van de VRK (Sven).
+- Tekst: prio, melding, straat en plaats, datum en tijd, link naar de uitrukken. Afbeelding: vierkante JPEG in de huisstijl, gemaakt door `build.py` onder `/sociaal/` (alleen voor P2000-uitrukken van de laatste 7 dagen).
+- Alleen vanaf `master`. Twee aparte jobs, zodat een mislukte post opnieuw kan zonder dat de andere dubbel komt. Een mislukte post raakt de site niet.
+- Nodig in de omgeving `p2000` (Sven, Claude raakt ze niet aan):
+  - `META_TOKEN`: paginatoken dat niet verloopt (systeemgebruiker in Meta Business Suite, rechten `pages_manage_posts`, `pages_read_engagement`, `instagram_basic`, `instagram_content_publish`);
+  - `FB_PAGINA_ID`: id van de Facebook-pagina brandweeruitgeest;
+  - `IG_ACCOUNT_ID`: id van het Instagram-account (zakelijk account, gekoppeld aan de Facebook-pagina).
+  Zonder deze secrets slaat de stap het posten over en blijft alles werken.
 
 ## Is het veilig?
 

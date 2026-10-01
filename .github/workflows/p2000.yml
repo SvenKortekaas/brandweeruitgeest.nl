@@ -16,6 +16,8 @@ on:
       - .github/workflows/p2000.yml
       - tools/import_p2000.py
       - tools/p2000.yaml
+      - tools/plaatsen.yaml
+      - tools/sociaal.py
   workflow_dispatch:
     inputs:
       tijdstip:
@@ -63,6 +65,13 @@ jobs:
               --tekst "P 1 BNH-01 BR woning Molenwerf Uitgeest"; then
             echo "FOUT: melding zonder capcode 0107711 is niet afgekeurd"; exit 1
           fi
+      - name: Facebook- en Instagram-post (droog)
+        env:
+          UITRUK: '{"datum":"2026-10-01","tijd":"03:47","prio":"2","melding":"Automatische brandmelding OMS","adres":"Molenwerf","plaats":"Uitgeest","bron":"p2000","publiceren":"ja"}'
+        run: |
+          python tools/sociaal.py facebook --droog
+          python tools/sociaal.py instagram --droog
+          python -c "import sys, json, os; sys.path.insert(0, 'tools'); import sociaal; from pathlib import Path; sociaal.maak_afbeelding(json.loads(os.environ['UITRUK']), Path('proef.jpg'))"
 
   importeren:
     # Alleen de officiële repo, alleen master of v2, alleen gestart met de sleutel van Sven.
@@ -77,6 +86,7 @@ jobs:
       contents: write
     outputs:
       nieuw: ${{ steps.import.outputs.nieuw }}
+      uitruk: ${{ steps.import.outputs.uitruk }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -150,3 +160,49 @@ jobs:
           PROD_WACHTWOORD: ${{ secrets.FTP_WACHTWOORD_PROD || secrets.FTP_PASSWORD_PROD }}
           PROD_MAP: ${{ secrets.FTP_MAP_PROD }}
         run: python tools/publiceer.py
+
+  # Facebook en Instagram (besluit Sven 01-10-2026): alleen vanaf master (de echte site), na het
+  # publiceren, zodat de afbeelding onder /sociaal/ al online staat. Twee aparte jobs: mislukt er
+  # een, dan start "Re-run failed jobs" alleen die opnieuw en komt de andere post niet dubbel.
+  # Secrets in de omgeving p2000: META_TOKEN, FB_PAGINA_ID, IG_ACCOUNT_ID.
+  facebook:
+    needs: [importeren, publiceren]
+    if: needs.importeren.outputs.nieuw == 'ja' && github.ref == 'refs/heads/master'
+    runs-on: ubuntu-24.04
+    environment: p2000
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Post op Facebook
+        env:
+          UITRUK: ${{ needs.importeren.outputs.uitruk }}
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+          FB_PAGINA_ID: ${{ secrets.FB_PAGINA_ID }}
+        run: python tools/sociaal.py facebook
+
+  instagram:
+    needs: [importeren, publiceren]
+    if: needs.importeren.outputs.nieuw == 'ja' && github.ref == 'refs/heads/master'
+    runs-on: ubuntu-24.04
+    environment: p2000
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Post op Instagram
+        env:
+          UITRUK: ${{ needs.importeren.outputs.uitruk }}
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+          IG_ACCOUNT_ID: ${{ secrets.IG_ACCOUNT_ID }}
+        run: python tools/sociaal.py instagram

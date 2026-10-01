@@ -1,0 +1,38 @@
+# Bewaakt dat er nergens een link naar een Claude-sessie staat: niet in commitberichten,
+# niet in de titel of beschrijving van een pull request en niet in bestanden (besluit Sven
+# 01-10-2026). Alleen lezen, geen secrets.
+
+name: Geen sessielinks
+
+on:
+  push:
+    branches: [master, v2]
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+permissions:
+  contents: read
+
+jobs:
+  controleren:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+      - name: Controleren
+        env:
+          PR_TITEL: ${{ github.event.pull_request.title }}
+          PR_TEKST: ${{ github.event.pull_request.body }}
+          BASIS: ${{ github.event.pull_request.base.sha || github.event.before }}
+          KOP: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: |
+          if [ -n "$BASIS" ] && [ "$BASIS" != "0000000000000000000000000000000000000000" ]; then
+            python tools/geen_sessielinks.py "$BASIS..$KOP"
+          else
+            python tools/geen_sessielinks.py "$KOP"
+          fi

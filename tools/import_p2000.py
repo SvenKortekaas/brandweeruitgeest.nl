@@ -24,6 +24,7 @@ Regels (CLAUDE.md, PLAN-P2000.md):
 import argparse
 import csv
 import datetime as dt
+import json
 import os
 import re
 import sys
@@ -314,6 +315,8 @@ def main():
     if uitvoer:
         with open(uitvoer, "a", encoding="utf-8") as f:
             f.write("nieuw=ja\n")
+            # Voor tools/sociaal.py (Facebook en Instagram), na het publiceren van de site.
+            f.write(f"uitruk={json.dumps(regel, ensure_ascii=False)}\n")
 
 
 if __name__ == "__main__":
