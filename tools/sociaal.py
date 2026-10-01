@@ -4,6 +4,7 @@ Gebruik (normaal via .github/workflows/p2000.yml, na het publiceren van de site)
     python tools/sociaal.py facebook       # post op de Facebook-pagina
     python tools/sociaal.py instagram      # post op Instagram
     python tools/sociaal.py facebook --droog   # alleen tonen, niets posten
+    python tools/sociaal.py controleer         # alleen lezen: kloppen token, pagina en account?
 
 De uitruk komt uit de omgevingsvariabele UITRUK (JSON van import_p2000.py). Alleen regels met
 publiceren=ja worden gepost, met dezelfde gegevens als op de site: prio, melding, straat, plaats.
@@ -177,7 +178,26 @@ def instagram(regel, token, account, afbeelding_url):
     print(f"Instagram: geplaatst ({uit.get('id')}).")
 
 
+def controleer():
+    """Leest alleen: hoort het token bij de juiste pagina en het juiste Instagram-account?"""
+    token = os.environ.get("META_TOKEN", "")
+    pagina = os.environ.get("FB_PAGINA_ID", "")
+    account = os.environ.get("IG_ACCOUNT_ID", "")
+    if not (token and pagina and account):
+        sys.exit("FOUT: META_TOKEN, FB_PAGINA_ID of IG_ACCOUNT_ID ontbreekt in de omgeving p2000")
+    p = graph(pagina, {"fields": "name,instagram_business_account", "access_token": token}, "GET")
+    print(f"Facebook-pagina: {p.get('name')}")
+    gekoppeld = (p.get("instagram_business_account") or {}).get("id")
+    i = graph(account, {"fields": "username", "access_token": token}, "GET")
+    print(f"Instagram-account: @{i.get('username')}")
+    if gekoppeld != account:
+        sys.exit("FOUT: het Instagram-account is niet gekoppeld aan deze Facebook-pagina")
+    print("In orde: token, pagina en Instagram-account horen bij elkaar. Er is niets gepost.")
+
+
 def main():
+    if sys.argv[1:] == ["controleer"]:
+        return controleer()
     ap = argparse.ArgumentParser(description="Plaatst een uitruk op Facebook of Instagram.")
     ap.add_argument("platform", choices=["facebook", "instagram"])
     ap.add_argument("--droog", action="store_true", help="alleen tonen, niets posten")

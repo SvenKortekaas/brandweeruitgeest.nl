@@ -1,0 +1,31 @@
+# Controleert de koppeling met Facebook en Instagram zonder iets te posten: hoort het token
+# bij de juiste pagina en het juiste Instagram-account? Alleen handmatig te starten.
+
+name: Facebook en Instagram controleren
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  controleren:
+    if: github.repository == 'SvenKortekaas/brandweeruitgeest.nl' && github.actor == 'SvenKortekaas'
+    runs-on: ubuntu-24.04
+    environment: p2000
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Controleren (alleen lezen)
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+          FB_PAGINA_ID: ${{ secrets.FB_PAGINA_ID }}
+          IG_ACCOUNT_ID: ${{ secrets.IG_ACCOUNT_ID }}
+        run: python tools/sociaal.py controleer
