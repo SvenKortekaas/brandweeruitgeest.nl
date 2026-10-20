@@ -1,0 +1,66 @@
+# Plaatst een bestaande P2000-uitruk alsnog op Facebook en/of Instagram, bijvoorbeeld als de
+# automatische post in "P2000-uitruk" mislukte. Alleen handmatig, alleen vanaf master en alleen
+# door Sven. Alleen P2000-uitrukken van de laatste 7 dagen die op de site staan: alleen die
+# hebben een afbeelding onder /sociaal/. Tekst en afbeelding zijn gelijk aan de automatische post.
+
+name: Uitruk alsnog op Facebook en Instagram
+
+on:
+  workflow_dispatch:
+    inputs:
+      uitruk:
+        description: "Datum en tijd van de uitruk, bijv. 2026-10-20 11:56"
+        required: true
+      waar:
+        description: "Waar posten"
+        type: choice
+        options: [beide, facebook, instagram]
+        default: beide
+
+permissions:
+  contents: read
+
+jobs:
+  facebook:
+    if: >-
+      github.repository == 'SvenKortekaas/brandweeruitgeest.nl' && github.actor == 'SvenKortekaas' &&
+      github.ref == 'refs/heads/master' && inputs.waar != 'instagram'
+    runs-on: ubuntu-24.04
+    environment: p2000
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Post op Facebook
+        env:
+          UITRUK_MOMENT: ${{ inputs.uitruk }}
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+          FB_PAGINA_ID: ${{ secrets.FB_PAGINA_ID }}
+        run: python tools/sociaal.py facebook --uitruk "$UITRUK_MOMENT"
+
+  instagram:
+    if: >-
+      github.repository == 'SvenKortekaas/brandweeruitgeest.nl' && github.actor == 'SvenKortekaas' &&
+      github.ref == 'refs/heads/master' && inputs.waar != 'facebook'
+    runs-on: ubuntu-24.04
+    environment: p2000
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Post op Instagram
+        env:
+          UITRUK_MOMENT: ${{ inputs.uitruk }}
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+          IG_ACCOUNT_ID: ${{ secrets.IG_ACCOUNT_ID }}
+        run: python tools/sociaal.py instagram --uitruk "$UITRUK_MOMENT"

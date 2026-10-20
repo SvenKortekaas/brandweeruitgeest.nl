@@ -215,7 +215,7 @@ Fase 3: migratie. Uitgevoerd 28-09-2026, wacht op controle door Sven (op v2.bran
   - Gemiste uitruk alsnog via de P2000-workflow (run 24) met de tekst van Sven: "P 1 BNH-02 Reanimatie Benesserlaan Uitgeest 122002", 11:56. Staat op de site (nr 72).
   - Run 24 was de eerste echte post: Facebook en Instagram faalden allebei. Facebook: Meta weigert posten met het token van de systeemgebruiker ("publish_actions"); er is een paginatoken nodig. Instagram: Meta kon de afbeelding niet ophalen (code 9004), terwijl hij online staat (200, JPEG 1080x1080, robots.txt staat alles toe). Mogelijk blokkeert de hosting de ophaler van Meta, of was het tijdelijk.
   - `tools/sociaal.py`: Facebook vraagt nu eerst het paginatoken op; Instagram probeert het ophalen nog twee keer na 30 seconden; `controleer` test ook het paginatoken en of Instagram de afbeelding van de laatste P2000-uitruk kan ophalen (container zonder publiceren, vervalt na 24 uur).
-  - Open: de post van 20-10 alsnog plaatsen (Sven beslist hoe), en na de merge "Facebook en Instagram controleren" draaien.
+  - Nieuw (akkoord Sven 20-10-2026): workflow "Uitruk alsnog op Facebook en Instagram" (`sociaal-alsnog.yml`, alleen master en Sven) en `sociaal.py --uitruk "JJJJ-MM-DD UU:MM"`: een P2000-uitruk van de laatste 7 dagen alsnog posten. Sven geeft Claude toestemming de post van 20-10 11:56 eenmalig te starten, na een geslaagde "Facebook en Instagram controleren". Uiterlijk 26-10 (daarna is de afbeelding weg).
 
 ## Volgende stap
 

@@ -5,6 +5,8 @@ Gebruik (normaal via .github/workflows/p2000.yml, na het publiceren van de site)
     python tools/sociaal.py instagram      # post op Instagram
     python tools/sociaal.py facebook --droog   # alleen tonen, niets posten
     python tools/sociaal.py controleer         # alleen lezen: kloppen token, pagina en account?
+    python tools/sociaal.py facebook --uitruk "2026-10-20 11:56"   # bestaande uitruk alsnog
+                                               # (workflow "Uitruk alsnog op Facebook en Instagram")
 
 De uitruk komt uit de omgevingsvariabele UITRUK (JSON van import_p2000.py). Alleen regels met
 publiceren=ja worden gepost, met dezelfde gegevens als op de site: prio, melding, straat, plaats.
@@ -253,15 +255,29 @@ def controleer():
     print("In orde: token, pagina en Instagram-account horen bij elkaar. Er is niets gepost.")
 
 
+def zoek_uitruk(tekst):
+    """Zoekt een P2000-uitruk van de laatste DAGEN_BEWAREN dagen op datum en tijd. Alleen die
+    hebben een afbeelding op de site."""
+    for r in recente_p2000(lees_jaren(), dt.date.today()):
+        if f"{r['datum']} {r['tijd']}" == " ".join(tekst.split()):
+            return dict(r, datum=r["datum"].isoformat())
+    sys.exit(f"FOUT: geen P2000-uitruk op de site van de laatste {DAGEN_BEWAREN} dagen op '{tekst}'")
+
+
 def main():
     if sys.argv[1:] == ["controleer"]:
         return controleer()
     ap = argparse.ArgumentParser(description="Plaatst een uitruk op Facebook of Instagram.")
     ap.add_argument("platform", choices=["facebook", "instagram"])
     ap.add_argument("--droog", action="store_true", help="alleen tonen, niets posten")
+    ap.add_argument("--uitruk", metavar="'JJJJ-MM-DD UU:MM'",
+                    help="een bestaande P2000-uitruk alsnog posten, in plaats van UITRUK")
     args = ap.parse_args()
 
-    regel = json.loads(os.environ.get("UITRUK") or "{}")
+    if args.uitruk:
+        regel = zoek_uitruk(args.uitruk)
+    else:
+        regel = json.loads(os.environ.get("UITRUK") or "{}")
     if not regel:
         sys.exit("FOUT: geen uitruk meegegeven (UITRUK)")
     if regel.get("publiceren") != "ja":
