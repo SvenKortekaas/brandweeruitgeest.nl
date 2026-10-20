@@ -9,7 +9,8 @@ Gebruik (normaal via .github/workflows/p2000.yml, na het publiceren van de site)
 De uitruk komt uit de omgevingsvariabele UITRUK (JSON van import_p2000.py). Alleen regels met
 publiceren=ja worden gepost, met dezelfde gegevens als op de site: prio, melding, straat, plaats.
 
-Nodig in de GitHub-omgeving p2000 (Sven): META_TOKEN (paginatoken dat niet verloopt),
+Nodig in de GitHub-omgeving p2000 (Sven): META_TOKEN (token van de systeemgebruiker dat
+niet verloopt; voor Facebook vraagt het script daarmee het paginatoken op),
 FB_PAGINA_ID en IG_ACCOUNT_ID. Ontbreken ze, dan wordt er niets gepost en slaagt de stap.
 
 De afbeelding (verplicht voor Instagram) maakt build.py met maak_afbeelding() en staat op
@@ -17,6 +18,7 @@ de site onder /sociaal/; Facebook en Instagram halen hem daar op.
 """
 
 import argparse
+import csv
 import datetime as dt
 import json
 import os
@@ -44,6 +46,17 @@ DAGEN_BEWAREN = 7  # build.py maakt afbeeldingen voor P2000-uitrukken van de laa
 
 def site():
     return yaml.safe_load((ROOT / "data" / "site.yaml").read_text(encoding="utf-8"))
+
+
+def lees_jaren():
+    """Uitrukken van dit en vorig jaar, zoals build.py ze aan recente_p2000() geeft."""
+    jaren = {}
+    for jaar in (dt.date.today().year - 1, dt.date.today().year):
+        pad = ROOT / "data" / "uitrukken" / f"{jaar}.csv"
+        if pad.exists():
+            with pad.open(encoding="utf-8", newline="") as f:
+                jaren[jaar] = [dict(r, datum=dt.date.fromisoformat(r["datum"])) for r in csv.DictReader(f)]
+    return jaren
 
 
 def moment(regel):
@@ -144,6 +157,14 @@ def recente_p2000(jaren, vandaag):
 
 # Meta Graph API
 
+class MetaFout(Exception):
+    """Fout van de Graph API. De tekst bevat het token niet; wel de reden."""
+
+    def __init__(self, code, tekst):
+        super().__init__(f"FOUT van Meta ({code}): {tekst[:500]}")
+        self.tekst = tekst
+
+
 def graph(pad, velden, methode="POST"):
     data = urllib.parse.urlencode(velden).encode()
     if methode == "GET":
@@ -154,27 +175,53 @@ def graph(pad, velden, methode="POST"):
         with urllib.request.urlopen(verzoek, timeout=60) as antwoord:
             return json.load(antwoord)
     except urllib.error.HTTPError as e:
-        # De foutmelding van Meta bevat het token niet; wel de reden.
-        sys.exit(f"FOUT van Meta ({e.code}): {e.read().decode(errors='replace')[:500]}")
+        raise MetaFout(e.code, e.read().decode(errors="replace")) from None
+
+
+def paginatoken(token, pagina):
+    """Posten op een pagina kan alleen met een paginatoken. Het token van de systeemgebruiker
+    (META_TOKEN) geeft dat token voor de pagina waar hij aan gekoppeld is. Met het token van de
+    systeemgebruiker zelf weigert Meta het posten (melding over publish_actions)."""
+    uit = graph(pagina, {"fields": "access_token", "access_token": token}, "GET")
+    if not uit.get("access_token"):
+        sys.exit("FOUT: geen paginatoken. Koppel de systeemgebruiker in Meta Business aan de pagina "
+                 "(met volledige toegang) en geef de app de rechten pages_manage_posts en "
+                 "pages_read_engagement.")
+    return uit["access_token"]
 
 
 def facebook(regel, token, pagina, afbeelding_url):
     uit = graph(f"{pagina}/photos", {"url": afbeelding_url, "message": bericht(regel, "facebook"),
-                                     "access_token": token})
+                                     "access_token": paginatoken(token, pagina)})
     print(f"Facebook: geplaatst ({uit.get('post_id') or uit.get('id')}).")
 
 
-def instagram(regel, token, account, afbeelding_url):
-    media = graph(f"{account}/media", {"image_url": afbeelding_url,
-                                       "caption": bericht(regel, "instagram"), "access_token": token})
+def instagram_container(token, account, afbeelding_url, caption):
+    """Maakt een mediacontainer (nog niet gepubliceerd) en wacht tot Instagram de afbeelding
+    heeft verwerkt. Lukt het ophalen van de afbeelding niet meteen, dan nog twee keer proberen."""
+    for poging in range(3):
+        try:
+            media = graph(f"{account}/media", {"image_url": afbeelding_url, "caption": caption,
+                                               "access_token": token})
+            break
+        except MetaFout as e:
+            if poging == 2 or '"code":9004' not in e.tekst:
+                raise
+            print(f"Instagram kon de afbeelding niet ophalen, over 30 seconden opnieuw ({e})")
+            time.sleep(30)
     for _ in range(20):  # wachten tot Instagram de afbeelding heeft verwerkt
         status = graph(media["id"], {"fields": "status_code", "access_token": token}, "GET")
         if status.get("status_code") == "FINISHED":
-            break
+            return media["id"]
         if status.get("status_code") == "ERROR":
             sys.exit("FOUT: Instagram kon de afbeelding niet verwerken")
         time.sleep(3)
-    uit = graph(f"{account}/media_publish", {"creation_id": media["id"], "access_token": token})
+    sys.exit("FOUT: Instagram is na een minuut nog niet klaar met de afbeelding")
+
+
+def instagram(regel, token, account, afbeelding_url):
+    container = instagram_container(token, account, afbeelding_url, bericht(regel, "instagram"))
+    uit = graph(f"{account}/media_publish", {"creation_id": container, "access_token": token})
     print(f"Instagram: geplaatst ({uit.get('id')}).")
 
 
@@ -192,6 +239,17 @@ def controleer():
     print(f"Instagram-account: @{i.get('username')}")
     if gekoppeld != account:
         sys.exit("FOUT: het Instagram-account is niet gekoppeld aan deze Facebook-pagina")
+    paginatoken(token, pagina)
+    print("Paginatoken voor Facebook: in orde.")
+    # Kan Instagram de afbeelding van de site ophalen? Een container zonder media_publish
+    # verschijnt niet op Instagram en vervalt na 24 uur.
+    regels = sorted(recente_p2000(lees_jaren(), dt.date.today()), key=moment)
+    if regels:
+        url = site()["url"] + afbeelding_pad(regels[-1])
+        instagram_container(token, account, url, "")
+        print(f"Instagram kan de afbeelding ophalen: {url}")
+    else:
+        print("Geen recente P2000-uitruk met afbeelding; ophalen door Instagram niet getest.")
     print("In orde: token, pagina en Instagram-account horen bij elkaar. Er is niets gepost.")
 
 
@@ -227,4 +285,7 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except MetaFout as e:
+        sys.exit(str(e))
