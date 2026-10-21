@@ -45,6 +45,8 @@ Fase 3: migratie. Uitgevoerd 28-09-2026, wacht op controle door Sven (op v2.bran
 
 ## Beslissingen van Sven
 
+- 21-10-2026: Claude werkt voortaan volgens ponytail (kleinste volledige wijziging, zie `CLAUDE.md`). Eerste audit van de hele repo op 21-10-2026, uitkomst onder Volgende stap.
+
 - 27-09-2026: in het dataschema van `data/uitrukken/JJJJ.csv` worden `prio` (1, 2 of 3) en `plaats` verplicht. `plaats` wordt altijd ingevuld, ook bij Uitgeest; "leeg betekent Uitgeest" vervalt. Historische regels zonder prio: niet raden, per jaar tellen in `MIGRATIE.md` en Sven vragen. Historische regels zonder plaats krijgen Uitgeest, behalve regels met wegnummer of hectometrering (A9, N203): niet invullen, vragen. `check.py` faalt op nieuwe regels zonder geldige prio of plaats. Vastgelegd in `CLAUDE.md`.
 
 - 27-09-2026, antwoorden op de vragen van fase 1:
@@ -228,6 +230,11 @@ Wat werkt:
 - Facebook en Instagram: posten werkt (21-10-2026, uitruk van 20-10 via "Uitruk alsnog", goedgekeurd door Sven). Facebook met paginatoken. Een automatische post vanuit "P2000-uitruk" is nog niet gezien.
 - Mislukt een post: workflow "Uitruk alsnog op Facebook en Instagram" (datum en tijd, beide of een van de twee), binnen 7 dagen.
 - Bewaking tegen sessielinks. Let op: het aanmaken van een pull request via de GitHub-koppeling zette er een sessielink in de footer; daarna de beschrijving zonder footer bijgewerkt. Controleer de beschrijving na het aanmaken.
+
+Uitkomst audit 21-10-2026 (nog niets gewijzigd, wacht op Sven):
+- Moet: twee P2000-meldingen tegelijk (bijv. alarm en opschaling) kunnen een uitruk kwijtraken terwijl hij toch op Facebook en Instagram komt. Oorzaak: `git pull --rebase` in `p2000.yml` loopt vast op een conflict en de push daarna meldt "up-to-date". Voorstel: imports na elkaar (concurrency) en stoppen met een fout bij een conflict.
+- Zou moeten: test die de uitkomst van de P2000-import controleert (nu alleen "loopt niet vast").
+- Opruimen: `MIGRATIE_KLAAR` en waarschuwingen in `check.py`, ongebruikte parameter `site` in `htaccess()`, `MAANDEN` dubbel, verouderde verwijzingen naar `migrate_hugo.py`, mogelijk de reservenaam `FTP_PASSWORD_PROD`.
 
 Eerstvolgende stappen:
 1. Bij de eerstvolgende uitruk de run "P2000-uitruk" nakijken: site, job `facebook`, job `instagram`, en of HA nu het brandweerbericht doorgeeft (`trigger_message`).
