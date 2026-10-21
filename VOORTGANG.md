@@ -45,6 +45,8 @@ Fase 3: migratie. Uitgevoerd 28-09-2026, wacht op controle door Sven (op v2.bran
 
 ## Beslissingen van Sven
 
+- 21-10-2026: Claude werkt voortaan volgens ponytail (kleinste volledige wijziging, zie `CLAUDE.md`). Eerste audit van de hele repo op 21-10-2026, uitkomst onder Volgende stap.
+
 - 27-09-2026: in het dataschema van `data/uitrukken/JJJJ.csv` worden `prio` (1, 2 of 3) en `plaats` verplicht. `plaats` wordt altijd ingevuld, ook bij Uitgeest; "leeg betekent Uitgeest" vervalt. Historische regels zonder prio: niet raden, per jaar tellen in `MIGRATIE.md` en Sven vragen. Historische regels zonder plaats krijgen Uitgeest, behalve regels met wegnummer of hectometrering (A9, N203): niet invullen, vragen. `check.py` faalt op nieuwe regels zonder geldige prio of plaats. Vastgelegd in `CLAUDE.md`.
 
 - 27-09-2026, antwoorden op de vragen van fase 1:
@@ -216,18 +218,27 @@ Fase 3: migratie. Uitgevoerd 28-09-2026, wacht op controle door Sven (op v2.bran
   - Run 24 was de eerste echte post: Facebook en Instagram faalden allebei. Facebook: Meta weigert posten met het token van de systeemgebruiker ("publish_actions"); er is een paginatoken nodig. Instagram: Meta kon de afbeelding niet ophalen (code 9004), terwijl hij online staat (200, JPEG 1080x1080, robots.txt staat alles toe). Mogelijk blokkeert de hosting de ophaler van Meta, of was het tijdelijk.
   - `tools/sociaal.py`: Facebook vraagt nu eerst het paginatoken op; Instagram probeert het ophalen nog twee keer na 30 seconden; `controleer` test ook het paginatoken en of Instagram de afbeelding van de laatste P2000-uitruk kan ophalen (container zonder publiceren, vervalt na 24 uur).
   - Nieuw (akkoord Sven 20-10-2026): workflow "Uitruk alsnog op Facebook en Instagram" (`sociaal-alsnog.yml`, alleen master en Sven) en `sociaal.py --uitruk "JJJJ-MM-DD UU:MM"`: een P2000-uitruk van de laatste 7 dagen alsnog posten. Sven geeft Claude toestemming de post van 20-10 11:56 eenmalig te starten, na een geslaagde "Facebook en Instagram controleren". Uiterlijk 26-10 (daarna is de afbeelding weg).
+  - 21-10-2026: Sven voegde #64 samen. "Facebook en Instagram controleren" geslaagd: paginatoken in orde, Instagram kon de afbeelding ophalen (de fout van 20-10 was dus tijdelijk of lag aan het tijdstip). Daarna "Uitruk alsnog" voor 2026-10-20 11:56: Facebook en Instagram allebei geplaatst; Sven: "zag er goed uit". Bij de volgende uitruk de automatische posts in "P2000-uitruk" nakijken.
 
 ## Volgende stap
 
-Stand 01-10-2026 (overdracht naar een nieuwe sessie): de site is live en alles tot en met #62 staat in `master`. Op `v2` staan daarna alleen nog `VOORTGANG.md`-updates.
+Stand 21-10-2026 (overdracht naar een nieuwe sessie): de site is live en alles tot en met #64 staat in `master`. Op `v2` staan daarna alleen nog `VOORTGANG.md`-updates (gaan mee met de volgende pull request).
 
 Wat werkt:
-- P2000-keten volledig automatisch: Home Assistant, import, vastleggen in `master` (bypass op de branchbeveiliging), publiceren met omgeving `p2000`. Getest met twee echte uitrukken (29-09 en 01-10-2026).
-- Facebook en Instagram: gebouwd (#61), koppeling gecontroleerd met "Facebook en Instagram controleren" (01-10-2026, in orde). Echt posten nog niet gezien.
-- Bewaking tegen sessielinks (#61), alle oude PR-beschrijvingen opgeschoond.
+- P2000-keten volledig automatisch: Home Assistant, import, vastleggen in `master` (bypass op de branchbeveiliging), publiceren met omgeving `p2000`. Getest met echte uitrukken (29-09, 01-10 en 20-10-2026).
+- HA geeft sinds 20-10-2026 `trigger_message` door (het brandweerbericht) in plaats van de eerste melding van het incident. Nog niet gezien bij een echte uitruk.
+- Facebook en Instagram: posten werkt (21-10-2026, uitruk van 20-10 via "Uitruk alsnog", goedgekeurd door Sven). Facebook met paginatoken. Een automatische post vanuit "P2000-uitruk" is nog niet gezien.
+- Mislukt een post: workflow "Uitruk alsnog op Facebook en Instagram" (datum en tijd, beide of een van de twee), binnen 7 dagen.
+- Bewaking tegen sessielinks. Let op: het aanmaken van een pull request via de GitHub-koppeling zette er een sessielink in de footer; daarna de beschrijving zonder footer bijgewerkt. Controleer de beschrijving na het aanmaken.
+
+Audit 21-10-2026 (ponytail), uitgevoerd met akkoord van Sven, in een pull request naar `master`:
+- P2000: imports lopen na elkaar (concurrency in `p2000.yml`) en een conflict bij het vastleggen stopt de run met een fout. Eerder kon een tweede melding binnen een minuut een uitruk kwijtraken die toch op Facebook en Instagram kwam.
+- Nieuw: `tools/test_import_p2000.py` (20 gevallen: P2000-tekst naar de regel op de site, afkeuren, zelfde uitruk binnen het venster). Draait in "Bouwen en publiceren".
+- Opgeruimd: `MIGRATIE_KLAAR` en waarschuwingen in `check.py`, ongebruikte parameter in `htaccess()`, `MAANDEN` maar op één plek, verwijzingen naar het verwijderde `migrate_hugo.py`. De gebouwde site is identiek.
+- Secrets (21-10-2026): `productie` heeft `FTP_PASSWORD_PROD`, `p2000` heeft `FTP_WACHTWOORD_PROD`; de reservenaam in de workflows blijft daarom nodig. `FTP_GEBRUIKERSNAAM` in `p2000` wordt nergens gebruikt.
 
 Eerstvolgende stappen:
-1. Bij de eerstvolgende uitruk de run "P2000-uitruk" nakijken: site, job `facebook`, job `instagram`.
+1. Bij de eerstvolgende uitruk de run "P2000-uitruk" nakijken: site, job `facebook`, job `instagram`, en of HA nu het brandweerbericht doorgeeft (`trigger_message`).
 2. Sven: in de branchbeveiliging van `master` de check "Geen sessielinks / controleren" verplicht maken.
 3. Actuele feiten (Sven): eisen voor nieuwe leden, copyrighttekst, wervingstekst op de site.
 4. Foto's 12-2001 en 12-1536 (Sven, nog niet).

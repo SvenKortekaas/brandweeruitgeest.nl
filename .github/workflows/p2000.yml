@@ -82,6 +82,13 @@ jobs:
       github.actor == 'SvenKortekaas' &&
       github.triggering_actor == 'SvenKortekaas'
     runs-on: ubuntu-24.04
+    # Alarm en opschaling komen soms binnen een minuut: één import tegelijk, zodat de tweede
+    # de eerste ziet en als dezelfde uitruk overslaat.
+    concurrency:
+      # shortcut: GitHub houdt maar één wachtende run vast; bij drie meldingen tegelijk vervalt
+      # de middelste (meestal dezelfde uitruk). Komt dat voor, dan per melding een eigen wachtrij.
+      group: p2000-import-${{ github.ref_name }}
+      cancel-in-progress: false
     permissions:
       contents: write
     outputs:
@@ -115,7 +122,9 @@ jobs:
           for poging in 1 2 3 4; do
             git push origin "HEAD:$BRANCH" && exit 0
             sleep $((poging * 3))
-            git pull --rebase -q origin "$BRANCH"
+            # Bij een conflict stoppen: anders meldt de volgende push "up-to-date" en wordt een
+            # uitruk gepost die niet in de data staat. Een netwerkfout probeert het gewoon opnieuw.
+            git pull --rebase -q origin "$BRANCH" || { git rebase --abort 2>/dev/null && exit 1; }
           done
           exit 1
 

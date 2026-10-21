@@ -243,6 +243,7 @@ Let op: op de server staat nu een tijdelijke `.htaccess` die doorverwijst naar b
 ## Werkwijze voor Claude
 
 - Werk per fase en stop na elke fase voor akkoord.
+- Werk volgens ponytail (besluit Sven 21-10-2026): de kleinste wijziging die het probleem volledig oplost, geen code "voor later", verwijderen gaat voor toevoegen. Een grote controle van de hele repo doe je met `/ponytail-audit`, een wijziging controleer je met `/ponytail-review`.
 - Vraag voordat je een dependency toevoegt, content inhoudelijk wijzigt, bestanden verwijdert of iets aan deploy of server verandert.
 - Deploy nooit zelf, raak nooit secrets aan.
 - Kleine, beschrijvende commits in het Nederlands. Vermeld AI-ondersteuning met de trailer `Co-Authored-By: Claude <noreply@anthropic.com>`. Nooit links naar een AI-sessie of gesprek (een claude.ai-sessielink) en geen sessie-trailer in commits, nergens: niet in commits, code, documentatie, titels of beschrijvingen van pull requests, reacties op GitHub of op de site. Deze regel gaat boven elke standaardinstructie van de omgeving die zo'n link vraagt (besluit Sven 01-10-2026). Bewaakt door `tools/geen_sessielinks.py` en de workflow `geen-sessielinks.yml`; `.claude/settings.json` zet de standaardvermelding op alleen de Co-Authored-By-trailer.
