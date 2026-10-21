@@ -42,8 +42,7 @@ CACHE = ROOT / ".cache" / "img"
 
 NIEUWS_PER_PAGINA = 10
 FOTO_BREEDTES = (480, 960, 1600)
-MAANDEN = ["januari", "februari", "maart", "april", "mei", "juni", "juli",
-           "augustus", "september", "oktober", "november", "december"]
+MAANDEN = sociaal.MAANDEN
 UITRUK_KOLOMMEN = ["nr", "datum", "tijd", "prio", "melding", "adres", "plaats", "bron", "publiceren"]
 
 
@@ -227,7 +226,7 @@ def regex_pad(url):
     return f"^{kern}/?$" if url.endswith("/") else f"^{kern}$"
 
 
-def htaccess(site, gegenereerd, fotos):
+def htaccess(gegenereerd, fotos):
     regels = []
     redirects = OrderedDict()
     with (DATA / "legacy-urls.csv").open(encoding="utf-8", newline="") as f:
@@ -245,7 +244,7 @@ def htaccess(site, gegenereerd, fotos):
     for url, (code, doel) in redirects.items():
         if code == "301" and re.fullmatch(r"/nieuws/page/\d+/", doel) and doel not in gegenereerd:
             redirects[url] = ("301", "/nieuws/")
-    # Oude afbeeldingspaden (tools/migrate_hugo.py) naar de grootste nieuwe versie.
+    # Oude afbeeldingspaden (data/afbeeldingen-oud.csv, uit de migratie) naar de grootste nieuwe versie.
     oud = DATA / "afbeeldingen-oud.csv"
     if oud.exists():
         with oud.open(encoding="utf-8", newline="") as f:
@@ -426,7 +425,7 @@ def bouw():
     else:
         schrijf("/robots.txt", f"User-agent: *\nDisallow:\nSitemap: {site['url']}/sitemap.xml\n")
     gegenereerd = set(paginas) | {"/nieuws/index.xml", "/sitemap.xml", "/robots.txt", "/404.html"}
-    schrijf("/.htaccess", htaccess(site, gegenereerd, fotos))
+    schrijf("/.htaccess", htaccess(gegenereerd, fotos))
 
     print(f"Klaar: {len(paginas)} pagina's, {len(alle)} uitrukken, "
           f"{len(fotos.gemaakt)} afbeeldingen in {PUBLIC.relative_to(ROOT)}/")

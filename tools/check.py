@@ -25,15 +25,10 @@ ROOT = Path(__file__).resolve().parent.parent
 PUBLIC = ROOT / "public"
 DATA = ROOT / "data"
 
-# Zet op True zodra fase 3 (migratie) klaar is. Tot die tijd zijn de migratiecontroles
-# (oude URL's die 200 moeten geven, en tellingen per jaar) alleen waarschuwingen.
-MIGRATIE_KLAAR = True
-
 # Telling uit de oude site (legacy/content/JJJJ.md, fase 1, MIGRATIE.md). Vast gegeven, de map is verwijderd.
 LEGACY_TELLING = {2008: 95, 2009: 113, 2010: 119, 2011: 127, 2012: 112, 2013: 116, 2014: 104,
                   2015: 91, 2016: 106, 2017: 126, 2018: 124, 2019: 76, 2020: 98, 2021: 69, 2022: 52}
-# Oude regels die bewust niet zijn overgenomen (oefening 2012, besluit Sven 28-09-2026),
-# gelijk aan LEGACY_WEG in tools/migrate_hugo.py.
+# Oude regels die bewust niet zijn overgenomen (oefening 2012, besluit Sven 28-09-2026).
 LEGACY_WEG = {2012: 1}
 
 BUDGET_PAGINA = 100 * 1024   # HTML + CSS + JS per pagina
@@ -44,7 +39,6 @@ VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "met
 OPTIONEEL_SLUITEN = {"p", "li", "dt", "dd", "tr", "td", "th", "thead", "tbody", "option"}
 
 fouten = []
-waarschuwingen = []
 
 
 def fout(tekst):
@@ -251,11 +245,9 @@ def controle_legacy_urls():
                 continue
             if r_ and r_[0] == "301":
                 if pad_voor(r_[1]) is None:
-                    melding = f"oude URL {url}: 301 naar {r_[1]}, maar dat bestaat niet"
-                    (fouten if MIGRATIE_KLAAR else waarschuwingen).append(melding)
+                    fout(f"oude URL {url}: 301 naar {r_[1]}, maar dat bestaat niet")
                 continue
-            melding = f"oude URL {url} geeft een 404 (verwacht {actie})"
-            (fouten if MIGRATIE_KLAAR else waarschuwingen).append(melding)
+            fout(f"oude URL {url} geeft een 404 (verwacht {actie})")
 
 
 HUISNUMMER = re.compile(r"[A-Za-zé.]\s+\d{1,4}\s?[a-zA-Z]?(\s?-\s?\d+)?\b(?![,.]\d)")
@@ -306,8 +298,7 @@ def controle_uitrukken():
                 fout(f"{pad.name}: {len(legacy)} legacy-regels, verwacht {verwacht}")
     for jaar in LEGACY_TELLING:
         if not (DATA / "uitrukken" / f"{jaar}.csv").exists():
-            melding = f"data/uitrukken/{jaar}.csv ontbreekt"
-            (fouten if MIGRATIE_KLAAR else waarschuwingen).append(melding)
+            fout(f"data/uitrukken/{jaar}.csv ontbreekt")
 
 
 def controle_testadres():
@@ -328,12 +319,6 @@ def main():
     controle_legacy_urls()
     controle_uitrukken()
     controle_testadres()
-    if waarschuwingen:
-        print(f"{len(waarschuwingen)} waarschuwing(en), fout zodra MIGRATIE_KLAAR = True:")
-        for w in waarschuwingen[:15]:
-            print(f"  - {w}")
-        if len(waarschuwingen) > 15:
-            print(f"  ... en nog {len(waarschuwingen) - 15}")
     if fouten:
         print(f"{len(fouten)} fout(en):")
         for f in fouten:

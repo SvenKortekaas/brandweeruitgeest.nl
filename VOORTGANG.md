@@ -231,10 +231,11 @@ Wat werkt:
 - Mislukt een post: workflow "Uitruk alsnog op Facebook en Instagram" (datum en tijd, beide of een van de twee), binnen 7 dagen.
 - Bewaking tegen sessielinks. Let op: het aanmaken van een pull request via de GitHub-koppeling zette er een sessielink in de footer; daarna de beschrijving zonder footer bijgewerkt. Controleer de beschrijving na het aanmaken.
 
-Uitkomst audit 21-10-2026 (nog niets gewijzigd, wacht op Sven):
-- Moet: twee P2000-meldingen tegelijk (bijv. alarm en opschaling) kunnen een uitruk kwijtraken terwijl hij toch op Facebook en Instagram komt. Oorzaak: `git pull --rebase` in `p2000.yml` loopt vast op een conflict en de push daarna meldt "up-to-date". Voorstel: imports na elkaar (concurrency) en stoppen met een fout bij een conflict.
-- Zou moeten: test die de uitkomst van de P2000-import controleert (nu alleen "loopt niet vast").
-- Opruimen: `MIGRATIE_KLAAR` en waarschuwingen in `check.py`, ongebruikte parameter `site` in `htaccess()`, `MAANDEN` dubbel, verouderde verwijzingen naar `migrate_hugo.py`, mogelijk de reservenaam `FTP_PASSWORD_PROD`.
+Audit 21-10-2026 (ponytail), uitgevoerd met akkoord van Sven, in een pull request naar `master`:
+- P2000: imports lopen na elkaar (concurrency in `p2000.yml`) en een conflict bij het vastleggen stopt de run met een fout. Eerder kon een tweede melding binnen een minuut een uitruk kwijtraken die toch op Facebook en Instagram kwam.
+- Nieuw: `tools/test_import_p2000.py` (20 gevallen: P2000-tekst naar de regel op de site, afkeuren, zelfde uitruk binnen het venster). Draait in "Bouwen en publiceren".
+- Opgeruimd: `MIGRATIE_KLAAR` en waarschuwingen in `check.py`, ongebruikte parameter in `htaccess()`, `MAANDEN` maar op één plek, verwijzingen naar het verwijderde `migrate_hugo.py`. De gebouwde site is identiek.
+- Secrets (21-10-2026): `productie` heeft `FTP_PASSWORD_PROD`, `p2000` heeft `FTP_WACHTWOORD_PROD`; de reservenaam in de workflows blijft daarom nodig. `FTP_GEBRUIKERSNAAM` in `p2000` wordt nergens gebruikt.
 
 Eerstvolgende stappen:
 1. Bij de eerstvolgende uitruk de run "P2000-uitruk" nakijken: site, job `facebook`, job `instagram`, en of HA nu het brandweerbericht doorgeeft (`trigger_message`).
