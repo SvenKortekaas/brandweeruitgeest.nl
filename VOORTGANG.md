@@ -220,12 +220,14 @@ Fase 3: migratie. Uitgevoerd 28-09-2026, wacht op controle door Sven (op v2.bran
 
 ## Volgende stap
 
-Stand 01-10-2026 (overdracht naar een nieuwe sessie): de site is live en alles tot en met #62 staat in `master`. Op `v2` staan daarna alleen nog `VOORTGANG.md`-updates.
+Stand 21-10-2026 (overdracht naar een nieuwe sessie): de site is live en alles tot en met #64 staat in `master`. Op `v2` staan daarna alleen nog `VOORTGANG.md`-updates (gaan mee met de volgende pull request).
 
 Wat werkt:
-- P2000-keten volledig automatisch: Home Assistant, import, vastleggen in `master` (bypass op de branchbeveiliging), publiceren met omgeving `p2000`. Getest met twee echte uitrukken (29-09 en 01-10-2026).
-- Facebook en Instagram: gebouwd (#61), koppeling gecontroleerd met "Facebook en Instagram controleren" (01-10-2026, in orde). Echt posten nog niet gezien.
-- Bewaking tegen sessielinks (#61), alle oude PR-beschrijvingen opgeschoond.
+- P2000-keten volledig automatisch: Home Assistant, import, vastleggen in `master` (bypass op de branchbeveiliging), publiceren met omgeving `p2000`. Getest met echte uitrukken (29-09, 01-10 en 20-10-2026).
+- HA geeft sinds 20-10-2026 `trigger_message` door (het brandweerbericht) in plaats van de eerste melding van het incident. Nog niet gezien bij een echte uitruk.
+- Facebook en Instagram: posten werkt (21-10-2026, uitruk van 20-10 via "Uitruk alsnog", goedgekeurd door Sven). Facebook met paginatoken. Een automatische post vanuit "P2000-uitruk" is nog niet gezien.
+- Mislukt een post: workflow "Uitruk alsnog op Facebook en Instagram" (datum en tijd, beide of een van de twee), binnen 7 dagen.
+- Bewaking tegen sessielinks. Let op: het aanmaken van een pull request via de GitHub-koppeling zette er een sessielink in de footer; daarna de beschrijving zonder footer bijgewerkt. Controleer de beschrijving na het aanmaken.
 
 Eerstvolgende stappen:
 1. Bij de eerstvolgende uitruk de run "P2000-uitruk" nakijken: site, job `facebook`, job `instagram`, en of HA nu het brandweerbericht doorgeeft (`trigger_message`).
