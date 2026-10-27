@@ -243,6 +243,8 @@ Uitruk 27-10-2026 15:05 niet op de site (Dier in problemen, WTR Uitgeestermeer):
 - FSR-geschiedenis (17 t/m 27-10) bekeken: `sensor.incidents` wisselt na een alarm heen en weer tussen alarm en intrekbericht (attribuut `trigger: update`, op 20-10 nog een dag later), en een tweede incident kan dezelfde tekst hebben. De automatisering reageert daarom op een nieuw `id` met `trigger: new`, en stuurt `created_at` als tijdstip. Sven: FSR is alleen voor brandweer Uitgeest (27-10-2026).
 - Uitruk van 27-10 15:05 met akkoord van Sven alsnog via `rest_command` gestuurd (run 31): op de site als nr 74, Facebook en Instagram geplaatst.
 
+Kwetsbaarheden (27-10-2026): GitHub meldde 3 Dependabot-meldingen (de lijst is voor Claude niet leesbaar). Volgens OSV: Pillow 12 heeft veel lekken die in 13.0.0 zijn opgelost (onze grens was `<13`), en de ondergrenzen van jinja2 en markdown lieten oude, lekke versies toe. `requirements.txt`: Pillow 13, jinja2 vanaf 3.1.6, markdown vanaf 3.8.1. Build, `check.py` en de importtest slagen met Pillow 13; de site is verder gelijk.
+
 Eerstvolgende stappen:
 1. Bij de eerstvolgende uitruk de run "P2000-uitruk" nakijken: site, job `facebook`, job `instagram`, en of HA nu het brandweerbericht doorgeeft (`trigger_message`).
 2. Sven: in de branchbeveiliging van `master` de check "Geen sessielinks / controleren" verplicht maken.
