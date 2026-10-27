@@ -240,7 +240,8 @@ Audit 21-10-2026 (ponytail), uitgevoerd met akkoord van Sven, in een pull reques
 Uitruk 27-10-2026 15:05 niet op de site (Dier in problemen, WTR Uitgeestermeer):
 - Sinds 27-10 komt P2000 in Home Assistant van een eigen dongle (`automation.brandweer_p2000_dongle_notificatie`) in plaats van 112radar. Alleen die stuurde door naar de site. De dongle lag eruit, het alarm kwam alleen via FSR (`sensor.incidents`), en daar hing geen doorsturen aan.
 - Besluit Sven 27-10-2026: een uitruk van Uitgeest gaat naar de site via de dongle of FSR, wie het eerst is. Nieuwe HA-automatisering `automation.brandweer_uitruk_naar_brandweeruitgeest_nl_via_fsr`: bij een FSR-alarm (`type: incident_alert`) `rest_command.brandweeruitgeest_p2000` met de tekst, `created_at` als tijdstip en capcode 0107711 (FSR geeft geen capcodes). De tweede melding is dezelfde straat binnen 30 minuten en wordt overgeslagen; de imports lopen na elkaar (#65).
-- De import herkent de tekst van 27-10 (droog getest).
+- FSR-geschiedenis (17 t/m 27-10) bekeken: `sensor.incidents` wisselt na een alarm heen en weer tussen alarm en intrekbericht (attribuut `trigger: update`, op 20-10 nog een dag later), en een tweede incident kan dezelfde tekst hebben. De automatisering reageert daarom op een nieuw `id` met `trigger: new`, en stuurt `created_at` als tijdstip. Sven: FSR is alleen voor brandweer Uitgeest (27-10-2026).
+- Uitruk van 27-10 15:05 met akkoord van Sven alsnog via `rest_command` gestuurd (run 31): op de site als nr 74, Facebook en Instagram geplaatst.
 
 Eerstvolgende stappen:
 1. Bij de eerstvolgende uitruk de run "P2000-uitruk" nakijken: site, job `facebook`, job `instagram`, en of HA nu het brandweerbericht doorgeeft (`trigger_message`).
