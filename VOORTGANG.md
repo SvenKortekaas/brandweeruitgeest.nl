@@ -237,6 +237,11 @@ Audit 21-10-2026 (ponytail), uitgevoerd met akkoord van Sven, in een pull reques
 - Opgeruimd: `MIGRATIE_KLAAR` en waarschuwingen in `check.py`, ongebruikte parameter in `htaccess()`, `MAANDEN` maar op één plek, verwijzingen naar het verwijderde `migrate_hugo.py`. De gebouwde site is identiek.
 - Secrets (21-10-2026): `productie` heeft `FTP_PASSWORD_PROD`, `p2000` heeft `FTP_WACHTWOORD_PROD`; de reservenaam in de workflows blijft daarom nodig. `FTP_GEBRUIKERSNAAM` in `p2000` wordt nergens gebruikt.
 
+Uitruk 27-10-2026 15:05 niet op de site (Dier in problemen, WTR Uitgeestermeer):
+- Sinds 27-10 komt P2000 in Home Assistant van een eigen dongle (`automation.brandweer_p2000_dongle_notificatie`) in plaats van 112radar. Alleen die stuurde door naar de site. De dongle lag eruit, het alarm kwam alleen via FSR (`sensor.incidents`), en daar hing geen doorsturen aan.
+- Besluit Sven 27-10-2026: een uitruk van Uitgeest gaat naar de site via de dongle of FSR, wie het eerst is. Nieuwe HA-automatisering `automation.brandweer_uitruk_naar_brandweeruitgeest_nl_via_fsr`: bij een FSR-alarm (`type: incident_alert`) `rest_command.brandweeruitgeest_p2000` met de tekst, `created_at` als tijdstip en capcode 0107711 (FSR geeft geen capcodes). De tweede melding is dezelfde straat binnen 30 minuten en wordt overgeslagen; de imports lopen na elkaar (#65).
+- De import herkent de tekst van 27-10 (droog getest).
+
 Eerstvolgende stappen:
 1. Bij de eerstvolgende uitruk de run "P2000-uitruk" nakijken: site, job `facebook`, job `instagram`, en of HA nu het brandweerbericht doorgeeft (`trigger_message`).
 2. Sven: in de branchbeveiliging van `master` de check "Geen sessielinks / controleren" verplicht maken.
