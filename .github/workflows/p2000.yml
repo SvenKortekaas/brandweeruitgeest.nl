@@ -33,6 +33,10 @@ on:
 permissions:
   contents: read
 
+env:
+  # Datum en jaar in Nederlandse tijd, niet in UTC (jaarwisseling).
+  TZ: Europe/Amsterdam
+
 jobs:
   zelftest:
     if: github.event_name == 'push'
@@ -48,7 +52,7 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Verzonnen meldingen (zonder --apply)
         run: |
-          nu=$(TZ=Europe/Amsterdam date '+%Y-%m-%d %H:%M:%S')
+          nu=$(date '+%Y-%m-%d %H:%M:%S')
           python tools/import_p2000.py --tijdstip "$nu" --capcodes 0107711 \
             --tekst "P 1 BNH-01 BR wegvervoer Broekpolderweg Uitgeest 122030"
           python tools/import_p2000.py --tijdstip "$nu" --capcodes 0107711 \
