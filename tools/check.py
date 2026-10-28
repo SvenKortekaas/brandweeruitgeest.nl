@@ -258,6 +258,23 @@ TELEFOON = re.compile(r"(\+31|\b0)[\s-]?\d(?:[\s-]?\d){8}\b")
 KENTEKEN = re.compile(r"\b(?=[A-Z0-9-]{8}\b)[A-Z0-9]{1,3}-[A-Z0-9]{1,3}-[A-Z0-9]{1,3}\b")
 
 
+def zelftest_privacy():
+    """Het privacyfilter is het laatste vangnet: werkt een patroon niet meer, dan faalt de controle."""
+    for patroon, wel, niet in (
+            (HUISNUMMER, ["Benesserlaan 12", "Molenwerf 25a", "Dorpsstraat 3-5"], ["Molenwerf", "A9 Li 60,1"]),
+            (WEG, ["A9 Li 60,1", "N203 57,6"], ["Molenwerf"]),
+            (MEDISCH, ["Reanimatie", "Afhijsen patiënt", "Persoon te water"], ["Brand woning"]),
+            (POSTCODE, ["1911 DB", "1911DB"], ["Molenwerf", "A9 Li 60,1"]),
+            (TELEFOON, ["0251-123456", "06 12345678", "+31 6 12345678"], ["A9 Li 60,1", "1911 DB"]),
+            (KENTEKEN, ["AB-12-CD", "12-ABC-3"], ["Molenwerf", "N203"])):
+        for t in wel:
+            if not patroon.search(t):
+                fout(f"zelftest privacyfilter: '{t}' wordt niet herkend")
+        for t in niet:
+            if patroon.search(t):
+                fout(f"zelftest privacyfilter: '{t}' wordt ten onrechte herkend")
+
+
 def controle_uitrukken():
     for pad in sorted((DATA / "uitrukken").glob("*.csv")):
         jaar = int(pad.stem)
@@ -317,6 +334,7 @@ def main():
     n = controle_html()
     controle_bestanden()
     controle_legacy_urls()
+    zelftest_privacy()
     controle_uitrukken()
     controle_testadres()
     if fouten:

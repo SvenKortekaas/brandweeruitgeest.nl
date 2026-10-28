@@ -2,3 +2,4 @@ jinja2>=3.1.6,<4
 markdown>=3.8.1,<4
 pyyaml>=6.0,<7
 Pillow>=13.0,<14
+tzdata>=2024.1; sys_platform == "win32"  # tijdzones voor de P2000-import, Linux en macOS hebben ze al
