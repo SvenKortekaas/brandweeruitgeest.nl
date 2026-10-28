@@ -245,8 +245,13 @@ Uitruk 27-10-2026 15:05 niet op de site (Dier in problemen, WTR Uitgeestermeer):
 
 Kwetsbaarheden (27-10-2026): GitHub meldde 3 Dependabot-meldingen (de lijst is voor Claude niet leesbaar). Volgens OSV: Pillow 12 heeft veel lekken die in 13.0.0 zijn opgelost (onze grens was `<13`), en de ondergrenzen van jinja2 en markdown lieten oude, lekke versies toe. `requirements.txt`: Pillow 13, jinja2 vanaf 3.1.6, markdown vanaf 3.8.1. Build, `check.py` en de importtest slagen met Pillow 13; de site is verder gelijk.
 
+28-10-2026:
+- Uitruk 27-10 17:52 (Ongeval wegvervoer, A9 Heiloo) kwam via dongle en FSR binnen: de eerste melding zette hem op de site (nr 75) en plaatste hem automatisch op Facebook en Instagram, de tweede werd overgeslagen als dezelfde uitruk. De doorgegeven tekst was het brandweerbericht. De keten werkt volledig automatisch.
+- Ponytail-plugin in `.claude/settings.json` gezet (akkoord Sven 28-10-2026, zoals in Ploegapp). `CLAUDE.md` noemde `/ponytail-audit` en `/ponytail-review` al, maar de plugin werd niet geladen. Na een herstart van Claude Code vraagt die eenmalig of de plugin vertrouwd wordt.
+- Lokale beveiligingsscans: gitleaks vindt alleen de ongeldige Google Maps-key uit 2017-2018, semgrep 6 valse alarmen, geen open Dependabot-meldingen. Voorstel aan Sven (nog geen besluit): wekelijkse scans (gitleaks, semgrep), CodeQL en een Claude-review bij pull requests, zoals in Ploegapp.
+
 Eerstvolgende stappen:
-1. Bij de eerstvolgende uitruk de run "P2000-uitruk" nakijken: site, job `facebook`, job `instagram`, en of HA nu het brandweerbericht doorgeeft (`trigger_message`).
+1. Sven: besluiten over beveiligingsscans (zie 28-10-2026).
 2. Sven: in de branchbeveiliging van `master` de check "Geen sessielinks / controleren" verplicht maken.
 3. Actuele feiten (Sven): eisen voor nieuwe leden, copyrighttekst, wervingstekst op de site.
 4. Foto's 12-2001 en 12-1536 (Sven, nog niet).
