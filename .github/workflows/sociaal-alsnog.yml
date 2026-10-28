@@ -20,6 +20,10 @@ on:
 permissions:
   contents: read
 
+env:
+  # "Laatste 7 dagen" in Nederlandse tijd, niet in UTC (jaarwisseling).
+  TZ: Europe/Amsterdam
+
 jobs:
   facebook:
     if: >-
