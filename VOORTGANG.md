@@ -248,10 +248,20 @@ Kwetsbaarheden (27-10-2026): GitHub meldde 3 Dependabot-meldingen (de lijst is v
 28-10-2026:
 - Uitruk 27-10 17:52 (Ongeval wegvervoer, A9 Heiloo) kwam via dongle en FSR binnen: de eerste melding zette hem op de site (nr 75) en plaatste hem automatisch op Facebook en Instagram, de tweede werd overgeslagen als dezelfde uitruk. De doorgegeven tekst was het brandweerbericht. De keten werkt volledig automatisch.
 - Ponytail-plugin in `.claude/settings.json` gezet (akkoord Sven 28-10-2026, zoals in Ploegapp). `CLAUDE.md` noemde `/ponytail-audit` en `/ponytail-review` al, maar de plugin werd niet geladen. Na een herstart van Claude Code vraagt die eenmalig of de plugin vertrouwd wordt.
-- Lokale beveiligingsscans: gitleaks vindt alleen de ongeldige Google Maps-key uit 2017-2018, semgrep 6 valse alarmen, geen open Dependabot-meldingen. Voorstel aan Sven (nog geen besluit): wekelijkse scans (gitleaks, semgrep), CodeQL en een Claude-review bij pull requests, zoals in Ploegapp.
+- Lokale beveiligingsscans: gitleaks vindt alleen de ongeldige Google Maps-key uit 2017-2018, semgrep 6 valse alarmen, geen open Dependabot-meldingen. Voorstel aan Sven: wekelijkse scans (gitleaks, semgrep), CodeQL en een Claude-review bij pull requests, zoals in Ploegapp.
+- Besluiten Sven 28-10-2026 over beveiligingsscans: geen gitleaks en semgrep; in plaats daarvan zet Sven zelf GitHub secret scanning met push protection aan (stond uit). CodeQL ja: door Claude aangezet als "default setup" in de repo-instellingen (Python en Actions, geen workflowbestand). Geen Claude-review bij pull requests.
+- Audit (ponytail) 28-10-2026, alle 7 punten met akkoord van Sven uitgevoerd:
+  1. "Bouwen en publiceren" bouwt bij publiceren de nieuwste stand van de branch (zoals `p2000.yml`), in plaats van de bouw van het moment van de push. Die oudere bouw kon een intussen vastgelegde P2000-uitruk en de afbeelding voor Instagram weer van de server halen.
+  2. `tzdata` in `requirements.txt`, alleen op Windows (akkoord Sven): de importtest draait nu ook op Windows.
+  3. `check.py` test zijn eigen privacyfilter (huisnummer, weg, medisch, postcode, telefoon, kenteken) bij elke controle.
+  4. Ongebruikte vertaaltabel uit `tools/meldingen.yaml` gehaald; de korte meldingen staan in `tools/p2000.yaml`. `CLAUDE.md` en `PLAN-P2000.md` bijgewerkt.
+  5. Telling van oefeningen weg uit `build.py` en de templates (kon nooit iets tellen).
+  6. Resten weg uit `build.py`: `jaar_nu`, `data/redirects.csv` (bestond niet).
+  7. Workflows draaien in tijdzone Europe/Amsterdam, zodat de jaarwisseling klopt.
+  De gebouwde site is gelijk, op één commentaarregel in `.htaccess` na.
 
 Eerstvolgende stappen:
-1. Sven: besluiten over beveiligingsscans (zie 28-10-2026).
+1. Sven: secret scanning met push protection aanzetten (Settings, Advanced Security).
 2. Sven: in de branchbeveiliging van `master` de check "Geen sessielinks / controleren" verplicht maken.
 3. Actuele feiten (Sven): eisen voor nieuwe leden, copyrighttekst, wervingstekst op de site.
 4. Foto's 12-2001 en 12-1536 (Sven, nog niet).
