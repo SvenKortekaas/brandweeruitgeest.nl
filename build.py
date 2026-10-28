@@ -95,11 +95,6 @@ def soortgroep(melding):
     return OVERIG
 
 
-def is_oefening(r):
-    """Oefeningen tellen apart, niet als uitruk (besluit 28-09-2026)."""
-    return r["prio"] == "5" or r["melding"].strip().lower() == "oefening"
-
-
 def lees_uitrukken():
     """Alle uitrukken per jaar, gecontroleerd op kolommen en waarden."""
     jaren = {}
@@ -245,17 +240,10 @@ def htaccess(gegenereerd, fotos):
         if code == "301" and re.fullmatch(r"/nieuws/page/\d+/", doel) and doel not in gegenereerd:
             redirects[url] = ("301", "/nieuws/")
     # Oude afbeeldingspaden (data/afbeeldingen-oud.csv, uit de migratie) naar de grootste nieuwe versie.
-    oud = DATA / "afbeeldingen-oud.csv"
-    if oud.exists():
-        with oud.open(encoding="utf-8", newline="") as f:
-            for r in csv.DictReader(f):
-                redirects[r["oud"]] = ("301", fotos.groot(r["nieuw"]))
+    with (DATA / "afbeeldingen-oud.csv").open(encoding="utf-8", newline="") as f:
+        for r in csv.DictReader(f):
+            redirects[r["oud"]] = ("301", fotos.groot(r["nieuw"]))
     redirects["/img/logo.png"] = ("301", "/logo.png")
-    extra = DATA / "redirects.csv"
-    if extra.exists():
-        with extra.open(encoding="utf-8", newline="") as f:
-            for r in csv.DictReader(f):
-                redirects[r["oud"]] = ("301", r["nieuw"])
 
     regels += [
         "# Gegenereerd door build.py. Niet met de hand wijzigen.",
@@ -297,7 +285,7 @@ def htaccess(gegenereerd, fotos):
     regels += [
         "</IfModule>",
         "",
-        "# Oude URL's (data/legacy-urls.csv en data/redirects.csv)",
+        "# Oude URL's (data/legacy-urls.csv en data/afbeeldingen-oud.csv)",
     ]
     for url, (code, doel) in redirects.items():
         if code == "301":
@@ -320,8 +308,7 @@ def bouw():
     env = Environment(loader=FileSystemLoader(TEMPLATES), autoescape=True,
                       undefined=StrictUndefined, trim_blocks=True, lstrip_blocks=True)
     env.globals.update(site=site, foto=fotos.html, foto_groot=fotos.groot,
-                       asset=lambda b: asset(assets, b), maanden=MAANDEN,
-                       jaar_nu=dt.date.today().year)
+                       asset=lambda b: asset(assets, b), maanden=MAANDEN)
     env.filters.update(datum=datum_nl, slug=slug)
 
     paginas = []  # (url, titel) voor sitemap
@@ -345,21 +332,18 @@ def bouw():
         groepen_per_maand = {m: {r["groep"] for r in rs} for m, rs in per_maand.items()}
         lijst = sorted(gepubliceerd)
         i = lijst.index(jaar)
-        oefeningen = sum(1 for r in regels if is_oefening(r))
-        aantal = len(regels) - oefeningen
+        aantal = len(regels)
         render(f"/uitrukken/{jaar}/", "uitrukken-jaar.html", jaar=jaar, aantal=aantal,
-               oefeningen=oefeningen, lopend=(jaar == dt.date.today().year),
+               lopend=(jaar == dt.date.today().year),
                per_maand=per_maand, soorten=soorten, groepen=groepen,
                groepen_per_maand=groepen_per_maand,
                vorige=lijst[i - 1] if i > 0 else None,
                volgende=lijst[i + 1] if i + 1 < len(lijst) else None,
                titel=f"Uitrukken {jaar}",
                beschrijving=f"Alle {aantal} uitrukken van brandweer Uitgeest in {jaar}.")
-    totalen = [(j, sum(1 for x in r if not is_oefening(x)), sum(1 for x in r if is_oefening(x)))
-               for j, r in sorted(gepubliceerd.items())]
+    totalen = [(j, len(r)) for j, r in sorted(gepubliceerd.items())]
     render("/uitrukken/", "uitrukken-overzicht.html", totalen=totalen,
-           hoogste=max((a for _, a, _ in totalen), default=1),
-           met_oefeningen=any(o for _, _, o in totalen),
+           hoogste=max((a for _, a in totalen), default=1),
            titel="Uitrukken", beschrijving="Alle uitrukken van brandweer Uitgeest per jaar.")
     alle = [r for rs in gepubliceerd.values() for r in rs]
     laatste = sorted(alle, key=lambda r: (r["datum"], r["nr"]), reverse=True)[:5]

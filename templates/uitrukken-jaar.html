@@ -3,7 +3,7 @@
 <div class="tekst">
   <p class="kruimel"><a href="/uitrukken/">Uitrukken</a></p>
   <h1>{{ titel }}</h1>
-  <p>In {{ jaar }} rukte brandweer Uitgeest {% if lopend %}tot nu toe {% endif %}{{ aantal }} keer uit.{% if oefeningen %} Daarnaast {{ "was er 1 oefening" if oefeningen == 1 else "waren er %d oefeningen" % oefeningen }}, die tellen niet mee.{% endif %}</p>
+  <p>In {{ jaar }} rukte brandweer Uitgeest {% if lopend %}tot nu toe {% endif %}{{ aantal }} keer uit.</p>
   <nav class="jaarnav" aria-label="Andere jaren">
     {% if vorige %}<a href="/uitrukken/{{ vorige }}/" rel="prev">{{ vorige }}</a>{% endif %}
     {% if volgende %}<a href="/uitrukken/{{ volgende }}/" rel="next">{{ volgende }}</a>{% endif %}

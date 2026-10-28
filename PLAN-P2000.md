@@ -54,7 +54,7 @@ Voor elke wijziging in HA maakt Claude eerst een kopie van de huidige automatise
 1. **`tools/import_p2000.py`** (Claude):
    - accepteert alleen het vaste formaat: tijdstip als datum en tijd, tekst die begint met een prio (`P 1`, `A1`, `B2` enz.), maximale lengte;
    - één regel per incident: dezelfde straat binnen 30 minuten is dezelfde uitruk (herhaalalarm, opschaling);
-   - melding wordt de korte tekst uit `tools/meldingen.yaml`, adres wordt straat en plaats; huisnummers, objectnamen, regiocodes (`BNH-01`) en eenheidsnummers gaan eruit;
+   - melding wordt de korte tekst uit `tools/p2000.yaml` (meldingen), adres wordt straat en plaats; huisnummers, objectnamen, regiocodes (`BNH-01`) en eenheidsnummers gaan eruit;
    - proefalarmen, testberichten en oefeningen worden overgeslagen;
    - een ingetrokken alarmering telt als uitruk, het intrekbericht niet: het hoort bij de uitruk op dezelfde straat (intrekken gebeurt binnen een kwartier, dus binnen het venster van 30 minuten), en staat die er nog niet dan komt de uitruk er één keer bij (besluit Sven 29-09-2026);
    - bron `p2000`; opnieuw draaien geeft geen dubbele regels.
