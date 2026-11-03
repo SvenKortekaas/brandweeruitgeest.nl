@@ -93,4 +93,15 @@ for tekst in ("P 1 BNH-01 (Grote BR) BR woning Molenwerf Uitgeest",
     assert verwerk(tekst, bestaand=eerder)[0] == "overgeslagen", tekst
 assert verwerk("P 1 BNH-01 BR woning Benesserlaan Uitgeest", bestaand=eerder)[0] == "nieuw"
 
+# De post op Facebook en Instagram: geen werving bij een melding met een slachtoffer of patiënt.
+import sociaal  # noqa: E402
+for tekst, medisch in (("P 1 BNH-02 Reanimatie Benesserlaan Uitgeest 122002", True),
+                       ("P 2 BNH-02 Ass. Ambu (afhijsen) Molenwerf Uitgeest 122002", True),
+                       ("P 2 BNH-02 Ass. Ambu (tilassistentie) Molenwerf Uitgeest 122002", True),
+                       ("P 1 BNH-01 BR wegvervoer Broekpolderweg Uitgeest 122030", False)):
+    regel = verwerk(tekst)[1]
+    for platform in ("facebook", "instagram"):
+        post = sociaal.bericht(regel, platform)
+        assert (sociaal.WERVING in post) != medisch and ("vacature" in post) != medisch, (tekst, platform)
+
 print(f"P2000-import: {len(NIEUW) + len(OVERGESLAGEN) + len(AFGEKEURD) + 4} gevallen in orde.")
