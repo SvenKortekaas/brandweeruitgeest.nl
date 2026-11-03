@@ -45,6 +45,8 @@ Fase 3: migratie. Uitgevoerd 28-09-2026, wacht op controle door Sven (op v2.bran
 
 ## Beslissingen van Sven
 
+- 03-11-2026: posts op Facebook en Instagram bij een melding met een slachtoffer of patiënt (reanimatie, afhijsen, til assistentie, assistentie ambulance, letsel, persoon te water en dergelijke) zonder wervingstekst, vacature en #heldengezocht: dat is niet netjes naar de slachtoffers. Alleen de feiten en de link naar alle uitrukken. Herkenning met `MEDISCH` in `tools/sociaal.py`, dezelfde lijst als het privacyfilter in `check.py`.
+
 - 21-10-2026: Claude werkt voortaan volgens ponytail (kleinste volledige wijziging, zie `CLAUDE.md`). Eerste audit van de hele repo op 21-10-2026, uitkomst onder Volgende stap.
 
 - 27-09-2026: in het dataschema van `data/uitrukken/JJJJ.csv` worden `prio` (1, 2 of 3) en `plaats` verplicht. `plaats` wordt altijd ingevuld, ook bij Uitgeest; "leeg betekent Uitgeest" vervalt. Historische regels zonder prio: niet raden, per jaar tellen in `MIGRATIE.md` en Sven vragen. Historische regels zonder plaats krijgen Uitgeest, behalve regels met wegnummer of hectometrering (A9, N203): niet invullen, vragen. `check.py` faalt op nieuwe regels zonder geldige prio of plaats. Vastgelegd in `CLAUDE.md`.

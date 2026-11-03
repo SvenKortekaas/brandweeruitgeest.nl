@@ -21,6 +21,8 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
+from sociaal import MEDISCH  # tools/sociaal.py: ook voor de posts op Facebook en Instagram
+
 ROOT = Path(__file__).resolve().parent.parent
 PUBLIC = ROOT / "public"
 DATA = ROOT / "data"
@@ -252,7 +254,6 @@ def controle_legacy_urls():
 
 HUISNUMMER = re.compile(r"[A-Za-zé.]\s+\d{1,4}\s?[a-zA-Z]?(\s?-\s?\d+)?\b(?![,.]\d)")
 WEG = re.compile(r"\b[AN]\s?\d{1,3}\b")
-MEDISCH = re.compile(r"reanim|ambu|pati|afhijs|tillen|letsel|onwel|persoon|zelfdod|suic", re.I)
 POSTCODE = re.compile(r"\b\d{4}\s?[A-Za-z]{2}\b")
 TELEFOON = re.compile(r"(\+31|\b0)[\s-]?\d(?:[\s-]?\d){8}\b")
 KENTEKEN = re.compile(r"\b(?=[A-Z0-9-]{8}\b)[A-Z0-9]{1,3}-[A-Z0-9]{1,3}-[A-Z0-9]{1,3}\b")
