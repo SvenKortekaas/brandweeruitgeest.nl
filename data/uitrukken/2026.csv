@@ -78,3 +78,4 @@ nr,datum,tijd,prio,melding,adres,plaats,bron,publiceren
 77,2026-11-04,21:31,2,Buitenbrand,Parallelweg,Uitgeest,p2000,ja
 78,2026-11-06,11:48,2,Gaslekkage,Meldijk,Uitgeest,p2000,ja
 79,2026-11-07,14:52,2,Buitenbrand,Geesterweg,Uitgeest,p2000,ja
+80,2026-11-10,07:24,1,Automatische brandmelding PAC,Westerwerf,Uitgeest,p2000,ja
