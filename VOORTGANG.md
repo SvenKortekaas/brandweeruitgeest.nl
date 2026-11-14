@@ -45,6 +45,8 @@ Fase 3: migratie. Uitgevoerd 28-09-2026, wacht op controle door Sven (op v2.bran
 
 ## Beslissingen van Sven
 
+- 03-11-2026: pull requests `v2` naar `master` voortaan met "Create a merge commit" (#68 als eerste), niet meer squash. Zo staan de commits van `v2` in `master` en toont een volgende pull request alleen de nieuwe commits. Toegestaan: de branchbeveiliging vraagt geen lineaire historie.
+
 - 03-11-2026: posts op Facebook en Instagram bij een melding met een slachtoffer of patiënt (reanimatie, afhijsen, til assistentie, assistentie ambulance, letsel, persoon te water en dergelijke) zonder wervingstekst, vacature en #heldengezocht: dat is niet netjes naar de slachtoffers. Alleen de feiten en de link naar alle uitrukken. Herkenning met `MEDISCH` in `tools/sociaal.py`, dezelfde lijst als het privacyfilter in `check.py`.
 
 - 21-10-2026: Claude werkt voortaan volgens ponytail (kleinste volledige wijziging, zie `CLAUDE.md`). Eerste audit van de hele repo op 21-10-2026, uitkomst onder Volgende stap.

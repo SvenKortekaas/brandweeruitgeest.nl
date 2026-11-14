@@ -95,6 +95,7 @@ __pycache__/
 .DS_Store
 .hugo_build.lock
 .cache/
+graphify-out/
 
 ### Invoerbestanden: nooit in git ###
 invoer/
